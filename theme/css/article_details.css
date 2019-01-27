@@ -1,0 +1,36 @@
+/* Article */
+
+#authorDetail{
+    /* border: 2px solid green; */
+    margin-top: 5px;
+}
+
+p.authorName, p.publishedDate{
+    margin: 0px;
+    font-size: 15px;
+    font-family: 'Barlow', sans-serif;
+
+}
+
+#blogpostHeading{
+    /* border: 2px solid black; */
+    margin-bottom: 15px;
+    /* border-bottom: 4px solid #ffb900; */
+
+}
+
+#blogpostHeading h1{
+    font-size: 40px;
+    font-family: 'Barlow', sans-serif;
+    margin: 0px;
+}
+
+#blogpostDetails{
+    /* border: 2px solid blue; */
+    margin-left: 15px;
+}
+
+#blogpostFeaturedImage{
+    box-shadow: 5px 5px 5px grey;
+}
+
