@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>A Pelican Blog - Nischal Lal Shrestha</title><link>/</link><description></description><lastBuildDate>Sun, 27 Jan 2019 00:00:00 +0000</lastBuildDate><item><title>Code sample</title><link>/code-sample.html</link><description>&lt;p&gt;This is sample test.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nischal Lal Shrestha</dc:creator><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-01-27:/code-sample.html</guid><category>random</category><category>randoms</category></item><item><title>Open sample</title><link>/open-le.html</link><description>&lt;p&gt;This is sample test.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nischal Lal Shrestha</dc:creator><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-01-27:/open-le.html</guid><category>random</category><category>randoms</category></item><item><title>Others sample</title><link>/others-sample.html</link><description>&lt;p&gt;This is sample test.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nischal Lal Shrestha</dc:creator><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-01-27:/others-sample.html</guid><category>random</category><category>randoms</category></item><item><title>Smart City</title><link>/smart-city.html</link><description>&lt;p&gt;This is sample test.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nischal Lal Shrestha</dc:creator><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-01-27:/smart-city.html</guid><category>random</category><category>randoms</category></item><item><title>This is a test</title><link>/this-test-slug.html</link><description>&lt;div class="section" id="structure"&gt;
+&lt;h2&gt;Structure&lt;/h2&gt;
+&lt;p&gt;From the &lt;strong&gt;outset&lt;/strong&gt;, let me say that &amp;quot;Structured Text&amp;quot; is probably a bit
+of a misnomer.  It's more like &amp;quot;Relaxed Text&amp;quot; that uses certain
+consistent patterns.  These patterns are interpreted by a HTML
+converter to produce &amp;quot;Very Structured Text&amp;quot; that can be used by a web
+browser.&lt;/p&gt;
+&lt;p&gt;The most …&lt;/p&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nischal Lal Shrestha</dc:creator><pubDate>Sun, 27 Jan 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:None,2019-01-27:/this-test-slug.html</guid><category>random</category><category>randoms</category></item></channel></rss>
