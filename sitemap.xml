@@ -4,169 +4,204 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://TheOnlyNischal.github.io/</loc>
-<lastmod>2019-02-10T18:35:04-00:00</lastmod>
+<loc>http://127.0.0.1:8000/</loc>
+<lastmod>2019-02-10T18:58:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/archives.html</loc>
-<lastmod>2019-02-10T18:35:04-00:00</lastmod>
+<loc>http://127.0.0.1:8000/archives.html</loc>
+<lastmod>2019-02-10T18:58:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tags.html</loc>
-<lastmod>2019-02-10T18:35:04-00:00</lastmod>
+<loc>http://127.0.0.1:8000/tags.html</loc>
+<lastmod>2019-02-10T18:58:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/categories.html</loc>
-<lastmod>2019-02-10T18:35:04-00:00</lastmod>
+<loc>http://127.0.0.1:8000/categories.html</loc>
+<lastmod>2019-02-10T18:58:03-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/government-2-and-nepal.html</loc>
+<loc>http://127.0.0.1:8000/Deploying-Pytorch-Model-with-Flask.html</loc>
+<lastmod>2019-02-10T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://127.0.0.1:8000/government-2-and-nepal.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/i-love-everything-that-makes-me-more-human.html</loc>
+<loc>http://127.0.0.1:8000/i-love-everything-that-makes-me-more-human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/search-for-a-smart-cities-in-nepal.html</loc>
+<loc>http://127.0.0.1:8000/search-for-a-smart-cities-in-nepal.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/Introduction-to-Data-Structure.html</loc>
+<loc>http://127.0.0.1:8000/Introduction-to-Data-Structure.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/code-sample.html</loc>
+<loc>http://127.0.0.1:8000/code-sample.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/open-le.html</loc>
+<loc>http://127.0.0.1:8000/open-le.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/smart-city.html</loc>
+<loc>http://127.0.0.1:8000/smart-city.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/this-test-slug.html</loc>
+<loc>http://127.0.0.1:8000/this-test-slug.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/thoughts-sample.html</loc>
+<loc>http://127.0.0.1:8000/thoughts-sample.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/algorithm.html</loc>
+<loc>http://127.0.0.1:8000/category/algorithm.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/code.html</loc>
-<lastmod>2019-01-27T00:00:00+05:41</lastmod>
+<loc>http://127.0.0.1:8000/category/code.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/openmovement.html</loc>
+<loc>http://127.0.0.1:8000/category/openmovement.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/smartcity.html</loc>
+<loc>http://127.0.0.1:8000/category/smartcity.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/thoughts.html</loc>
+<loc>http://127.0.0.1:8000/category/thoughts.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/human.html</loc>
+<loc>http://127.0.0.1:8000/tag/code.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://127.0.0.1:8000/tag/pytorch.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://127.0.0.1:8000/tag/flask.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://127.0.0.1:8000/tag/deploying.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://127.0.0.1:8000/tag/human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/data-structure.html</loc>
+<loc>http://127.0.0.1:8000/tag/data-structure.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/algorithms.html</loc>
+<loc>http://127.0.0.1:8000/tag/algorithms.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/random.html</loc>
+<loc>http://127.0.0.1:8000/tag/random.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/randoms.html</loc>
+<loc>http://127.0.0.1:8000/tag/randoms.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/author/nischal-lal-shrestha.html</loc>
-<lastmod>2019-02-03T00:00:00+05:41</lastmod>
+<loc>http://127.0.0.1:8000/author/nischal-lal-shrestha.html</loc>
+<lastmod>2019-02-10T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
