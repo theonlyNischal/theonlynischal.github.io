@@ -5,34 +5,41 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://TheOnlyNischal.github.io/</loc>
-<lastmod>2019-02-16T13:53:07-00:00</lastmod>
+<lastmod>2019-02-16T21:40:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://TheOnlyNischal.github.io/archives.html</loc>
-<lastmod>2019-02-16T13:53:07-00:00</lastmod>
+<lastmod>2019-02-16T21:40:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://TheOnlyNischal.github.io/tags.html</loc>
-<lastmod>2019-02-16T13:53:07-00:00</lastmod>
+<lastmod>2019-02-16T21:40:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://TheOnlyNischal.github.io/categories.html</loc>
-<lastmod>2019-02-16T13:53:07-00:00</lastmod>
+<lastmod>2019-02-16T21:40:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://TheOnlyNischal.github.io/holi-Glorifying-romance-Playing-with-color.html</loc>
+<lastmod>2019-02-16T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://TheOnlyNischal.github.io/nepal-love-affair-with-momo-keeps-growing.html</loc>
 <lastmod>2019-02-16T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -131,6 +138,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://TheOnlyNischal.github.io/category/thoughts.html</loc>
+<lastmod>2019-02-16T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://TheOnlyNischal.github.io/tag/holi.html</loc>
+<lastmod>2019-02-16T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://TheOnlyNischal.github.io/tag/thoughts.html</loc>
+<lastmod>2019-02-16T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://TheOnlyNischal.github.io/tag/festivals-in-nepal.html</loc>
+<lastmod>2019-02-16T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://TheOnlyNischal.github.io/tag/momo.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
