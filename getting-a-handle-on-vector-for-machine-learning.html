@@ -49,6 +49,7 @@
     <link href="https://TheOnlyNischal.github.io/theme/css/mediumish.css" rel="stylesheet">
 	<link href="https://TheOnlyNischal.github.io/theme/css/navigation.css" rel="stylesheet">
 	<link href="https://TheOnlyNischal.github.io/theme/css/footer.css" rel="stylesheet">
+  <link href="/theme/css/pygments.css" rel="stylesheet">
   <link href="https://TheOnlyNischal.github.io/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,7 +63,7 @@
 </script>
   <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
   <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
-
+ 
   
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
@@ -241,7 +242,8 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$<div
 <p>In this section, we will illustrate simple vector-vector arithmetic, where all operations are performed element-wise.</p>
 <div class="section" id="vector-addition">
 <h3>Vector Addition</h3>
-<p>Two vector of equal length when added produce a new vector of the same length.</p>
+<p>Two vector of equal length when added produce a new vector of the same length.
+Each element of the new vector at index <strong>i</strong> is calculated as the sum of the other element at that particular index <strong>i</strong>.</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="n">house1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
@@ -252,6 +254,10 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$<div
 <span class="k">print</span><span class="p">(</span><span class="n">house3</span><span class="p">)</span>
 <span class="p">[</span>    <span class="mi">4</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>   <span class="mi">350</span><span class="p">,</span> <span class="mi">49000</span><span class="p">]</span>
 </pre></div>
+</div>
+<div class="section" id="vector-subtraction">
+<h3>Vector Subtraction</h3>
+<p>Two vectors of equal length can be subtracted to produce a new vector of the same lenght. Each element of the new vector at index <strong>i</strong> is calculated as the difference of the other elements at that particular index <strong>i</strong>.</p>
 </div>
 </div>
 
