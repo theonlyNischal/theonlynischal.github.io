@@ -226,7 +226,35 @@
 $$house = \begin{pmatrix} 2 \\ 1 \\ 150 \\ 20000 \end{pmatrix}$$
 </p><p>Based on this vector, our machine learning predicts that there is 45% chance that this house will give me profit if I buy, 5% chance that it will be a bad deal(loss) and 50% chance that the price of house will not change at all. We can represent this prediction in a vector as:</p>
 <p>
-$$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
+$$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$<div class="section" id="vectors-in-python">
+<h2>Vectors in Python</h2>
+<p>There are multiple ways we can define a vector in Python, the simplest on being a list:</p>
+<div class="highlight"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
+</pre></div>
+<p>Python Lists are very good, but in Machine Learning we have deal with lot of scientific calculations,so it is much convenient to represent a vector in Python as a NumPy array as Numpy array does the thing what we expect when we add, multiply vectors.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="n">house</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="section" id="vector-arithmetic">
+<h2>Vector Arithmetic</h2>
+<p>In this section, we will illustrate simple vector-vector arithmetic, where all operations are performed element-wise.</p>
+<div class="section" id="vector-addition">
+<h3>Vector Addition</h3>
+<p>Two vector of equal length when added produce a new vector of the same length.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">house1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
+<span class="n">house2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">29000</span><span class="p">])</span>
+
+<span class="n">house3</span> <span class="o">=</span> <span class="n">house1</span> <span class="o">+</span> <span class="n">house2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">house3</span><span class="p">)</span>
+<span class="p">[</span>    <span class="mi">4</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>   <span class="mi">350</span><span class="p">,</span> <span class="mi">49000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+
 			</div>
 			<!-- End Post Content -->
 
