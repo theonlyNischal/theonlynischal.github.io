@@ -220,11 +220,14 @@
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-				<p>The word <strong>vector</strong> comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science we generalize this idea to think vector as a list of attributes of an object.</p>
-<p>Vectors have many purposes in Machine Learning, most notably to represent observations and predictions. For example, say we built a Machine Learning system to classify videos into 3 categories (good, spam, clickbait) based on what we know about them. For each video, we would have a vector representing what we know about it, such as:</p>
-$$video = \begin{pmatrix} 10.5 \\ 5.2 \\ 3.25 \\ 7.0 \end{pmatrix}$$<p>This vector could represent a video that lasts 10.5 minutes, but only 5.2% viewers watch for more than a minute, it gets 3.25 views per day on average, and it was flagged 7 times as spam. As you can see, each axis may have a different meaning.</p>
-<p>Based on this vector our Machine Learning system may predict that there is an 80% probability that it is a spam video, 18% that it is clickbait, and 2% that it is a good video. This could be represented as the following vector:</p>
-$$classProbabilities= \begin{pmatrix} 0.80 \\ 0.18 \\ 0.02 \end{pmatrix}$$
+				<p>The word <strong>vector</strong> comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science or Machine Learning we generalize this idea to think vector as a list of attributes of an object. So Vectors are used to represent objects, observations and predictions.</p>
+<p>Say we want to represent a house having 2 bedrooms, 1 bathroom, 150 meter square and cost around $ 20,000. Based on the information we know about this house, we can represent the house as vector:</p>
+<pre class="literal-block">
+.. raw:: html
+</pre>
+<blockquote>
+$$house = begin{pmatrix} 2 \ 1 \ 150 \ 20000 end{pmatrix}$$</blockquote>
+
 			</div>
 			<!-- End Post Content -->
 
