@@ -227,7 +227,8 @@
 $$house = \begin{pmatrix} 2 \\ 1 \\ 150 \\ 20000 \end{pmatrix}$$
 </p><p>Based on this vector, our machine learning predicts that there is 45% chance that this house will give me profit if I buy, 5% chance that it will be a bad deal(loss) and 50% chance that the price of house will not change at all. We can represent this prediction in a vector as:</p>
 <p>
-$$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$<div class="section" id="vectors-in-python">
+$$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
+</p><div class="section" id="vectors-in-python">
 <h2>Vectors in Python</h2>
 <p>There are multiple ways we can define a vector in Python, the simplest on being a list:</p>
 <div class="highlight"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
@@ -257,8 +258,31 @@ Each element of the new vector at index <strong>i</strong> is calculated as the 
 </div>
 <div class="section" id="vector-subtraction">
 <h3>Vector Subtraction</h3>
-<p>Two vectors of equal length can be subtracted to produce a new vector of the same lenght. Each element of the new vector at index <strong>i</strong> is calculated as the difference of the other elements at that particular index <strong>i</strong>.</p>
+<p>Two vectors of equal length can be subtracted to produce a new vector of the same length. Each element of the new vector at index <strong>i</strong> is calculated as the difference of the other elements at that particular index <strong>i</strong>.</p>
 </div>
+<div class="section" id="vector-multiplication">
+<h3>Vector Multiplication</h3>
+<p>Two vector of equal length can be multiplied together to create a new vector of same length. Like with addition and subtraction, vector multiplication is done element wise.</p>
+$$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+
+<span class="p">[</span> <span class="mi">2</span>  <span class="mi">6</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="section" id="vector-division">
+<h3>Vector Division</h3>
+<p>Two vector of equal length can be divided element wise to calculate a new vector of same length.</p>
+</div>
+</div>
+<div class="section" id="plotting-2d-and-3d-vectors">
+<h2>Plotting 2D and 3D Vectors</h2>
 </div>
 
 			</div>
