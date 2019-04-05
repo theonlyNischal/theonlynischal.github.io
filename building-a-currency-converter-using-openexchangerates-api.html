@@ -8,16 +8,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="shortcut icon" type="image/png" href="https://TheOnlyNischal.github.io/theme/img/favicon.png"/>
-    <title>    Building a Currency Converter using OpenExchangeRates API and requests
+    <title>    Building a Currency(includes bitcoin, etherum) Converter using OpenExchangeRates API and requests
   Nischal Lal Shrestha</title>
 
-<meta name="description" content="Published On:Thu, Mar 05 2019, keywords: currency converter, openexchangerates, api, requests, [<Tag 'code'>, <Tag 'currency_converter'>, <Tag 'requests'>, <Tag 'api'>]">
+<meta name="description" content="Published On:Thu, Mar 05 2019, keywords: currency converter, openexchangerates, api, requests, [<Tag 'code'>, <Tag 'currency_converter'>, <Tag 'requests'>, <Tag 'api'>, <Tag 'cryptocurrency'>]">
 
-    <meta name="keywords" content="currency converter, openexchangerates, api, requests, [<Tag 'code'>, <Tag 'currency_converter'>, <Tag 'requests'>, <Tag 'api'>]" />
+    <meta name="keywords" content="currency converter, openexchangerates, api, requests, [<Tag 'code'>, <Tag 'currency_converter'>, <Tag 'requests'>, <Tag 'api'>, <Tag 'cryptocurrency'>]" />
 
 
 
-<meta property="og:title" content="Building a Currency Converter using OpenExchangeRates API and requests">
+<meta property="og:title" content="Building a Currency(includes bitcoin, etherum) Converter using OpenExchangeRates API and requests">
 <meta property="og:description" content="Converting Currency in google is no fun and no brainer. Explore the power of programming by building our own Currency Converter.">
 <meta property="og:url" content="https://nischal.info.np/">
 <meta property="og:image" content="https://TheOnlyNischal.github.io/theme/img/code/building-a-currency-converter-using-openexchangerates-api.png">
@@ -32,7 +32,7 @@
     <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
 
     <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
-    <meta property="og:title" contenct="Building a Currency Converter using OpenExchangeRates API and requests"/>
+    <meta property="og:title" contenct="Building a Currency(includes bitcoin, etherum) Converter using OpenExchangeRates API and requests"/>
     <meta property="og:url" content="./building-a-currency-converter-using-openexchangerates-api.html"/>
     <meta property="og:site_name" content="Nischal Lal Shrestha"/>
     <meta property="og:type" content="article"/>
@@ -201,12 +201,12 @@
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading" id = "blogpostHeading">
 
-				<h1 class="posttitle">Building a Currency Converter using OpenExchangeRates API and requests</h1>
+				<h1 class="posttitle">Building a Currency(includes bitcoin, etherum) Converter using OpenExchangeRates API and requests</h1>
 
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="https://TheOnlyNischal.github.io/theme/img/code/building-a-currency-converter-using-openexchangerates-api.png" alt="Building a Currency Converter using OpenExchangeRates API and requests">
+			<img class="featured-image img-fluid" src="https://TheOnlyNischal.github.io/theme/img/code/building-a-currency-converter-using-openexchangerates-api.png" alt="Building a Currency(includes bitcoin, etherum) Converter using OpenExchangeRates API and requests">
 			<!-- End Featured Image -->
 
 			<div id = "authorDetail">
@@ -221,7 +221,60 @@
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-				
+				<p>Converting currency in google is simple, no fun and no brainer. Let's leverage the use of Python and
+build a currency converter that will not only convert traditional currency but also digital
+currencies like BitCoin, Etherum and others.</p>
+<p>We will be using OpenExchangeRates API for this. <a class="reference external" href="https://openexchangerates.org/">Sign Up</a> and register for a new API Key.</p>
+<p>To get a view of OpenExchangeRates API, replace <strong>YOUR_APP_ID</strong> with the key you get in a email in the following link and make a new request in browser.</p>
+<blockquote>
+<a class="reference external" href="https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID">https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID</a></blockquote>
+<p>To make such request we will be using <a class="reference external" href="http://docs.python-requests.org/en/master/">Requests</a>. After getting a response we will fetch the rates and calculate necessary value as shown in the code below.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">class</span> <span class="nc">CurrencyConverter</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="n">symbols</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">YOUR_APP_ID</span> <span class="o">=</span> <span class="n">YOUR_APP_ID</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">symbols</span> <span class="o">=</span> <span class="n">symbols</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">])</span>
+
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="s2">&quot;https://openexchangerates.org/api/latest.json&quot;</span><span class="p">,</span>
+                <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+                    <span class="s2">&quot;app_id&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">YOUR_APP_ID</span><span class="p">,</span>
+                    <span class="s2">&quot;symbols&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span><span class="p">,</span>
+                    <span class="s2">&quot;show_alternatives&quot;</span><span class="p">:</span> <span class="bp">True</span>
+                        <span class="p">}</span>
+                <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rates_</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;rates&quot;</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">rates_</span><span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="nf">convert</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">symbol_from</span><span class="p">,</span> <span class="n">symbol_to</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">rates_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol_from</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol_to</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="bp">None</span>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">YOUR_APP_ID</span> <span class="o">=</span> <span class="s2">&quot;3dccea5302c7430db25f6b8863300084&quot;</span>
+
+    <span class="c1"># Enter all the rates you want in the list</span>
+    <span class="n">cadUSDconverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">])</span>
+
+    <span class="c1"># Converts 10 US Dollars to Nepali Rupees.</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">cadUSDconverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;NPR&#39;</span><span class="p">))</span>
+</pre></div>
+<div class="section" id="converting-bitcoin-etherum-and-other-digital-currencies">
+<h2>Converting BitCoin, Etherum and other Digital Currencies</h2>
+<p>If we made <strong>show_alternatives</strong> parameter <strong>True</strong> we can get rates for digital currencies like bitcoin, Etherum and others. Add all the necessary symbols required while creating new currency converter and we are all ready.</p>
+<div class="highlight"><pre><span></span><span class="n">simpleConverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">,</span> <span class="s2">&quot;BTC&quot;</span><span class="p">])</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">simpleConverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;BTC&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+
 			</div>
 			<!-- End Post Content -->
 
@@ -233,6 +286,7 @@
                         <li><a href="https://TheOnlyNischal.github.io/tag/currency_converter.html">currency_converter</a></li>
                         <li><a href="https://TheOnlyNischal.github.io/tag/requests.html">requests</a></li>
                         <li><a href="https://TheOnlyNischal.github.io/tag/api.html">api</a></li>
+                        <li><a href="https://TheOnlyNischal.github.io/tag/cryptocurrency.html">cryptocurrency</a></li>
 				</ul>
 			</div>
 			<!-- End Tags -->
