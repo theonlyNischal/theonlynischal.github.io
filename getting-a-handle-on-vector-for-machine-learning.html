@@ -283,12 +283,70 @@ $$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</spa
 </div>
 <div class="section" id="vector-norms">
 <h2>Vector Norms</h2>
-<p>The term <strong>Norm</strong> is typically used to represent the length or magnitude of a vector. The norm of vector <strong>v</strong> is denoted by [||v||].</p>
+<p>The term <strong>Norm</strong> is typically used to represent the length or magnitude of a vector. The norm of vector <strong>v</strong> is denoted by <strong>||v||</strong>.</p>
 <p>Norm Properties</p>
-1. For any vector **v**, \[||v||\] is a non-negative real number.
-2. For any vector **v**, \[||v||\] is zero if and only if **v** is a zero vector.
-3. Triangle inequality, For any vectors **x** and **y**,  \[||x + y|| \le ||x|| + ||y||\].
-4. For any vector **v** and any scalar \[\alpha \], \[||\alpha v|| = |\alpha |||v||\].</div>
+1. For any vector \(\mathbf{v}\), \(\mathbf{||v||}\) is a non-negative real number.$$\\$$
+
+2. For any vector \(\mathbf{v}\), \(\mathbf{||v||}\) is zero if and only if \(\mathbf{v}\) is a zero vector.$$\\$$
+
+3. Triangle inequality, For any vectors \(\mathbf{x}\) and \(\mathbf{y}\),  \[||x + y|| \le ||x|| + ||y||\]$$\\$$
+
+4. For any vector \(\mathbf{v}\) and any scalar \(\alpha \), \[||\alpha v|| = |\alpha |||v||\]$$\\$$<div class="section" id="different-vector-norms">
+<h3>Different Vector Norms</h3>
+<div class="section" id="manhattan-norm-or-taxicab-norm">
+<h4>1. Manhattan Norm or Taxicab Norm</h4>
+The \(L^1\) Norm or Manhattan Norm or Taxicab Norm of vector \(\mathbf{v}\) \( \in \) \(R^n\) is defined as
+\[||v||_1 = \sum\limits_{i = 1}^n {{|v_i|}} \]. $$\\$$
+
+The \(L^1\) norm is calculated as the sum of the absolute vector values, where the absolute value of a scalar uses the notation \(\mathbf{|v|}\).
+\[||v||_1 = |v_1| + |v_2| + |v_3| + .. + |v_n|\]</div>
+<div class="section" id="euclidean-norm">
+<h4>2. Euclidean Norm</h4>
+The \(L^2\) Norm or Euclidean of vector \(\mathbf{v}\) \( \in \) \(R^n\) is defined as
+\[||v||_2 = \sqrt{\sum\limits_{i = 1}^n {v_i^2}} \]. $$\\$$
+
+The \(L^2\) norm simply calculates the Euclidean distance from the origin to the point identified by \(\mathbf{v}\).
+
+The \(L^2\) norm is calculated as the square root of the sum of the squared vector values
+\[||v||_2 = \sqrt {v_1^2 + v_2^2 + v_3^2 + .. + v_n^2} \]</div>
+<div class="section" id="vector-max-norm">
+<h4>3. Vector Max Norm</h4>
+The \(L^\infty\) norm or vector max norm of vector \(\mathbf{v}\) \( \in \) \(R^n\) is defined as
+\[||v||_\infty  = \mathop {\max |v_i|}\limits_i \]
+
+The \(L^\infty\) norm is calculated by returning the the maximum value of vector as
+\[||v||_\infty  = \max (v_1,v_2,..,v_n)\]<div class="highlight"><pre><span></span><span class="c1"># Import numpy</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c1"># Import Linear Algebra package from NumPy</span>
+<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="kn">as</span> <span class="nn">LA</span>
+
+<span class="c1"># Define a simple vector</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># Calculate L1 norm</span>
+
+<span class="n">L1_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">L1_norm</span><span class="p">)</span> <span class="c1"># 6.0</span>
+
+<span class="c1"># Calculate L2 norm</span>
+
+<span class="n">L2_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">L2_norm</span><span class="p">)</span> <span class="c1"># 3.7416573867739413</span>
+
+<span class="c1"># Calculate max norm</span>
+<span class="c1"># For max norm import infinity</span>
+
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
+<span class="n">max_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">inf</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">max_norm</span><span class="p">)</span> <span class="c1"># 3.0</span>
+</pre></div>
+</div>
+</div>
+</div>
 
 			</div>
 			<!-- End Post Content -->
