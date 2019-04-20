@@ -3,6 +3,8 @@ dd { margin-left: 23px }
 
 /* *** General Styles *** */
 
+
+
 body  {
 	background: url(../images/background.jpg);
 	color: #293331;
@@ -212,4 +214,8 @@ ol {
     height:0;
     font-size: 1px;
     line-height: 0px;
+}
+
+#citationID{
+	color: #ffb900;
 }
