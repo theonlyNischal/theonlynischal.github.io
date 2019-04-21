@@ -4,246 +4,239 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://TheOnlyNischal.github.io/</loc>
-<lastmod>2019-04-20T13:28:07-00:00</lastmod>
+<loc>https://nischal.info.np/</loc>
+<lastmod>2019-04-21T15:37:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/archives.html</loc>
-<lastmod>2019-04-20T13:28:07-00:00</lastmod>
+<loc>https://nischal.info.np/archives.html</loc>
+<lastmod>2019-04-21T15:37:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tags.html</loc>
-<lastmod>2019-04-20T13:28:07-00:00</lastmod>
+<loc>https://nischal.info.np/tags.html</loc>
+<lastmod>2019-04-21T15:37:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/categories.html</loc>
-<lastmod>2019-04-20T13:28:07-00:00</lastmod>
+<loc>https://nischal.info.np/categories.html</loc>
+<lastmod>2019-04-21T15:37:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/k-nearest-neighbour-algorithm-for-image-classification.html</loc>
-<lastmod>2019-04-20T00:00:00+05:45</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://TheOnlyNischal.github.io/getting-a-handle-on-vector-for-machine-learning.html</loc>
+<loc>https://nischal.info.np/getting-a-handle-on-vector-for-machine-learning.html</loc>
 <lastmod>2019-03-28T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/building-a-currency-converter-using-openexchangerates-api.html</loc>
+<loc>https://nischal.info.np/building-a-currency-converter-using-openexchangerates-api.html</loc>
 <lastmod>2019-03-05T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/holi-Glorifying-romance-Playing-with-color.html</loc>
+<loc>https://nischal.info.np/holi-Glorifying-romance-Playing-with-color.html</loc>
 <lastmod>2019-02-16T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/nepal-love-affair-with-momo-keeps-growing.html</loc>
+<loc>https://nischal.info.np/nepal-love-affair-with-momo-keeps-growing.html</loc>
 <lastmod>2019-02-16T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/Deploying-Pytorch-Model-with-Flask.html</loc>
+<loc>https://nischal.info.np/Deploying-Pytorch-Model-with-Flask.html</loc>
 <lastmod>2019-02-10T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/government-2-and-nepal.html</loc>
+<loc>https://nischal.info.np/government-2-and-nepal.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/i-love-everything-that-makes-me-more-human.html</loc>
+<loc>https://nischal.info.np/i-love-everything-that-makes-me-more-human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/search-for-a-smart-cities-in-nepal.html</loc>
+<loc>https://nischal.info.np/search-for-a-smart-cities-in-nepal.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/Introduction-to-Data-Structure.html</loc>
+<loc>https://nischal.info.np/Introduction-to-Data-Structure.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/algorithm.html</loc>
-<lastmod>2019-04-20T00:00:00+05:41</lastmod>
+<loc>https://nischal.info.np/category/algorithm.html</loc>
+<lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/code.html</loc>
+<loc>https://nischal.info.np/category/code.html</loc>
 <lastmod>2019-03-28T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/openmovement.html</loc>
+<loc>https://nischal.info.np/category/openmovement.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/smartcity.html</loc>
+<loc>https://nischal.info.np/category/smartcity.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/category/thoughts.html</loc>
+<loc>https://nischal.info.np/category/thoughts.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/code.html</loc>
+<loc>https://nischal.info.np/tag/code.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/currency_converter.html</loc>
+<loc>https://nischal.info.np/tag/currency_converter.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/requests.html</loc>
+<loc>https://nischal.info.np/tag/requests.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/api.html</loc>
+<loc>https://nischal.info.np/tag/api.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/cryptocurrency.html</loc>
+<loc>https://nischal.info.np/tag/cryptocurrency.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/holi.html</loc>
+<loc>https://nischal.info.np/tag/holi.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/thoughts.html</loc>
+<loc>https://nischal.info.np/tag/thoughts.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/festivals-in-nepal.html</loc>
+<loc>https://nischal.info.np/tag/festivals-in-nepal.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/momo.html</loc>
+<loc>https://nischal.info.np/tag/momo.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/pytorch.html</loc>
+<loc>https://nischal.info.np/tag/pytorch.html</loc>
 <lastmod>2019-02-10T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/flask.html</loc>
+<loc>https://nischal.info.np/tag/flask.html</loc>
 <lastmod>2019-02-10T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/deploying.html</loc>
+<loc>https://nischal.info.np/tag/deploying.html</loc>
 <lastmod>2019-02-10T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/human.html</loc>
+<loc>https://nischal.info.np/tag/human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/data-structure.html</loc>
+<loc>https://nischal.info.np/tag/data-structure.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/tag/algorithms.html</loc>
+<loc>https://nischal.info.np/tag/algorithms.html</loc>
 <lastmod>2019-01-27T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://TheOnlyNischal.github.io/author/nischal-lal-shrestha.html</loc>
-<lastmod>2019-04-20T00:00:00+05:41</lastmod>
+<loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
+<lastmod>2019-03-28T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
