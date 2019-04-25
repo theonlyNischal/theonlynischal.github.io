@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2019-04-21T15:56:38-00:00</lastmod>
+<lastmod>2019-04-25T13:54:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2019-04-21T15:56:38-00:00</lastmod>
+<lastmod>2019-04-25T13:54:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2019-04-21T15:56:38-00:00</lastmod>
+<lastmod>2019-04-25T13:54:51-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2019-04-21T15:56:38-00:00</lastmod>
+<lastmod>2019-04-25T13:54:51-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://nischal.info.np/Bayesian-Theorem-and-Naive-Bayes-Classifier.html</loc>
+<lastmod>2019-05-25T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
@@ -103,7 +110,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/category/algorithm.html</loc>
-<lastmod>2019-04-20T00:00:00+05:41</lastmod>
+<lastmod>2019-05-25T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -243,7 +250,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
-<lastmod>2019-04-20T00:00:00+05:41</lastmod>
+<lastmod>2019-05-25T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

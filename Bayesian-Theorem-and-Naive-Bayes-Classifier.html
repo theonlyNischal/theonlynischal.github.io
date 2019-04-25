@@ -8,19 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
-    <title>    K-Nearest Neighbour Algorithm for Image Classification
+    <title>    Bayesian Theorem and Naive Bayes Classifier
  | Nischal Lal Shrestha</title>
 
-<meta name="description" content="Published On:Saturday, April 20 2019, keywords: k-nearest-neighbour, knn, knn algorithm,, ">
+<meta name="description" content="Published On:Thursday, April 25 2019, keywords: Bayes Theorem, Bayesian Theorem, Naive Bayes Classifier, ">
 
-    <meta name="keywords" content="k-nearest-neighbour, knn, knn algorithm,, " />
+    <meta name="keywords" content="Bayes Theorem, Bayesian Theorem, Naive Bayes Classifier, " />
 
 
 
-<meta property="og:title" content="K-Nearest Neighbour Algorithm for Image Classification">
-<meta property="og:description" content="KNN algorithm assumes that similar things are near to each other. In KNN we select a number of neighbors of the things we're are interested in and based on the properties of its neighbor we predict something about the thing.">
+<meta property="og:title" content="Bayesian Theorem and Naive Bayes Classifier">
+<meta property="og:description" content="The fundamental idea behind all Bayesian Statistic is Bayesian Theorem. So it is vital to understand what is Bayesian Theorem.">
 <meta property="og:url" content="https://nischal.info.np/">
-<meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/k-nearest-neighbour-algorithm-for-image-classification.png">
+<meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG">
 <meta property="og:site_name" content="Nischal Lal Shrestha">
 <!-- Markup for Twitter -->
 <meta name="twitter:card" content="site">
@@ -28,16 +28,16 @@
 <meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
 <meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
 <meta name="twitter:creator" content="Nischal Lal Shrestha">
-<meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/k-nearest-neighbour-algorithm-for-image-classification.png">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG">
     <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
 
     <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
-    <meta property="og:title" contenct="K-Nearest Neighbour Algorithm for Image Classification"/>
-    <meta property="og:url" content="./k-nearest-neighbour-algorithm-for-image-classification.html"/>
+    <meta property="og:title" contenct="Bayesian Theorem and Naive Bayes Classifier"/>
+    <meta property="og:url" content="./Bayesian-Theorem-and-Naive-Bayes-Classifier.html"/>
     <meta property="og:site_name" content="Nischal Lal Shrestha"/>
     <meta property="og:type" content="article"/>
 
-    <link rel="canonical" href="./k-nearest-neighbour-algorithm-for-image-classification.html" />
+    <link rel="canonical" href="./Bayesian-Theorem-and-Naive-Bayes-Classifier.html" />
 
     <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
 
@@ -201,18 +201,18 @@
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading" id = "blogpostHeading">
 
-				<h1 class="posttitle">K-Nearest Neighbour Algorithm for Image Classification</h1>
+				<h1 class="posttitle">Bayesian Theorem and Naive Bayes Classifier</h1>
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/algorithm/k-nearest-neighbour-algorithm-for-image-classification.png" alt="K-Nearest Neighbour Algorithm for Image Classification">
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG" alt="Bayesian Theorem and Naive Bayes Classifier">
 			<!-- End Featured Image -->
 
 			<div id = "authorDetail">
                 <div class = "container">
                     <div class = "row">
                                 <div id = "blogpostDetails">
-                                    <p class = "publishedDate">On Saturday, April 20 2019</p>
+                                    <p class = "publishedDate">On Thursday, April 25 2019</p>
                                 </div> <!-- blopostDetails -->
                     </div> <!-- row -->
                 </div> <!-- container -->
@@ -220,16 +220,26 @@
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-				<div class="section" id="a-natural-way-we-learn">
-<h2>A Natural Way We Learn</h2>
-<p>Say we are given a picture of a thing that we have never seen before and we need to find what type of image is this, call this image <strong>test image</strong>. Also, we are given 100 different other images whose type is written on its back, call them <strong>training images</strong>.
-let's say we manually compare all the 100 images with the <strong>test image</strong> and give a simple similarity score. The image having high similarity with our test image will get a higher similarity score. After comparing all the 100 images we found out that one training image has a similarity score of 99% with our test image. If so, then <strong>we can predict that the type of our test image is the type of the training image</strong>.</p>
-</div>
-<div class="section" id="k-nearest-neighbour-algorithm">
-<h2>K-Nearest Neighbour Algorithm</h2>
-<p>KNN algorithm assumes that similar things are near to each other. In KNN we select a number of neighbors of the things we're are interested in and based on the properties of its neighbor we predict something about the thing.</p>
-<p>In KNN all the training examples are kept in memory. When an unseen <strong>test case</strong> comes in, the KNN algorithm find <strong>k</strong> <strong>training examples</strong> closest to the <strong>test case</strong> (neighbours). For classification problem KNN algorithm returns the majority label of the neighbours and for regression it returns average label.</p>
-</div>
+				<p>Some uncertain events like <strong>whether the Arctic Ice Cap will disappear completely by the end of the century</strong>, cannot be repeated numerous time in order to define the notion of probability.</p>
+<p>For such an event, we generally have some idea such as <strong>we may think that the ice cap is melting at the rate of 100,000 square kilometers each year</strong>. But from the <strong>fresh observation</strong> of earth via satellite we found out that <strong>the rate of ice loss is more than 200,000 square kilometers every year</strong>. Such <strong>new evidence</strong> affects our opinions on uncertain events. So it is necessary to revise uncertainty in the light of new evidence we just found. This can be done using the Bayesian interpretation of Probability.</p>
+<div class="section" id="introduction-to-bayesian-theorem">
+<h2>Introduction to Bayesian Theorem</h2>
+<p>The fundamental idea behind all Bayesian Statistic is Bayesian Theorem. So it is vital to understand what is Bayesian Theorem.</p>
+Bayes' Theorem answers the questions "based on the data(or predictors) we have observed, what is the probability that the outcome is class \(C_L\). Mathematically,  If \(\mathbf{X}\) and \(\mathbf{Y = Class Variable}\) represents the collection of predictor variables, we are trying to estimate \(P[Y=C_L \hspace{0.6em}|\hspace{0.6em} X]\), i.e what is the probability that the outcome falls on the \(L^th\) class given \(\mathbf{X}\) is true, it is given as
+
+\[P[Y=C_L\hspace{0.6em} | \hspace{0.6em}X] = \frac{{P[Y] \hspace{0.6em}P[X\hspace{0.6em}|\hspace{0.6em}Y = C_L]}}{{P[X]}}\]
+
+In above formula,$$\\$$
+P[Y] = Probability of the Y being true(regardless of the data). It is the prior probability.$$\\$$
+P[X] = Probability of predictor values.$$\\$$
+\(P[X\hspace{0.6em}|\hspace{0.6em}Y=C_L]\) is conditional probability of observing predictor values(or data) given class is \(C_L\).$$\\$$</div>
+<div class="section" id="bayes-theorem-for-naive-bayes-classifier">
+<h2>Bayes Theorem for Naive Bayes Classifier</h2>
+In a classification problem, say we got a vector \(\mathbf{X}\) representing \(\mathbf{N}\) features as \(X{\rm{ }} = {\rm{ }}\left[ {x_1,{\rm{ }}x_2,{\rm{ }}x_3,{\rm{ }}...{\rm{ }},{\rm{ }}x_N} \right]\) and we got L classes \(C_1, C_2, C_3, .., C_N\)
+
+The main aim of the Naive Bayes algorithm is to find the probability that the class is Ck given that the features are X. The Naive Bayes algorithm makes the use of Bayes Theorem which is given as
+
+    \[P[Y=C_L\hspace{0.6em} | \hspace{0.6em}X] = \frac{{P[Y] \hspace{0.6em}P[X\hspace{0.6em}|\hspace{0.6em}Y = C_L]}}{{P[X]}}\]</div>
 
 			</div>
 			<!-- End Post Content -->
@@ -251,7 +261,7 @@ let's say we manually compare all the 100 images with the <strong>test image</st
     /*
     var disqus_config = function () {
         this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = k-nearest-neighbour-algorithm-for-image-classification; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = Bayesian-Theorem-and-Naive-Bayes-Classifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
     (function() {  // DON'T EDIT BELOW THIS LINE
