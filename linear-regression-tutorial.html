@@ -8,19 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
-    <title>    Bayesian Theorem and Naive Bayes Classifier
+    <title>    Linear Regression Tutorial
  | Nischal Lal Shrestha</title>
 
-<meta name="description" content="Published On:Thursday, April 25 2019, keywords: Bayes Theorem, Bayesian Theorem, Naive Bayes Classifier, ">
+<meta name="description" content="Published On:Tuesday, April 30 2019, keywords: Linear Regression, Simple Linear Regression, Linear Regression Tutorial, Representation of Linear Regression, ">
 
-    <meta name="keywords" content="Bayes Theorem, Bayesian Theorem, Naive Bayes Classifier, " />
+    <meta name="keywords" content="Linear Regression, Simple Linear Regression, Linear Regression Tutorial, Representation of Linear Regression, " />
 
 
 
-<meta property="og:title" content="Bayesian Theorem and Naive Bayes Classifier">
-<meta property="og:description" content="The fundamental idea behind all Bayesian Statistic is Bayesian Theorem. So it is vital to understand what is Bayesian Theorem.">
+<meta property="og:title" content="Linear Regression Tutorial">
+<meta property="og:description" content="Linear Regression attempts to model the relationship between two variables by fitting a linear equation to observed data">
 <meta property="og:url" content="https://nischal.info.np/">
-<meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG">
+<meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.PNG">
 <meta property="og:site_name" content="Nischal Lal Shrestha">
 <!-- Markup for Twitter -->
 <meta name="twitter:card" content="site">
@@ -28,16 +28,16 @@
 <meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
 <meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
 <meta name="twitter:creator" content="Nischal Lal Shrestha">
-<meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.PNG">
     <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
 
     <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
-    <meta property="og:title" contenct="Bayesian Theorem and Naive Bayes Classifier"/>
-    <meta property="og:url" content="./Bayesian-Theorem-and-Naive-Bayes-Classifier.html"/>
+    <meta property="og:title" contenct="Linear Regression Tutorial"/>
+    <meta property="og:url" content="./linear-regression-tutorial.html"/>
     <meta property="og:site_name" content="Nischal Lal Shrestha"/>
     <meta property="og:type" content="article"/>
 
-    <link rel="canonical" href="./Bayesian-Theorem-and-Naive-Bayes-Classifier.html" />
+    <link rel="canonical" href="./linear-regression-tutorial.html" />
 
     <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
 
@@ -201,18 +201,18 @@
 		<div class="col-md-8 col-md-offset-2 col-xs-12">
 			<div class="mainheading" id = "blogpostHeading">
 
-				<h1 class="posttitle">Bayesian Theorem and Naive Bayes Classifier</h1>
+				<h1 class="posttitle">Linear Regression Tutorial</h1>
 			</div>
 
 			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/algorithm/Bayesian-Theorem-and-Naive-Naive-Bayes-Classifier.PNG" alt="Bayesian Theorem and Naive Bayes Classifier">
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.PNG" alt="Linear Regression Tutorial">
 			<!-- End Featured Image -->
 
 			<div id = "authorDetail">
                 <div class = "container">
                     <div class = "row">
                                 <div id = "blogpostDetails">
-                                    <p class = "publishedDate">On Thursday, April 25 2019</p>
+                                    <p class = "publishedDate">On Tuesday, April 30 2019</p>
                                 </div> <!-- blopostDetails -->
                     </div> <!-- row -->
                 </div> <!-- container -->
@@ -220,31 +220,51 @@
 
 			<!-- Begin Post Content -->
 			<div class="article-post">
-				<p>Some uncertain events like <strong>whether the Arctic Ice Cap will disappear completely by the end of the century</strong>, cannot be repeated numerous time in order to define the notion of probability.</p>
-<p>For such an event, we generally have some idea such as <strong>we may think that the ice cap is melting at the rate of 100,000 square kilometers each year</strong>. But from the <strong>fresh observation</strong> of earth via satellite we found out that <strong>the rate of ice loss is more than 200,000 square kilometers every year</strong>. Such <strong>new evidence</strong> affects our opinions on uncertain events. So it is necessary to revise uncertainty in the light of new evidence we just found. This can be done using the Bayesian interpretation of Probability.</p>
-<div class="section" id="introduction-to-bayesian-theorem">
-<h2>Introduction to Bayesian Theorem</h2>
-<p>The fundamental idea behind all Bayesian Statistic is Bayesian Theorem. So it is vital to understand what is Bayesian Theorem.</p>
-Bayes' Theorem answers the questions "based on the data(or predictors) we have observed, what is the probability that the outcome is class \(C_L\). Mathematically,  If  \(\mathbf{Y = Class Variable}\) and \(\mathbf{X}\) represents the collection of predictor variables, and  we are trying to estimate \(P[Y=C_L \hspace{0.6em}|\hspace{0.6em} X]\), i.e what is the probability that the outcome falls on the \(L^{th}\) class given \(\mathbf{X}\) is true, it is given as
-
-\[P[Y=C_L\hspace{0.6em} | \hspace{0.6em}X] = \frac{{P[Y] \hspace{0.6em}P[X\hspace{0.6em}|\hspace{0.6em}Y = C_L]}}{{P[X]}}\]
-
-P[Y] = Probability of the Y being true(regardless of the data). It is the prior probability.$$\\$$
-P[X] = Probability of predictor values.$$\\$$
-\(P[X\hspace{0.6em}|\hspace{0.6em}Y=C_L]\) is conditional probability of observing predictor values(or data) given class is \(C_L\).$$\\$$</div>
-<div class="section" id="bayes-theorem-for-naive-bayes-classifier">
-<h2>Bayes Theorem for Naive Bayes Classifier</h2>
-In a classification problem, say we got a vector \(\mathbf{X}\) representing \(\mathbf{N}\) features as \(X{\rm{ }} = {\rm{ }}\left[ {x_1,{\rm{ }}x_2,{\rm{ }}x_3,{\rm{ }}...{\rm{ }},{\rm{ }}x_N} \right]\) and we got L classes \(C_1, C_2, C_3, .., C_N\)
-
-The main aim of the Naive Bayes algorithm is to find the probability that the class is \(\mathbf{C_k}\) given that the features are X. The Naive Bayes algorithm makes the use of Bayes Theorem which is given as
-
-    \[P[C_k\hspace{0.6em} | \hspace{0.6em}X] = \frac{{P[C_k] \hspace{0.6em}P[X\hspace{0.6em}|\hspace{0.6em}C_k]}}{{P[X]}}\]<p>In the above formula, the denominator <strong>P[X]</strong> is only a normalizing term which allows us to calculate the probability. Since it is constant and is only used to normalize we can drop it. So, by the defination of the conditional probability the RHS of given equation becomes</p>
-<img alt="Naive_Bayes_Classifier" src="theme/img/algorithm/Naive_Bayes_Classifier.png" style="width: 100%;" />
-<p>Now the <strong>Naive</strong> comes to play:</p>
-<blockquote>
-The above equation is good but will require a lot of computational power. So we make assumptions to simplify it. We make a assumption that features in X are conditionally independent of other feature of X.</blockquote>
-<p>If the features are conditionally independent with each other then we can write,</p>
-<img alt="Naive_Bayes_Classifier" src="theme/img/algorithm/Naive_Bayes_Classifier_2.png" style="width: 100%;" />
+				<p>Linear Regression attempts to model the relationship between two variables by fitting a linear equation to observed data.</p>
+<p>Say we got following data of housing industry,</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="59%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">House Size(Sq. Ft.)</th>
+<th class="head">Cost(US $)</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>500</td>
+<td>10,000</td>
+</tr>
+<tr><td>700</td>
+<td>13,000</td>
+</tr>
+<tr><td>1000</td>
+<td>15,000</td>
+</tr>
+<tr><td>1200</td>
+<td>19,000</td>
+</tr>
+<tr><td>2500</td>
+<td>30,000</td>
+</tr>
+</tbody>
+</table>
+<p>Now, based on the data we got we need to find the cost of the house of size 2000 Sq. Ft. For that, we will first plot the data we got.</p>
+<img alt="Initial plot of the data" src="theme/img/algorithm/initial_data_image.png" style="width: 100%;" />
+<p>In Linear Regression what we try to do is fit our observed data by best possible linear equation(in this case it is a straight line) and next, we will predict the outcome for the unknown as shown in the image below.</p>
+<img alt="Plot of the data with linear regression" src="theme/img/algorithm/plot_of_data_with_linear_regression.png" style="width: 100%;" />
+<p>By seeing the above image we can find that the price of the house will be slightly greater than the $25,000.</p>
+<div class="section" id="what-is-a-linear-regression">
+<h2>What is a Linear Regression?</h2>
+<p>Linear regression is a linear approximation of a causal relationship between two or more variables. Linear Regression is a linear model, e.g a model that assumes a linear relationship between the input variables(X) and the single output variable(Y).</p>
+<p>The output(Y) can be calculated from a linear combination of the input variables(X). When there is a single input variable it is called as the Simple Linear Regression and when there is more than one input variable then it is referred to as the Multiple Linear Regression.</p>
+<p>When using regression analysis we want to predict the value of (Y) provided we have a value of X and Y must depend on X in some casual way, whenever there is a change in X, the change must be translated in Y.</p>
+<div class="section" id="representation-of-linear-regression">
+<h3>Representation of Linear Regression</h3>
+<p>Linear Regression is represented as linear equation that combines a specific set of input values(X) to give predicted value(Y).</p>
+The linear equation assigns one scale factor to each input value(X), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as\[Y = \beta_0 + \beta_1 * x\]<p>The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all.</p>
+</div>
 </div>
 
 			</div>
@@ -267,7 +287,7 @@ The above equation is good but will require a lot of computational power. So we 
     /*
     var disqus_config = function () {
         this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = Bayesian-Theorem-and-Naive-Bayes-Classifier; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = linear-regression-tutorial; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     */
     (function() {  // DON'T EDIT BELOW THIS LINE
