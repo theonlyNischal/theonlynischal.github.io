@@ -250,9 +250,9 @@
 </tr>
 </tbody>
 </table>
-<p>Now, based on the data we got we need to find the cost of the house of size 2000 Sq. Ft. For that, we will first plot the data we got.</p>
+<p>Now, based on the data provide, we need to find the cost of the house of size 2000 Sq. Ft. For that, we will first plot the data.</p>
 <img alt="Initial plot of the data" src="theme/img/algorithm/initial_data_image.png" style="width: 100%;" />
-<p>In Linear Regression what we try to do is fit our observed data by best possible linear equation(in this case it is a straight line) and next, we will predict the outcome for the unknown as shown in the image below.</p>
+<p>In Linear Regression, what we try to do is fit our observed data by best possible linear equation(in this case it is a straight line) and next, we will predict the outcome for the unknown as shown in the image below.</p>
 <img alt="Plot of the data with linear regression" src="theme/img/algorithm/plot_of_data_with_linear_regression.png" style="width: 100%;" />
 <p>By seeing the above image we can find that the price of the house will be $25,300.</p>
 <div class="section" id="what-is-a-linear-regression">
@@ -264,6 +264,29 @@
 <h3>Representation of Linear Regression</h3>
 <p>Linear Regression is represented as linear equation that combines a specific set of input values(X) to give predicted value(Y).</p>
 The linear equation assigns one scale factor to each input value(X), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as\[Y = \beta_0 + \beta_1 * X\]<p>The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all.</p>
+</div>
+<div class="section" id="loss-function-for-regression">
+<h3>Loss Function for Regression</h3>
+<p>Loss function is a method of evaluating the correctness of specific algorithm which models the given data. If the prediction deviates too much from the actual results, loss function will be very high.</p>
+<p>Loss function is quite straight forward in classification as L(h, (X,Y)) simply indicates whether h(x) correctly predicts or not.</p>
+<p>In regression, if the weight of person is 60kg, bot the prediction of 60.00001kg and 61kg are wrong. But we would surely prefer the prediction of 60.00001kg instead of 61kg. So we need a mechanism to penalized the discrepancy between estimated value and actual result.</p>
+<p>One common way is to use the Square-Loss Function.
+For a single data point,</p>
+for all the data points,
+\[Ls(h,(x,y)) = \sum\limits_{i = 1}^m {(h(x_i) - Y_i)^2} \]
+
+To make math easy, The \(\frac{1}{{m}}\) is to average the squared error over number of components so that the number of components doesn't affect the function and the \(\frac{1}{{2}}\) doesn't matter at all as minimizing L will also minizmize 2L.
+
+    \[Ls(h,(x,y)) = \frac{1}{{2m}}\sum\limits_{i = 1}^m {h(x_i) - Y_i)^2} \]
+
+\(h(x_i)\) = Our prediction$$\\$$
+\(Y_i\) = Actual result$$\\$$
+m = size of training data$$\\$$
+Goal = Minimize the loss function. $$\\$$</div>
+<div class="section" id="using-gradient-descent-to-minimize-the-loss-function">
+<h3>Using Gradient Descent to minimize the loss function</h3>
+<p>Imagine we are at any point of a mountain. In gradient descent, what are we going to do is spin 360 degree around and find the direction in which we have to make a baby step in order to go down the mountain as rapidly as possible.</p>
+<p>After the finding that direction, we will make a baby step. Now we are in the another position in the mountain. Here we will repeat the previous step that is we will spin 360 degree around and find the direction of steepest descent. We will continue this preocess until we are at the lowermost portion of the mountain.</p>
 </div>
 </div>
 
