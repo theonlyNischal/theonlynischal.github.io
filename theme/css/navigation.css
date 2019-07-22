@@ -94,3 +94,7 @@ form.navbar-form{
     /*outline: none !important;*/
     box-shadow: none;
 }
+
+.navigationContainer{
+    margin-left: -15px;
+}
