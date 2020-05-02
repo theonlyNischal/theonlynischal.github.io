@@ -65,7 +65,7 @@
   <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
  
   
-
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -157,7 +157,7 @@
 <!---- Test
 ================================================= --->
 
-     <!-- Begin Article
+    <!-- Begin Article
 ================================================== -->
 
 <div class="container">
@@ -199,7 +199,7 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
 <div class="highlight"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
 </pre></div>
 <p>Python Lists are very good, but in Machine Learning we have deal with lot of scientific calculations,so it is much convenient to represent a vector in Python as a NumPy array as Numpy array does the thing what we expect when we add, multiply vectors.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">house</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -210,14 +210,14 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
 <h3>Vector Addition</h3>
 <p>Two vector of equal length when added produce a new vector of the same length.
 Each element of the new vector at index <strong>i</strong> is calculated as the sum of the other element at that particular index <strong>i</strong>.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">house1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
 <span class="n">house2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">29000</span><span class="p">])</span>
 
 <span class="n">house3</span> <span class="o">=</span> <span class="n">house1</span> <span class="o">+</span> <span class="n">house2</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">house3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">house3</span><span class="p">)</span>
 <span class="p">[</span>    <span class="mi">4</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>   <span class="mi">350</span><span class="p">,</span> <span class="mi">49000</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -228,7 +228,7 @@ Each element of the new vector at index <strong>i</strong> is calculated as the 
 <div class="section" id="vector-multiplication">
 <h3>Vector Multiplication</h3>
 <p>Two vector of equal length can be multiplied together to create a new vector of same length. Like with addition and subtraction, vector multiplication is done element wise.</p>
-$$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+$$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
@@ -236,7 +236,7 @@ $$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</spa
 
 <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 
 <span class="p">[</span> <span class="mi">2</span>  <span class="mi">6</span> <span class="mi">12</span><span class="p">]</span>
 </pre></div>
@@ -281,10 +281,10 @@ The \(L^\infty\) norm or vector max norm of vector \(\mathbf{v}\) \( \in \) \(R^
 
 The \(L^\infty\) norm is calculated by returning the the maximum value of vector as
 \[||v||_\infty  = \max (v_1,v_2,..,v_n)\]<div class="highlight"><pre><span></span><span class="c1"># Import numpy</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Import Linear Algebra package from NumPy</span>
-<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="kn">as</span> <span class="nn">LA</span>
+<span class="kn">import</span> <span class="nn">numpy.linalg</span> <span class="k">as</span> <span class="nn">LA</span>
 
 <span class="c1"># Define a simple vector</span>
 
@@ -294,12 +294,12 @@ The \(L^\infty\) norm is calculated by returning the the maximum value of vector
 
 <span class="n">L1_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">L1_norm</span><span class="p">)</span> <span class="c1"># 6.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L1_norm</span><span class="p">)</span> <span class="c1"># 6.0</span>
 
 <span class="c1"># Calculate L2 norm</span>
 
 <span class="n">L2_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">L2_norm</span><span class="p">)</span> <span class="c1"># 3.7416573867739413</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">L2_norm</span><span class="p">)</span> <span class="c1"># 3.7416573867739413</span>
 
 <span class="c1"># Calculate max norm</span>
 <span class="c1"># For max norm import infinity</span>
@@ -307,7 +307,7 @@ The \(L^\infty\) norm is calculated by returning the the maximum value of vector
 <span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">inf</span>
 <span class="n">max_norm</span> <span class="o">=</span> <span class="n">LA</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">inf</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">max_norm</span><span class="p">)</span> <span class="c1"># 3.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max_norm</span><span class="p">)</span> <span class="c1"># 3.0</span>
 </pre></div>
 <p><a href='#JasonLinearAlgebra2018' id='ref-JasonLinearAlgebra2018-1'>Brownlee (2018)</a>
 <a href='#MML2019' id='ref-MML2019-1'>MarcPeterDeisenroth (2019)</a>

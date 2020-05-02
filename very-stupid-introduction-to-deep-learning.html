@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
+    <title>    Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation
+ | Nischal Lal Shrestha</title>
+
+<meta name="description" content="Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation, Published On:Thursday, April 01 2019, keywords: Artificial Neural Network, biological neural networks, mcp neuron, ">
+
+    <meta name="keywords" content="Artificial Neural Network, biological neural networks, mcp neuron, " />
+
+
+
+<meta property="og:title" content="Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation">
+<meta property="og:description" content="Although a present day artificial neural network resembles the biological neural network/human brain much as a paper plane resembles a supersonic jet, although, ANN have become quite different from the biological neural network, studying the biological neural network- the insipiration for ANN will do only good.">
+<meta property="og:url" content="https://nischal.info.np/">
+<meta property="og:image" content="https://nischal.info.np/theme/img/code/biological-neuron.png">
+<meta property="og:site_name" content="Nischal Lal Shrestha">
+<!-- Markup for Twitter -->
+<meta name="twitter:card" content="site">
+<meta name="twitter:site" content="@theonlyNischal">
+<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
+<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
+<meta name="twitter:creator" content="Nischal Lal Shrestha">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/code/biological-neuron.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <meta property="og:title" contenct="Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation"/>
+    <meta property="og:url" content="./very-stupid-introduction-to-deep-learning.html"/>
+    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="./very-stupid-introduction-to-deep-learning.html" />
+
+    <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
+  <link href="/theme/css/pygments.css" rel="stylesheet">
+  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88943346-5');
+</script>
+  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
+  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
+ 
+  
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+
+<div class = "container" id = "banner">
+	<!-- Begin Site Title
+	================================================== -->
+		<div class="mainheading">
+			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
+			<p class="lead">
+				I Love Everything That Makes Me More Human.
+			</p>
+		</div>
+	<!-- End Site Title
+	================================================== -->
+</div> <!-- #banner -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Nav
+================================================== -->
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container navigationContainer">
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+				</li>
+
+
+				<li class = "nav-item"  id = "activeMenu" >
+					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
+				</li>
+
+
+
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/openmovement.html">Open Movement</a>
+					</li>
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
+					</li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+				</li>
+
+
+			
+		</ul>
+		<!-- End Menu -->
+		<!-- Begin Search -->
+		<form class="form-inline my-2 my-lg-0 searchArea">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+		</form>
+		<!-- End Search -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<div class="container">
+
+
+
+
+<!---- Test
+================================================= --->
+
+    <!-- Begin Article
+================================================== -->
+
+<div class="container">
+	<div class="row">
+    <!-- include left_share was here -->
+		<!-- Begin Post -->
+		<div class="col-md-8 col-md-offset-2 col-xs-12">
+			<div class="mainheading" id = "blogpostHeading">
+
+				<h1 class="posttitle">Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation</h1>
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/code/biological-neuron.png" alt="Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation">
+			<!-- End Featured Image -->
+
+			<div id = "authorDetail">
+                <div class = "container">
+                    <div class = "row">
+                                <div id = "blogpostDetails">
+                                    <p class = "publishedDate">On Thursday, April 01 2019</p>
+                                </div> <!-- blopostDetails -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- authorDetail -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+				<p>Although a present day artificial neural network resembles the biological neural network much as a paper plane resembles a supersonic jet [ <a href='#Andrew-Glassner-2018-Deep-Learning' id='ref-Andrew-Glassner-2018-Deep-Learning-1'>Glassner (2018)</a> ] and even ANN have become quite different from the biological neural network, studying the biological neural
+network will do only good.</p>
+<div class="section" id="biological-neural-network">
+<h2>Biological Neural Network</h2>
+<p>Neural network is the connection of a neurons(information processing unit). So if we want to model a biological neural network
+we should start with modelling a single biological neuron. A biological neuron consist of a cell body called <strong>soma</strong>, a number of fibres called <strong>dendrites</strong>, and a single long fibre called <strong>axon</strong>.</p>
+<img alt="Biological Neurons" src="theme/img/code/biological-neuron.png" style="width: 100%;" />
+<p>Information in the form of electrical signals come to the neuron from the dendrites. These electrical signals are combined in the <strong>soma</strong> and when the total exceeds certain threshold, a new electrical signal is sent to another part of the neuron.</p>
+</div>
+<div class="section" id="artificial-neural-network">
+<h2>Artificial Neural Network</h2>
+<img alt="Comparing Artificial and Biological Neurons component" src="theme/img/code/ann-bnn.png" style="width: 100%;" />
+<p>Like, biological neural network, ANN consist of a number of very simple computing element, also called neurons. Each neuron recieves a number of input signal and it sends out a single output signal. The output
+may be a final output or it may act as input for other neurons.</p>
+<img alt="Comparing Artificial and Biological Neurons component" src="theme/img/code/comparision-artificial-and-biological.png" style="width: 100%;" />
+</div>
+<div class="section" id="mcp-neuron">
+<h2>MCP Neuron</h2>
+<p>In 1943, Warren McCulloch and Walter Pitts proposed a very simple model of the biological neuron.
+A single neuron takes multiple binary(on/off) input and give one binary output. The neuron is activated
+when certain number of inputs are ON or activated i.e when the sum of the inputs exceed certain threshold.
+The inputs of MCP Neuron is binary i.e 1 or 0 and it is weighted with identical values.</p>
+<p>The big contribution of this work was that they have shown that even with such a simple model it is possible to build a network of artificial neurons that can computes any logical proposition we want. i.e
+we can perform mathematical logic with neurons hence we can do mathematics with neuron.</p>
+<p>Let's use a MCP Neuron to perform some mathematical logic:</p>
+</div>
+<div class="section" id="and-gate">
+<h2>AND Gate</h2>
+<p>AND Gate is the logic gate that implements conjuction. Whenever both inputs are active then only the output will be activated.</p>
+\begin{bmatrix}
+    {x_1} & {x_2} & {y} \\
+    {0} & {0} & {0} \\
+    {0} & {1} & {0} \\
+    {1} & {0} & {0} \\
+    {1} & {1} & {1} \\
+\end{bmatrix}<img alt="AND Gate" src="theme/img/code/and_gate.png" style="width: 100%;" />
+<p>fig: AND Gate</p>
+<p>For AND Gate, we can use MCP neuron as shown in the image. The input x_1 and x_2 both have the weight of 1.</p>
+<p>So the input value is y_input = 1*x_1 + 1*x_2</p>
+<p>and the threshold of the neuron is 2.</p>
+</div>
+<div class="section" id="or-gate">
+<h2>OR GATE</h2>
+<p>In OR Gate, output is activated if any one of the input is active.</p>
+\begin{bmatrix}
+    {x_1} & {x_2} & {y} \\
+    {0} & {0} & {0} \\
+    {0} & {1} & {1} \\
+    {1} & {0} & {1} \\
+    {1} & {1} & {1} \\
+\end{bmatrix}<img alt="OR Gate" src="theme/img/code/or_gate.png" style="width: 100%;" />
+<p>fig: OR Gate</p>
+<p>For OR Gate, both input will have weight of 1 and the threshold of the neuron will be 1.</p>
+</div>
+<div class="section" id="not-gate">
+<h2>NOT Gate</h2>
+<p>In NOT Gate, the output is activated if the input is turned off, and the output will be turned off if the input is activated.</p>
+\begin{bmatrix}
+    {x_1} & {y} \\
+    {0} & {1} \\
+    {1} & {0}
+
+\end{bmatrix}<p>For OR Gate, the threshold value will be 0. When the input is turned off i.e 0, then the input mathces the threshold, so it will be activated.
+But when the input is turned on i.e 1, then the input won't matches with the threshold, so the output will be deactivated.</p>
+</div>
+<div class="section" id="perceptron">
+<h2>Perceptron</h2>
+<p>Building on the insight of the MCP neuron, Rosenblatt proposed <strong>Perceptron</strong> in 1957. Perceptron works very similar respect to MCP neuron but with some imporvements:</p>
+<ul class="simple">
+<li>The inputs became number instead of just binary.</li>
+<li>The weight of the inputs became variable instead of identical weights for all inputs.</li>
+<li>bias trick</li>
+</ul>
+<img alt="Perceptron" src="theme/img/code/perceptron.png" style="width: 100%;" />
+<p>The working of perceptron is very similar to MCP neuron. Perceptron takes inputs, scaled it by some weight and
+add all the weighted inputs. The result is then compared against a threshold and if the result exceed the threshold
+the output is 1 else -1( in some variation the output is set to 1 and 0 respectively).</p>
+</div>
+<div class="section" id="what-are-the-inputs">
+<h2>What are the inputs?</h2>
+<p>Inputs are the number which we record in the real world. Input are used to describe something. For example: we
+can describe an animal roughly using its weight, height, fur thickness etc. So,</p>
+\[animal = [weight(in KG), height(Meter), fur(Centimeter)]\]
+
+\[elephant_1 = [2000, 10, 3] \]
+
+\[dog_1 = [20, 1, 1] \]
+
+\[human_1 = [100, 2, 1]\]<p>We can represent any animal using given inputs.</p>
+</div>
+<div class="section" id="what-are-the-weights">
+<h2>What are the weights?</h2>
+<p>Weights are the number which we use to scale the inputs. Three inputs in above case have different significance, the input with
+greater significance will be scaled with higher number(i.e the input will have higher weight) and the input which are less
+significant will be scaled with lesser number.</p>
+</div>
+<div class="section" id="using-perceptron-to-find-elephant">
+<h2>Using perceptron to find elephant.</h2>
+<p>Let the weights of the input be:</p>
+\begin{bmatrix}
+    {inputs} & {weights} \\
+    {weight} & {2} \\
+    {height} & {1}\\
+    {fur} & {0.5}
+
+\end{bmatrix}<p>Let the threshold be 1000, i.e if the weighted sum is greater than 1000, the animal is elephant else no.</p>
+<p>animal_1 = [1000, 5, 2]</p>
+<p>animal_2 = [200, 3, 1]</p>
+<p>animal_3 = [30, 2, 2]</p>
+<p>For the first animal,</p>
+<p>weighted_sum = 1000*2 + 5*1 + 2*0.5 = 2006, which is greater than 1000, hence it is elephant.</p>
+<p>For the second animal,</p>
+<p>weighted_sum = 200*2 + 3*1 + 1*0.5 = 403.5, which is less than 1000, hence it is not an elephant.</p>
+<p><strong>MCP Neuron in Python</strong></p>
+<div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">animal_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">animal_3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]</span>
+
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="k">def</span> <span class="nf">check_elephant</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span> <span class="n">weights</span><span class="p">):</span>
+
+    <span class="n">weighted_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">weights</span><span class="p">)):</span>
+        <span class="n">weighted_sum</span> <span class="o">=</span> <span class="n">weighted_sum</span> <span class="o">+</span> <span class="n">animal</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">weights</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weighted Sum is </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">weighted_sum</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">weighted_sum</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given Animal is an Elephant.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given Animal is not an Elephant.&quot;</span><span class="p">)</span>
+
+<span class="n">check_elephant</span><span class="p">(</span><span class="n">animal_1</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Weighted</span> <span class="n">Sum</span> <span class="ow">is</span> <span class="mf">2006.0</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Given</span> <span class="n">Animal</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">Elephant</span><span class="o">.</span>
+
+<span class="n">check_elephant</span><span class="p">(</span><span class="n">animal_2</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Weighted</span> <span class="n">Sum</span> <span class="ow">is</span> <span class="mf">403.5</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Given</span> <span class="n">Animal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">Elephant</span><span class="o">.</span>
+
+<span class="n">check_elephant</span><span class="p">(</span><span class="n">animal_3</span><span class="p">,</span> <span class="n">weights</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">Weighted</span> <span class="n">Sum</span> <span class="ow">is</span> <span class="mf">63.0</span><span class="o">.</span>
+<span class="o">&gt;</span> <span class="n">Given</span> <span class="n">Animal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">Elephant</span><span class="o">.</span>
+</pre></div>
+<p><strong>NumPy version</strong></p>
+<div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">animal_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">animal_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+
+<span class="n">weights</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="k">def</span> <span class="nf">check_elephant</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span> <span class="n">weight</span><span class="p">):</span>
+    <span class="n">weighted_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">weight</span><span class="p">))</span> <span class="c1"># simple numpy operation</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Weighted Sum is </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">weighted_sum</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">weighted_sum</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given Animal is an Elephant.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given Animal is not an Elephant.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="but-how-does-the-perceptron-learn">
+<h2>But, How does the Perceptron Learn?</h2>
+<p>The perceptron we saw above made a decision using <strong>inputs</strong>, <strong>weights</strong> and <strong>threshold</strong>. The perceptron will made correct decision only when all the three parameters are at
+their best value. Since inputs are the values we observed from real world we can't change the value of input. So only the value of <strong>weights</strong> and <strong>threshold</strong> are changed to make a
+correct perceptron model.</p>
+</div>
+<div class="section" id="threshold">
+<h2><strong>Threshold?</strong></h2>
+<p>Threshold is a value we compare the weighted sum with. But how we determine this threshold? To determine this threshold, we use a trick called <strong>bias trick</strong>.</p>
+<p>As we know,</p>
+\[w_1x_1 + w_2x_2 + w_3x_3 + .. + w_nx_n  \geq threshold \]
+
+or, \[w_1x_1 + w_2x_2 + w_3x_3 + .. + w_nx_n - threshold  \geq 0 \]
+or, \[w_1x_1 + w_2x_2 + w_3x_3 + .. + w_nx_n + (-threshold)  \geq 0 \]
+or, \[w_1x_1 + w_2x_2 + w_3x_3 + .. + w_nx_n + bias * 1  \geq 0 \]<p>So instead of finding the threshold by ourself, we make a new input in the perceptron with value 1 and the weight
+of the input 1 is called bias.</p>
+<p>So instead of</p>
+\[ \sum\limits_{i=1}^n {{w_nx_n}}  \geq threshold \]<p>we do,</p>
+\[ \sum\limits_{i=1}^n {{w_nx_n + bias * 1}}  \geq 0 \]</div>
+<div class="section" id="but-why-treat-ve-threshold-or-bias-as-a-input">
+<h2>But why treat -ve threshold or bias as a input?</h2>
+<p>The problem of using threshold to compare is we have to find threshold first. Since, we can't find it before hand, we compute the threshold
+as a bias in the training itself. So to compute the bias, we take it as a input in the perceptron.</p>
+<p>Since we have set the threshold as a input to perceptron. So we can learn to make correct prediction by changing the weight.</p>
+</div>
+<div class="section" id="how-to-change-the-weight">
+<h2>How to change the weight?</h2>
+<p>In a simple perceptron algorithm, we will change the weight if and only if the prediction we made is wrong. First, we compare the weighted against 0 and classify them as positive or negative. If our prediction is wrong then we proceed to change the weight.</p>
+if the correct label of x is +ve, i.e \( \geq 0\)
+    \[weight = weight + \delta x\]
+
+if the correct label of x is -ve, i.e \(\lt 0\)
+
+    \[weight = weight - \delta x\]<p>If the correct label is +ve and our model predicts -ve, then we add certain value to
+weight because the prediction we made is lesser than the actual value so we need to
+increase the weight.</p>
+<p>If the correct label is -ve and our model predicts +ve, then we subtract certain value to
+weight because the prediction we made is greater than the actual value so we need to
+decrease the weight.</p>
+<p>Doing this we can get a new weight.</p>
+<p>Another useful way to change weight is to use Error. we will start with some random value for the weight and make a prediction. Next, we will measure how well our prediction is. For that we will use a term called <strong>error</strong>.</p>
+<p>Error is way to measure -  by how much we miss actual prediction. There are various way to calculate error.</p>
+\[actual\_value = 0.7\]
+
+\[prediction = 0.5\]
+
+\[ absolute\_error = |prediction - actual| \]
+
+\[ absolute\_error = | 0.5 - 0.7| \]
+
+\[ absolute\_error = 0.2 \]
+
+\[mean\_squared\_error = (prediction - actual)^2 \]
+
+\[mean\_squared\_error = (0.5 - 0.7)^2\]
+
+\[mean\_squared_error = 0.4\]<p>Above are 2 way to calculate error but there are multiple ways error can be calculated and choosing a right way to find error is very crucial.</p>
+</div>
+<div class="section" id="why-error-is-always-positive">
+<h2>Why error is always positive?</h2>
+<p>Error is used to estimate how well our prediction is. There is no sense to make error -ve. Also, in training process we deal with large
+number of inputs and each input will have its own error. If we want to see overall performance of our model on training set. We take average
+of errors. So if any point have error value -ve, then averaging will give false measure. Say error for one input is 2 and for another is -2, then the average
+will be 0, which is false. So error is always +ve.</p>
+</div>
+<div class="section" id="why-use-error-to-update-weight">
+<h2>Why use error to update weight?</h2>
+<p>The motive to update weight is to make prediction correct or to make error 0. It turns out that updating weight to make error 0 is easier or less
+complex than updating weight to make correct prediction.</p>
+</div>
+<div class="section" id="how-to-update-weight-using-error">
+<h2>How to update weight using error?</h2>
+<p>After calculating error, the question is how to update weight. We can update weight by:</p>
+<ul class="simple">
+<li>increasing weight by certain amount.</li>
+<li>decreasing weight by certain amount.</li>
+</ul>
+<p>One of the simplest method to update weight - After making prediction and calculating error. We again make prediction once by increasing weight on initial weight and again by decreasing weight on initial
+weight values.</p>
+<p>The action which yield lower error than current error is choosen. But this method is not efficient. Since we are using a fixed amount to change the weight and that fixed amount have nothing to
+do with error.</p>
+<p>Now we have to find a way to calculate the amount by which we should update weight and we should find either we should increase weight or decrease weight(find direction).</p>
+<p>One simple way to find direction is <strong>prediction - actual</strong> (This is the derivative of the Mean square Error), if it is +ve then our prediction is large and if <strong>prediction - actual</strong> is -ve then our prediction is small than actual.
+So if <strong>prediction - actual</strong> is +ve, we have to decrease the weight and if <strong>prediction - actual</strong> is -ve we have to increase the weight.</p>
+<p>We have found the way to change weight but by how much we should update the weight? For that we multiply <strong>prediction - actual</strong> by input. i.e <strong>(prediction - actual) * input</strong>. Multiplying by input
+makes sure that if input is big, weight update should be big and if input is small, weight update should be small.</p>
+<p>So,</p>
+\[ weight = weight - (prediction - actual) * input \]<p>But why should we should subtract. The answer is already mentioned above. if <strong>prediction - actual</strong> is -ve we have to increase our prediction, to increase
+our prediction, we should increase the weight. So,</p>
+\[ weight = weight - (-ve value) \]
+\[ weight = weight + value \]<p>also,</p>
+<p>When <strong>prediction - actual</strong> is +ve, we have to decrease the prediction, which we can do by decreasing the weight.
+So,</p>
+\[ weight = weight - (+ve value) \]
+\[ weight = weight - value \]<p><strong>Some terminology</strong></p>
+delta = prediction - actual
+
+weight_delta = delta * input<p>So weight update can be written as</p>
+\[delta = prediction - actual \]
+\[weight\_delta = delta * input \]
+
+\[weight = weight - weight\_delta \]<p><strong>Code Example</strong></p>
+<p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initail random weight of 0.2.
+Now we have to find a weight which <strong>scales input to match the output</strong>.</p>
+<p>So prediction means finding weight which can scale the input to actual value.</p>
+<div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="mf">0.4</span>
+<span class="n">weight</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="mf">0.7</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="nb">input</span> <span class="o">*</span> <span class="n">weight</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="p">(</span><span class="n">prediction</span> <span class="o">-</span> <span class="n">actual</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="n">delta</span> <span class="o">=</span> <span class="n">prediction</span> <span class="o">-</span> <span class="n">actual</span>
+    <span class="n">weight_delta</span> <span class="o">=</span> <span class="n">delta</span> <span class="o">*</span> <span class="nb">input</span>
+
+    <span class="n">weight</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">-</span> <span class="n">weight_delta</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
+</pre></div>
+<p>Output:</p>
+<p>Error: 0.38439999999999985</p>
+<p>Error: 0.2712326399999999</p>
+<p>Error: 0.19138175078399997</p>
+<p>Error: 0.13503896335319035</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>Error: 0.0005097957955105112</p>
+<p>When we see the error, its value is decreasing every time and it is reaching very close to 0.</p>
+<p>When we print the new weight its value is <strong>1.7025848182730323</strong> and <strong>1.7025848182730323 x 0.4 = 681033927309213</strong>.
+So the prediction is very close to actual i.e 0.7.</p>
+<p>Instead of updating weight by weight_delta we use a small value called <strong>learning rate</strong>, denoted by alpha. Using learning
+rate we limit the change in weight to very small amount. Using learning rate we make sure that model converges to zero.</p>
+<p>So overall learning of perceptron is:</p>
+Until error converges to 0 or loop to a fix amount of time
+
+    \[prediction = weight * input \]
+    \[error = (prediction - actual)^2\]
+    \[delta = prediction - actual \]
+    \[weight\_delta = delta * input \]
+    \[weight = weight - alpha * weight\_delta\]<p>This simple perceptron is the foundation of modern neural network. A neural network in nutshell takes certain inputs, scale the inputs, add them together and return the prediction.
+This simple perceptron shows us that it can make prediction by weighting the inputs(or features). It does very simple task of classifying a linear separable task. Unfortunately, not many interesting problems are linearly separable and Perceptron is not able to solve simple tasks too like solving XOR Gate(Minsky 1969).</p>
+<p>But researchers have shown that combining perceptron into larger structure emit the limit of single perceptron. Scientists have shown us that combination of such simple perceptron can do amazing things like generating faces, generating texts, beating humans in games and so on.</p>
+</div>
+<div class="section" id="multi-layer-perceptron">
+<h2>Multi-Layer Perceptron</h2>
+<img alt="Multilayer perceptron" src="theme/img/code/mlp.png" style="width: 100%;" />
+<p>The given network have 3 layers, at the first layer, the inputs are entered and very simple decision are made by scaling the inputs. In the next layer, another set of complex decisions are made by taking the output of first layer as inputs. The second layer can make complex decision because its input is a result of a simple decision taken before. The third layer takes the output of the second layer as a input and again make a complex decision.
+Multi-Layer perceptron is very powerful because of this series of decision making process.</p>
+<p>A multi-layer perceptron is a combination of many single perceptrons. Above image shows MLP with its input, hidden and output layers. x1, x2, x3 are the inputs to input layer,
+h1, h2 are hidden inputs and O is the output.</p>
+<p>The function of input layer is to take input. It doesn't do anything more. So the output of the input layer is all the input it is provided with. So the above image is same as</p>
+<img alt="Multilayer perceptron" src="theme/img/code/mlp_with_weight.png" style="width: 100%;" />
+<p>Weight leading from x1 to h1 is w11, from x1 to h2 is w12. Similary, weight leading x2 to h1 is w21 and weight leading from x2 to h2 is w2 and so on.</p>
+<p>Weight can be represented as</p>
+\begin{bmatrix}
+    {w_{11}} & {w_{12}}\\
+    {w_{21}} & {w_{22}}\\
+    {w_{31}} & {w_{32}}\\
+\end{bmatrix}</div>
+<div class="section" id="what-is-the-input-to-hidden-layer">
+<h2>What is the input to hidden layer?</h2>
+<p>The input to the hidden layer is the output of the 1st layer/input layer.
+To calculate the output of hidden layer, we take a dot product of the output of the 1st layer(input layer) and weight matrix</p>
+\[h_j = output\_of\_1st\_layer \odot weight\_matrix\]
+
+\[h_j = [x_1 x_2 x_3] \odot  weight\_matrix\]
+\[h_j = [x_1w_{11} \ldots, x1w_{12} \ldots ]\]
+
+\[ i.e [h_1, h_2] = [x_1w_{11} \ldots, x_1w_{12} \ldots ] \]</div>
+<div class="section" id="what-s-input-to-output-layer">
+<h2>What's input to output layer?</h2>
+<p>The input to output layer is the output of the hidden layer.
+To calculate the output of output layer we do the same thing as above. We take a dot product of output of hidden layer i.e [h1, h2] with the weight. If we do so, we
+can see that the output layer act a single perceptron. The result of the output layer is the weighted sum of its input.</p>
+<p>The output of the output layer is the prediction of the multi-layer perceptron.</p>
+</div>
+<div class="section" id="how-multi-layer-perceptron-learn">
+<h2>How Multi-Layer Perceptron Learn?</h2>
+<p>Learning in a MLP means getting a lower error. The MLP can learn just like a single perceptron.
+The weight in the first layer will be updated by adding or subtracting some random value, that will cause the change in the output of second layer, which will cause the output in the third layer to change and eventually we will get the new output. Using this output,
+we will calculate the error and if the new error is less than the current error then only the new update in weight will be accepted otherwise we will again choose some random update in the weight and do opposite action (addition or subtraction). We will continue to do this until the error came down to some accepted value. This way MLP can learn but this is very slow process. Modern neural network have millions of weight parameter and updating them for every sample will be very very slow. So we would not do learning this
+way but we will keep the idea of updating weight to lower the error.</p>
+<p>In a single perceptron, we have calculated the <strong>weight_delta</strong>. <strong>weight_delta</strong> is a value which shows how responsible this weight for the error or how much this weight contribute to generate that error. For, MLP we will also calculate the weight_delta for each weight and change all of weight simultaneously. Recall that we produced <strong>weight_delta</strong> by scaling weight's input by <strong>gradient or delta</strong> of weights output. The big question is to calculate weight_delta for MLP. Since the input for the weight's is just the input itself for the 1st layer and for hidden layers its output of previous layer. So there is no problem in fingind the weight's input. Now, we have to find the <strong>delta</strong> for each neuron.</p>
+<p>The change in neuron's output(caused by change in weight) is proportional to the change in the
+error of network. To find change in the error, we find change in the neuron's output and multiply by some particular value. That number is termed as delta. So every neuron has a delta associated with it.
+To find the delta we will use a simple algorithm called <strong>backpropagation</strong>. First, we will find the delta for the output layer. Using that delta we will find deltas of other layer. For that we will use chain rule to find the deltas for each neuron. Once we have deltas for each neuron then we can change all the weights simultaneously.</p>
+<p>Let's say by performing forward propagation we have an output. We can use any error formula to find an error. But for simplicity let's choose MSE i.e 1/2 * (prediction - actual)^2, the 1/2 is for simplification in calculating derivative, using MSE we will calculate the network's error. The derivative of MSE i.e 1/2 * (prediction - actual )^2 is (prediction - actual). So the delta for the output layer is prediction - actual. Now the delta for hidden
+layers can be calculated by treating the output layers' delta as input for thos hidden layers. i.e we will backpropagate the output layers' delta. So to calculate the delta for the hidden layers we multiply the output layers'
+delta with the weight that connects output layer and the hidden layer.</p>
+<p>After calculating delta for each neuron we need to find weight_delta. weight_delta is the actual value by which we update the weight. Recall that we produced <strong>weight_delta</strong> by scaling weight's input by <strong>gradient or delta</strong> of weights output.</p>
+<p>What about the activation function? We use activation function to prevent the multilayer network from collapsing to a single layer. As 10 * 10 * 10 and 500 * 2 results in same value, multiple functions can be collapsed to a single complex function. So a MLP without activation function can be collapsed to a single Perceptron and we know a single perceptron is of no use. So we can use activation function in between layers to prevent them from collapsing and to counter the effect of activation function in backpropagation to calculate delta we just have to multiply the derivative of the activation function with previous layer delta and weight connecting them. After finding delta, we will just we calculate weight_delta by Multiplying learning rate and delta. Using that weight delta we update the weight.</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">])</span>
+
+<span class="n">input_size</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">output_size</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">actual</span> <span class="o">=</span> <span class="mf">0.3</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">deriv2sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="n">weight_input_to_hidden</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">))</span> <span class="o">-</span> <span class="mf">0.1</span>
+<span class="n">weight_hidden_to_output</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">))</span> <span class="o">-</span> <span class="mf">0.1</span>
+
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">25</span><span class="p">):</span>
+    <span class="n">hidden_output</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">weight_input_to_hidden</span><span class="p">))</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">hidden_output</span><span class="p">,</span> <span class="n">weight_hidden_to_output</span><span class="p">)</span>
+
+    <span class="n">error</span> <span class="o">=</span> <span class="p">(</span><span class="n">actual</span> <span class="o">-</span> <span class="n">output</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+
+    <span class="n">output_delta</span> <span class="o">=</span> <span class="n">output</span> <span class="o">-</span> <span class="n">actual</span>
+
+    <span class="n">hidden_delta</span> <span class="o">=</span> <span class="n">output_delta</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">weight_hidden_to_output</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">deriv2sigmoid</span><span class="p">(</span><span class="n">hidden_output</span><span class="p">)</span>
+
+    <span class="n">weight_hidden_to_output</span> <span class="o">=</span> <span class="n">weight_hidden_to_output</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">output_delta</span> <span class="o">*</span> <span class="n">hidden_output</span>
+    <span class="n">weight_input_to_hidden</span> <span class="o">=</span> <span class="n">weight_input_to_hidden</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">hidden_delta</span> <span class="o">*</span> <span class="n">inputs</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error is: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediction is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">output</span><span class="p">))</span>
+</pre></div>
+<p>With the training complete,</p>
+<p>Error is: [5.2377699e-06]
+Prediction is [0.29771138] which is very close to actual value of 0.3</p>
+<p>Using Dropout to prevent the problem of overfitting in Neural Network</p>
+<p>A neural network overfits when certain neuron became too specialized to do certain things while training. While training, they will do very good as the specialized neuron will detect certain features available on training set. But, while testing where those specialized features are absent, then the over-specialized network will be of no use and the network will predict wrong. So a overfit network will have greater training accuracy and lower testing accuracy.**Dropout** is very simple and industry standard tool to solve this problem. The idea is to randomly drop certain neuron. When we drop neuron randomly, there is a chance that we may select the over-specialized neuron. When over-specialized neuron is dropped, other neuron will have to take responsibility to counter the loss of over-specialized neuron. Next time, when the over-specialized neuron is not dropped, its overspecialization is not
+necessary as other neuron have learnt to do its task.</p>
+<p>Dropout: Drop neuron randomly from input and hidden layers.</p>
+<p>Let's say we have a hidden layer with 10 hidden neurons. We are going to apply a dropout on this layer.
+To do this, we will randomly select p% of neurons and set their output to 0 while we will do nothing with the
+output of other layer.</p>
+<div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.11</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.67</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+<span class="n">dropout_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">hidden_layer</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dropout_mask</span><span class="p">)</span>
+
+<span class="c1"># [1 1 0 0 1 1 0 0 1 0]</span>
+
+<span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">hidden_layer</span> <span class="o">*</span> <span class="n">dropout_mask</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">hidden_layer</span><span class="p">)</span>
+
+<span class="c1"># [0.5  2.   0.   0.   0.11 0.43 0.   0.   0.3  0.  ]</span>
+</pre></div>
+<p>Next we have to multiply the output of hidden layer where we have applied dropout with 1/(p%). This is because, the
+next layer from this hidden layer will take weighted sum of the hidden layer, but, while testing we will not apply dropout,
+so there is unbalance between output. So to counter this unbalance between the output of hidden layer while training and testing
+we multiply the output of hidden layer in training.</p>
+<p>Next, we also have to apply dropout on the deltas of layer_1 neuron's.</p>
+<div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">hidden_layer</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">hidden_layer</span><span class="p">)</span>
+
+<span class="p">[</span><span class="mf">2.</span>   <span class="mf">8.</span>   <span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">0.44</span> <span class="mf">1.72</span> <span class="mf">0.</span>   <span class="mf">0.</span>   <span class="mf">1.2</span>  <span class="mf">0.</span>  <span class="p">]</span>
+
+<span class="n">hidden_delta</span> <span class="o">=</span> <span class="n">hidden_delta</span> <span class="o">*</span> <span class="n">dropout_mask</span>
+</pre></div>
+<p><a href='#Andrew-Glassner-2018-Deep-Learning' id='ref-Andrew-Glassner-2018-Deep-Learning-2'>Glassner (2018)</a>
+<a href='#Grokking-Deep-Learning' id='ref-Grokking-Deep-Learning-1'>Trask (2019)</a>
+<a href='#JasonLinearAlgebra2018' id='ref-JasonLinearAlgebra2018-1'>Brownlee (2018)</a>
+<a href='#MML2019' id='ref-MML2019-1'>MarcPeterDeisenroth (2019)</a>
+<a href='#DeepLearning' id='ref-DeepLearning-1'>IanGoodfellow (2019)</a>
+<a href='#handson-ml' id='ref-handson-ml-1'>Ageron (2019)</a></p>
+The Quadratic Formula
+
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+
+Cauchy's Integral Formula
+\[f(a) = \frac{1}{2\pi i} \oint\frac{f(z)}{z-a}dz\]
+
+Angle Sum Formula for Cosines
+\[ \cos(\theta+\phi)=\cos(\theta)\cos(\phi)−\sin(\theta)\sin(\phi) \]
+
+Gauss' Divergence Theorem
+\[ \int_D ({\nabla\cdot} F)dV=\int_{\partial D} F\cdot ndS \]
+
+Curl of a Vector Field
+\[ \vec{\nabla} \times \vec{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} \]
+
+Standard Deviation
+\[\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N (x_i -\mu)^2} \]
+
+Definition of Christoffel Symbols
+\[(\nabla_X Y)^k = X^i (\nabla_i Y)^k = X^i \left( \frac{\partial Y^k}{\partial x^i} + \Gamma_{im}^k Y^m \right)\]</div>
+<hr>
+<h2>Bibliography</h2>
+<p id='handson-ml'>Ageron.
+<span class="bibtex-protected">Math - Linear Algebra</span>.
+url: <span class="bibtex-protected">https://github.com/ageron/handson-ml/blob/master/math_linear_algebra.ipynb</span>, 2019.
+[Online; accessed 19-April-2019]. <a class="cite-backref" href="#ref-handson-ml-1" title="Jump back to reference 1">↩</a></p>
+<p id='JasonLinearAlgebra2018'>Jason Brownlee.
+<em>Basics of Linear Algebra for Machine Learning</em>.
+<span class="bibtex-protected">Machine Learning Mastery</span>, 2018. <a class="cite-backref" href="#ref-JasonLinearAlgebra2018-1" title="Jump back to reference 1">↩</a></p>
+<p id='Andrew-Glassner-2018-Deep-Learning'>Andrew Glassner.
+<em>Deep Learning</em>.
+The Imaginary Institute, Seattle, WA.
+<span class="bibtex-protected"> The Imaginary Institute, Seattle, WA. </span>, 2018. <a class="cite-backref" href="#ref-Andrew-Glassner-2018-Deep-Learning-1" title="Jump back to reference 1">↩</a><a class="cite-backref" href="#ref-Andrew-Glassner-2018-Deep-Learning-1" title="Jump back to reference 1"> <sup>1</sup> </a><a class="cite-backref" href="#ref-Andrew-Glassner-2018-Deep-Learning-2" title="Jump back to reference 2"><sup>2</sup> </a></p>
+<p id='DeepLearning'>Aaron&nbsp;Courville Ian&nbsp;Goodfellow, Yoshua&nbsp;Bengio.
+<em>Deep Learning</em>.
+Www.deeplearningbook.org.
+<span class="bibtex-protected">www.deeplearningbook.org</span>, 2019. <a class="cite-backref" href="#ref-DeepLearning-1" title="Jump back to reference 1">↩</a></p>
+<p id='MML2019'>Cheng Soon&nbsp;Ong Marc Peter&nbsp;Deisenroth, A.&nbsp;Aldo&nbsp;Faisal.
+<em>Mathematics for Machine Learning</em>.
+Cambridge University Press.
+<span class="bibtex-protected">Cambridge University Press</span>, 2019. <a class="cite-backref" href="#ref-MML2019-1" title="Jump back to reference 1">↩</a></p>
+<p id='Grokking-Deep-Learning'>Andrew Trask.
+<em>Grokking Deep Learning</em>.
+Manning Publications.
+<span class="bibtex-protected">Manning Publications</span>, 2019. <a class="cite-backref" href="#ref-Grokking-Deep-Learning-1" title="Jump back to reference 1">↩</a></p>
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+			<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = very-stupid-introduction-to-deep-learning; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://shresthanischal.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+<div class="hideshare"></div>
+
+<!-- End Test =====================================- -->
+
+
+	<!-- Begin Footer
+	================================================== -->
+<div class = "container" id = "myFooter">
+        <div class = "row">
+
+            <div class = "col-lg-3 col-md-3" id = "footer-information">
+                <p>Hey there, I'm <strong>Nischal</strong>.<br>
+                I am a student, a developer and I specializ in
+                standards-based Django, JS, HTML, CSS web development.
+                <br>
+                <br>
+
+                I love Everything that makes me more Human. While
+                not Coding, I play and/or watch football. 
+
+
+
+
+                     </p>
+                <p>Copyright text 2019 by Nischal!!</p>
+                <a href = "">
+                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
+                </a>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "footer-menu">
+                <ul class="pages">
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">My Life</a></li>
+                    <li><a href="">My Daily Journal</a></li>
+                    <li><a href="">My Wish Bucket</a></li>
+                    <li><a href="">My Photos</a></li>
+                    <li><a href="">My Bookmarks</a></li>
+                    <li><a href="">Say Hi!!</a></li>
+                </ul>
+
+                <ul class="list">
+                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
+                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "social-section">
+                <h4 class = "social-links-heading">Follow Me</h4>
+                <ul class = "social-links">
+                    <li><a href = "https://www.facebook.com/theonlyNischal">
+                        <span class = "fa fa-facebook fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.twitter.com/theonlyNischal">
+                        <span class = "fa fa-twitter fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.github.com/NischalLalShrestha">
+                        <span class = "fa fa-github fa-2x"></span>
+                        </a>
+                    </li>
+                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
+                        <span class = "fa fa-linkedin fa-2x"></span>
+                        </a></li>
+                    
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
+                <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
+                <p> 
+                    <form method = "POST" action = "">
+                    <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
+                    </div><!-- /input-group -->
+                    <br />
+                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
+                    </form>
+                 </p>
+            </div>
+        
+
+        </div> <!-- row -->
+</div> <!-- container myFooter -->	<!-- End Footer
+	================================================== -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
+<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
+<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
+</body>
+</html>

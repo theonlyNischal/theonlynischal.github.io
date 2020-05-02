@@ -65,7 +65,7 @@
   <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
  
   
-
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -157,7 +157,7 @@
 <!---- Test
 ================================================= --->
 
-     <!-- Begin Article
+    <!-- Begin Article
 ================================================== -->
 
 <div class="container">
@@ -207,7 +207,7 @@ currencies like BitCoin, Etherum and others.</p>
                 <span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
                     <span class="s2">&quot;app_id&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">YOUR_APP_ID</span><span class="p">,</span>
                     <span class="s2">&quot;symbols&quot;</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_symbols</span><span class="p">,</span>
-                    <span class="s2">&quot;show_alternatives&quot;</span><span class="p">:</span> <span class="bp">True</span>
+                    <span class="s2">&quot;show_alternatives&quot;</span><span class="p">:</span> <span class="kc">True</span>
                         <span class="p">}</span>
                 <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">rates_</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;rates&quot;</span><span class="p">]</span>
@@ -217,8 +217,8 @@ currencies like BitCoin, Etherum and others.</p>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">1</span><span class="o">/</span><span class="bp">self</span><span class="o">.</span><span class="n">rates_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol_from</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">rates_</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">symbol_to</span><span class="p">)</span>
         <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="bp">None</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span>
 
 
 
@@ -229,14 +229,14 @@ currencies like BitCoin, Etherum and others.</p>
     <span class="n">cadUSDconverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">])</span>
 
     <span class="c1"># Converts 10 US Dollars to Nepali Rupees.</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">cadUSDconverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;NPR&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cadUSDconverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;NPR&#39;</span><span class="p">))</span>
 </pre></div>
 <div class="section" id="converting-bitcoin-etherum-and-other-digital-currencies">
 <h2>Converting BitCoin, Etherum and other Digital Currencies</h2>
 <p>If we made <strong>show_alternatives</strong> parameter <strong>True</strong> we can get rates for digital currencies like bitcoin, Etherum and others. Add all the necessary symbols required while creating new currency converter and we are all ready.</p>
 <div class="highlight"><pre><span></span><span class="n">simpleConverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">,</span> <span class="s2">&quot;BTC&quot;</span><span class="p">])</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">simpleConverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;BTC&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">simpleConverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;BTC&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
 
