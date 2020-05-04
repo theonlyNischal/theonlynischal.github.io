@@ -455,7 +455,7 @@ weight_delta = delta * input<p>So weight update can be written as</p>
 \[weight\_delta = delta * input \]
 
 \[weight = weight - weight\_delta \]<p><strong>Code Example</strong></p>
-<p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initail random weight of 0.2.
+<p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initial random weight of 0.2.
 Now we have to find a weight which <strong>scales input to match the output</strong>.</p>
 <p>So prediction means finding weight which can scale the input to actual value.</p>
 <div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="mf">0.4</span>
@@ -589,7 +589,49 @@ delta with the weight that connects output layer and the hidden layer.</p>
 <p>With the training complete,</p>
 <p>Error is: [5.2377699e-06]
 Prediction is [0.29771138] which is very close to actual value of 0.3</p>
-<p>Using Dropout to prevent the problem of overfitting in Neural Network</p>
+</div>
+<div class="section" id="what-is-this-mysterious-predict-actual-input">
+<h2>What is this mysterious (predict - actual) * input?</h2>
+<p>Let's say we have a very simple neural network as shown in the figure.</p>
+<img alt="Simple Neural Network" src="theme/img/code/simple_neural_network.png" style="width: 100%;" />
+The output of the network is
+$$output = A_1W_1 + A_2W_2$$
+
+One simple way to calculate the error or loss is
+
+$$Loss = \frac{1}{2}(output - actual)^2$$
+
+Now we need to update weights to minimize the loss. To update the weight
+we will find partial derivative of Loss with respect to the weights. We will use the concept of chain-rule to find the partial derivative as
+
+\begin{equation}
+\frac{\partial Loss}{\partial W_1} = \frac{\partial Loss}{\partial output} * \frac{\partial output}{\partial W_1}
+\end{equation}
+
+\begin{equation}
+\frac{\partial Loss}{\partial W_1} = \frac{1}{2}\frac{\partial (predict - actual)^2}{\partial output} * \frac{\partial output}{\partial W_1}
+\end{equation}
+
+\begin{equation}
+\frac{\partial Loss}{\partial W_1} = \frac{1}{2}\frac{\partial (predict - actual)^2}{\partial{}(predict - output)}\frac{\partial (predict - output)}{\partial{output}} * \frac{\partial( A_1W_1 + A_2W_2)}{\partial W_1}
+\end{equation}
+
+
+\begin{equation}
+\frac{\partial Loss}{\partial W_1} = (predict - actual) * A_1
+\end{equation}
+
+Similary,
+
+\begin{equation}
+\frac{\partial Loss}{\partial W_2} = (predict - actual) * A_2
+\end{equation}
+
+
+Now we will use this to update the weight for W1 and W2. The mysterious (predict - actual) * input is partial derivative of Loss with respect to loss. (predict - actual) is local gradient which gives the direction to update and Inputs
+are scaling factor.</div>
+<div class="section" id="using-dropout-to-prevent-the-problem-of-overfitting-in-neural-network">
+<h2>Using Dropout to prevent the problem of overfitting in Neural Network</h2>
 <p>A neural network overfits when certain neuron became too specialized to do certain things while training. While training, they will do very good as the specialized neuron will detect certain features available on training set. But, while testing where those specialized features are absent, then the over-specialized network will be of no use and the network will predict wrong. So a overfit network will have greater training accuracy and lower testing accuracy.**Dropout** is very simple and industry standard tool to solve this problem. The idea is to randomly drop certain neuron. When we drop neuron randomly, there is a chance that we may select the over-specialized neuron. When over-specialized neuron is dropped, other neuron will have to take responsibility to counter the loss of over-specialized neuron. Next time, when the over-specialized neuron is not dropped, its overspecialization is not
 necessary as other neuron have learnt to do its task.</p>
 <p>Dropout: Drop neuron randomly from input and hidden layers.</p>
