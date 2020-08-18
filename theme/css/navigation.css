@@ -98,3 +98,13 @@ form.navbar-form{
 .navigationContainer{
     margin-left: -15px;
 }
+
+@media (min-width:576px) {
+    #navbarsExampleDefault{
+        margin-left: 50px;
+    }
+
+    #navbarsExampleDefault.ul.li.nav-link{
+        margin-left: 20px;
+    }
+}
