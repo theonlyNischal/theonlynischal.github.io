@@ -18,7 +18,7 @@
 
 
 <meta property="og:title" content="Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation">
-<meta property="og:description" content="Although a present day artificial neural network resembles the">
+<meta property="og:description" content="Although a present day artificial neural network resembles the biological neural network/human brain much as a paper plane resembles a supersonic jet, although, ANN have become quite different from the biological neural network, studying the biological neural network- the insipiration for ANN will do only good.">
 <meta property="og:url" content="https://nischal.info.np/">
 <meta property="og:image" content="https://nischal.info.np/theme/img/code/biological-neuron.png">
 <meta property="og:site_name" content="Nischal Lal Shrestha">
@@ -67,7 +67,6 @@
   
 <script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
-<script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 <body>
@@ -193,7 +192,7 @@ network will do only good.</p>
 <p>Neural network is the connection of a neurons(information processing unit). So if we want to model a biological neural network
 we should start with modelling a single biological neuron. A biological neuron consist of a cell body called <strong>soma</strong>, a number of fibres called <strong>dendrites</strong>, and a single long fibre called <strong>axon</strong>.</p>
 <img alt="Biological Neurons" src="theme/img/code/biological-neuron.png" style="width: 100%;" />
-<p>Information in the form of electrical signals come to the neuron from the dendrites. These electrical signals are combined in the <strong>soma</strong> and when the total exceeds certain threshold, a new electrical signal is sent to another part of the neuron.</p>
+<p>Information in the form of electrical signals come to the neuron from the dendrites. These electrical signals are combined in the <strong>soma</strong> and when the total exceeds certain threshold, a new electrical signal is sent to anothe part of the neuron.</p>
 </div>
 <div class="section" id="artificial-neural-network">
 <h2>Artificial Neural Network</h2>
@@ -253,7 +252,7 @@ But when the input is turned on i.e 1, then the input won't matches with the thr
 </div>
 <div class="section" id="perceptron">
 <h2>Perceptron</h2>
-<p>Building on the insight of the MCP neuron, Rosenblatt proposed <strong>Perceptron</strong> in 1957. Perceptron works very similar respect to MCP neuron but with some imporvements:</p>
+<p>Building on the insight of the MCP neuron, Rosenblatt proposed <strong>Perceptron</strong> in 1957. Perceptron works very similar respect to perceptron but with some imporvements:</p>
 <ul class="simple">
 <li>The inputs became number instead of just binary.</li>
 <li>The weight of the inputs became variable instead of identical weights for all inputs.</li>
@@ -393,7 +392,7 @@ increase the weight.</p>
 weight because the prediction we made is greater than the actual value so we need to
 decrease the weight.</p>
 <p>Doing this we can get a new weight.</p>
-<p>Another useful way to change weight is to use Error. we will start with some random value for the weight and make a prediction. Next, we will measure how well our prediction is. For that we will use a term called <strong>error</strong>.</p>
+<p>Another useful way to change weight is to use Error. we will start with some random value for the weight and make a prediction. Next, we will measure how well our prediction is. For that we will use a term called <strong>error</strong>. This method</p>
 <p>Error is way to measure -  by how much we miss actual prediction. There are various way to calculate error.</p>
 \[actual\_value = 0.7\]
 
@@ -415,7 +414,7 @@ decrease the weight.</p>
 <h2>Why error is always positive?</h2>
 <p>Error is used to estimate how well our prediction is. There is no sense to make error -ve. Also, in training process we deal with large
 number of inputs and each input will have its own error. If we want to see overall performance of our model on training set. We take average
-of errors. So if any point have error value -ve, then averaging will give false measure. Say error for one input is 2 and for another is -2, then the average
+of errors. So if any point have error value -ve, then averaging will give false measure. Say one input is 2 and another is -2, then the average
 will be 0, which is false. So error is always +ve.</p>
 </div>
 <div class="section" id="why-use-error-to-update-weight">
@@ -455,7 +454,7 @@ weight_delta = delta * input<p>So weight update can be written as</p>
 \[weight\_delta = delta * input \]
 
 \[weight = weight - weight\_delta \]<p><strong>Code Example</strong></p>
-<p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initial random weight of 0.2.
+<p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initail random weight of 0.2.
 Now we have to find a weight which <strong>scales input to match the output</strong>.</p>
 <p>So prediction means finding weight which can scale the input to actual value.</p>
 <div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="mf">0.4</span>
@@ -590,46 +589,6 @@ delta with the weight that connects output layer and the hidden layer.</p>
 <p>Error is: [5.2377699e-06]
 Prediction is [0.29771138] which is very close to actual value of 0.3</p>
 </div>
-<div class="section" id="what-is-this-mysterious-predict-actual-input">
-<h2>What is this mysterious (predict - actual) * input?</h2>
-<p>Let's say we have a very simple neural network as shown in the figure.</p>
-<img alt="Simple Neural Network" src="theme/img/code/simple_neural_network.png" style="width: 100%;" />
-The output of the network is
-$$output = A_1W_1 + A_2W_2$$
-
-One simple way to calculate the error or loss is
-
-$$Loss = \frac{1}{2}(output - actual)^2$$
-
-Now we need to update weights to minimize the loss. To update the weight
-we will find partial derivative of Loss with respect to the weights. We will use the concept of chain-rule to find the partial derivative as
-
-\begin{equation}
-\frac{\partial Loss}{\partial W_1} = \frac{\partial Loss}{\partial output} * \frac{\partial output}{\partial W_1}
-\end{equation}
-
-\begin{equation}
-\frac{\partial Loss}{\partial W_1} = \frac{1}{2}\frac{\partial (predict - actual)^2}{\partial output} * \frac{\partial output}{\partial W_1}
-\end{equation}
-
-\begin{equation}
-\frac{\partial Loss}{\partial W_1} = \frac{1}{2}\frac{\partial (predict - actual)^2}{\partial{}(predict - output)}\frac{\partial (predict - output)}{\partial{output}} * \frac{\partial( A_1W_1 + A_2W_2)}{\partial W_1}
-\end{equation}
-
-
-\begin{equation}
-\frac{\partial Loss}{\partial W_1} = (predict - actual) * A_1
-\end{equation}
-
-Similary,
-
-\begin{equation}
-\frac{\partial Loss}{\partial W_2} = (predict - actual) * A_2
-\end{equation}
-
-
-Now we will use this to update the weight for W1 and W2. The mysterious (predict - actual) * input is partial derivative of Loss with respect to loss. (predict - actual) is local gradient which gives the direction to update and Inputs
-are scaling factor.</div>
 <div class="section" id="using-dropout-to-prevent-the-problem-of-overfitting-in-neural-network">
 <h2>Using Dropout to prevent the problem of overfitting in Neural Network</h2>
 <p>A neural network overfits when certain neuron became too specialized to do certain things while training. While training, they will do very good as the specialized neuron will detect certain features available on training set. But, while testing where those specialized features are absent, then the over-specialized network will be of no use and the network will predict wrong. So a overfit network will have greater training accuracy and lower testing accuracy.**Dropout** is very simple and industry standard tool to solve this problem. The idea is to randomly drop certain neuron. When we drop neuron randomly, there is a chance that we may select the over-specialized neuron. When over-specialized neuron is dropped, other neuron will have to take responsibility to counter the loss of over-specialized neuron. Next time, when the over-specialized neuron is not dropped, its overspecialization is not
@@ -671,7 +630,27 @@ we multiply the output of hidden layer in training.</p>
 <a href='#MML2019' id='ref-MML2019-1'>MarcPeterDeisenroth (2019)</a>
 <a href='#DeepLearning' id='ref-DeepLearning-1'>IanGoodfellow (2019)</a>
 <a href='#handson-ml' id='ref-handson-ml-1'>Ageron (2019)</a></p>
-</div>
+The Quadratic Formula
+
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+
+Cauchy's Integral Formula
+\[f(a) = \frac{1}{2\pi i} \oint\frac{f(z)}{z-a}dz\]
+
+Angle Sum Formula for Cosines
+\[ \cos(\theta+\phi)=\cos(\theta)\cos(\phi)−\sin(\theta)\sin(\phi) \]
+
+Gauss' Divergence Theorem
+\[ \int_D ({\nabla\cdot} F)dV=\int_{\partial D} F\cdot ndS \]
+
+Curl of a Vector Field
+\[ \vec{\nabla} \times \vec{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} \]
+
+Standard Deviation
+\[\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N (x_i -\mu)^2} \]
+
+Definition of Christoffel Symbols
+\[(\nabla_X Y)^k = X^i (\nabla_i Y)^k = X^i \left( \frac{\partial Y^k}{\partial x^i} + \Gamma_{im}^k Y^m \right)\]</div>
 <hr>
 <h2>Bibliography</h2>
 <p id='handson-ml'>Ageron.
@@ -766,7 +745,7 @@ Manning Publications.
 
 
                      </p>
-                <p>Copyright text 2019 by Nischal!!</p>
+                <p>Copyright text 2020 by Nischal!!</p>
                 <a href = "">
                     <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
                 </a>
