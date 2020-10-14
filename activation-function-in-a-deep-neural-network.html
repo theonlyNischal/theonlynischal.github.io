@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +8,38 @@
     <meta name="description" content="">
     <meta name="author" content="">
 	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
-    <title>Nischal Lal Shrestha - Authors | Nischal Lal Shrestha</title>
+    <title>    Activation functions in a deep neural networks
+ | Nischal Lal Shrestha</title>
 
-        
+<meta name="description" content="Activation functions in a deep neural networks, Published On:Wed, Oct 14 2020, keywords: activation function, transfer function, sigmoid, relu, ">
 
+    <meta name="keywords" content="activation function, transfer function, sigmoid, relu, " />
+
+
+
+<meta property="og:title" content="Activation functions in a deep neural networks">
+<meta property="og:description" content="This activation function prevents collapsing because it adds a extra bit of processing before transfering the output of a neuron. Let's say we have an activationfunction that allows passing of value > 0. If any neuron have value < 0 then their outputare not passed to next layer. By doing these stuffs, activation function introduce non-linearlity.">
+<meta property="og:url" content="https://nischal.info.np/">
+<meta property="og:image" content="https://nischal.info.np/theme/img/code/activation_function.png">
+<meta property="og:site_name" content="Nischal Lal Shrestha">
+<!-- Markup for Twitter -->
+<meta name="twitter:card" content="site">
+<meta name="twitter:site" content="@theonlyNischal">
+<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
+<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
+<meta name="twitter:creator" content="Nischal Lal Shrestha">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/code/activation_function.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <meta property="og:title" contenct="Activation functions in a deep neural networks"/>
+    <meta property="og:url" content="./activation-function-in-a-deep-neural-network.html"/>
+    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="./activation-function-in-a-deep-neural-network.html" />
+
+    <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
@@ -87,7 +117,7 @@
 				</li>
 
 
-				<li class = "nav-item" >
+				<li class = "nav-item"  id = "activeMenu" >
 					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
 				</li>
 
@@ -130,10 +160,111 @@
 <!---- Test
 ================================================= --->
 
-    <h1>Authors on Nischal Lal Shrestha</h1>
-    <ul>
-        <li><a href="https://nischal.info.np/author/nischal-lal-shrestha.html">Nischal Lal Shrestha</a> (21)</li>
-    </ul>
+    <!-- Begin Article
+================================================== -->
+
+<div class="container">
+	<div class="row">
+    <!-- include left_share was here -->
+		<!-- Begin Post -->
+		<div class="col-md-12 col-md-offset-2 col-xs-12">
+			<div class="mainheading" id = "blogpostHeading">
+
+				<h1 class="posttitle">Activation functions in a deep neural networks</h1>
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/code/activation_function.png" alt="Activation functions in a deep neural networks">
+			<!-- End Featured Image -->
+
+			<div id = "authorDetail">
+                <div class = "container">
+                    <div class = "row">
+                                <div id = "blogpostDetails">
+                                    <p class = "publishedDate">On Wed, Oct 14 2020</p>
+                                </div> <!-- blopostDetails -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- authorDetail -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+				<div class="section" id="why-do-we-need-an-activation-function">
+<h2>Why do we need an Activation Function?</h2>
+<p>Let's have a look at a simple neural network.</p>
+<img alt="Simple Neural Network" src="theme/img/code/simple-neural-network-to-show.png" style="width: 100%;" />
+<p>The output of the first layer will be</p>
+<p>
+$$y_1 = W_1X_1 + b_1$$
+$$y_2 = W_2(y_1) + b_2$$
+$$y_2 = W_2W_1X_1 + W_2b_1 + b_2$$
+$$y_2 = WX + b$$
+</p><!-- y1 = w1X + b1 -->
+<!-- y2 = W2(y1) + b2 -->
+<!-- y2 = W2W1X + W2b1 + b2 -->
+<!-- y2 = Wx b -->
+<p>which is linear output equivalent of using a single neuron.
+A single neuron is not powerful enough to do complex task.
+So, eventhough we are using a deep neural network with
+many layers it became equivalent of using a simple single
+neuron.</p>
+<p>To prevent this collapse, we need beyond multiplication and addition.
+We will use what commonly known as activation function or transfer function.
+This activation function prevents collapsing because it adds a extra bit of
+processing before transfering the output of a neuron. Let's say we have an activation
+function that allows passing of value &gt; 0. If any neuron have value &lt; 0 then their output
+are not passed to next layer. By doing these stuffs, activation function introduce non-linearlity.</p>
+<p>The result of using these functions is that we keep our network of
+many neurons, rather than having it turn into just one neuron, and
+that makes all the difference.</p>
+</div>
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+			<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = activation-function-in-a-deep-neural-network; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://shresthanischal.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+<div class="hideshare"></div>
+
 <!-- End Test =====================================- -->
 
 
