@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
+    <title>    Difference Between Authentication and Authorization(Authentication vs Authorization)
+ | Nischal Lal Shrestha</title>
+
+<meta name="description" content="Difference Between Authentication and Authorization(Authentication vs Authorization), Published On:Fri, Jun 14 2019, keywords: difference between authentication and authorization, authentication vs authorization, [<Tag 'authentication'>, <Tag 'authorization'>]">
+
+    <meta name="keywords" content="difference between authentication and authorization, authentication vs authorization, [<Tag 'authentication'>, <Tag 'authorization'>]" />
+
+
+
+<meta property="og:title" content="Difference Between Authentication and Authorization(Authentication vs Authorization)">
+<meta property="og:description" content="">
+<meta property="og:url" content="https://nischal.info.np/">
+<meta property="og:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/difference-between-authentication-and-authorization.PNG">
+<meta property="og:site_name" content="Nischal Lal Shrestha">
+<!-- Markup for Twitter -->
+<meta name="twitter:card" content="site">
+<meta name="twitter:site" content="@theonlyNischal">
+<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
+<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
+<meta name="twitter:creator" content="Nischal Lal Shrestha">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/difference-between-authentication-and-authorization.PNG">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <meta property="og:title" contenct="Difference Between Authentication and Authorization(Authentication vs Authorization)"/>
+    <meta property="og:url" content="./difference-between-authenticate-and-authorization.html"/>
+    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="./difference-between-authenticate-and-authorization.html" />
+
+    <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
+  <link href="/theme/css/pygments.css" rel="stylesheet">
+  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88943346-5');
+</script>
+  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
+  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
+  <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+</head>
+<body>
+
+<div class = "container animate__animated animate__rollIn" id = "banner">
+	<!-- Begin Site Title
+	================================================== -->
+		<div class="mainheading">
+			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
+			<p class="lead">
+				I Love Everything That Makes Me More Human.
+			</p>
+		</div>
+	<!-- End Site Title
+	================================================== -->
+</div> <!-- #banner -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Nav
+================================================== -->
+<nav class="container navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container navigationContainer">
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+				</li>
+
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
+				</li>
+
+
+				<li class = "nav-item"  id = "activeMenu" >
+					<a class="nav-link" href="https://nischal.info.np/category/difference-between.html">Difference between</a>
+				</li>
+
+
+
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/openmovement.html">Open Movement</a>
+					</li>
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
+					</li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+				</li>
+
+
+			
+		</ul>
+		<!-- End Menu -->
+		<!-- Begin Search -->
+		<form class="form-inline my-2 my-lg-0 searchArea">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+		</form>
+		<!-- End Search -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<div class="container">
+
+
+
+
+<!---- Test
+================================================= --->
+
+    <!-- Begin Article
+================================================== -->
+
+<div class="container">
+	<div class="row">
+    <!-- include left_share was here -->
+		<!-- Begin Post -->
+		<div class="col-md-12 col-md-offset-2 col-xs-12">
+			<div class="mainheading" id = "blogpostHeading">
+
+				<h1 class="posttitle">Difference Between Authentication and Authorization(Authentication vs Authorization)</h1>
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/difference-between-authentication-and-authorization.PNG" alt="Difference Between Authentication and Authorization(Authentication vs Authorization)">
+			<!-- End Featured Image -->
+
+			<div id = "authorDetail">
+                <div class = "container">
+                    <div class = "row">
+                                <div id = "blogpostDetails">
+                                    <p class = "publishedDate">On Fri, Jun 14 2019</p>
+                                </div> <!-- blopostDetails -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- authorDetail -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+				<div class="section" id="what-is-the-main-difference-between-authentication-and-authorization-authentication-vs-authorization">
+<h2>What is the main difference between Authentication and Authorization(Authentication vs Authorization)?</h2>
+<p>The main difference authentication and authorization is authentication asks Who is the user? whereas authorization asks what can you do?</p>
+<p>Whether you're withdrawing money from a bank, entering a restricted building, or boarding an airplane, gaining access to a restricted resource requires both authentication and authorization. The two processes are closely related and often confused. To understand the difference between authentication and authorization, consider an example in the physical world that most people are familiar with: boarding an airplane. Before you can board a plane, you must present both your identification and your ticket. Your identification, typically a driver's license or a passport, enables the airport staff to determine who you are. Validating your identity is the authentication part of the boarding process. The airport staff also checks your ticket to make sure that the flight you are boarding is the correct one. Verifying that you are allowed to board the plane is the authorization process.</p>
+<div class="section" id="comparision-chart-for-difference-between-authentication-and-authorization-authentication-vs-authorization">
+<h3>Comparision Chart for difference between Authentication and Authorization(Authentication vs Authorization)</h3>
+<img alt="Difference Between Authentication and Authorization(Authentication vs Authorization)" id="id1" src="/theme/img/DifferenceBetween/difference-between-authenticateion-and-authorization.png" style="width: 100%;" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="2%" />
+<col width="42%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Basis</td>
+<td>Authentication</td>
+<td>Authorization</td>
+</tr>
+<tr><td>Definition</td>
+<td>Authentication is the process of identifying the users. Authentication is usually done by requesting a username-password pair, or a certificate to verify the authenticity of the user. (Who is the user? Can you identify him as a staff in your system?)</td>
+<td>Authorization happens after authentication. Authorization addresses the question, what does the user have access to after the authentication? Therefore, the user is already known, but what can the user access in the system? For example, does the user have delete access for a purchase order if the user logs in as a Manager role?</td>
+</tr>
+<tr><td>Process</td>
+<td><p class="first">Authentication is a process for a system such as a computer, a web server and a</p>
+<p>smartphone to verify the identity of a claimed user and to authorize the user to access</p>
+<p class="last">the system.</p>
+</td>
+<td>Authorization is process of assigning role to users after they are authenticated.</td>
+</tr>
+<tr><td>Determines</td>
+<td><p class="first">Authentication determines whether user is what he claims to be.</p>
+<p class="last">It determines what user can and cannot access.</p>
+</td>
+<td><p class="first">Authorization happens afterward and determines what you can do after you authenticate</p>
+<p>yourself. If you have proper authorization, then once you have properly authenticated yourself,</p>
+<p>you can get access to shares on a server, the room door unlocks, and you can access your bank</p>
+<p class="last">account.</p>
+</td>
+</tr>
+<tr><td>Priority</td>
+<td>Authentication is the first step of authorization.</td>
+<td>Authorization happens after authentication.</td>
+</tr>
+<tr><td>Example</td>
+<td>Swiping a key card to gain access to a room, inserting your ATM card, and entering a PIN are all examples of authentication.</td>
+<td><p class="first">Verifying that you are allowed to board the plane is the authorization process.</p>
+<p class="last">Verifying that the user is allowed to delete entire system if the user logs in as admin is authorization process.</p>
+</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="authentication">
+<h3>Authentication</h3>
+<p>Authentication is the process of identifying a user against a service. OpenID was the first standard that aimed at providing a decentralized protocol for identifying users
+across multiple sites. The idea behind this was very simple: avoiding the tedious task
+of re-entering information over and over. Basically the log-in process is being delega-
+ted to another site. OpenID got introduced in 2005 and saw enormous growth with totaling over 1 bil-
+lion user accounts in 2009 1 . Recent development showed less demand for OpenID
+and central identity platforms. Instead hybrid approaches were being introduced that
+offered both user authentication and authorization at the same time.</p>
+</div>
+<div class="section" id="authorization">
+<h3>Authorization</h3>
+<p>While authentication aims at user identity, authorization tries to solve the issue of
+providing access to a user’s protected resources. This can involve providing access to
+user profiles - which blurs the line between authentication and authorization - or
+simple anomynous access to data.
+Authorization standards like OAuth are often used as a more convenient and more
+secure way of handling sign-in than regular basic authentication flows using user-
+names and passwords. The idea behind this concept is relying on a third-parties’
+authentication system. This concept is heavily leveraged for various social login sce-
+narios using Service Providers like Facebook, Google Plus or Twitter.</p>
+<p>Authorization is the process of determining whether an authenticated user is allowed
+to perform a requested action. Each time you open a file, Windows Server 2003 verifies
+that you are authorized to open that file. Each time you print, Windows Server 2003
+verifies that you have Print permissions to that printer. In fact, Windows Server 2003
+verifies your authorization to access just about every object you can imagine: files and
+folders, shared folders, printers, services, Active Directory directory service objects,
+Terminal Services connections, Windows Management Interface objects, and registry
+keys and values.</p>
+</div>
+<div class="section" id="authentication-in-net">
+<h3>Authentication in .NET</h3>
+<p>Authentication is mainly performed by API calls to Active Directory. Active Directory will return with a confirmation of the identity or deny the access to the system. The authorization details in most cases have to be explicitly coded. Authorization in .NET is based on roles. (For
+example, the SeniorManager role can delete the purchase orders as opposed to the Manager role, which is not entitled for the same privilege.) Therefore, before you delete a purchase order, you need to check whether the currently logged in user has the SeniorManager role
+attached to his profile. You do this by utilizing the IsInRole function.</p>
+</div>
+<div class="section" id="authentication-in-file-systems">
+<h3>Authentication in File Systems</h3>
+<p>Authentication is the process where you prove who you are. Entering a username and password at a prompt, swiping a key card to gain access to a room, inserting your ATM card, and entering a PIN are all examples of authentication. You’re proving you are who you say you are.
+Authorization happens afterward and determines what you can do after you authenticate yourself. If you have proper authorization, then once you have properly authenticated yourself, you can get access to shares on a server, the room door unlocks, and you can access your bank
+account. If you are not authorized to do those things, then they will still fail, even though you properly authenticated yourself. Wrapping your head around the differences between those two concepts can take a bit of work, but knowing the difference is critical in running a server.</p>
+</div>
+<div class="section" id="authorization-in-windows-server-2003">
+<h3>Authorization in Windows Server 2003</h3>
+<p>Authorization is the process of determining whether an authenticated user is allowed
+to perform a requested action. Each time you open a file, Windows Server 2003 verifies
+that you are authorized to open that file. Each time you print, Windows Server 2003
+verifies that you have Print permissions to that printer. In fact, Windows Server 2003
+verifies your authorization to access just about every object you can imagine: files and
+folders, shared folders, printers, services, Active Directory directory service objects,
+Terminal Services connections, Windows Management Interface objects, and registry
+keys and values.</p>
+</div>
+</div>
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+
+                        <li><a href="https://nischal.info.np/tag/authentication.html">authentication</a></li>
+                        <li><a href="https://nischal.info.np/tag/authorization.html">authorization</a></li>
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+			<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = difference-between-authenticate-and-authorization; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://shresthanischal.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+<div class="hideshare"></div>
+
+<!-- End Test =====================================- -->
+
+
+	<!-- Begin Footer
+	================================================== -->
+<div class = "container" id = "myFooter">
+        <div class = "row">
+
+            <div class = "col-lg-3 col-md-3" id = "footer-information">
+                <p>Hey there, I'm <strong>Nischal</strong>.<br>
+                I am a student, a developer and I specialize in
+                standards-based Web Development(Django, JS, HTML, CSS ) and ML/DL.
+
+                <br>
+                <br>
+
+                I love Everything that makes me more Human. While
+                not Coding, I play and/or watch football. 
+
+
+
+
+                     </p>
+                <p>Copyright text 2020 by Nischal!!</p>
+                <a href = "">
+                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
+                </a>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "footer-menu">
+                <ul class="pages">
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">My Life</a></li>
+                    <li><a href="">My Daily Journal</a></li>
+                    <li><a href="">My Wish Bucket</a></li>
+                    <li><a href="">My Photos</a></li>
+                    <li><a href="">My Bookmarks</a></li>
+                    <li><a href="">Say Hi!!</a></li>
+                </ul>
+
+                <ul class="list">
+                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
+                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "social-section">
+                <h4 class = "social-links-heading">Follow Me</h4>
+                <ul class = "social-links">
+                    <li><a href = "https://www.facebook.com/theonlyNischal">
+                        <span class = "fa fa-facebook fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.twitter.com/theonlyNischal">
+                        <span class = "fa fa-twitter fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.github.com/NischalLalShrestha">
+                        <span class = "fa fa-github fa-2x"></span>
+                        </a>
+                    </li>
+                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
+                        <span class = "fa fa-linkedin fa-2x"></span>
+                        </a></li>
+                    
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
+                <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
+                <p> 
+                    <form method = "POST" action = "">
+                    <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
+                    </div><!-- /input-group -->
+                    <br />
+                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
+                    </form>
+                 </p>
+            </div>
+        
+
+        </div> <!-- row -->
+</div> <!-- container myFooter -->	<!-- End Footer
+	================================================== -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
+<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
+<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
+</body>
+</html>

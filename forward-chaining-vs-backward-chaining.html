@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
+    <title>    Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)
+ | Nischal Lal Shrestha</title>
+
+<meta name="description" content="Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining), Published On:Tue, May 14 2019, keywords: forward chaining, backward chaining, difference between forward chaining and backward chaining, forward chaining vs backward chaining, [<Tag 'forward chaining'>, <Tag 'backward chaining'>]">
+
+    <meta name="keywords" content="forward chaining, backward chaining, difference between forward chaining and backward chaining, forward chaining vs backward chaining, [<Tag 'forward chaining'>, <Tag 'backward chaining'>]" />
+
+
+
+<meta property="og:title" content="Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)">
+<meta property="og:description" content="The main difference between forward chaining and backward chaining is Forward chaining starts with the available data and uses inference rules to extract more data (from an end user for example) until a goal is reached whereas Backward chaining (or backward reasoning) is an inference method that can be described as working backward from the goal(s).">
+<meta property="og:url" content="https://nischal.info.np/">
+<meta property="og:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/forward-chaining-vs-backward-chaining.png">
+<meta property="og:site_name" content="Nischal Lal Shrestha">
+<!-- Markup for Twitter -->
+<meta name="twitter:card" content="site">
+<meta name="twitter:site" content="@theonlyNischal">
+<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
+<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
+<meta name="twitter:creator" content="Nischal Lal Shrestha">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/forward-chaining-vs-backward-chaining.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <meta property="og:title" contenct="Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)"/>
+    <meta property="og:url" content="./forward-chaining-vs-backward-chaining.html"/>
+    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="./forward-chaining-vs-backward-chaining.html" />
+
+    <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
+  <link href="/theme/css/pygments.css" rel="stylesheet">
+  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88943346-5');
+</script>
+  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
+  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
+  <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+</head>
+<body>
+
+<div class = "container animate__animated animate__rollIn" id = "banner">
+	<!-- Begin Site Title
+	================================================== -->
+		<div class="mainheading">
+			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
+			<p class="lead">
+				I Love Everything That Makes Me More Human.
+			</p>
+		</div>
+	<!-- End Site Title
+	================================================== -->
+</div> <!-- #banner -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Nav
+================================================== -->
+<nav class="container navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container navigationContainer">
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+				</li>
+
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
+				</li>
+
+
+				<li class = "nav-item"  id = "activeMenu" >
+					<a class="nav-link" href="https://nischal.info.np/category/difference-between.html">Difference between</a>
+				</li>
+
+
+
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/openmovement.html">Open Movement</a>
+					</li>
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
+					</li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+				</li>
+
+
+			
+		</ul>
+		<!-- End Menu -->
+		<!-- Begin Search -->
+		<form class="form-inline my-2 my-lg-0 searchArea">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+		</form>
+		<!-- End Search -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<div class="container">
+
+
+
+
+<!---- Test
+================================================= --->
+
+    <!-- Begin Article
+================================================== -->
+
+<div class="container">
+	<div class="row">
+    <!-- include left_share was here -->
+		<!-- Begin Post -->
+		<div class="col-md-12 col-md-offset-2 col-xs-12">
+			<div class="mainheading" id = "blogpostHeading">
+
+				<h1 class="posttitle">Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)</h1>
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/forward-chaining-vs-backward-chaining.png" alt="Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)">
+			<!-- End Featured Image -->
+
+			<div id = "authorDetail">
+                <div class = "container">
+                    <div class = "row">
+                                <div id = "blogpostDetails">
+                                    <p class = "publishedDate">On Tue, May 14 2019</p>
+                                </div> <!-- blopostDetails -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- authorDetail -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+				<div class="section" id="what-is-the-main-difference-between-forward-chaining-and-backward-chaining">
+<h2>What is the main difference between forward chaining and backward chaining?</h2>
+<p>The main difference between forward chaining and backward chaining is Forward chaining starts with the available data and uses inference rules to extract more data (from an end user for example) until a goal is reached whereas Backward chaining (or backward reasoning) is an inference method that can be described as working backward from the goal(s). Forward Chaining starts with available data. Backward chaining starts with the list of goals.</p>
+<img alt="Difference Between Forward Chaining and Backward Chaining(Forward Chaining vs Backward Chaining)" id="id1" src="theme/img/DifferenceBetween/forward-chaining-vs-backward-chaining.png" style="width: 100%;" />
+<p>The difference between forward chaining and backward chaining is shown in the table below and the image above.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="4%" />
+<col width="61%" />
+<col width="35%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Basis</td>
+<td>Forward Chaining</td>
+<td>Backward Chaining</td>
+</tr>
+<tr><td>Concept</td>
+<td>Forward chaining starts with the available data and uses inference rules to extract more data (from an end user for example) until a goal is reached.</td>
+<td>Backward chaining (or backward reasoning) is an inference method that can be described as working backward from the goal(s).</td>
+</tr>
+<tr><td>Starts With</td>
+<td>Forward Chaining starts with available data.</td>
+<td>Backward chaining starts with the list of goals.</td>
+</tr>
+<tr><td>Also Known As</td>
+<td>Forward Chaining is also known as Data-Driven inference technique.</td>
+<td>Backward Chaining is also known as Goal Driven inference technique.</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Number of conclusions</td>
+<td>Forward Chaining can create an infinite number of possible conclusions.</td>
+<td>Backward Chaining only produces reasonable amount of final conclusions.</td>
+</tr>
+<tr><td>Reasoning</td>
+<td>Forward Chaining is a bottom-up reasoning.</td>
+<td>Backward Chaining is top-down reasoning.</td>
+</tr>
+<tr><td>Approach</td>
+<td>Forward Chaining is Breadth First Search Approach.</td>
+<td>Backward Chaining is Depth First Search Approach.</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Process</td>
+<td>Present to future.</td>
+<td>Present to past.</td>
+</tr>
+<tr><td>Working</td>
+<td>An inference engine using forward chaining searches the inference rules until it finds one where the antecedent (If clause) is known to be true. When found it can conclude, or infer, the consequent (Then clause), resulting in the addition of new information to its data. Inference engines will iterate through this process until a goal is reached.</td>
+<td><p class="first">An inference engine using backward chaining would search the inference rules until it finds one which has a consequent (Then clause) that matches a desired goal. If the</p>
+<p class="last">antecedent (If clause) of that rule is not known to be true, then it is added to the list of goals (in order for one's goal to be confirmed one must also provide data that confirms this new rule).</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="forward-chaining">
+<h2>Forward Chaining</h2>
+<p>Forward chaining starts with the available data and uses inference rules to extract more data (from an end user for example) until a goal is reached. An inference engine using forward chaining searches the inference rules until it finds one where the antecedent 5 (If clause) is known to be true. When found it can conclude, or infer, the consequent (Then clause), resulting in the addition of new information to its data. Inference engines will iterate through this process until a goal is reached.</p>
+<img alt="Forward Chaining Cycle" id="forward-chaining-cycle" src="theme/img/DifferenceBetween/forward-chaining-cycle.PNG" style="width: 100%;" />
+</div>
+<div class="section" id="backward-chaining">
+<h2>Backward Chaining</h2>
+<p>Backward chaining (or backward reasoning) is an inference method that can be described as working backward from the goal(s). It is used in automated theorem provers, proof assistants and other artificial intelligence applications, but it has also been observed in primates. In game theory, its application to (simpler) sub-games in order to find a solution to the game is called backward induction. In chess, it is called retrograde analysis, and it is used to generate table bases for chess endgames for computer chess. Backward chaining is implemented in logic programming by SLD resolution. Both rules are based on the modus ponens inference rule. It is one of the two most commonly used methods of reasoning with inference rules and logical implications – the other is forward chaining. Backward chaining systems usually employ a depth-first search strategy, e.g. Prolog.</p>
+<img alt="Backward Chaining Cycle" id="backward-chaining-cycle" src="theme/img/DifferenceBetween/backward-chaining-cycle.PNG" style="width: 100%;" />
+</div>
+<div class="section" id="choosing-forward-or-backward-chaining">
+<h2>Choosing Forward or Backward Chaining</h2>
+<p><strong>When to choose Backward Chaining?</strong>
+Choose Backward Chaining If you already know what you are looking for.</p>
+<p><strong>When to choose Forward Chaining?</strong>
+Choose Forward Chaining, If you don't necessarily know the final state of your solution.</p>
+<img alt="Choosing Forward or Backward Chaining" id="id2" src="theme/img/DifferenceBetween/choosing-forward-chaining-or-backward-chaining.PNG" style="width: 100%;" />
+</div>
+<div class="section" id="forward-chaining-example">
+<h2>Forward Chaining example</h2>
+<p>Suppose that the goal is to conclude the color of a pet named Fritz, given that he
+croaks and eats flies, and that the rule base contains the following four rules:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>If X croaks and eats flies - Then X is a frog</li>
+<li>If X chirps and sings - Then X is a canary</li>
+<li>If X is a frog - Then X is green</li>
+<li>If X is a canary - Then X is yellow</li>
+</ol>
+</blockquote>
+<p>This rule base would be searched and the first rule would be selected, because its antecedent (If
+Fritz croaks and eats flies) matches our data. Now the consequents (Then X is a frog) is added to
+the data. The rule base is again searched and this time the third rule is selected, because its
+antecedent (If Fritz is a frog) matches our data that was just confirmed. Now the new consequent
+(Then Fritz is green) is added to our data. Nothing more can be inferred from this information,
+but we have now accomplished our goal of determining the color of Fritz.</p>
+</div>
+<div class="section" id="backward-chaining-example">
+<h2>Backward Chaining example</h2>
+<p>An Example of Backward Chaining:</p>
+<blockquote>
+<ol class="arabic simple">
+<li>If X croaks and eats flies – Then X is a frog</li>
+<li>If X chirps and sings – Then X is a canary</li>
+<li>If X is a frog – Then X is green</li>
+<li>If X is a canary – Then X is yellow</li>
+</ol>
+</blockquote>
+<p>This rule base would be searched and the third and fourth rules would be selected, because their
+consequents (Then Fritz is green, Then Fritz is yellow) match the goal (to determine Fritz's
+color). It is not yet known that Fritz is a frog, so both the antecedents (If Fritz is a frog, If Fritz is a canary) are added to the goal list. The rule base is again searched and this time the first two
+rules are selected, because their consequents (Then X is a frog, Then X is a canary) match the
+new goals that were just added to the list. The antecedent (If Fritz croaks and eats flies) is known
+to be true and therefore it can be concluded that Fritz is a frog, and not a canary. The goal of
+determining Fritz's color is now achieved (Fritz is green if he is a frog, and yellow if he is a
+canary, but he is a frog since he croaks and eats flies; therefore, Fritz is green).</p>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-starts-with">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Starts With</h3>
+<p>Forward Chaining tarts with the initial facts whereas Backward Chaining starts with some hypothesis or goal.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-test-of-rules">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Test of rules</h3>
+<p>Forward Chaining tests all the rules but Backward Chaining tests some rules.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-questions">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Questions</h3>
+<p>Forward Chaining asks many questions but Backward Chaining asks few questions.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-information">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of information</h3>
+<p>Forward Chaining provides a huge amount of information from just a small amount of data whereas Backward Chaining provides a small amount of information from just a small amount of data.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-working">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Working</h3>
+<p>Forward chaining works forward to find conclusions from facts whereas backward chaining works backward to find facts that support the hypothesis.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-breadth-first-or-depth-first">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Breadth-first or Depth-first</h3>
+<p>Forward Chaining tends to be breadth-first whereas Backward Chaining tends to be depth-first.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-data">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of Data</h3>
+<p>All data is available in forward chaining but data must be acquired interactively(on demand) on backward chaining.</p>
+</div>
+<div class="section" id="difference-between-forward-chaining-and-backward-chaining-on-the-basis-of-forming-a-goal">
+<h3>Difference Between Forward Chaining and Backward Chaining on the basis of forming a goal</h3>
+<p>Forming a goal is difficult on forward chaining whereas forming a goal is easy on backward chaining.</p>
+</div>
+<div class="section" id="forward-chaining-vs-backward-chaining-youtube-videos">
+<h3>Forward Chaining vs Backward Chaining Youtube Videos</h3>
+<p><strong>This is a brief description of the different kinds of logic that may be used in determining the solution to a problem.</strong></p>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/ZhTt-GG7PiQ' frameborder='0' allowfullscreen></iframe></div><p><strong>A short description to both those algorithms. These are algorithms to answer questions poised to a knowledge base.</strong></p>
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/EZJs6w2YFRM' frameborder='0' allowfullscreen></iframe></div></div>
+</div>
+<div class="section" id="reference">
+<h2>Reference</h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Forward_chaining">Forward Chaining</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Backward_chaining">Backward Chaining</a></p>
+</div>
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+
+                        <li><a href="https://nischal.info.np/tag/forward-chaining.html">forward chaining</a></li>
+                        <li><a href="https://nischal.info.np/tag/backward-chaining.html">backward chaining</a></li>
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+			<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = forward-chaining-vs-backward-chaining; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://shresthanischal.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+<div class="hideshare"></div>
+
+<!-- End Test =====================================- -->
+
+
+	<!-- Begin Footer
+	================================================== -->
+<div class = "container" id = "myFooter">
+        <div class = "row">
+
+            <div class = "col-lg-3 col-md-3" id = "footer-information">
+                <p>Hey there, I'm <strong>Nischal</strong>.<br>
+                I am a student, a developer and I specialize in
+                standards-based Web Development(Django, JS, HTML, CSS ) and ML/DL.
+
+                <br>
+                <br>
+
+                I love Everything that makes me more Human. While
+                not Coding, I play and/or watch football. 
+
+
+
+
+                     </p>
+                <p>Copyright text 2020 by Nischal!!</p>
+                <a href = "">
+                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
+                </a>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "footer-menu">
+                <ul class="pages">
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">My Life</a></li>
+                    <li><a href="">My Daily Journal</a></li>
+                    <li><a href="">My Wish Bucket</a></li>
+                    <li><a href="">My Photos</a></li>
+                    <li><a href="">My Bookmarks</a></li>
+                    <li><a href="">Say Hi!!</a></li>
+                </ul>
+
+                <ul class="list">
+                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
+                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "social-section">
+                <h4 class = "social-links-heading">Follow Me</h4>
+                <ul class = "social-links">
+                    <li><a href = "https://www.facebook.com/theonlyNischal">
+                        <span class = "fa fa-facebook fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.twitter.com/theonlyNischal">
+                        <span class = "fa fa-twitter fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.github.com/NischalLalShrestha">
+                        <span class = "fa fa-github fa-2x"></span>
+                        </a>
+                    </li>
+                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
+                        <span class = "fa fa-linkedin fa-2x"></span>
+                        </a></li>
+                    
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
+                <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
+                <p> 
+                    <form method = "POST" action = "">
+                    <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
+                    </div><!-- /input-group -->
+                    <br />
+                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
+                    </form>
+                 </p>
+            </div>
+        
+
+        </div> <!-- row -->
+</div> <!-- container myFooter -->	<!-- End Footer
+	================================================== -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
+<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
+<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
+</body>
+</html>

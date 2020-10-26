@@ -1,0 +1,479 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
+    <title>    Difference Between RISC and CISC(RISC vs CISC)
+ | Nischal Lal Shrestha</title>
+
+<meta name="description" content="Difference Between RISC and CISC(RISC vs CISC), Published On:Tue, May 21 2019, keywords: risc vs cisc, difference between risc and cisc, [<Tag 'risc'>, <Tag 'cisc'>]">
+
+    <meta name="keywords" content="risc vs cisc, difference between risc and cisc, [<Tag 'risc'>, <Tag 'cisc'>]" />
+
+
+
+<meta property="og:title" content="Difference Between RISC and CISC(RISC vs CISC)">
+<meta property="og:description" content="The main difference between RISC and CISC is RISC processors have simple instructions taking about one clock cycle whereas CSIC processor has complex instructions that take up multiple clocks for execution.">
+<meta property="og:url" content="https://nischal.info.np/">
+<meta property="og:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/risc-vs-cisc.png">
+<meta property="og:site_name" content="Nischal Lal Shrestha">
+<!-- Markup for Twitter -->
+<meta name="twitter:card" content="site">
+<meta name="twitter:site" content="@theonlyNischal">
+<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
+<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
+<meta name="twitter:creator" content="Nischal Lal Shrestha">
+<meta name="twitter:image" content="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/risc-vs-cisc.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <meta property="og:title" contenct="Difference Between RISC and CISC(RISC vs CISC)"/>
+    <meta property="og:url" content="./difference-between-risc-and-cisc.html"/>
+    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
+    <meta property="og:type" content="article"/>
+
+    <link rel="canonical" href="./difference-between-risc-and-cisc.html" />
+
+    <link href="https://nischal.info.np/theme/css/article_details.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
+	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
+  <link href="/theme/css/pygments.css" rel="stylesheet">
+  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-88943346-5');
+</script>
+  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
+  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
+  <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  
+<script src="https://nischal.info.np/theme/js/mathjax_2.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+</head>
+<body>
+
+<div class = "container animate__animated animate__rollIn" id = "banner">
+	<!-- Begin Site Title
+	================================================== -->
+		<div class="mainheading">
+			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
+			<p class="lead">
+				I Love Everything That Makes Me More Human.
+			</p>
+		</div>
+	<!-- End Site Title
+	================================================== -->
+</div> <!-- #banner -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Begin Nav
+================================================== -->
+<nav class="container navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container navigationContainer">
+
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+				</li>
+
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
+				</li>
+
+
+				<li class = "nav-item"  id = "activeMenu" >
+					<a class="nav-link" href="https://nischal.info.np/category/difference-between.html">Difference between</a>
+				</li>
+
+
+
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/openmovement.html">Open Movement</a>
+					</li>
+
+					<li class = "nav-item" >
+						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
+					</li>
+
+				<li class = "nav-item" >
+					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+				</li>
+
+
+			
+		</ul>
+		<!-- End Menu -->
+		<!-- Begin Search -->
+		<form class="form-inline my-2 my-lg-0 searchArea">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+		</form>
+		<!-- End Search -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<div class="container">
+
+
+
+
+<!---- Test
+================================================= --->
+
+    <!-- Begin Article
+================================================== -->
+
+<div class="container">
+	<div class="row">
+    <!-- include left_share was here -->
+		<!-- Begin Post -->
+		<div class="col-md-12 col-md-offset-2 col-xs-12">
+			<div class="mainheading" id = "blogpostHeading">
+
+				<h1 class="posttitle">Difference Between RISC and CISC(RISC vs CISC)</h1>
+			</div>
+
+			<!-- Begin Featured Image -->
+			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/theme/img/DifferenceBetween/risc-vs-cisc.png" alt="Difference Between RISC and CISC(RISC vs CISC)">
+			<!-- End Featured Image -->
+
+			<div id = "authorDetail">
+                <div class = "container">
+                    <div class = "row">
+                                <div id = "blogpostDetails">
+                                    <p class = "publishedDate">On Tue, May 21 2019</p>
+                                </div> <!-- blopostDetails -->
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </div> <!-- authorDetail -->
+
+			<!-- Begin Post Content -->
+			<div class="article-post">
+				<div class="section" id="what-is-the-main-difference-between-risc-and-cisc-risc-vs-cisc">
+<h2>What is the main difference between RISC and CISC(RISC vs CISC)?</h2>
+<p>The main difference between RISC and CISC is RISC processors have simple instructions taking about one clock cycle whereas CSIC processor has complex instructions that take up multiple clocks for execution.</p>
+<p>One of the other major differences between RISC and CISC architectures is the set of instructions that can access memory. A related issue that affects both RISC and CISC architectures is the choice of which addressing modes the architecture supports. Architecture's addressing modes are the set of syntaxes and methods that instructions use to specify a memory address, either as the target address of a memory reference or as the address that a branch will jump to.</p>
+<p>There are two basic types of processor design philosophies: reduced instruction set computer(RISC) and complex instruction set computers(CISC). In the 1970s and 1980s, processors predominantly followed the CISC designs. The current trend is to use the RISC philosophy.</p>
+<img alt="Difference Between System Software and Application Software" id="difference-between-system-software-and-application-software" src="theme/img/DifferenceBetween/difference-between-system-software-and-application-software.png" style="width: 100%;" />
+</div>
+<div class="section" id="cisc">
+<h2>CISC</h2>
+<p>As the name suggests, CISC systems use complex instructions. What is a complex instruction? For example, adding two integers is considered to be a simple instruction. But, an instruction that copies an element from one array to another array and automatically updates both array subscripts is considered to be a complex instruction. RISC systems use only simple instructions. Furthermore RISC system assume that the required operands are in the processor's internal registers, not in the main memory.</p>
+<p>A CISC design doesn't impose such restrictions. So What? It turns out that characterstics like simple instructions and restrictions like register-based operands not only simplify the processor design but also result in a processor that provides improved application performance.</p>
+</div>
+<div class="section" id="risc">
+<h2>RISC</h2>
+<p>RISC processor instruction set has a fixed length encoding of instructions and each instruction execute in a single clock cycle by hardwired implementation of each instruction. RISC architectures focus on reducing the number of instructions and working with simpler instruction sets having the limited number of addressing modes and allowing them to execute more instructions in the same amount of time. Program written for RISC architecture tend to take more space in memory but the RISC processor's increased clock rate allows it to execute its program in less time than a CISC processor takes to execute its program.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="51%" />
+<col width="40%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Basis</td>
+<td>RISC</td>
+<td>CISC</td>
+</tr>
+<tr><td>Full Form</td>
+<td>RISC stands for Reduced Instruction Set Computer.</td>
+<td>CISC stands for Complex Instruction Set Computer.</td>
+</tr>
+<tr><td>Type of Instruction</td>
+<td>RISC processors have simple instructions taking about one clock cycle.</td>
+<td>CSIC processor has complex instructions that take up multiple clocks for execution.</td>
+</tr>
+<tr><td>Instruction Set</td>
+<td>The instruction set is reduced i.e. it has only a&nbsp;few instructions in the instruction set. Many of these instructions are very primitive.</td>
+<td>The instruction set has a variety of different instructions that can be used for complex operations.</td>
+</tr>
+<tr><td>Execution Time</td>
+<td>In RISC Execution time is very less.</td>
+<td>In CISC Execution time is very high.</td>
+</tr>
+<tr><td>Examples</td>
+<td>The most common RISC microprocessors are Alpha, ARC, ARM, AVR, MIPS, PA-RISC, PIC, Power Architecture, and SPARC.</td>
+<td>Examples of CISC processors are the System/360, VAX, PDP-11, Motorola 68000 family, AMD and Intel x86 CPUs.</td>
+</tr>
+<tr><td>Average Clock Cycle</td>
+<td>The average clock cycle per instruction (CPI) is 1.5 in RISC</td>
+<td>The average clock cycle per instruction (CPI) is in the range of 2 and 15 in CISC</td>
+</tr>
+<tr><td>Focus on</td>
+<td>Software Centric Design</td>
+<td>Hardware Centric Design</td>
+</tr>
+<tr><td>Memory Unit</td>
+<td>It has no memory unit and uses a separate hardware to implement instructions.</td>
+<td>It has a memory unit to implement complex instructions.</td>
+</tr>
+<tr><td>Register Set</td>
+<td>Multiple Register Set</td>
+<td>Single Register Set</td>
+</tr>
+<tr><td>RAM Requirement</td>
+<td>RISC requires more RAM.</td>
+<td>CISC requires minimum amount of RAM</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<img alt="Schematic Comparision Between RISC and CISC Architecture" id="schematic-comparision-between-risc-and-cisc-architecture" src="theme/img/DifferenceBetween/schematic-comparision-between-risc-and-cisc-architecture.png" style="width: 100%;" />
+</div>
+<div class="section" id="the-amount-of-work-accomplished-per-instruction">
+<h2>The amount of work accomplished per instruction</h2>
+<p>The original CISC philosophy was to do as much work per instruction as possible. Doing more work with fewer instructions meant that writing programs (in assembly language) was easier, and it was easier to write code generators for compilers.</p>
+<p>RISC designs, on the other hand, attempt to perform only one operation per instruction. For this reason, it often takes two or more RISC instructions to do the same work as a single CISC instruction. As a result, RISC programs generally execute between 1.5 and 2.5 times as many instructions to do the same work as an equivalent program running on a CISC processor.</p>
+</div>
+<div class="section" id="the-size-of-an-individual-instruction">
+<h2>The size of an individual instruction</h2>
+<p>Most CISC designs use a variable instruction length, whereas RISC designs use fixed instruction lengths. Instructions on the 80x86, for example, range
+in length from 1 byte to 15 bytes. PowerPC instructions, on the other hand,
+are always 4 bytes long.</p>
+<p>From a memory-usage point of view, CISC designs are more efficient
+than RISC designs. A well-designed CISC instruction set can pack more
+instructions into the same memory, thereby using less memory to hold the
+same number of instructions. Combined with the fact that those (smaller)
+instructions often do more work than individual RISC instructions, CISC
+processors usually have a big advantage over RISC processors when it comes
+to instruction density (that is, the number of instructions appearing in a
+given block of memory).</p>
+</div>
+<div class="section" id="the-clock-speed-and-clock-cycles-per-instruction">
+<h2>The clock speed and clock cycles per instruction</h2>
+<p>So far, it appears that the CISC design philosophy is the outright winner
+when comparing the two designs. CISC instructions do more work and, on
+the average, require less memory to do that work. All other things being
+equal, you might expect that programs running in a CISC processor would
+run faster than equivalent programs running on a RISC processor.</p>
+<p>In fact, this assumption turns out to be false. The implicit assumption
+here is that all instructions take the same amount of time to execute, regard-
+less of their size and complexity. In the real world, and especially for CISC
+processors, complex instructions often take far longer to execute than
+simpler instructions. Indeed, the holy grail of RISC design has always been
+to reduce instruction execution time to one clock per instruction (CPI) or
+less.</p>
+</div>
+<div class="section" id="the-number-of-registers-they-provide-and-the-way-they-use-those-registers">
+<h2>The number of registers they provide, and the way they use those registers</h2>
+<p>Most CPUs perform intermediate calculations in registers and use registers
+to hold parameter and local variable values (to avoid accessing memory).
+The more registers you have, the more data a CPU can manipulate without
+accessing main memory. This is one area where RISC processors have a huge
+advantage over CISC processors. A typical RISC CPU, like the PowerPC, pro-
+vides 32 general-purpose registers, compared to the eight general-purpose
+registers found on a 32-bit 80x86 CPU. 1 As a result, RISC CPUs do not have
+to access memory anywhere near as often as the 80x86 CPU does. Because
+register access is much faster than memor access, having these extra registers
+helps RISC CPUs overcome the fact that many operations require the exe-
+cution of two or more RISC instructions to do the same work as one CISC
+instruction that can directly access memory</p>
+</div>
+<div class="section" id="immediate-constant-operands">
+<h2>Immediate (Constant) Operands</h2>
+<p>RISC and CISC CPUs often vary considerably with respect to the type of
+immediate operands that instructions allow. CISC CPUs support variable-
+sized instructions that allow a program to specify 8-, 16-, 32-, and even 64-bit
+constant operands as part of a single instruction. 2 RISC processors only allow
+a single 32-bit instruction format and, therefore, cannot encode an instruc-
+tion opcode, destination register operand, and a large immediate constant
+into a single instruction. RISC CPUs, therefore, have to use two or more
+instructions to load large constant values into a register. This situation worsens
+as the instruction operands become larger (e.g., loading a 64-bit constant
+into a 64-bit variant of the PowerPC).</p>
+</div>
+
+			</div>
+			<!-- End Post Content -->
+
+			<!-- Begin Tags -->
+			<div class="after-post-tags">
+				<ul class="tags">
+
+                        <li><a href="https://nischal.info.np/tag/risc.html">risc</a></li>
+                        <li><a href="https://nischal.info.np/tag/cisc.html">cisc</a></li>
+				</ul>
+			</div>
+			<!-- End Tags -->
+
+			<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = difference-between-risc-and-cisc; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        
+        s.src = 'https://shresthanischal.disqus.com/embed.js';
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+		</div>
+		<!-- End Post -->
+
+	</div>
+</div>
+<!-- End Article
+================================================== -->
+<div class="hideshare"></div>
+
+<!-- End Test =====================================- -->
+
+
+	<!-- Begin Footer
+	================================================== -->
+<div class = "container" id = "myFooter">
+        <div class = "row">
+
+            <div class = "col-lg-3 col-md-3" id = "footer-information">
+                <p>Hey there, I'm <strong>Nischal</strong>.<br>
+                I am a student, a developer and I specialize in
+                standards-based Web Development(Django, JS, HTML, CSS ) and ML/DL.
+
+                <br>
+                <br>
+
+                I love Everything that makes me more Human. While
+                not Coding, I play and/or watch football. 
+
+
+
+
+                     </p>
+                <p>Copyright text 2020 by Nischal!!</p>
+                <a href = "">
+                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
+                </a>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "footer-menu">
+                <ul class="pages">
+                    <li><a href="">Articles</a></li>
+                    <li><a href="">My Life</a></li>
+                    <li><a href="">My Daily Journal</a></li>
+                    <li><a href="">My Wish Bucket</a></li>
+                    <li><a href="">My Photos</a></li>
+                    <li><a href="">My Bookmarks</a></li>
+                    <li><a href="">Say Hi!!</a></li>
+                </ul>
+
+                <ul class="list">
+                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
+                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "social-section">
+                <h4 class = "social-links-heading">Follow Me</h4>
+                <ul class = "social-links">
+                    <li><a href = "https://www.facebook.com/theonlyNischal">
+                        <span class = "fa fa-facebook fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.twitter.com/theonlyNischal">
+                        <span class = "fa fa-twitter fa-2x"></span>
+                        </a></li>
+                    <li><a href = "https://www.github.com/NischalLalShrestha">
+                        <span class = "fa fa-github fa-2x"></span>
+                        </a>
+                    </li>
+                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
+                        <span class = "fa fa-linkedin fa-2x"></span>
+                        </a></li>
+                    
+                </ul>
+            </div>
+
+            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
+                <h4>Newsletter</h4>
+                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
+                <p> 
+                    <form method = "POST" action = "">
+                    <div class="input-group">
+                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
+                    </div><!-- /input-group -->
+                    <br />
+                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
+                    </form>
+                 </p>
+            </div>
+        
+
+        </div> <!-- row -->
+</div> <!-- container myFooter -->	<!-- End Footer
+	================================================== -->
+
+</div>
+<!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
+<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
+<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
+</body>
+</html>
