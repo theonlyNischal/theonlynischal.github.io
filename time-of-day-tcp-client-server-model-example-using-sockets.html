@@ -1,200 +1,172 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="facebook-domain-verification" content="r35igwv89e9azem6iyb1u7tin7zkrs" />
-    <meta property="og:title" content="Nischal Lal Shrestha">
-    <meta property="og:description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
-    <meta property="og:url" content="https://nischal.info.np/">
-    <meta property="og:image" content="https://nischal.info.np/theme/img/favicon.png">
-    <meta property="og:site_name" content="Nischal Lal Shrestha">
-    <meta http-equiv="Content-Security-Policy" content="default-src https:">
-    
-	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
-    <title>    Simple time-of-day TCP Client-Server model example using sockets in C
+   <head>
+      <meta charset="utf-8">
+      <title>Simple time-of-day TCP Client-Server model example using sockets in C
  | Nischal Lal Shrestha</title>
-
-<meta name="description" content="Simple time-of-day TCP Client-Server model example using sockets in C, Published On:Wed, Oct 14 2020, keywords: tcp, sockets, c, tcp example, client-server model, sockets example, ">
-
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='en_US'>
+      <meta property='wagtail:language' content='en'>
+      <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Simple time-of-day TCP Client-Server model example using sockets in C, Published On:Wed, Oct 14 2020, keywords: tcp, sockets, c, tcp example, client-server model, sockets example, ">
     <meta name="keywords" content="tcp, sockets, c, tcp example, client-server model, sockets example, " />
-
-
-<meta property="og:title" content="Simple time-of-day TCP Client-Server model example using sockets in C">
-<meta property="og:description" content="In a client-server model, a server is an application program that offers a service over a network. The server's code runs first, which opens a port and accepts an incoming request. When a request arrives it forms a response and returns the result to the requester. A program becomes a client when it sends a request to a server and waits for a response.">
-<meta property="og:url" content="https://nischal.info.np/">
-<meta property="og:image" content="https://nischal.info.np/theme/img/code/sockets-simple-time-of-day-server-in-c.png">
-<meta property="og:site_name" content="Nischal Lal Shrestha">
-<!-- Markup for Twitter -->
-<meta name="twitter:card" content="site">
-<meta name="twitter:site" content="@theonlyNischal">
-<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
-<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
-<meta name="twitter:creator" content="Nischal Lal Shrestha">
-<meta name="twitter:image" content="https://nischal.info.np/theme/img/code/sockets-simple-time-of-day-server-in-c.png">
+    <meta property="og:title" content="Simple time-of-day TCP Client-Server model example using sockets in C">
+    <meta property="og:description" content="In a client-server model, a server is an application program that offers a service over a network. The server's code runs first, which opens a port and accepts an incoming request. When a request arrives it forms a response and returns the result to the requester. A program becomes a client when it sends a request to a server and waits for a response.">
+    <meta property="og:url" content="https://nischal.info.np/">
+    <meta property="og:image" content="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png">
+    <meta property="og:site_name" content="Nischal Lal Shrestha">
+    <!-- Markup for Twitter -->
+    <meta name="twitter:card" content="site">
+    <meta name="twitter:site" content="@theonlyNischal">
+    <meta name="twitter:title" content="Simple time-of-day TCP Client-Server model example using sockets in C">
+    <meta name="twitter:description" content="In a client-server model, a server is an application program that offers a service over a network. The server's code runs first, which opens a port and accepts an incoming request. When a request arrives it forms a response and returns the result to the requester. A program becomes a client when it sends a request to a server and waits for a response.">
+    <meta name="twitter:creator" content="Nischal Lal Shrestha">
+    <meta name="twitter:image" content="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png">
     <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
-
     <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
     <meta property="og:type" content="article"/>
-
     <link rel="canonical" href="./time-of-day-tcp-client-server-model-example-using-sockets.html" />
-
-    <link href="https://nischal.info.np/theme/css/article_details.css" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+    
+      
+      <script src="http://127.0.0.1:8000/theme/js/protocol-base.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-support.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-utils.js"></script>
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/uswds-2.11.2/css/uswds.min.css" />
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol-components.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/main.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/my-touch.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/pygments.css">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
-    <!-- Custom styles for this template -->
-    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
-	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
-	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
-  <link href="/theme/css/pygments.css" rel="stylesheet">
-  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="icon" type="image/png" sizes="196x196" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="shortcut icon" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="canonical" href="http://127.0.0.1:8000">
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds-init.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      
+   </head>
+   <body class="" id="view-blog-index">
+      <div class="wrapper">
+<div class="sticky-top d-print-none">
+    <div class="primary-nav-container">
+        <div class="wrapper-burger">
+            <div class="menu-container">
+                <div class="narrow-screen-menu hidden d-lg-none">
+                <div class="narrow-screen-menu-background dark-theme">
+                    <div class="narrow-screen-menu-container">
+                        <div class="container" role="navigation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="nav-links pt-3">
+                                        <div><a class="" href="http://127.0.0.1:8000">Home</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></div>
 
-  gtag('config', 'UA-88943346-5');
-</script>
-  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
-  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
-  <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+                                            <div><a class="active" href="http://127.0.0.1:8000/category/code.html">Code</a></div>
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-/>
-</head>
-<body>
+                                            <div><a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></div>
 
-<div class = "container animate__animated animate__rollIn" id = "banner">
-	<!-- Begin Site Title
-	================================================== -->
-		<div class="mainheading">
-			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
-			<p class="lead">
-				I Love Everything That Makes Me More Human.
-			</p>
-		</div>
-	<!-- End Site Title
-	================================================== -->
-</div> <!-- #banner -->
+                                            <div><a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></div>
 
+                                            <br>
+<div class="row">
+    <div class="col-12">
+        <hr class="intro-and-content-divider">
+    </div>
+</div>                                            <div><a  href="http://127.0.0.1:8000/about/"><i class="la-lg las la-user"></i>  About Me</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/projects/"><i class="la-lg las la-file-code"></i>  Projects</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i> Contact</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <nav class="container wide-screen-menu-container" title="main site navigation">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div id="primary-nav-links">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+                                        <div class="burger-bar burger-bar-top"></div>
+                                        <div class="burger-bar burger-bar-middle"></div>
+                                        <div class="burger-bar burger-bar-bottom"></div>
+                                    </button>
+                                    <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
+                                    <div class="wide-screen-menu">
+                                        <div class="nav-links d-none d-lg-block">
+                                                <a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a>
+                                                <a class="active" href="http://127.0.0.1:8000/category/code.html">Code</a>
+                                                <a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a>
+                                                <a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a>
+ 
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/about/" ><i class="la-lg las la-user"></i>  About Me</a>
+                                            
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/projects/" ><i class="la-lg las la-file-code"></i>  Projects</a>
+                                                
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i>  Contact</a>
+                                        </div>
+                                        
 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="d-flex align-items-center">
 
+                            </div>
+                            
 
-
-
-
-
-
-
-
-
-<!-- Begin Nav
-================================================== -->
-<nav class="container navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="container navigationContainer">
-
-	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		<!-- Begin Menu -->
-		<ul class="navbar-nav ml-auto">
-		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
-
-				<li class = "nav-item" >
-					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
-				</li>
-
-
-				<li class = "nav-item"  id = "activeMenu" >
-					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
-				</li>
-
-
-
-
-					<li class = "nav-item" >
-						<a class="nav-link" href="https://nischal.info.np/category/opensource.html">Open Source</a>
-					</li>
-
-					<li class = "nav-item" >
-						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
-					</li>
-
-				<li class = "nav-item" >
-					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
-				</li>
-
-
-			
-		</ul>
-		<!-- End Menu -->
-		<!-- Begin Search -->
-		<form class="form-inline my-2 my-lg-0 searchArea">
-			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
-		</form>
-		<!-- End Search -->
-	</div>
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
 </div>
-</nav>
-<!-- End Nav
-================================================== -->
+         <header role="banner">
+         </header>
+         
+         <main role="main">
+            <div class="container">
+              <header>
 
-<div class="container">
-
-
-
-
-<!---- Test
-================================================= --->
-
-    <!-- Begin Article
-================================================== -->
-
-<div class="container">
-	<div class="row">
-    <!-- include left_share was here -->
-		<!-- Begin Post -->
-		<div class="col-md-12 col-md-offset-2 col-xs-12">
-			<div class="mainheading" id = "blogpostHeading">
-
-				<h1 class="posttitle">Simple time-of-day TCP Client-Server model example using sockets in C</h1>
-			</div>
-
-			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/code/sockets-simple-time-of-day-server-in-c.png" alt="Simple time-of-day TCP Client-Server model example using sockets in C">
-			<!-- End Featured Image -->
-
-			<div id = "authorDetail">
-                <div class = "container">
-                    <div class = "row">
-                                <div id = "blogpostDetails">
-                                    <p class = "publishedDate">On Wed, Oct 14 2020</p>
-                                </div> <!-- blopostDetails -->
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- authorDetail -->
-
-			<!-- Begin Post Content -->
-			<div class="article-post">
-				<p>This program returns time of day whenever a client send server a packet.
+    <div class="row">
+        <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
+            <div class="blog-sticky-side d-none d-lg-flex justify-content-lg-end">
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Simple time-of-day TCP Client-Server model example using sockets in C" data-link="http://127.0.0.1:8000/time-of-day-tcp-client-server-model-example-using-sockets"></div>
+            </div>
+        </div>
+        <div class="py-4 py-md-5 col-lg-8">
+            <div class="cms ">
+            <h1 class="h1-heading">Simple time-of-day TCP Client-Server model example using sockets in C</h1>
+            <div class="blog-authors d-flex flex-wrap flex-column mb-4">
+                <p class="body-small my-2">
+                    By
+                    <span><b><a href="http://127.0.0.1:8000/author/nischal-lal-shrestha.html">Nischal Lal Shrestha</a></b></span>
+                    | Wed, Oct 14 2020
+                    | <a class="category" href="http://127.0.0.1:8000/category/code.html">Code</a>
+                </p>
+            </div>
+            <div class="blog-body">
+                <figure class="my-default">
+                    <img src="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png" alt="Image for Simple time-of-day TCP Client-Server model example using sockets in C" class="w-100" />
+                    <figcaption class="body-small d-block mt-2">
+                        
+                    </figcaption>
+                </figure>
+                <div class="rich-text">
+                    <p>This program returns time of day whenever a client send server a packet.
 Using this example we will understand basics of TCP sockets.</p>
 <p>In a client-server model, a server is an application program that offers a service over a network. The
 server's code runs first, which opens a port and accepts an incoming request. When a request arrives
@@ -208,53 +180,53 @@ the client and the client will print the information in the screen.</p>
 </div>
 <div class="section" id="server-side-code">
 <h2>Server Side Code</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
@@ -268,11 +240,11 @@ the client and the client will print the information in the screen.</p>
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">listenfd</span><span class="p">,</span> <span class="n">connfd</span><span class="p">;</span>
-    <span class="k">struct</span> <span class="n">sockaddr_in</span> <span class="n">servaddr</span><span class="p">,</span> <span class="n">cliaddr</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">servaddr</span><span class="p">,</span> <span class="n">cliaddr</span><span class="p">;</span>
     <span class="kt">char</span> <span class="n">buff</span> <span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span>
     <span class="kt">time_t</span> <span class="n">ticks</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">port</span><span class="p">;</span>
@@ -305,7 +277,16 @@ the client and the client will print the information in the screen.</p>
 </td></tr></table></div>
 <div class="section" id="include-header-files">
 <h2>1. Include header files</h2>
-<div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
@@ -316,162 +297,172 @@ the client and the client will print the information in the screen.</p>
 <span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
 </pre></div>
-<p>These line includes numerous system headers that are needed by most network programs</p>
+</td></tr></table><p>These line includes numerous system headers that are needed by most network programs</p>
 </div>
 <div class="section" id="defines-constants">
 <h2>2. Defines Constants</h2>
-<div class="highlight"><pre><span></span><span class="cp">#define MAXLINE 1024</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 </pre></div>
-<p>Defines various constants that we use(e.g., MAXLINE, LISTENQ)</p>
+</td></tr></table><p>Defines various constants that we use(e.g., MAXLINE, LISTENQ)</p>
 </div>
 <div class="section" id="gives-type-struct-sockaddr-a-new-name-to-shorten-the-code">
 <h2>3. Gives type &quot;struct sockaddr&quot; a new name to shorten the code.</h2>
-<div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
 </pre></div>
-<ol class="arabic simple" start="4">
+</td></tr></table><ol class="arabic simple" start="4">
 <li>Starts main function and it accepts command line arguments.</li>
 </ol>
-<div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
 </pre></div>
-<p><strong>argv**(argument count) and **argc**(argument vector) are how command line arguments
+</td></tr></table><p><strong>argv**(argument count) and **argc**(argument vector) are how command line arguments
 are passed to **main()</strong> in C and C++.</p>
 <p><strong>argc</strong> will be the number of strings pointed to by <strong>argv</strong>.</p>
 </div>
 <div class="section" id="creates-a-tcp-socket">
 <h2>5. Creates a TCP Socket.</h2>
-<div class="highlight"><pre><span></span><span class="n">listenfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Creates a TCP Socket</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listenfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Creates a TCP Socket</span>
 </pre></div>
-<p>The socket function creates a socket on demand. The function takes three integer
+</td></tr></table><p>The socket function creates a socket on demand. The function takes three integer
 arguments and returns an integer descriptor which we can use to identify the socket
 in all future function calls (e.g., the calls to connect and
 read that follow).</p>
 </div>
 <div class="section" id="initialize-the-server-address-by-the-port-and-ip">
 <h2>6.Initialize the server address by the port and IP.</h2>
-<div class="highlight"><pre><span></span><span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 <span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
 <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
 <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span> <span class="o">=</span> <span class="n">htonl</span><span class="p">(</span><span class="n">INADDR_ANY</span><span class="p">);</span>
 <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="bind-the-socket-descriptor-to-the-server-address">
 <h2>7. Bind the socket descriptor to the server address.</h2>
-<div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
 </pre></div>
-<p>Once a socket has been created, a server uses the bind function to establish a local address for
+</td></tr></table><p>Once a socket has been created, a server uses the bind function to establish a local address for
 the socket†. Bind has the following form.</p>
-<div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">localaddr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">localaddr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="turn-on-the-socket-to-listen-for-incoming-connections">
 <h2>8. Turn on the socket to listen for incoming connections.</h2>
-<div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="n">LISTENQ</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="n">LISTENQ</span><span class="p">);</span>
 </pre></div>
-<p>Socket function listen allows servers to prepare a socket for incoming connections.
+</td></tr></table><p>Socket function listen allows servers to prepare a socket for incoming connections.
 In terms of the underlying protocols, listen puts the socket in a passive mode ready to
 accept connections. Only servers use listen. In addition to placing a protocol in passive
 mode, listen contains an argument that configures the size of a queue for incoming re-
 quests.
 A call has the form:</p>
-<div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">qlength</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">qlength</span><span class="p">);</span>
 </pre></div>
-<p>Argument descriptor gives the descriptor of a socket that should be prepared for use by
+</td></tr></table><p>Argument descriptor gives the descriptor of a socket that should be prepared for use by
 a server, and argument qlength specifies the length of the request queue for that socket.</p>
 </div>
 <div class="section" id="infinite-loop">
 <h2>9. Infinite loop</h2>
-<div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
 <span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
 <span class="p">}</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="store-the-clients-address-and-socket-descriptor-by-accepting-an-incoming-connection">
 <h2>10. Store the client’s address and socket descriptor by accepting an incoming connection.</h2>
-<div class="highlight"><pre><span></span><span class="n">len</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">len</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span>
 <span class="n">connfd</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">len</span><span class="p">);</span>
 </pre></div>
-<p>Once a socket has been established, the server needs to wait for a connection. To
+</td></tr></table><p>Once a socket has been established, the server needs to wait for a connection. To
 do so, the server calls function accept. A call to accept blocks until a new connection
 request arrives. The call has the form:</p>
-<div class="highlight"><pre><span></span><span class="n">newsock</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">newsock</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="sending-data-through-a-socket">
 <h2>11. Sending data through a socket.</h2>
-<div class="highlight"><pre><span></span><span class="n">ticks</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ticks</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
 <span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span> <span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span>
 <span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span> <span class="n">buff</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span>
 </pre></div>
-<p>This calculate current time and send it to client through socket.</p>
+</td></tr></table><p>This calculate current time and send it to client through socket.</p>
 </div>
 <div class="section" id="terminate-the-connection">
 <h2>12. Terminate the connection.</h2>
-<div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="client-side-code">
 <h2>Client Side Code</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
@@ -485,12 +476,12 @@ request arrives. The call has the form:</p>
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
     <span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
     <span class="kt">char</span> <span class="n">recvline</span> <span class="p">[</span><span class="n">MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-    <span class="k">struct</span> <span class="n">sockaddr_in</span> <span class="n">servaddr</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">servaddr</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">port</span><span class="p">;</span>
 
     <span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">){</span>
@@ -533,147 +524,133 @@ request arrives. The call has the form:</p>
 </pre></div>
 </td></tr></table></div>
 
+                </div>
+                <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Simple time-of-day TCP Client-Server model example using sockets in C" data-link="http://127.0.0.1:8000/time-of-day-tcp-client-server-model-example-using-sockets"></div>
+            </div>
+            <br/>
+
+
+
+            <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                    */
+                    /*
+                    var disqus_config = function () {
+                        this.page.url = http://127.0.0.1:8000;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = time-of-day-tcp-client-server-model-example-using-sockets; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://shresthanischal.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                            
+            </div>
+        </div>
+    </div>
+
+               
+            </div>
+         </main>
+
+
+
+<footer class="mzp-c-footer">
+	<div class="mzp-l-content ">
+		<nav class="mzp-c-footer-primary">
+			<div class="mzp-c-footer-primary-logo">
+				<a href="https://nischal.info.np">Nischal Lal Shrestha</a>
 			</div>
-			<!-- End Post Content -->
+			<div class="mzp-c-footer-sections">
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Explore
+  </h5>
+					<ul class="mzp-c-footer-list">
+							<li><a href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></li>
+							<li><a href="http://127.0.0.1:8000/category/code.html">Code</a></li>
+							<li><a href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></li>
+							<li><a href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    About
+  </h5>
+					<ul class="mzp-c-footer-list">
+                        <li><a href="http://127.0.0.1:8000/about/">About Me</a></li>
+                        <li><a href="http://127.0.0.1:8000/projects/">Projects</a></li>
+                        <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Website Credits
+  </h5>
+					<ul class="mzp-c-footer-list">
+						<li><a href="https://protocol.mozilla.org/">Mozilla Protocol</a></li>
+						<li><a href="https://designsystem.digital.gov/how-to-use-uswds/">
+							USWD </a></li>
+						<li><a href="https://docs.getpelican.com/en/stable/index.html">Pelican</a></li>
+						<li><a href="https://icons8.com/line-awesome">Line Awesome</a></li>
+						<li><a href="https://pages.github.com/">Github Pages</a></li>
+						<li><a href="https://unsplash.com/">Unsplash</a></li>
+					</ul>
+				</section>
+			</div>
+		</nav>
+		<nav class="mzp-c-footer-secondary">
+			<ul class="mzp-c-footer-links-social">
+				<li>
+					<a class="twitter" href="https://twitter.com/dakkulanthu">Twitter
+						<span> (@dakkulanthu)</span>
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="https://www.youtube.com/channel/UCQoieW45COakbskXxW_ANIw">YouTube
+						<span> (Nischal Lal Shrestha)</span>
+					</a>
+				</li>
+			</ul>
 
-			<!-- Begin Tags -->
-			<div class="after-post-tags">
-				<ul class="tags">
+			<div class="mzp-c-footer-legal">
+				<p class="mzp-c-footer-license">Hey there, I'm Nischal.
+						<br/>
+						I am a student, a developer. I like to be vocal on 
+						local problems. Currently learning ML, DL, Data Science, Python.
+				</p>
 
+				<p class="mzp-c-footer-license">I love Everything that makes me more Human.
+				<br/>
+				<br/>
+				 While not Coding, I play Football and Chess.
+				</p class="mzp-c-footer-license">
+
+				<p mzp-c-footer-license>Copyright text 2020 by Nischal!!</p>
+				
+				<ul class="mzp-c-footer-terms">
+				<li><a href="https://nischal.info.np">Cookies</a></li>
+				<li><a href="https://nischal.info.np">Legal</a></li>
+				<li><a href="https://nischal.info.np">Privacy Policy</a></li>
+				<li><a href="https://nischal.info.np">Disclaimer</a></li>
+				<li><a href="https://nischal.info.np">Code of Conduct</a></li>
+				
 				</ul>
-			</div>
-			<!-- End Tags -->
+      		</div>
 
-			<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = time-of-day-tcp-client-server-model-example-using-sockets; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://shresthanischal.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-
-
-		</div>
-		<!-- End Post -->
-
+		</nav>
 	</div>
-</div>
-<!-- End Article
-================================================== -->
-<div class="hideshare"></div>
-
-<!-- End Test =====================================- -->
-
-
-	<!-- Begin Footer
-	================================================== -->
-<div class = "container" id = "myFooter">
-        <div class = "row">
-
-            <div class = "col-lg-3 col-md-3" id = "footer-information">
-                <p>Hey there, I'm <strong>Nischal</strong>.<br>
-                I am a student, a developer and I specialize in
-                standards-based Web Development(Django, JS, HTML, CSS ) and ML/DL.
-
-                <br>
-                <br>
-
-                I love Everything that makes me more Human. While
-                not Coding, I play and/or watch football. 
-
-
-
-
-                     </p>
-                <p>Copyright text 2020 by Nischal!!</p>
-                <a href = "">
-                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
-                </a>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "footer-menu">
-                <ul class="pages">
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">My Life</a></li>
-                    <li><a href="">My Daily Journal</a></li>
-                    <li><a href="">My Wish Bucket</a></li>
-                    <li><a href="">My Photos</a></li>
-                    <li><a href="">My Bookmarks</a></li>
-                    <li><a href="">Say Hi!!</a></li>
-                </ul>
-
-                <ul class="list">
-                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
-                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "social-section">
-                <h4 class = "social-links-heading">Follow Me</h4>
-                <ul class = "social-links">
-                    <li><a href = "https://www.facebook.com/theonlyNischal">
-                        <span class = "fa fa-facebook fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.twitter.com/theonlyNischal">
-                        <span class = "fa fa-twitter fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.github.com/NischalLalShrestha">
-                        <span class = "fa fa-github fa-2x"></span>
-                        </a>
-                    </li>
-                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
-                        <span class = "fa fa-linkedin fa-2x"></span>
-                        </a></li>
-                    
-                </ul>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
-                <h4>Newsletter</h4>
-                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
-                <p> 
-                    <form method = "POST" action = "">
-                    <div class="input-group">
-                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
-                    </div><!-- /input-group -->
-                    <br />
-                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
-                    </form>
-                 </p>
-            </div>
-        
-
-        </div> <!-- row -->
-</div> <!-- container myFooter -->	<!-- End Footer
-	================================================== -->
-
-</div>
-<!-- /.container -->
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
-<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
-<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
-</body>
+</footer>      </div>
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds.min.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+   </body>
 </html>

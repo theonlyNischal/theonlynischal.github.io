@@ -1,361 +1,553 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Nischal Lal Shrestha" />
-    <meta name="robots" content="index, follow"/>
-    <link rel="shortcut icon" type="image/png" href="./theme/img/favicon.png"/>
-    <meta name="description" content="Author: Nischal Lal Shrestha(theonlyNischal), Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works ">
-    <meta name="keywords" content="Nischal Lal Shrestha, Algorithms, Smart City, Data Structures, How-To, blog of Nischal." />
-    
-<meta property="og:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
-<meta property="og:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
-<meta property="og:url" content="http://www.nischal.info.np/">
-<meta property="og:image" content="http://nischal.info.np/static/img/brand_image_of_nischal_lal_shrestha.png/">
-<meta property="og:site_name" content="Nischal Lal Shrestha">
-<!-- Markup for Twitter -->
-<meta name="twitter:card" content="site">
-<meta name="twitter:site" content="@theonlyNischal">
-<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
-<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
-<meta name="twitter:creator" content="Nischal Lal Shrestha">
-<meta name="twitter:image" content="http://nischal.info.np/static/img/brand_image_of_nischal_lal_shrestha.png">
-    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Home
+ | Nischal Lal Shrestha</title>
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='en_US'>
+      <meta property='wagtail:language' content='en'>
+      <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
+         <meta name="keywords" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
+         <meta name="twitter:card" content="summary_large_image">
+         <meta name="twitter:title" content="Blog">
+         <meta name="twitter:description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
+         <meta name="twitter:image" content="">
+         <meta property="og:url" content="https://nischal.info.np" />
+         <meta property="og:title" content="Blog" />
+         <meta property="og:description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
+         <meta property="og:site_name" content="Nischal Lal Shrestha" />
+         <meta property="og:image" content="" />
+         <meta property="og:image:width" content="1200" />
+         <meta property="og:image:height" content="1200" />
+         <meta itemprop='url' content='https://nischal.info.np' />
+         <meta itemprop="name" content="Blog">
+         <meta itemprop='description' content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
+         <meta itemprop='image' content="" />
+         <title>Nischal Lal Shrestha</title>
+         <meta name="description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
+         <meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
+         <meta name="ga-identifier" content="UA-87658599-6">
+         <meta name="gtm-identifier" content="GTM-MD3XGZ4">
+      
+      
+      <script src="http://127.0.0.1:8000/theme/js/protocol-base.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-support.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-utils.js"></script>
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/uswds-2.11.2/css/uswds.min.css" />
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol-components.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/main.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/my-touch.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/pygments.css">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="icon" type="image/png" sizes="196x196" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="shortcut icon" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="canonical" href="http://127.0.0.1:8000">
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds-init.min.js"></script>
 
+      
+   </head>
+   <body class="" id="view-blog-index">
+      <div class="wrapper">
+<div class="sticky-top d-print-none">
+    <div class="primary-nav-container">
+        <div class="wrapper-burger">
+            <div class="menu-container">
+                <div class="narrow-screen-menu hidden d-lg-none">
+                <div class="narrow-screen-menu-background dark-theme">
+                    <div class="narrow-screen-menu-container">
+                        <div class="container" role="navigation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="nav-links pt-3">
+                                        <div><a class="" href="http://127.0.0.1:8000">Home</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></div>
 
+                                            <div><a  href="http://127.0.0.1:8000/category/code.html">Code</a></div>
 
-    <meta property="og:title" content="Nischal Lal Shrestha"/>
-    <meta property="og:url" content="."/>
-    <meta property="og:site_name" content="Nischal Lal Shrestha"/>
-    <meta property="og:type" content="website"/>
+                                            <div><a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></div>
 
-    <link rel="canonical" href="." />
+                                            <div><a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></div>
 
-    <title>Nischal Lal Shrestha</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="./theme/css/main.css" />
-
-
-
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">
-        stLight.options({
-            publisher: "5ac2361ece89f00013641f45",
-            doNotHash: false,
-            doNotCopy: false,
-            hashAddressBar: false
-        });
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-88943346-2');
-</script>
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link rel="stylesheet" href="./theme/css/article.css">
-    <link rel="stylesheet" href="./theme/css/main.css">
-
-     <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i" rel="stylesheet">
-
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-
-
-
-
-
-
-
-
-</head>
-
-<body id="index">
-
-<div class="container" id="banner">
-                <a href = ".">
-                    <img src = "./theme/img/brand.png" alt = "Logo of Nischal Lal Shrestha">
-                </a>
-        </div> <!-- banner --><!-- Navigation -->
-
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-static-top" role="navigation" id="topnavbar">
-          <div class="container">
-            <!-- <a class="navbar-brand" href="#">Start Bootstrap</a> -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-              <ul class="navbar-nav ml-auto">
-              
-                <li class="nav-item"  >
-                  <a class="nav-link" href=".">Articles
-                    <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-                
-                <li class="nav-item" ><a href="./category/dsa.html" class = "nav-link">DSA</a></li>
-                <li class="nav-item" ><a href="./category/how-to.html" class = "nav-link">How-To</a></li>
-                <li class="nav-item" ><a href="./category/others.html" class = "nav-link">Others</a></li>
-                <li class="nav-item" ><a href="./category/smart-city.html" class = "nav-link">Smart City</a></li>
-   
-              </ul>
-
-              <div class="col-sm-3 col-md-3" id = "searchArea">
-                <form class="navbar-form" role="search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" id = "search" name="q">
-                    <!-- <div class="input-group-btn">
-                        <button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
-                    </div> -->
+                                            <br>
+<div class="row">
+    <div class="col-12">
+        <hr class="intro-and-content-divider">
+    </div>
+</div>                                            <div><a  href="http://127.0.0.1:8000/about/"><i class="la-lg las la-user"></i>  About Me</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/projects/"><i class="la-lg las la-file-code"></i>  Projects</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i> Contact</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </form>
-            </div>
-            </div> <!-- navbarResponsive -->
+                </div>
+                <nav class="container wide-screen-menu-container" title="main site navigation">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div id="primary-nav-links">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+                                        <div class="burger-bar burger-bar-top"></div>
+                                        <div class="burger-bar burger-bar-middle"></div>
+                                        <div class="burger-bar burger-bar-bottom"></div>
+                                    </button>
+                                    <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
+                                    <div class="wide-screen-menu">
+                                        <div class="nav-links d-none d-lg-block">
+                                                <a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a>
+                                                <a  href="http://127.0.0.1:8000/category/code.html">Code</a>
+                                                <a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a>
+                                                <a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a>
+ 
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/about/" ><i class="la-lg las la-user"></i>  About Me</a>
+                                            
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/projects/" ><i class="la-lg las la-file-code"></i>  Projects</a>
+                                                
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i>  Contact</a>
+                                        </div>
+                                        
 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="d-flex align-items-center">
 
-          </div>
-</nav>
+                            </div>
+                            
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-         
-
-
-
-
-
-
-    <div class="row-fluid">
-        <div class="span10 offset1">
-            <div class="row-fluid">
-<div class = "container" id = "mainImage">
-            <div class="carousel slide" data-ride="carousel" data-interval = "2000">
-                  <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">  
-                        <a href = "./what-is-data-structure.html">
-                          <img src="./theme/img/DSA/what_is_data_structure.jpeg" alt="What is Data Structure and Why should I study Data Structure" class = "img-responsive" id = "mainImageImage">
-                          <!-- <div class = "carousel-caption">
-                            <h3 class = "carousel-heading">This is the title and it can also be read if you don't mind doing stuffs related to none.</h3>
-                          </div> -->
-                        </a>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <a href = "#">
-                          <img src="./theme/img/carousel/img2.png" alt="Second slide" class = "img-responsive" id = "mainImageImage">
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href = "#">
-                          <img src="./theme/img/carousel/img3.png" alt="Third slide" class = "img-responsive" id = "mainImageImage">
-                        </a>
-                    </div>
-                  </div> <!-- carousel-innter -->
-            </div> <!-- carousel slide -->
-        </div><div class = "row">
-            <div class = "col">
-                <h1 style="padding-bottom: 10px; padding-top:10px;"></h1>
-            </div>
-</div>
-<div class = "container" id = "articleSection">
-        <div class = "row">
-                <div class = "col-lg-3 col-md-6 mb-4">
-                    <div class = "singleArticle" data-target = "blogpostBody">
-                        <a href= "./how-one.html" class = "articleLink">
-                            <div class = "articleImage">
-                               <img src= "./theme/img/How-To/img1.png" class = "img-responsive">
-                            </div> <!-- articleImage -->
-
-                            <div class = "articleHeading">
-                                <h3>How One</h3>
-                            </div> <!-- articleHeading -->
-
-                            <div class = "articleDetails">
-                                <div class = "eta">
-                                    2 min read
-                                </div>
-
-                                <div class = "author">
-                                    <h4 href = "#myFooter">Nischal Shrestha</h4>
-                                </div>
-
-                                <div class = "timeSince">
-                                    <h4>Fri 23 March 2018</h4>
-                                </div>
-                            </div> <!-- articleDetails -->
-                        </a>
-                    </div> <!-- singleArticle -->
-                </div> <!-- col -->
-                <div class = "col-lg-3 col-md-6 mb-4">
-                    <div class = "singleArticle" data-target = "blogpostBody">
-                        <a href= "./other-one.html" class = "articleLink">
-                            <div class = "articleImage">
-                               <img src= "./theme/img/Others/img1.png" class = "img-responsive">
-                            </div> <!-- articleImage -->
-
-                            <div class = "articleHeading">
-                                <h3>Other One</h3>
-                            </div> <!-- articleHeading -->
-
-                            <div class = "articleDetails">
-                                <div class = "eta">
-                                    4 min read
-                                </div>
-
-                                <div class = "author">
-                                    <h4 href = "#myFooter">Nischal Shrestha</h4>
-                                </div>
-
-                                <div class = "timeSince">
-                                    <h4>Fri 23 March 2018</h4>
-                                </div>
-                            </div> <!-- articleDetails -->
-                        </a>
-                    </div> <!-- singleArticle -->
-                </div> <!-- col -->
-        </div>
-
+                </div>
+                </nav>
             </div>
         </div>
     </div>
-
-
-
-<div class = "container"> <!-- To Fix Footer -->
-
-<div class = "container" id = "myFooter">
-        <div class = "row">
-
-            <div class = "col-lg-3 col-md-3" id = "footer-information">
-                <p>Hey there, I'm <strong>Nischal</strong>.</br>
-                I am a student, a developer and I specialize in
-                standards-based Django, JS, HTML, CSS web development.
-                </br>
-                </br>
-
-                I love Everything that makes me more Human. While
-                not Coding, I play and/or watch football. 
-
-                </br>
-
-
-                I study at NCIT, Nepal(<a href = "https://timeandupdate.com/2018/01/bachelor-of-software-engineering/" class = "friend-link"> Bachelor of Software Engineering</a>). You should come and say HI to me.
-
-
-
-
-                     </p>
-                <p>Copyright text 2018 by Nischal!!</p>
-                <a href = ".">
-                    <img src = "./theme/img/brand.png" class = "img-responsive" style="background: white;" alt = "Logo of Nischal">
-                </a>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "footer-menu">
-                <ul class="pages">
-                    <li><a href=".">Articles</a></li>
-                    <li><a href="./category/dsa.html">Data Structures &amp; Algorithms</a></li>
-                    <li><a href="./category/how-to.html">How To</a></li>
-                    <li><a href="./category/smart-city.html">Smart City</a></li>
-                    <li><a href="./category/others.html">Others</a></li>
-                </ul>
-
-                <ul class="list">
-                    <li><a href="">Terms &amp; Condition</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-2 footer-social animated fadeInDown">
-                <h4>Follow Me</h4>
-                <ul style="list-style: none;">
-                    <li><a href = "https://www.facebook.com/theonlyNischal">
-                        <span class = "fa fa-facebook fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.twitterLink.com/theonlyNischal">
-                        <span class = "fa fa-twitter fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.github.com/theonlyNischal">
-                        <span class = "fa fa-github fa-2x"></span>
-                        </a>
-                    </li>
-                    <li> <a href = "https://www.linkedIn.com/theonlyNischal">
-                        <span class = "fa fa-linkedin fa-2x"></span>
-                        </a></li>
-                </ul>
-            </div>
-
-            <div class="col-md-3 footer-ns animated fadeInRight">
-                <h4>Newsletter</h4>
-                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins? Subscribe Me To Find Out.</p>
-                <p>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="smart@outofworld.com">
-                    </div><!-- /input-group -->
-                    <br />
-                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
-                 </p>
-            </div>
-        
-
-        </div> <!-- row -->
-<h2 class = "checkout-friend-heading">Check Out Some Popular Blogs From My Friends!!</h2>
-        <div class = "row myFriends">
-
-
-            <div class = "col-md-6">
-                <a href="https://www.aashishtiwari.com.np/" class = "friend-link"><h4>Ashish Tiwari</h4></a>
-
-                <p class = "friend-description">Ashish loves to try new things, make stuffs and dream of the sublime. He enjoy good markup, strive for good styling and is passionate about the beautiful code.</p>
-            </div>
-
-            <div class = "col-md-6">
-                <a href="https://www.sarojb.com.np/" class = "friend-link"><h4>Saroj Bhattarai</h4></a>
-
-                <p class = "friend-description">If you like people with a great sense of humor and intelligence, then you should say Hi to Saroj. BUT, Be careful, He knows everything that you are thinking.</p>
-            </div>
-        </div>
-</div> <!-- container myFooter -->
-
-
 </div>
-<script type="text/javascript">
-    var disqus_shortname = 'shresthanischal';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+         <header role="banner">
+         </header>
+         
+         <main role="main">
+            <div class="container">
+              <header>
+    <header>
+    <br>
+        <a href = "http://127.0.0.1:8000"><h1 class="sitetitle"><img src="http://127.0.0.1:8000/theme/img/logo.png" alt="logo"></h1></a>
+			<p class="lead">
+				I Love Everything That Makes Me More Human.
+			</p>
+    </header>
 
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
-</body>
+
+    
+
+ 
+            <div class="my-5">
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/most-handsome-man-of-nepal-is-nirdesh" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/thoughts/nirdesh-is-most-handsome-of-nepal.jpg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Top 10 reason why Nirdesh is the most handsome man of Nepal</h3>
+                                    <div class="rich-text">
+                                        <p>Nirdesh is most nice looking and handsome man of Nepal and he knows it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/thoughts/nirdesh-is-most-handsome-of-nepal.jpg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/thoughts/nirdesh-is-most-handsome-of-nepal.jpg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Top 10 reason why Nirdesh is the most handsome man of Nepal</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>Nirdesh is most nice looking and handsome man of Nepal and he knows it.</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/most-handsome-man-of-nepal-is-nirdesh" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/introduction-to-abstract-data-types" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-abstract-data-types.png" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Introduction to Abstract Data Types</h3>
+                                    <div class="rich-text">
+                                        <p>Computer Scientists uses the concept of abstraction to manage the complexity of a system or a problem. By abstraction we mean, specifying what it does, but not How it...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-abstract-data-types.png" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-abstract-data-types.png" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Introduction to Abstract Data Types</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>Computer Scientists uses the concept of abstraction to manage the complexity of a system or a problem. By abstraction we mean, specifying what it does, but not How it...</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/introduction-to-abstract-data-types" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/time-of-day-tcp-client-server-model-example-using-sockets" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Simple time-of-day TCP Client-Server model example using sockets in C</h3>
+                                    <div class="rich-text">
+                                        <p>In a client-server model, a server is an application program that offers a service over a network. The server's code runs first, which opens a port and accepts an...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/code/sockets-simple-time-of-day-server-in-c.png" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Simple time-of-day TCP Client-Server model example using sockets in C</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>In a client-server model, a server is an application program that offers a service over a network. The server's code runs first, which opens a port and accepts an...</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/time-of-day-tcp-client-server-model-example-using-sockets" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/Deploying-Pytorch-Model-with-Flask" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/code/Deploying-Pytorch-Model-with-Flask.jpg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Deploying Pytorch Model with Flask</h3>
+                                    <div class="rich-text">
+                                        <p>We will deploy a pytorch model which correctly recognize different species of flowers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/code/Deploying-Pytorch-Model-with-Flask.jpg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/code/Deploying-Pytorch-Model-with-Flask.jpg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Deploying Pytorch Model with Flask</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>We will deploy a pytorch model which correctly recognize different species of flowers.</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/Deploying-Pytorch-Model-with-Flask" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/Introduction-to-Data-Structure" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-data-structure.png" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Introduction to Data Structure</h3>
+                                    <div class="rich-text">
+                                        <p>A Data Structure, as the name suggests, is a method to store data in a structured way so that it can be easily created, viewed, and managed. A one-liner definition...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-data-structure.png" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/algorithm/introduction-to-data-structure.png" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Introduction to Data Structure</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>A Data Structure, as the name suggests, is a method to store data in a structured way so that it can be easily created, viewed, and managed. A one-liner definition...</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/Introduction-to-Data-Structure" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/Thesaurus" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/thoughts/4.jpg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Thesaurus</h3>
+                                    <div class="rich-text">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/thoughts/4.jpg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/thoughts/4.jpg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Thesaurus</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p></p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/Thesaurus" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/a-house-is-made-to-be-a-home" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/thoughts/a-house-is-made-to-be-a-home.jpeg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">A House is Made To Be a Home</h3>
+                                    <div class="rich-text">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/thoughts/a-house-is-made-to-be-a-home.jpeg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/thoughts/a-house-is-made-to-be-a-home.jpeg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">A House is Made To Be a Home</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p></p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/a-house-is-made-to-be-a-home" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/classification-of-data-structure" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/algorithm/classification-of-data-structure.jpeg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Classification of Data Structure</h3>
+                                    <div class="rich-text">
+                                        <p>A Data Structure, as the name suggests, is a method to store data in a structured way so that it can be easily created, viewed, and managed. How do we classify data...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/algorithm/classification-of-data-structure.jpeg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/algorithm/classification-of-data-structure.jpeg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Classification of Data Structure</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>A Data Structure, as the name suggests, is a method to store data in a structured way so that it can be easily created, viewed, and managed. How do we classify data...</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/classification-of-data-structure" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-block d-sm-none">
+                        <div class="card-regular h-100 d-flex flex-column">
+                        <a href="http://127.0.0.1:8000/government-2-and-nepal" class="no-underline">
+                            <img src="http://127.0.0.1:8000/theme/img/OpenSource/government-2-and-nepal.jpg" class="full-bleed-xs" />
+                            <div class="full-bleed-xs d-flex flex-1">
+                                <div class="key-item mx-2 mx-md-3 p-3 w-100 d-flex flex-column">
+                                    <h3 class="h3-heading mb-2">Government 2.0 and Nepal</h3>
+                                    <div class="rich-text">
+                                        <p>Even though we live in the 21st century where technology is advancing as we had never seen before. Our government cannot fight the complex challenges like global...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="d-none d-sm-block">
+                        <div class="row card-cta-large my-3 align-items-center my-4">
+                            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                <img class="full-bleed-xs d-block d-md-none d-lg-block" src="http://127.0.0.1:8000/theme/img/OpenSource/government-2-and-nepal.jpg" class="w-100" />
+                                <img class="d-none d-md-block d-lg-none" src="http://127.0.0.1:8000/theme/img/OpenSource/government-2-and-nepal.jpg" class="w-100" />
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h3 class="h2-heading">Government 2.0 and Nepal</h3>
+                                <div class="body-large">
+                                <div class="rich-text">
+                                    <p>Even though we live in the 21st century where technology is advancing as we had never seen before. Our government cannot fight the complex challenges like global...</p>
+                                </div>
+                                </div>
+                                <a href="http://127.0.0.1:8000/government-2-and-nepal" class="mzp-c-button mzp-t-secondary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="mzp-c-button mzp-t-md" href="http://127.0.0.1:8000/index.html">
+                        Previous
+                    </a>
+                    <a class="mzp-c-button mzp-t-md" href="http://127.0.0.1:8000/index3.html">
+                        Next
+                    </a>
+                  
+            </div>
+
+
+               
+            </div>
+         </main>
+
+
+
+<footer class="mzp-c-footer">
+	<div class="mzp-l-content ">
+		<nav class="mzp-c-footer-primary">
+			<div class="mzp-c-footer-primary-logo">
+				<a href="https://nischal.info.np">Nischal Lal Shrestha</a>
+			</div>
+			<div class="mzp-c-footer-sections">
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Explore
+  </h5>
+					<ul class="mzp-c-footer-list">
+							<li><a href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></li>
+							<li><a href="http://127.0.0.1:8000/category/code.html">Code</a></li>
+							<li><a href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></li>
+							<li><a href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    About
+  </h5>
+					<ul class="mzp-c-footer-list">
+                        <li><a href="http://127.0.0.1:8000/about/">About Me</a></li>
+                        <li><a href="http://127.0.0.1:8000/projects/">Projects</a></li>
+                        <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Website Credits
+  </h5>
+					<ul class="mzp-c-footer-list">
+						<li><a href="https://protocol.mozilla.org/">Mozilla Protocol</a></li>
+						<li><a href="https://designsystem.digital.gov/how-to-use-uswds/">
+							USWD </a></li>
+						<li><a href="https://docs.getpelican.com/en/stable/index.html">Pelican</a></li>
+						<li><a href="https://icons8.com/line-awesome">Line Awesome</a></li>
+						<li><a href="https://pages.github.com/">Github Pages</a></li>
+						<li><a href="https://unsplash.com/">Unsplash</a></li>
+					</ul>
+				</section>
+			</div>
+		</nav>
+		<nav class="mzp-c-footer-secondary">
+			<ul class="mzp-c-footer-links-social">
+				<li>
+					<a class="twitter" href="https://twitter.com/dakkulanthu">Twitter
+						<span> (@dakkulanthu)</span>
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="https://www.youtube.com/channel/UCQoieW45COakbskXxW_ANIw">YouTube
+						<span> (Nischal Lal Shrestha)</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="mzp-c-footer-legal">
+				<p class="mzp-c-footer-license">Hey there, I'm Nischal.
+						<br/>
+						I am a student, a developer. I like to be vocal on 
+						local problems. Currently learning ML, DL, Data Science, Python.
+				</p>
+
+				<p class="mzp-c-footer-license">I love Everything that makes me more Human.
+				<br/>
+				<br/>
+				 While not Coding, I play Football and Chess.
+				</p class="mzp-c-footer-license">
+
+				<p mzp-c-footer-license>Copyright text 2020 by Nischal!!</p>
+				
+				<ul class="mzp-c-footer-terms">
+				<li><a href="https://nischal.info.np">Cookies</a></li>
+				<li><a href="https://nischal.info.np">Legal</a></li>
+				<li><a href="https://nischal.info.np">Privacy Policy</a></li>
+				<li><a href="https://nischal.info.np">Disclaimer</a></li>
+				<li><a href="https://nischal.info.np">Code of Conduct</a></li>
+				
+				</ul>
+      		</div>
+
+		</nav>
+	</div>
+</footer>      </div>
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds.min.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+   </body>
 </html>

@@ -1,0 +1,1 @@
+{"PULSE_API_DOMAIN": "https://api.mozillapulse.org", "PULSE_DOMAIN": "https://www.mozillapulse.org", "NETWORK_SITE_URL": "https://foundation.mozilla.org", "TARGET_DOMAINS": ["foundation.mozilla.org", "www.mozillafestival.org"], "SENTRY_DSN": "https://6e0702b58d704eac9d172dcd653848e2@sentry.prod.mozaws.net/490", "RELEASE_VERSION": "v764", "SENTRY_ENVIRONMENT": "Production"}

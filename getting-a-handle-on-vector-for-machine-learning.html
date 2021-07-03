@@ -1,200 +1,172 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="facebook-domain-verification" content="r35igwv89e9azem6iyb1u7tin7zkrs" />
-    <meta property="og:title" content="Nischal Lal Shrestha">
-    <meta property="og:description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
-    <meta property="og:url" content="https://nischal.info.np/">
-    <meta property="og:image" content="https://nischal.info.np/theme/img/favicon.png">
-    <meta property="og:site_name" content="Nischal Lal Shrestha">
-    <meta http-equiv="Content-Security-Policy" content="default-src https:">
-    
-	<link rel="shortcut icon" type="image/png" href="https://nischal.info.np/theme/img/favicon.png"/>
-    <title>    Getting a Handle on Vector for Machine Learning
+   <head>
+      <meta charset="utf-8">
+      <title>Getting a Handle on Vector for Machine Learning
  | Nischal Lal Shrestha</title>
-
-<meta name="description" content="Getting a Handle on Vector for Machine Learning, Published On:Thursday, March 28 2019, keywords: vectors, vectors in machine learning, vectors in physics, vectors in data science, defination of vector, vector, what is vector, vector in deep learning, ">
-
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='en_US'>
+      <meta property='wagtail:language' content='en'>
+      <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Getting a Handle on Vector for Machine Learning, Published On:Thursday, March 28 2019, keywords: vectors, vectors in machine learning, vectors in physics, vectors in data science, defination of vector, vector, what is vector, vector in deep learning, ">
     <meta name="keywords" content="vectors, vectors in machine learning, vectors in physics, vectors in data science, defination of vector, vector, what is vector, vector in deep learning, " />
-
-
-<meta property="og:title" content="Getting a Handle on Vector for Machine Learning">
-<meta property="og:description" content="The word vector comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science and Machine Learning we generalize this idea to think vector as a list of attributes of an object.">
-<meta property="og:url" content="https://nischal.info.np/">
-<meta property="og:image" content="https://nischal.info.np/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG">
-<meta property="og:site_name" content="Nischal Lal Shrestha">
-<!-- Markup for Twitter -->
-<meta name="twitter:card" content="site">
-<meta name="twitter:site" content="@theonlyNischal">
-<meta name="twitter:title" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others.">
-<meta name="twitter:description" content="Nischal Lal Shrestha: Articles on Smart City, Data Structures and Algorithms and Many Others, Nischal's Photos, Nischals' Works">
-<meta name="twitter:creator" content="Nischal Lal Shrestha">
-<meta name="twitter:image" content="https://nischal.info.np/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG">
+    <meta property="og:title" content="Getting a Handle on Vector for Machine Learning">
+    <meta property="og:description" content="The word vector comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science and Machine Learning we generalize this idea to think vector as a list of attributes of an object.">
+    <meta property="og:url" content="https://nischal.info.np/">
+    <meta property="og:image" content="http://127.0.0.1:8000/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG">
+    <meta property="og:site_name" content="Nischal Lal Shrestha">
+    <!-- Markup for Twitter -->
+    <meta name="twitter:card" content="site">
+    <meta name="twitter:site" content="@theonlyNischal">
+    <meta name="twitter:title" content="Getting a Handle on Vector for Machine Learning">
+    <meta name="twitter:description" content="The word vector comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science and Machine Learning we generalize this idea to think vector as a list of attributes of an object.">
+    <meta name="twitter:creator" content="Nischal Lal Shrestha">
+    <meta name="twitter:image" content="http://127.0.0.1:8000/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG">
     <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
-
     <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
     <meta property="og:type" content="article"/>
-
     <link rel="canonical" href="./getting-a-handle-on-vector-for-machine-learning.html" />
-
-    <link href="https://nischal.info.np/theme/css/article_details.css" rel="stylesheet">
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://nischal.info.np/theme/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+    
+      
+      <script src="http://127.0.0.1:8000/theme/js/protocol-base.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-support.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/protocol-utils.js"></script>
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/uswds-2.11.2/css/uswds.min.css" />
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/protocol-components.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/main.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/my-touch.css">
+      <link rel="stylesheet" href="http://127.0.0.1:8000/theme/css/pygments.css">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
-    <!-- Custom styles for this template -->
-    <link href="https://nischal.info.np/theme/css/mediumish.css" rel="stylesheet">
-	<link href="https://nischal.info.np/theme/css/navigation.css" rel="stylesheet">
-	<link href="https://nischal.info.np/theme/css/footer.css" rel="stylesheet">
-  <link href="/theme/css/pygments.css" rel="stylesheet">
-  <link href="https://nischal.info.np/" type="application/atom+xml" rel="alternate" title="Nischal Lal Shrestha ATOM Feed" />
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="icon" type="image/png" sizes="196x196" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="shortcut icon" href="http://127.0.0.1:8000/theme/img/favicon.png">
+      <link rel="canonical" href="http://127.0.0.1:8000">
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds-init.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88943346-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      
+   </head>
+   <body class="" id="view-blog-index">
+      <div class="wrapper">
+<div class="sticky-top d-print-none">
+    <div class="primary-nav-container">
+        <div class="wrapper-burger">
+            <div class="menu-container">
+                <div class="narrow-screen-menu hidden d-lg-none">
+                <div class="narrow-screen-menu-background dark-theme">
+                    <div class="narrow-screen-menu-container">
+                        <div class="container" role="navigation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="nav-links pt-3">
+                                        <div><a class="" href="http://127.0.0.1:8000">Home</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></div>
 
-  gtag('config', 'UA-88943346-5');
-</script>
-  <meta name="google-site-verification" content="tGcL8kVWw--iRNduKaMh8LLH3WSyxUxrxloy4IA9OQo" />
-  <meta name="msvalidate.01" content="87DD74B4D76797CCF6CCE8F28AB3C2E8" />
-  <script data-ad-client="ca-pub-4909906137407369" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+                                            <div><a class="active" href="http://127.0.0.1:8000/category/code.html">Code</a></div>
 
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-/>
-</head>
-<body>
+                                            <div><a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></div>
 
-<div class = "container animate__animated animate__rollIn" id = "banner">
-	<!-- Begin Site Title
-	================================================== -->
-		<div class="mainheading">
-			<a href = "https://nischal.info.np"><h1 class="sitetitle"><img src="https://nischal.info.np/theme/img/logo.png" alt="logo"></h1></a>
-			<p class="lead">
-				I Love Everything That Makes Me More Human.
-			</p>
-		</div>
-	<!-- End Site Title
-	================================================== -->
-</div> <!-- #banner -->
+                                            <div><a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></div>
 
+                                            <br>
+<div class="row">
+    <div class="col-12">
+        <hr class="intro-and-content-divider">
+    </div>
+</div>                                            <div><a  href="http://127.0.0.1:8000/about/"><i class="la-lg las la-user"></i>  About Me</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/projects/"><i class="la-lg las la-file-code"></i>  Projects</a></div>
+                                            <div><a  href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i> Contact</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <nav class="container wide-screen-menu-container" title="main site navigation">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div id="primary-nav-links">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+                                        <div class="burger-bar burger-bar-top"></div>
+                                        <div class="burger-bar burger-bar-middle"></div>
+                                        <div class="burger-bar burger-bar-bottom"></div>
+                                    </button>
+                                    <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
+                                    <div class="wide-screen-menu">
+                                        <div class="nav-links d-none d-lg-block">
+                                                <a  href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a>
+                                                <a class="active" href="http://127.0.0.1:8000/category/code.html">Code</a>
+                                                <a  href="http://127.0.0.1:8000/category/open-source.html">Open Source</a>
+                                                <a  href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a>
+ 
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/about/" ><i class="la-lg las la-user"></i>  About Me</a>
+                                            
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/projects/" ><i class="la-lg las la-file-code"></i>  Projects</a>
+                                                
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="http://127.0.0.1:8000/contact/"><i class="la-lg las la-phone-volume"></i>  Contact</a>
+                                        </div>
+                                        
 
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="d-flex align-items-center">
 
+                            </div>
+                            
 
-
-
-
-
-
-
-
-
-<!-- Begin Nav
-================================================== -->
-<nav class="container navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation" id = "topnavbar">
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="container navigationContainer">
-
-	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
-		<!-- Begin Menu -->
-		<ul class="navbar-nav ml-auto">
-		<li class = "nav-item"><a class = "nav-link" href = "https://nischal.info.np">Articles</a></li>
-
-				<li class = "nav-item" >
-					<a class="nav-link" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
-				</li>
-
-
-				<li class = "nav-item"  id = "activeMenu" >
-					<a class="nav-link" href="https://nischal.info.np/category/code.html">Code</a>
-				</li>
-
-
-
-
-					<li class = "nav-item" >
-						<a class="nav-link" href="https://nischal.info.np/category/opensource.html">Open Source</a>
-					</li>
-
-					<li class = "nav-item" >
-						<a class="nav-link" href="https://nischal.info.np/category/smartcity.html">Smart City</a>
-					</li>
-
-				<li class = "nav-item" >
-					<a class="nav-link" href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
-				</li>
-
-
-			
-		</ul>
-		<!-- End Menu -->
-		<!-- Begin Search -->
-		<form class="form-inline my-2 my-lg-0 searchArea">
-			<input class="form-control mr-sm-2" type="text" placeholder="Search">
-			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
-		</form>
-		<!-- End Search -->
-	</div>
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
 </div>
-</nav>
-<!-- End Nav
-================================================== -->
+         <header role="banner">
+         </header>
+         
+         <main role="main">
+            <div class="container">
+              <header>
 
-<div class="container">
-
-
-
-
-<!---- Test
-================================================= --->
-
-    <!-- Begin Article
-================================================== -->
-
-<div class="container">
-	<div class="row">
-    <!-- include left_share was here -->
-		<!-- Begin Post -->
-		<div class="col-md-12 col-md-offset-2 col-xs-12">
-			<div class="mainheading" id = "blogpostHeading">
-
-				<h1 class="posttitle">Getting a Handle on Vector for Machine Learning</h1>
-			</div>
-
-			<!-- Begin Featured Image -->
-			<img class="featured-image img-fluid" src="https://nischal.info.np/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG" alt="Getting a Handle on Vector for Machine Learning">
-			<!-- End Featured Image -->
-
-			<div id = "authorDetail">
-                <div class = "container">
-                    <div class = "row">
-                                <div id = "blogpostDetails">
-                                    <p class = "publishedDate">On Thursday, March 28 2019</p>
-                                </div> <!-- blopostDetails -->
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- authorDetail -->
-
-			<!-- Begin Post Content -->
-			<div class="article-post">
-				<p>The word <strong>vector</strong> comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science and Machine Learning we generalize this idea to think vector as a list of attributes of an object. So Vectors are used to represent objects, observations and predictions.</p>
+    <div class="row">
+        <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
+            <div class="blog-sticky-side d-none d-lg-flex justify-content-lg-end">
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Getting a Handle on Vector for Machine Learning" data-link="http://127.0.0.1:8000/getting-a-handle-on-vector-for-machine-learning"></div>
+            </div>
+        </div>
+        <div class="py-4 py-md-5 col-lg-8">
+            <div class="cms ">
+            <h1 class="h1-heading">Getting a Handle on Vector for Machine Learning</h1>
+            <div class="blog-authors d-flex flex-wrap flex-column mb-4">
+                <p class="body-small my-2">
+                    By
+                    <span><b><a href="http://127.0.0.1:8000/author/nischal-lal-shrestha.html">Nischal Lal Shrestha</a></b></span>
+                    | Thursday, March 28 2019
+                    | <a class="category" href="http://127.0.0.1:8000/category/code.html">Code</a>
+                </p>
+            </div>
+            <div class="blog-body">
+                <figure class="my-default">
+                    <img src="http://127.0.0.1:8000/theme/img/code/getting-a-handle-on-vector-for-machine-learning.PNG" alt="Image for Getting a Handle on Vector for Machine Learning" class="w-100" />
+                    <figcaption class="body-small d-block mt-2">
+                        
+                    </figcaption>
+                </figure>
+                <div class="rich-text">
+                    <p>The word <strong>vector</strong> comes from the Latin for “carrier”, reason might be the nature of vector to move from one location to another. In physics, a Vector is an object that moves around a physical space. In Data Science and Machine Learning we generalize this idea to think vector as a list of attributes of an object. So Vectors are used to represent objects, observations and predictions.</p>
 <p>Say we want to represent a house having 2 bedrooms, 1 bathroom, 150-meter square and cost around $ 20,000. Based on the information we know about this house, we can represent the house as a vector:</p>
 <p>
 $$house = \begin{pmatrix} 2 \\ 1 \\ 150 \\ 20000 \end{pmatrix}$$
@@ -204,13 +176,14 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
 </p><div class="section" id="vectors-in-python">
 <h2>Vectors in Python</h2>
 <p>There are multiple ways we can define a vector in Python, the simplest on being a list:</p>
-<div class="highlight"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">house</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">]</span>
 </pre></div>
-<p>Python Lists are very good, but in Machine Learning we have deal with lot of scientific calculations,so it is much convenient to represent a vector in Python as a NumPy array as Numpy array does the thing what we expect when we add, multiply vectors.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</td></tr></table><p>Python Lists are very good, but in Machine Learning we have deal with lot of scientific calculations,so it is much convenient to represent a vector in Python as a NumPy array as Numpy array does the thing what we expect when we add, multiply vectors.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">house</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="vector-arithmetic">
 <h2>Vector Arithmetic</h2>
 <p>In this section, we will illustrate simple vector-vector arithmetic, where all operations are performed element-wise.</p>
@@ -218,7 +191,15 @@ $$class\_probabilities = \begin{pmatrix} 0.45 \\ 0.05 \\ 0.5 \end{pmatrix}$$
 <h3>Vector Addition</h3>
 <p>Two vector of equal length when added produce a new vector of the same length.
 Each element of the new vector at index <strong>i</strong> is calculated as the sum of the other element at that particular index <strong>i</strong>.</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">house1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span> <span class="mi">20000</span><span class="p">])</span>
 <span class="n">house2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">29000</span><span class="p">])</span>
@@ -228,7 +209,7 @@ Each element of the new vector at index <strong>i</strong> is calculated as the 
 <span class="nb">print</span><span class="p">(</span><span class="n">house3</span><span class="p">)</span>
 <span class="p">[</span>    <span class="mi">4</span><span class="p">,</span>     <span class="mi">2</span><span class="p">,</span>   <span class="mi">350</span><span class="p">,</span> <span class="mi">49000</span><span class="p">]</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="vector-subtraction">
 <h3>Vector Subtraction</h3>
 <p>Two vectors of equal length can be subtracted to produce a new vector of the same length. Each element of the new vector at index <strong>i</strong> is calculated as the difference of the other elements at that particular index <strong>i</strong>.</p>
@@ -236,7 +217,17 @@ Each element of the new vector at index <strong>i</strong> is calculated as the 
 <div class="section" id="vector-multiplication">
 <h3>Vector Multiplication</h3>
 <p>Two vector of equal length can be multiplied together to create a new vector of same length. Like with addition and subtraction, vector multiplication is done element wise.</p>
-$$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+$$a=b * c$$<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
 
@@ -248,7 +239,7 @@ $$a=b * c$$<div class="highlight"><pre><span></span><span class="kn">import</spa
 
 <span class="p">[</span> <span class="mi">2</span>  <span class="mi">6</span> <span class="mi">12</span><span class="p">]</span>
 </pre></div>
-</div>
+</td></tr></table></div>
 <div class="section" id="vector-division">
 <h3>Vector Division</h3>
 <p>Two vector of equal length can be divided element wise to calculate a new vector of same length.</p>
@@ -288,7 +279,34 @@ The \(L^\infty\) norm or vector max norm of vector \(\mathbf{v}\) \( \in \) \(R^
 \[||v||_\infty  = \mathop {\max |v_i|}\limits_i \]
 
 The \(L^\infty\) norm is calculated by returning the the maximum value of vector as
-\[||v||_\infty  = \max (v_1,v_2,..,v_n)\]<div class="highlight"><pre><span></span><span class="c1"># Import numpy</span>
+\[||v||_\infty  = \max (v_1,v_2,..,v_n)\]<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Import numpy</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Import Linear Algebra package from NumPy</span>
@@ -317,7 +335,7 @@ The \(L^\infty\) norm is calculated by returning the the maximum value of vector
 
 <span class="nb">print</span><span class="p">(</span><span class="n">max_norm</span><span class="p">)</span> <span class="c1"># 3.0</span>
 </pre></div>
-<p><a href='#JasonLinearAlgebra2018' id='ref-JasonLinearAlgebra2018-1'>Brownlee (2018)</a>
+</td></tr></table><p><a href='#JasonLinearAlgebra2018' id='ref-JasonLinearAlgebra2018-1'>Brownlee (2018)</a>
 <a href='#MML2019' id='ref-MML2019-1'>MarcPeterDeisenroth (2019)</a>
 <a href='#DeepLearning' id='ref-DeepLearning-1'>IanGoodfellow (2019)</a>
 <a href='#handson-ml' id='ref-handson-ml-1'>Ageron (2019)</a></p>
@@ -342,147 +360,133 @@ Www.deeplearningbook.org.
 Cambridge University Press.
 <span class="bibtex-protected">Cambridge University Press</span>, 2019. <a class="cite-backref" href="#ref-MML2019-1" title="Jump back to reference 1">↩</a></p>
 
+                </div>
+                <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Getting a Handle on Vector for Machine Learning" data-link="http://127.0.0.1:8000/getting-a-handle-on-vector-for-machine-learning"></div>
+            </div>
+            <br/>
+
+
+
+            <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                    */
+                    /*
+                    var disqus_config = function () {
+                        this.page.url = http://127.0.0.1:8000;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = getting-a-handle-on-vector-for-machine-learning; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://shresthanischal.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                            
+            </div>
+        </div>
+    </div>
+
+               
+            </div>
+         </main>
+
+
+
+<footer class="mzp-c-footer">
+	<div class="mzp-l-content ">
+		<nav class="mzp-c-footer-primary">
+			<div class="mzp-c-footer-primary-logo">
+				<a href="https://nischal.info.np">Nischal Lal Shrestha</a>
 			</div>
-			<!-- End Post Content -->
+			<div class="mzp-c-footer-sections">
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Explore
+  </h5>
+					<ul class="mzp-c-footer-list">
+							<li><a href="http://127.0.0.1:8000/category/algorithm.html">Algorithm</a></li>
+							<li><a href="http://127.0.0.1:8000/category/code.html">Code</a></li>
+							<li><a href="http://127.0.0.1:8000/category/open-source.html">Open Source</a></li>
+							<li><a href="http://127.0.0.1:8000/category/thoughts.html">Thoughts</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    About
+  </h5>
+					<ul class="mzp-c-footer-list">
+                        <li><a href="http://127.0.0.1:8000/about/">About Me</a></li>
+                        <li><a href="http://127.0.0.1:8000/projects/">Projects</a></li>
+                        <li><a href="http://127.0.0.1:8000/contact/">Contact</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Website Credits
+  </h5>
+					<ul class="mzp-c-footer-list">
+						<li><a href="https://protocol.mozilla.org/">Mozilla Protocol</a></li>
+						<li><a href="https://designsystem.digital.gov/how-to-use-uswds/">
+							USWD </a></li>
+						<li><a href="https://docs.getpelican.com/en/stable/index.html">Pelican</a></li>
+						<li><a href="https://icons8.com/line-awesome">Line Awesome</a></li>
+						<li><a href="https://pages.github.com/">Github Pages</a></li>
+						<li><a href="https://unsplash.com/">Unsplash</a></li>
+					</ul>
+				</section>
+			</div>
+		</nav>
+		<nav class="mzp-c-footer-secondary">
+			<ul class="mzp-c-footer-links-social">
+				<li>
+					<a class="twitter" href="https://twitter.com/dakkulanthu">Twitter
+						<span> (@dakkulanthu)</span>
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="https://www.youtube.com/channel/UCQoieW45COakbskXxW_ANIw">YouTube
+						<span> (Nischal Lal Shrestha)</span>
+					</a>
+				</li>
+			</ul>
 
-			<!-- Begin Tags -->
-			<div class="after-post-tags">
-				<ul class="tags">
+			<div class="mzp-c-footer-legal">
+				<p class="mzp-c-footer-license">Hey there, I'm Nischal.
+						<br/>
+						I am a student, a developer. I like to be vocal on 
+						local problems. Currently learning ML, DL, Data Science, Python.
+				</p>
 
+				<p class="mzp-c-footer-license">I love Everything that makes me more Human.
+				<br/>
+				<br/>
+				 While not Coding, I play Football and Chess.
+				</p class="mzp-c-footer-license">
+
+				<p mzp-c-footer-license>Copyright text 2020 by Nischal!!</p>
+				
+				<ul class="mzp-c-footer-terms">
+				<li><a href="https://nischal.info.np">Cookies</a></li>
+				<li><a href="https://nischal.info.np">Legal</a></li>
+				<li><a href="https://nischal.info.np">Privacy Policy</a></li>
+				<li><a href="https://nischal.info.np">Disclaimer</a></li>
+				<li><a href="https://nischal.info.np">Code of Conduct</a></li>
+				
 				</ul>
-			</div>
-			<!-- End Tags -->
+      		</div>
 
-			<div id="disqus_thread"></div>
-<script>
-    /**
-     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-    /*
-    var disqus_config = function () {
-        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = getting-a-handle-on-vector-for-machine-learning; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() {  // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        
-        s.src = 'https://shresthanischal.disqus.com/embed.js';
-        
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-
-
-		</div>
-		<!-- End Post -->
-
+		</nav>
 	</div>
-</div>
-<!-- End Article
-================================================== -->
-<div class="hideshare"></div>
-
-<!-- End Test =====================================- -->
-
-
-	<!-- Begin Footer
-	================================================== -->
-<div class = "container" id = "myFooter">
-        <div class = "row">
-
-            <div class = "col-lg-3 col-md-3" id = "footer-information">
-                <p>Hey there, I'm <strong>Nischal</strong>.<br>
-                I am a student, a developer and I specialize in
-                standards-based Web Development(Django, JS, HTML, CSS ) and ML/DL.
-
-                <br>
-                <br>
-
-                I love Everything that makes me more Human. While
-                not Coding, I play and/or watch football. 
-
-
-
-
-                     </p>
-                <p>Copyright text 2020 by Nischal!!</p>
-                <a href = "">
-                    <img src = "https://nischal.info.np/theme/img/logo.png" class = "img-responsive" style="background: white;" alt= "Logo of Nischal Lal Shrestha">
-                </a>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "footer-menu">
-                <ul class="pages">
-                    <li><a href="">Articles</a></li>
-                    <li><a href="">My Life</a></li>
-                    <li><a href="">My Daily Journal</a></li>
-                    <li><a href="">My Wish Bucket</a></li>
-                    <li><a href="">My Photos</a></li>
-                    <li><a href="">My Bookmarks</a></li>
-                    <li><a href="">Say Hi!!</a></li>
-                </ul>
-
-                <ul class="list">
-                    <li><a href="https://nischal.info.np/terms-and-condition.html">Terms &amp; Condition</a></li>
-                    <li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "social-section">
-                <h4 class = "social-links-heading">Follow Me</h4>
-                <ul class = "social-links">
-                    <li><a href = "https://www.facebook.com/theonlyNischal">
-                        <span class = "fa fa-facebook fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.twitter.com/theonlyNischal">
-                        <span class = "fa fa-twitter fa-2x"></span>
-                        </a></li>
-                    <li><a href = "https://www.github.com/NischalLalShrestha">
-                        <span class = "fa fa-github fa-2x"></span>
-                        </a>
-                    </li>
-                    <li> <a href = "https://www.linkedin.com/in/theonlyNischal/">
-                        <span class = "fa fa-linkedin fa-2x"></span>
-                        </a></li>
-                    
-                </ul>
-            </div>
-
-            <div class = "col-lg-3 col-md-3" id = "newsletter-section">
-                <h4>Newsletter</h4>
-                <p>A rover wearing a fuzzy suit doesn’t alarm the real penguins. Then What Alarms The Penguins. Subscribe Me To Find Out.</p>
-                <p> 
-                    <form method = "POST" action = "">
-                    <div class="input-group">
-                      <input type="email" class="form-control" placeholder="Enter Your Favourite e-mail"  name = "SubscriberEmail">
-                    </div><!-- /input-group -->
-                    <br />
-                    <button id = "NewsletterSubmit" class = "btn btn-primary">Submit</button>
-                    </form>
-                 </p>
-            </div>
-        
-
-        </div> <!-- row -->
-</div> <!-- container myFooter -->	<!-- End Footer
-	================================================== -->
-
-</div>
-<!-- /.container -->
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://nischal.info.np/theme/js/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://nischal.info.np/theme/js/bootstrap.min.js"></script>
-<script src="https://nischal.info.np/theme/js/ie10-viewport-bug-workaround.js"></script>
-<script id="dsq-count-scr" src="//shresthanischal.disqus.com/count.js" async></script>
-</body>
+</footer>      </div>
+      <script src="http://127.0.0.1:8000/theme/uswds-2.11.2/js/uswds.min.js"></script>
+      <script src="http://127.0.0.1:8000/theme/js/main.js"></script>
+   </body>
 </html>
