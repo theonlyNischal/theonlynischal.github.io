@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2021-07-06T19:24:48-00:00</lastmod>
+<lastmod>2021-07-07T13:36:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2021-07-06T19:24:48-00:00</lastmod>
+<lastmod>2021-07-07T13:36:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2021-07-06T19:24:48-00:00</lastmod>
+<lastmod>2021-07-07T13:36:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2021-07-06T19:24:48-00:00</lastmod>
+<lastmod>2021-07-07T13:36:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -144,13 +144,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://nischal.info.np/Thesaurus.html</loc>
-<lastmod>2019-02-16T00:00:00+05:45</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://nischal.info.np/a-house-is-made-to-be-a-home.html</loc>
 <lastmod>2019-05-28T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
@@ -160,13 +153,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nischal.info.np/classification-of-data-structure.html</loc>
 <lastmod>2019-09-17T00:00:00+05:45</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
-<loc>https://nischal.info.np/government-2-and-nepal.html</loc>
-<lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
