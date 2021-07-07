@@ -195,21 +195,24 @@
 <div class="section" id="representation-of-linear-regression">
 <h3>Representation of Linear Regression</h3>
 <p>Linear Regression is represented as linear equation that combines a specific set of input values(X) to give predicted value(Y).</p>
-The linear equation assigns one scale factor to each input value(X), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as\[Y = \beta_0 + \beta_1 * X\]<p>The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all.</p>
+<p>The linear equation assigns one scale factor to each input value(X), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as: </p>\[Y = \beta_0 + \beta_1 * X\]<p>The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all.</p>
 </div>
 <div class="section" id="loss-function-for-regression">
 <h3>Loss Function for Regression</h3>
 <p>Loss function is a method of evaluating the correctness of specific algorithm which models the given data. If the prediction deviates too much from the actual results, loss function will be very high.</p>
 <p>Loss function is quite straight forward in classification as L(h, (X,Y)) simply indicates whether h(x) correctly predicts or not.</p>
 <p>In regression, if the weight of person is 60kg, both the prediction of 60.00001kg and 61kg are wrong. But we would surely prefer the prediction of 60.00001kg instead of 61kg. So we need a mechanism to penalized the discrepancy between estimated value and actual result.</p>
-<p>One common way is to use the Square-Loss Function.
-For a single data point,</p>
-for all the data points,
+<p>One common way is to use the Square-Loss Function.</p>
+<p>For a single data point,</p>
+
+\[L(h,(x,y)) = ((h(x) - Y)^2\]
+
+<p>for all the data points,</p>
 \[Ls(h,(x,y)) = \sum\limits_{i = 1}^m {(h(x_i) - Y_i)^2} \]
 
-To make math easy, The \(\frac{1}{{m}}\) is to average the squared error over number of components so that the number of components doesn't affect the function and the \(\frac{1}{{2}}\) doesn't matter at all as minimizing L will also minizmize 2L.
+<p>To make math easy, The \(\frac{1}{{m}}\) is to average the squared error over number of components so that the number of components doesn't affect the function and the \(\frac{1}{{2}}\) doesn't matter at all as minimizing L will also minizmize 2L. </p>
 
-    \[Ls(h,(x,y)) = \frac{1}{{2m}}\sum\limits_{i = 1}^m {h(x_i) - Y_i)^2} \]
+    \[Ls(h,(x,y)) = \frac{1}{{2m}}\sum\limits_{i = 1}^m {(h(x_i) - Y_i)^2} \]
 
 \(h(x_i)\) = Our prediction$$\\$$
 \(Y_i\) = Actual result$$\\$$
@@ -218,9 +221,15 @@ Goal = Minimize the loss function. $$\\$$</div>
 <div class="section" id="using-gradient-descent-to-minimize-the-loss-function">
 <h3>Using Gradient Descent to minimize the loss function</h3>
 <p>Imagine we are at any point of a mountain. In gradient descent, what are we going to do is spin 360 degree around and find the direction in which we have to make a baby step in order to go down the mountain as rapidly as possible.</p>
-<p>After the finding that direction, we will make a baby step. Now we are in the another position in the mountain. Here we will repeat the previous step that is we will spin 360 degree around and find the direction of steepest descent. We will continue this preocess until we are at the lowermost portion of the mountain.</p>
+<p>After the finding that direction, we will make a baby step. Now we are in the another position in the mountain. Here we will repeat the previous step that is we will spin 360 degree around and find the direction of steepest descent. We will continue this preocess until we are at the lowermost portion of the mountain <a href='#AndrewNG_GradientDescent' id='ref-AndrewNG_GradientDescent-1'>NG (2021)</a>.</p>
 </div>
 </div>
+<hr>
+<h2>Bibliography</h2>
+<p id='AndrewNG_GradientDescent'>Andrew NG.
+<span class="bibtex-protected">Machine Learning by Stanford University</span>.
+url: <span class="bibtex-protected">https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent </span>, 2021.
+[Online; accessed 5-July-2020]. <a class="cite-backref" href="#ref-AndrewNG_GradientDescent-1" title="Jump back to reference 1">↩</a></p>
 
                 </div>
                 <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Linear Regression Tutorial" data-link="https://nischal.info.np/linear-regression-tutorial"></div>

@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2021-07-07T21:37:39-00:00</lastmod>
+<lastmod>2021-07-07T22:18:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2021-07-07T21:37:39-00:00</lastmod>
+<lastmod>2021-07-07T22:18:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2021-07-07T21:37:39-00:00</lastmod>
+<lastmod>2021-07-07T22:18:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2021-07-07T21:37:39-00:00</lastmod>
+<lastmod>2021-07-07T22:18:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -81,13 +81,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://nischal.info.np/most-handsome-man-of-nepal-is-nirdesh.html</loc>
-<lastmod>2020-11-14T00:00:00+05:45</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>https://nischal.info.np/activation-function-in-a-deep-neural-network.html</loc>
 <lastmod>2020-10-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
@@ -125,6 +118,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nischal.info.np/k-nearest-neighbour-algorithm-for-image-classification.html</loc>
 <lastmod>2019-04-20T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://nischal.info.np/most-handsome-man-of-nepal-is-nirdesh.html</loc>
+<lastmod>2020-11-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
