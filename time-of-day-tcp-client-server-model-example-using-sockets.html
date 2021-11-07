@@ -226,53 +226,53 @@ the client and the client will print the information in the screen.</p>
 <span class="normal">44</span>
 <span class="normal">45</span>
 <span class="normal">46</span>
-<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="normal">47</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
 
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">listenfd</span><span class="p">,</span> <span class="n">connfd</span><span class="p">;</span>
-    <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">servaddr</span><span class="p">,</span> <span class="n">cliaddr</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">buff</span> <span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span>
-    <span class="kt">time_t</span> <span class="n">ticks</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">port</span><span class="p">;</span>
-    <span class="kt">socklen_t</span> <span class="n">len</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="n">connfd</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span> <span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="n">cliaddr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buff</span><span class="w"> </span><span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">ticks</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">socklen_t</span><span class="w"> </span><span class="n">len</span><span class="p">;</span><span class="w"></span>
 
-    <span class="n">listenfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Creates a TCP Socket</span>
+<span class="w">    </span><span class="n">listenfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creates a TCP Socket</span>
 
-    <span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
-    <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
-    <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span> <span class="o">=</span> <span class="n">htonl</span><span class="p">(</span><span class="n">INADDR_ANY</span><span class="p">);</span>
-    <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">INADDR_ANY</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span><span class="w"></span>
 
-    <span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Server is waiting connection at port %d</span><span class="se">\t\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">port</span><span class="p">);</span>
-    <span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="n">LISTENQ</span><span class="p">);</span>
+<span class="w">    </span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Server is waiting connection at port %d</span><span class="se">\t\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="n">LISTENQ</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="n">len</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span>
-        <span class="n">connfd</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">len</span><span class="p">);</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Connection from %s, port %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">inet_ntop</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="p">,</span> <span class="n">buff</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">)),</span> <span class="n">ntohs</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">.</span><span class="n">sin_port</span><span class="p">));</span>
-        <span class="n">ticks</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-        <span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span> <span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span>
-        <span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span> <span class="n">buff</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span>
-        <span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">connfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Connection from %s, port %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">inet_ntop</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">)),</span><span class="w"> </span><span class="n">ntohs</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">.</span><span class="n">sin_port</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span><span class="w"></span>
+<span class="w">        </span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="include-header-files">
@@ -286,16 +286,16 @@ the client and the client will print the information in the screen.</p>
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="normal">10</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
 </pre></div>
 </td></tr></table><p>These line includes numerous system headers that are needed by most network programs</p>
 </div>
@@ -309,12 +309,12 @@ the client and the client will print the information in the screen.</p>
 </div>
 <div class="section" id="gives-type-struct-sockaddr-a-new-name-to-shorten-the-code">
 <h2>3. Gives type &quot;struct sockaddr&quot; a new name to shorten the code.</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </td></tr></table><ol class="arabic simple" start="4">
 <li>Starts main function and it accepts command line arguments.</li>
 </ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p><strong>argv**(argument count) and **argc**(argument vector) are how command line arguments
 are passed to **main()</strong> in C and C++.</p>
@@ -322,7 +322,7 @@ are passed to **main()</strong> in C and C++.</p>
 </div>
 <div class="section" id="creates-a-tcp-socket">
 <h2>5. Creates a TCP Socket.</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listenfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// Creates a TCP Socket</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listenfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creates a TCP Socket</span>
 </pre></div>
 </td></tr></table><p>The socket function creates a socket on demand. The function takes three integer
 arguments and returns an integer descriptor which we can use to identify the socket
@@ -335,25 +335,25 @@ read that follow).</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-<span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
-<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
-<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span> <span class="o">=</span> <span class="n">htonl</span><span class="p">(</span><span class="n">INADDR_ANY</span><span class="p">);</span>
-<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
+<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w"></span>
+<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htonl</span><span class="p">(</span><span class="n">INADDR_ANY</span><span class="p">);</span><span class="w"></span>
+<span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="bind-the-socket-descriptor-to-the-server-address">
 <h2>7. Bind the socket descriptor to the server address.</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p>Once a socket has been created, a server uses the bind function to establish a local address for
 the socket†. Bind has the following form.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">localaddr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span><span class="w"> </span><span class="n">localaddr</span><span class="p">,</span><span class="w"> </span><span class="n">addrlen</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="turn-on-the-socket-to-listen-for-incoming-connections">
 <h2>8. Turn on the socket to listen for incoming connections.</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="n">LISTENQ</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="n">LISTENQ</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p>Socket function listen allows servers to prepare a socket for incoming connections.
 In terms of the underlying protocols, listen puts the socket in a passive mode ready to
@@ -361,7 +361,7 @@ accept connections. Only servers use listen. In addition to placing a protocol i
 mode, listen contains an argument that configures the size of a queue for incoming re-
 quests.
 A call has the form:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">qlength</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span><span class="w"> </span><span class="n">qlength</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p>Argument descriptor gives the descriptor of a socket that should be prepared for use by
 a server, and argument qlength specifies the length of the request queue for that socket.</p>
@@ -370,36 +370,36 @@ a server, and argument qlength specifies the length of the request queue for tha
 <h2>9. Infinite loop</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span> <span class="p">;</span> <span class="p">;</span> <span class="p">)</span> <span class="p">{</span>
-<span class="p">.</span> <span class="p">.</span> <span class="p">.</span>
-<span class="p">}</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="store-the-clients-address-and-socket-descriptor-by-accepting-an-incoming-connection">
 <h2>10. Store the client’s address and socket descriptor by accepting an incoming connection.</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">len</span> <span class="o">=</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span>
-<span class="n">connfd</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">len</span><span class="p">);</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span><span class="w"></span>
+<span class="n">connfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p>Once a socket has been established, the server needs to wait for a connection. To
 do so, the server calls function accept. A call to accept blocks until a new connection
 request arrives. The call has the form:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">newsock</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span> <span class="n">addr</span><span class="p">,</span> <span class="n">addrlen</span><span class="p">)</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">newsock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">descriptor</span><span class="p">,</span><span class="w"> </span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">addrlen</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="sending-data-through-a-socket">
 <h2>11. Sending data through a socket.</h2>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ticks</span> <span class="o">=</span> <span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
-<span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span> <span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span>
-<span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span> <span class="n">buff</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span><span class="w"></span>
+<span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </td></tr></table><p>This calculate current time and send it to client through socket.</p>
 </div>
 <div class="section" id="terminate-the-connection">
 <h2>12. Terminate the connection.</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="client-side-code">
@@ -462,65 +462,65 @@ request arrives. The call has the form:</p>
 <span class="normal">56</span>
 <span class="normal">57</span>
 <span class="normal">58</span>
-<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
+<span class="normal">59</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;arpa/inet.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;errno.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;time.h&gt;</span><span class="cp"></span>
 
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="n">SA</span><span class="p">;</span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">int</span> <span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">sockfd</span><span class="p">,</span> <span class="n">n</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">recvline</span> <span class="p">[</span><span class="n">MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
-    <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">servaddr</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">port</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sockfd</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">recvline</span><span class="w"> </span><span class="p">[</span><span class="n">MAXLINE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span> <span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">;</span><span class="w"></span>
 
-    <span class="k">if</span><span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">3</span><span class="p">){</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: a.out &lt;IPaddress&gt; &lt;port no.&gt;&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">((</span><span class="n">sockfd</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// Creates a TCP Socket</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Socket Error&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Usage: a.out &lt;IPaddress&gt; &lt;port no.&gt;&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">sockfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span><span class="c1">// Creates a TCP Socket</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Socket Error&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="n">port</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span> <span class="c1">// ascii to integer conversion</span>
+<span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"> </span><span class="c1">// ascii to integer conversion</span>
 
-    <span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span> <span class="c1">// fills servaddr with zeros.</span>
+<span class="w">    </span><span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"> </span><span class="c1">// fills servaddr with zeros.</span>
 
-    <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
-    <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span>
+<span class="w">    </span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">(</span><span class="n">port</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">inet_pton</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// pton = presentatin to network, convert command line argument like 204..... to correct.</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;inet_pton error for %s&quot;</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">inet_pton</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span><span class="c1">// pton = presentatin to network, convert command line argument like 204..... to correct.</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;inet_pton error for %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">sockfd</span><span class="p">,</span> <span class="p">(</span><span class="n">SA</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// Establishes a TCP Connnection</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Connect Error.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">sockfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span><span class="c1">// Establishes a TCP Connnection</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Connect Error.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">while</span> <span class="p">((</span><span class="n">n</span><span class="o">=</span><span class="n">read</span><span class="p">(</span><span class="n">sockfd</span><span class="p">,</span> <span class="n">recvline</span><span class="p">,</span> <span class="n">MAXLINE</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span> <span class="c1">// reads server reply.</span>
-        <span class="n">recvline</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">n</span><span class="o">=</span><span class="n">read</span><span class="p">(</span><span class="n">sockfd</span><span class="p">,</span><span class="w"> </span><span class="n">recvline</span><span class="p">,</span><span class="w"> </span><span class="n">MAXLINE</span><span class="p">))</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span><span class="c1">// reads server reply.</span>
+<span class="w">        </span><span class="n">recvline</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">fputs</span><span class="p">(</span><span class="n">recvline</span><span class="p">,</span> <span class="n">stdout</span><span class="p">)</span> <span class="o">==</span> <span class="n">EOF</span><span class="p">){</span>
-            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;fputs error.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fputs</span><span class="p">(</span><span class="n">recvline</span><span class="p">,</span><span class="w"> </span><span class="n">stdout</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">EOF</span><span class="p">){</span><span class="w"></span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;fputs error.</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span>
-        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;read error&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;read error&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
 
 
-<span class="p">}</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
 
