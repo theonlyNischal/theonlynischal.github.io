@@ -4,371 +4,371 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://127.0.0.1:8000/</loc>
-<lastmod>2021-12-14T20:13:48-00:00</lastmod>
+<loc>https://nischal.info.np/</loc>
+<lastmod>2021-12-14T20:25:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/archives.html</loc>
-<lastmod>2021-12-14T20:13:48-00:00</lastmod>
+<loc>https://nischal.info.np/archives.html</loc>
+<lastmod>2021-12-14T20:25:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tags.html</loc>
-<lastmod>2021-12-14T20:13:48-00:00</lastmod>
+<loc>https://nischal.info.np/tags.html</loc>
+<lastmod>2021-12-14T20:25:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/categories.html</loc>
-<lastmod>2021-12-14T20:13:48-00:00</lastmod>
+<loc>https://nischal.info.np/categories.html</loc>
+<lastmod>2021-12-14T20:25:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/pages/about.html</loc>
+<loc>https://nischal.info.np/pages/about.html</loc>
 <lastmod>2020-11-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/pages/resume.html</loc>
+<loc>https://nischal.info.np/pages/resume.html</loc>
 <lastmod>2020-11-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/pages/contact.html</loc>
+<loc>https://nischal.info.np/pages/contact.html</loc>
 <lastmod>2020-11-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/getting-a-handle-on-vector-for-machine-learning.html</loc>
+<loc>https://nischal.info.np/getting-a-handle-on-vector-for-machine-learning.html</loc>
 <lastmod>2019-03-28T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/linear-regression-tutorial.html</loc>
+<loc>https://nischal.info.np/linear-regression-tutorial.html</loc>
 <lastmod>2019-05-30T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/very-stupid-introduction-to-deep-learning.html</loc>
+<loc>https://nischal.info.np/very-stupid-introduction-to-deep-learning.html</loc>
 <lastmod>2019-04-01T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/do-not-be-religious-about-technology.html</loc>
+<loc>https://nischal.info.np/do-not-be-religious-about-technology.html</loc>
 <lastmod>2019-09-15T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/activation-function-in-a-deep-neural-network.html</loc>
+<loc>https://nischal.info.np/activation-function-in-a-deep-neural-network.html</loc>
 <lastmod>2020-10-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/building-a-currency-converter-using-openexchangerates-api.html</loc>
+<loc>https://nischal.info.np/building-a-currency-converter-using-openexchangerates-api.html</loc>
 <lastmod>2019-03-05T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/how-often-should-we-git-commit-nischal.html</loc>
+<loc>https://nischal.info.np/how-often-should-we-git-commit-nischal.html</loc>
 <lastmod>2019-09-15T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/identification-of-rice-leaf-diseases-using-cnn.html</loc>
+<loc>https://nischal.info.np/identification-of-rice-leaf-diseases-using-cnn.html</loc>
 <lastmod>2019-07-05T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/Bayesian-Theorem-and-Naive-Bayes-Classifier.html</loc>
+<loc>https://nischal.info.np/Bayesian-Theorem-and-Naive-Bayes-Classifier.html</loc>
 <lastmod>2019-05-25T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/k-nearest-neighbour-algorithm-for-image-classification.html</loc>
+<loc>https://nischal.info.np/k-nearest-neighbour-algorithm-for-image-classification.html</loc>
 <lastmod>2019-04-20T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/most-handsome-man-of-nepal-is-nirdesh.html</loc>
+<loc>https://nischal.info.np/most-handsome-man-of-nepal-is-nirdesh.html</loc>
 <lastmod>2020-11-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/introduction-to-abstract-data-types.html</loc>
+<loc>https://nischal.info.np/introduction-to-abstract-data-types.html</loc>
 <lastmod>2019-09-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/time-of-day-tcp-client-server-model-example-using-sockets.html</loc>
+<loc>https://nischal.info.np/time-of-day-tcp-client-server-model-example-using-sockets.html</loc>
 <lastmod>2020-10-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/Introduction-to-Data-Structure.html</loc>
+<loc>https://nischal.info.np/Introduction-to-Data-Structure.html</loc>
 <lastmod>2019-01-27T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/a-house-is-made-to-be-a-home.html</loc>
+<loc>https://nischal.info.np/a-house-is-made-to-be-a-home.html</loc>
 <lastmod>2019-05-28T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/classification-of-data-structure.html</loc>
+<loc>https://nischal.info.np/classification-of-data-structure.html</loc>
 <lastmod>2019-09-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/holi-Glorifying-romance-Playing-with-color.html</loc>
+<loc>https://nischal.info.np/holi-Glorifying-romance-Playing-with-color.html</loc>
 <lastmod>2019-02-16T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/i-love-everything-that-makes-me-more-human.html</loc>
+<loc>https://nischal.info.np/i-love-everything-that-makes-me-more-human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/nepal-love-affair-with-momo-keeps-growing.html</loc>
+<loc>https://nischal.info.np/nepal-love-affair-with-momo-keeps-growing.html</loc>
 <lastmod>2019-02-16T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/category/algorithm.html</loc>
+<loc>https://nischal.info.np/category/algorithm.html</loc>
 <lastmod>2019-09-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/category/code.html</loc>
+<loc>https://nischal.info.np/category/code.html</loc>
 <lastmod>2020-10-14T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/category/open-source.html</loc>
+<loc>https://nischal.info.np/category/open-source.html</loc>
 <lastmod>2019-07-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/category/thoughts.html</loc>
+<loc>https://nischal.info.np/category/thoughts.html</loc>
 <lastmod>2020-11-14T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/religious.html</loc>
+<loc>https://nischal.info.np/tag/religious.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/windows.html</loc>
+<loc>https://nischal.info.np/tag/windows.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/code.html</loc>
+<loc>https://nischal.info.np/tag/code.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/currency_converter.html</loc>
+<loc>https://nischal.info.np/tag/currency_converter.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/requests.html</loc>
+<loc>https://nischal.info.np/tag/requests.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/api.html</loc>
+<loc>https://nischal.info.np/tag/api.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/cryptocurrency.html</loc>
+<loc>https://nischal.info.np/tag/cryptocurrency.html</loc>
 <lastmod>2019-03-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/git.html</loc>
+<loc>https://nischal.info.np/tag/git.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/github.html</loc>
+<loc>https://nischal.info.np/tag/github.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/commit.html</loc>
+<loc>https://nischal.info.np/tag/commit.html</loc>
 <lastmod>2019-09-15T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/rice.html</loc>
+<loc>https://nischal.info.np/tag/rice.html</loc>
 <lastmod>2019-07-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/cnn.html</loc>
+<loc>https://nischal.info.np/tag/cnn.html</loc>
 <lastmod>2019-07-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/projects.html</loc>
+<loc>https://nischal.info.np/tag/projects.html</loc>
 <lastmod>2019-07-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/nepal.html</loc>
+<loc>https://nischal.info.np/tag/nepal.html</loc>
 <lastmod>2019-07-05T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/data-types.html</loc>
+<loc>https://nischal.info.np/tag/data-types.html</loc>
 <lastmod>2019-09-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/algorithms.html</loc>
+<loc>https://nischal.info.np/tag/algorithms.html</loc>
 <lastmod>2019-09-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/data-structure.html</loc>
+<loc>https://nischal.info.np/tag/data-structure.html</loc>
 <lastmod>2019-09-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/holi.html</loc>
+<loc>https://nischal.info.np/tag/holi.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/thoughts.html</loc>
+<loc>https://nischal.info.np/tag/thoughts.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/festivals-in-nepal.html</loc>
+<loc>https://nischal.info.np/tag/festivals-in-nepal.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/human.html</loc>
+<loc>https://nischal.info.np/tag/human.html</loc>
 <lastmod>2019-02-03T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/tag/momo.html</loc>
+<loc>https://nischal.info.np/tag/momo.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://127.0.0.1:8000/author/nischal-lal-shrestha.html</loc>
+<loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
 <lastmod>2020-11-14T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
