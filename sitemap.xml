@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2021-12-27T14:13:06-00:00</lastmod>
+<lastmod>2021-12-27T14:19:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2021-12-27T14:13:06-00:00</lastmod>
+<lastmod>2021-12-27T14:19:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2021-12-27T14:13:06-00:00</lastmod>
+<lastmod>2021-12-27T14:19:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2021-12-27T14:13:06-00:00</lastmod>
+<lastmod>2021-12-27T14:19:39-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -88,7 +88,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://nischal.info.np/how-to-sort-a-dictionary-in-pyhon.html</loc>
+<loc>https://nischal.info.np/how-to-sort-a-dictionary-in-python.html</loc>
 <lastmod>2021-12-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
