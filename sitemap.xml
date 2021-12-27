@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2021-12-26T20:33:51-00:00</lastmod>
+<lastmod>2021-12-27T14:13:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2021-12-26T20:33:51-00:00</lastmod>
+<lastmod>2021-12-27T14:13:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2021-12-26T20:33:51-00:00</lastmod>
+<lastmod>2021-12-27T14:13:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2021-12-26T20:33:51-00:00</lastmod>
+<lastmod>2021-12-27T14:13:06-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -83,6 +83,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://nischal.info.np/getting-a-handle-on-vector-for-machine-learning.html</loc>
 <lastmod>2019-03-28T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://nischal.info.np/how-to-sort-a-dictionary-in-pyhon.html</loc>
+<lastmod>2021-12-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -222,7 +229,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/category/code.html</loc>
-<lastmod>2020-10-14T00:00:00+05:41</lastmod>
+<lastmod>2021-12-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -397,7 +404,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
-<lastmod>2020-11-14T00:00:00+05:41</lastmod>
+<lastmod>2021-12-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

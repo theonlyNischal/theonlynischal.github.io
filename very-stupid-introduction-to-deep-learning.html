@@ -294,39 +294,7 @@ significant will be scaled with lesser number.</p>
 <p>For the second animal,</p>
 <p>weighted_sum = 200*2 + 3*1 + 1*0.5 = 403.5, which is less than 1000, hence it is not an elephant.</p>
 <p><strong>MCP Neuron in Python</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">animal_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">animal_3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 
@@ -360,23 +328,8 @@ significant will be scaled with lesser number.</p>
 <span class="o">&gt;</span> <span class="n">Weighted</span> <span class="n">Sum</span> <span class="ow">is</span> <span class="mf">63.0</span><span class="o">.</span>
 <span class="o">&gt;</span> <span class="n">Given</span> <span class="n">Animal</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">an</span> <span class="n">Elephant</span><span class="o">.</span>
 </pre></div>
-</td></tr></table><p><strong>NumPy version</strong></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<p><strong>NumPy version</strong></p>
+<div class="highlight"><pre><span></span><span class="n">animal_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 <span class="n">animal_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">200</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 <span class="n">animal_3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
 
@@ -393,7 +346,7 @@ significant will be scaled with lesser number.</p>
     <span class="k">else</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Given Animal is not an Elephant.&quot;</span><span class="p">)</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 <div class="section" id="but-how-does-the-perceptron-learn">
 <h2>But, How does the Perceptron Learn?</h2>
 <p>The perceptron we saw above made a decision using <strong>inputs</strong>, <strong>weights</strong> and <strong>threshold</strong>. The perceptron will made correct decision only when all the three parameters are at
@@ -499,20 +452,7 @@ weight_delta = delta * input<p>So weight update can be written as</p>
 <p>Let's say the actual value we want to predict is 0.7. We have a input of 0.4 and initail random weight of 0.2.
 Now we have to find a weight which <strong>scales input to match the output</strong>.</p>
 <p>So prediction means finding weight which can scale the input to actual value.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="mf">0.4</span>
+<div class="highlight"><pre><span></span><span class="nb">input</span> <span class="o">=</span> <span class="mf">0.4</span>
 <span class="n">weight</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="n">actual</span> <span class="o">=</span> <span class="mf">0.7</span>
 
@@ -527,7 +467,7 @@ Now we have to find a weight which <strong>scales input to match the output</str
 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
 </pre></div>
-</td></tr></table><p>Output:</p>
+<p>Output:</p>
 <p>Error: 0.38439999999999985</p>
 <p>Error: 0.2712326399999999</p>
 <p>Error: 0.19138175078399997</p>
@@ -600,45 +540,7 @@ layers can be calculated by treating the output layers' delta as input for thos 
 delta with the weight that connects output layer and the hidden layer.</p>
 <p>After calculating delta for each neuron we need to find weight_delta. weight_delta is the actual value by which we update the weight. Recall that we produced <strong>weight_delta</strong> by scaling weight's input by <strong>gradient or delta</strong> of weights output.</p>
 <p>What about the activation function? We use activation function to prevent the multilayer network from collapsing to a single layer. As 10 * 10 * 10 and 500 * 2 results in same value, multiple functions can be collapsed to a single complex function. So a MLP without activation function can be collapsed to a single Perceptron and we know a single perceptron is of no use. So we can use activation function in between layers to prevent them from collapsing and to counter the effect of activation function in backpropagation to calculate delta we just have to multiply the derivative of the activation function with previous layer delta and weight connecting them. After finding delta, we will just we calculate weight_delta by Multiplying learning rate and delta. Using that weight delta we update the weight.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">inputs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">])</span>
 
@@ -678,7 +580,7 @@ delta with the weight that connects output layer and the hidden layer.</p>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error is: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prediction is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">output</span><span class="p">))</span>
 </pre></div>
-</td></tr></table><p>With the training complete,</p>
+<p>With the training complete,</p>
 <p>Error is: [5.2377699e-06]
 Prediction is [0.29771138] which is very close to actual value of 0.3</p>
 </div>
@@ -690,19 +592,7 @@ necessary as other neuron have learnt to do its task.</p>
 <p>Let's say we have a hidden layer with 10 hidden neurons. We are going to apply a dropout on this layer.
 To do this, we will randomly select p% of neurons and set their output to 0 while we will do nothing with the
 output of other layer.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.11</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.67</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.11</span><span class="p">,</span> <span class="mf">0.43</span><span class="p">,</span> <span class="mf">0.67</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
 
 <span class="n">dropout_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">hidden_layer</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -716,18 +606,12 @@ output of other layer.</p>
 
 <span class="c1"># [0.5  2.   0.   0.   0.11 0.43 0.   0.   0.3  0.  ]</span>
 </pre></div>
-</td></tr></table><p>Next we have to multiply the output of hidden layer where we have applied dropout with 1/(p%). This is because, the
+<p>Next we have to multiply the output of hidden layer where we have applied dropout with 1/(p%). This is because, the
 next layer from this hidden layer will take weighted sum of the hidden layer, but, while testing we will not apply dropout,
 so there is unbalance between output. So to counter this unbalance between the output of hidden layer while training and testing
 we multiply the output of hidden layer in training.</p>
 <p>Next, we also have to apply dropout on the deltas of layer_1 neuron's.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">hidden_layer</span> <span class="o">*</span> <span class="mi">2</span>
+<div class="highlight"><pre><span></span><span class="n">hidden_layer</span> <span class="o">=</span> <span class="n">hidden_layer</span> <span class="o">*</span> <span class="mi">2</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">hidden_layer</span><span class="p">)</span>
 
@@ -735,7 +619,7 @@ we multiply the output of hidden layer in training.</p>
 
 <span class="n">hidden_delta</span> <span class="o">=</span> <span class="n">hidden_delta</span> <span class="o">*</span> <span class="n">dropout_mask</span>
 </pre></div>
-</td></tr></table><p><a href='#Andrew-Glassner-2018-Deep-Learning' id='ref-Andrew-Glassner-2018-Deep-Learning-2'>Glassner (2018)</a>
+<p><a href='#Andrew-Glassner-2018-Deep-Learning' id='ref-Andrew-Glassner-2018-Deep-Learning-2'>Glassner (2018)</a>
 <a href='#Grokking-Deep-Learning' id='ref-Grokking-Deep-Learning-1'>Trask (2019)</a>
 <a href='#JasonLinearAlgebra2018' id='ref-JasonLinearAlgebra2018-1'>Brownlee (2018)</a>
 <a href='#MML2019' id='ref-MML2019-1'>MarcPeterDeisenroth (2019)</a>

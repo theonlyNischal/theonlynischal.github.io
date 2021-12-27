@@ -186,42 +186,7 @@ currencies like BitCoin, Etherum and others.</p>
 <p>We will be using OpenExchangeRates API for this. <a class="reference external" href="https://openexchangerates.org/">Sign Up</a> and register for a new API Key.</p>
 <p>To get a view of OpenExchangeRates API, replace <strong>YOUR_APP_ID</strong> with the key you get in a email in the following link and make a new request in browser. <a class="reference external" href="https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID">OpenExchanges</a></p>
 <p>To make such request we will be using <a class="reference external" href="http://docs.python-requests.org/en/master/">Requests</a>. After getting a response we will fetch the rates and calculate necessary value as shown in the code below.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span>
-<span class="normal">30</span>
-<span class="normal">31</span>
-<span class="normal">32</span>
-<span class="normal">33</span>
-<span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="k">class</span> <span class="nc">CurrencyConverter</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="n">symbols</span><span class="p">):</span>
@@ -258,16 +223,14 @@ currencies like BitCoin, Etherum and others.</p>
     <span class="c1"># Converts 10 US Dollars to Nepali Rupees.</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">cadUSDconverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;NPR&#39;</span><span class="p">))</span>
 </pre></div>
-</td></tr></table><div class="section" id="converting-bitcoin-etherum-and-other-digital-currencies">
+<div class="section" id="converting-bitcoin-etherum-and-other-digital-currencies">
 <h2>Converting BitCoin, Etherum and other Digital Currencies</h2>
 <p>If we made <strong>show_alternatives</strong> parameter <strong>True</strong> we can get rates for digital currencies like bitcoin, Etherum and others. Add all the necessary symbols required while creating new currency converter and we are all ready.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="n">simpleConverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">,</span> <span class="s2">&quot;BTC&quot;</span><span class="p">])</span>
+<div class="highlight"><pre><span></span><span class="n">simpleConverter</span> <span class="o">=</span> <span class="n">CurrencyConverter</span><span class="p">(</span><span class="n">YOUR_APP_ID</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;NPR&quot;</span><span class="p">,</span> <span class="s2">&quot;BTC&quot;</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">simpleConverter</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span> <span class="s1">&#39;BTC&#39;</span><span class="p">))</span>
 </pre></div>
-</td></tr></table></div>
+</div>
 
                 </div>
                 <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Building a Currency Converter using OpenExchangeRates API and requests" data-link="https://nischal.info.np/building-a-currency-converter-using-openexchangerates-api"></div>
