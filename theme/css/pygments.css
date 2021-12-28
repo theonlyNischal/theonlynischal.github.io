@@ -1,5 +1,5 @@
 .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f0f3f3; border-radius: 10px; padding: 10px 10px 10px 10; border-style: ridge;}
+.highlight  { background: #f0f3f3; border-radius: 10px; padding: 10px 10px 0px 10px; border-style: ridge;}
 .highlight .c { color: #0099FF; font-style: italic } /* Comment */
 .highlight .err { color: #AA0000; background-color: #FFAAAA } /* Error */
 .highlight .k { color: #006699; font-weight: bold } /* Keyword */
