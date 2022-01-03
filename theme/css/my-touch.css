@@ -18,3 +18,8 @@
 .category-article-thumbnail{
     height: 100%;
 }
+
+.blog-body.h2{
+    border-bottom: 2px solid #93c593;
+    display: inline;
+}
