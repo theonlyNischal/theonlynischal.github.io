@@ -151,9 +151,9 @@
          <header role="banner">
          </header>
          
-         <main role="main">
+         <main role="main" id="main-content" class="main-content">
             <div class="container">
-              <header>
+              
 
     <div class="row">
         <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
@@ -187,13 +187,34 @@ server's code runs first, which opens a port and accepts an incoming request. Wh
 it forms a response and returns the result to the requester.
 A program becomes a client when it sends a request to a server and waits
 for a response.</p>
-<div class="section" id="time-of-day">
+<div class="usa-summary-box"
+  role="region"
+  aria-labelledby="summary-box-key-information"
+>
+  <div class="usa-summary-box__body">
+    <h3 class="usa-summary-box__heading" id="summary-box-key-information">
+      Source code for other similar programs
+    </h3>
+    <div class="usa-summary-box__text">
+      <ul class="usa-list" style="list-style-type: disc;">
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/01-day-of-time" class="usa-link usa-link--external">Time of day client-server program using TCP sockets </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/02-simple-echo-program" class="usa-link usa-link--external">Example of echo server using TCP sockets </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/03-simple-chat-program" class="usa-link usa-link--external">Simple chat using TCP sockets </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/04-concurrent-echo" class="usa-link usa-link--external">Echo server but built with concurrent server </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/05-concurrent-chat" class="usa-link usa-link--external">Simple chat but built with concurrent server </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/06-TCP-Quiz" class="usa-link usa-link--external">Implementation of a TCP Quiz program  </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/07-provide-registration-number" class="usa-link usa-link--external">[WIP] Provide Registration Number </a></li>
+        <li><a href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/08-client-to-client-chat" class="usa-link usa-link--external">[WIP] Client-to-Client Communication Chat </a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<br><div class="section" id="time-of-day">
 <h2>Time-of-Day</h2>
 <p>Here, when a client is connected to a server. The server will send current time information to
 the client and the client will print the information in the screen.</p>
-</div>
 <div class="section" id="server-side-code">
-<h2>Server Side Code</h2>
+<h3>Server Side Code</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -290,7 +311,7 @@ the client and the client will print the information in the screen.</p>
 </pre></div>
 </td></tr></table></div>
 <div class="section" id="include-header-files">
-<h2>1. Include header files</h2>
+<h3>1. Include header files</h3>
 <div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
@@ -305,14 +326,14 @@ the client and the client will print the information in the screen.</p>
 <p>These line includes numerous system headers that are needed by most network programs</p>
 </div>
 <div class="section" id="defines-constants">
-<h2>2. Defines Constants</h2>
+<h3>2. Defines Constants</h3>
 <div class="highlight"><pre><span></span><span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 </pre></div>
 <p>Defines various constants that we use(e.g., MAXLINE, LISTENQ)</p>
 </div>
 <div class="section" id="gives-type-struct-sockaddr-a-new-name-to-shorten-the-code">
-<h2>3. Gives type &quot;struct sockaddr&quot; a new name to shorten the code.</h2>
+<h3>3. Gives type &quot;struct sockaddr&quot; a new name to shorten the code.</h3>
 <div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 <ol class="arabic simple" start="4">
@@ -320,12 +341,12 @@ the client and the client will print the information in the screen.</p>
 </ol>
 <div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
 </pre></div>
-<p><strong>argv**(argument count) and **argc**(argument vector) are how command line arguments
-are passed to **main()</strong> in C and C++.</p>
+<p><strong>argc</strong> (argument count) and <strong>argv</strong> (argument vector) are how command line arguments
+are passed to <strong>main()</strong> in C and C++.</p>
 <p><strong>argc</strong> will be the number of strings pointed to by <strong>argv</strong>.</p>
 </div>
 <div class="section" id="creates-a-tcp-socket">
-<h2>5. Creates a TCP Socket.</h2>
+<h3>5. Creates a TCP Socket.</h3>
 <div class="highlight"><pre><span></span><span class="n">listenfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">AF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Creates a TCP Socket</span>
 </pre></div>
 <p>The socket function creates a socket on demand. The function takes three integer
@@ -334,7 +355,7 @@ in all future function calls (e.g., the calls to connect and
 read that follow).</p>
 </div>
 <div class="section" id="initialize-the-server-address-by-the-port-and-ip">
-<h2>6.Initialize the server address by the port and IP.</h2>
+<h3>6.Initialize the server address by the port and IP.</h3>
 <div class="highlight"><pre><span></span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
 <span class="n">bzero</span><span class="p">(</span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
 <span class="n">servaddr</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w"></span>
@@ -343,7 +364,7 @@ read that follow).</p>
 </pre></div>
 </div>
 <div class="section" id="bind-the-socket-descriptor-to-the-server-address">
-<h2>7. Bind the socket descriptor to the server address.</h2>
+<h3>7. Bind the socket descriptor to the server address.</h3>
 <div class="highlight"><pre><span></span><span class="n">bind</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">servaddr</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 <p>Once a socket has been created, a server uses the bind function to establish a local address for
@@ -352,7 +373,7 @@ the socket†. Bind has the following form.</p>
 </pre></div>
 </div>
 <div class="section" id="turn-on-the-socket-to-listen-for-incoming-connections">
-<h2>8. Turn on the socket to listen for incoming connections.</h2>
+<h3>8. Turn on the socket to listen for incoming connections.</h3>
 <div class="highlight"><pre><span></span><span class="n">listen</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="n">LISTENQ</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 <p>Socket function listen allows servers to prepare a socket for incoming connections.
@@ -367,14 +388,14 @@ A call has the form:</p>
 a server, and argument qlength specifies the length of the request queue for that socket.</p>
 </div>
 <div class="section" id="infinite-loop">
-<h2>9. Infinite loop</h2>
+<h3>9. Infinite loop</h3>
 <div class="highlight"><pre><span></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="store-the-clients-address-and-socket-descriptor-by-accepting-an-incoming-connection">
-<h2>10. Store the client’s address and socket descriptor by accepting an incoming connection.</h2>
+<h3>10. Store the client’s address and socket descriptor by accepting an incoming connection.</h3>
 <div class="highlight"><pre><span></span><span class="n">len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">cliaddr</span><span class="p">);</span><span class="w"></span>
 <span class="n">connfd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">SA</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="n">cliaddr</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">len</span><span class="p">);</span><span class="w"></span>
 </pre></div>
@@ -385,7 +406,7 @@ request arrives. The call has the form:</p>
 </pre></div>
 </div>
 <div class="section" id="sending-data-through-a-socket">
-<h2>11. Sending data through a socket.</h2>
+<h3>11. Sending data through a socket.</h3>
 <div class="highlight"><pre><span></span><span class="n">ticks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
 <span class="n">snprintf</span><span class="p">(</span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">buff</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%.24s</span><span class="se">\r\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ctime</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ticks</span><span class="p">));</span><span class="w"></span>
 <span class="n">write</span><span class="p">(</span><span class="n">connfd</span><span class="p">,</span><span class="w"> </span><span class="n">buff</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">buff</span><span class="p">));</span><span class="w"></span>
@@ -393,12 +414,12 @@ request arrives. The call has the form:</p>
 <p>This calculate current time and send it to client through socket.</p>
 </div>
 <div class="section" id="terminate-the-connection">
-<h2>12. Terminate the connection.</h2>
+<h3>12. Terminate the connection.</h3>
 <div class="highlight"><pre><span></span><span class="n">close</span><span class="p">(</span><span class="n">connfd</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="section" id="client-side-code">
-<h2>Client Side Code</h2>
+<h3>Client Side Code</h3>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -518,21 +539,8 @@ request arrives. The call has the form:</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </td></tr></table></div>
-<div class="section" id="source-code-for-other-programs">
-<h2>Source Code for Other programs</h2>
-<ul class="simple">
-<li>Time of day client-server program using TCP sockets. <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/01-day-of-time">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/01-day-of-time</a></li>
-<li>Example of echo server using TCP sockets. <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/02-simple-echo-program">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/02-simple-echo-program</a></li>
-<li>Simple chat using TCP sockets.https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/03-simple-chat-program</li>
-<li>Echo server but built with concurrent server. <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/04-concurrent-echo">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/04-concurrent-echo</a></li>
-<li>Simple chat but built with concurrent server. <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/05-concurrent-chat">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/05-concurrent-chat</a></li>
-<li>TCP Quiz <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/06-TCP-Quiz">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/06-TCP-Quiz</a></li>
-<li>[Incomplete]-Provide Registration Number <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/07-provide-registration-number">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/07-provide-registration-number</a></li>
-<li>[Incomplete]-Client-to-Client Communication Chat <a class="reference external" href="https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/08-client-to-client-chat">https://github.com/theonlyNischal/Network-Programming-Lab-Assignments-NCIT/tree/main/08-client-to-client-chat</a></li>
-</ul>
-</div>
 <div class="section" id="instructions-for-lab-1">
-<h2>Instructions for Lab 1</h2>
+<h3>Instructions for Lab 1</h3>
 <ol class="arabic simple">
 <li>Create two files for the Client and server program named as daytimetcpserver.c and daytimetcpclient.c</li>
 <li>Write a server and client program (Program code is attached as a pdf Image)</li>
@@ -551,6 +559,7 @@ request arrives. The call has the form:</p>
 <li>Observer an output.</li>
 <li>Submit your code</li>
 </ol>
+</div>
 </div>
 
                 </div>
