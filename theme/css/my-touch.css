@@ -20,8 +20,12 @@
 }
 
 h2{
-    border-bottom: 2px solid #93c593;
+    text-decoration: underline 3px #93c593;
     display: inline;
+}
+
+.mzp-c-card-title{
+    text-decoration: none;
 }
 
 .site-note {
