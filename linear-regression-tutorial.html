@@ -2,17 +2,17 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Linear Regression Tutorial
+      <title>Simple Linear Regression Tutorial
  | Nischal Lal Shrestha</title>
       <meta property='og:type' content='website'>
       <meta property='og:locale' content='en_US'>
       <meta property='wagtail:language' content='en'>
       <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Linear Regression Tutorial, Published On:Tuesday, April 30 2019, keywords: Linear Regression, Simple Linear Regression, Linear Regression Tutorial, Representation of Linear Regression, ">
+    <meta name="description" content="Simple Linear Regression Tutorial, Published On:Tuesday, April 30 2019, keywords: Linear Regression, Simple Linear Regression, Linear Regression Tutorial, Representation of Linear Regression, ">
     <meta name="keywords" content="Linear Regression, Simple Linear Regression, Linear Regression Tutorial, Representation of Linear Regression, " />
     <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Linear Regression Tutorial">
+    <meta property="og:title" content="Simple Linear Regression Tutorial">
     <meta property="og:description" content="Linear Regression attempts to model the relationship between two variables by fitting a linear equation to observed data">
     <meta property="og:url" content="https://nischal.info.np/linear-regression-tutorial">
     <meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.png">
@@ -20,7 +20,7 @@
     <!-- Markup for Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@dakkulanthu">
-    <meta name="twitter:title" content="Linear Regression Tutorial">
+    <meta name="twitter:title" content="Simple Linear Regression Tutorial">
     <meta name="twitter:description" content="Linear Regression attempts to model the relationship between two variables by fitting a linear equation to observed data">
     <meta name="twitter:creator" content="@dakkulanthu">
     <meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.png">
@@ -158,12 +158,12 @@
     <div class="row">
         <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
             <div class="blog-sticky-side d-none d-lg-flex justify-content-lg-end">
-            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Linear Regression Tutorial" data-link="https://nischal.info.np/linear-regression-tutorial"></div>
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Simple Linear Regression Tutorial" data-link="https://nischal.info.np/linear-regression-tutorial"></div>
             </div>
         </div>
         <div class="py-4 py-md-5 col-lg-8">
             <div class="cms ">
-            <h1 class="h1-heading">Linear Regression Tutorial</h1>
+            <h1 class="h1-heading">Simple Linear Regression Tutorial</h1>
             <div class="blog-authors d-flex flex-wrap flex-column mb-4">
                 <p class="body-small my-2">
                     By
@@ -174,7 +174,7 @@
             </div>
             <div class="blog-body">
                 <figure class="my-default">
-                    <img src="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.png" alt="Image for Linear Regression Tutorial" class="w-100" />
+                    <img src="https://nischal.info.np/theme/img/algorithm/linear-regression-tutorial.png" alt="Image for Simple Linear Regression Tutorial" class="w-100" />
                     <figcaption class="body-small d-block mt-2">
                         
                     </figcaption>
@@ -206,13 +206,15 @@
 <p>Linear regression is a linear approximation of a causal relationship between two or more variables. Linear Regression is a linear model, e.g a model that assumes a linear relationship between the input variables(X) and the single output variable(Y).</p>
 <p>The output(Y) can be calculated from a linear combination of the input variables(X). When there is a single input variable it is called as the Simple Linear Regression and when there is more than one input variable then it is referred to as the Multiple Linear Regression.</p>
 <p>When using regression analysis we want to predict the value of (Y) provided we have a value of X and Y must depend on X in some casual way, whenever there is a change in X, the change must be translated in Y.</p>
-<div class="section" id="representation-of-linear-regression">
-<h3>Representation of Linear Regression</h3>
-<p>Linear Regression is represented as linear equation that combines a specific set of input values(X) to give predicted value(Y).</p>
-<p>The linear equation assigns one scale factor to each input value(X), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as: </p>\[Y = \beta_0 + \beta_1 * X\]<p>The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all.</p>
 </div>
+<div class="section" id="representation-of-linear-regression">
+<h2>Representation of Linear Regression</h2>
+<p>Linear Regression is represented as linear equation that combines a specific set of input values(X) to give predicted value(Y).</p>
+<p>The linear equation assigns one scale factor to each input value(\(X\)), that is commonly represented by the Greek Letter Beta(\(\beta\)). One additional coefficient is also added, giving the line an additon degree of freedom. Simple linear regression is represented as: </p>$$Y \approx \beta_0 + \beta_1X$$
+
+<p>\(\beta_0\) and \(\beta_1\) are two unknown constants that represents \(intercept\) and \(slope\) terms in the linear model. Together \(\beta_0\) and \(\beta_1\) are known as model \(coefficients\) or \(parameters\). The higher the value of the coefficient higher the influence is. So if the value of the coefficient is 0, then the particular input variable will have no influence at all. We use the training data to estimate the value of \(\beta_0\) and \(\beta_1\) and make a predictions with it. </p></div>
 <div class="section" id="loss-function-for-regression">
-<h3>Loss Function for Regression</h3>
+<h2>Loss Function for Regression</h2>
 <p>Loss function is a method of evaluating the correctness of specific algorithm which models the given data. If the prediction deviates too much from the actual results, loss function will be very high.</p>
 <p>Loss function is quite straight forward in classification as L(h, (X,Y)) simply indicates whether h(x) correctly predicts or not.</p>
 <p>In regression, if the weight of person is 60kg, both the prediction of 60.00001kg and 61kg are wrong. But we would surely prefer the prediction of 60.00001kg instead of 61kg. So we need a mechanism to penalized the discrepancy between estimated value and actual result.</p>
@@ -228,15 +230,14 @@
 
     \[Ls(h,(x,y)) = \frac{1}{{2m}}\sum\limits_{i = 1}^m {(h(x_i) - Y_i)^2} \]
 
-\(h(x_i)\) = Our prediction$$\\$$
-\(Y_i\) = Actual result$$\\$$
-m = size of training data$$\\$$
-Goal = Minimize the loss function. $$\\$$</div>
+\(h(x_i)\) = Our prediction<br>
+\(Y_i\) = Actual result<br>
+m = size of training data<br>
+Goal = Minimize the loss function</div>
 <div class="section" id="using-gradient-descent-to-minimize-the-loss-function">
-<h3>Using Gradient Descent to minimize the loss function</h3>
+<h2>Using Gradient Descent to minimize the loss function</h2>
 <p>Imagine we are at any point of a mountain. In gradient descent, what are we going to do is spin 360 degree around and find the direction in which we have to make a baby step in order to go down the mountain as rapidly as possible.</p>
 <p>After the finding that direction, we will make a baby step. Now we are in the another position in the mountain. Here we will repeat the previous step that is we will spin 360 degree around and find the direction of steepest descent. We will continue this preocess until we are at the lowermost portion of the mountain <a href='#AndrewNG_GradientDescent' id='ref-AndrewNG_GradientDescent-1'>NG (2021)</a>.</p>
-</div>
 </div>
 <hr>
 <h2>Bibliography</h2>
@@ -246,7 +247,7 @@ url: <span class="bibtex-protected">https://www.coursera.org/learn/machine-learn
 [Online; accessed 5-July-2020]. <a class="cite-backref" href="#ref-AndrewNG_GradientDescent-1" title="Jump back to reference 1">↩</a></p>
 
                 </div>
-                <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Linear Regression Tutorial" data-link="https://nischal.info.np/linear-regression-tutorial"></div>
+                <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Simple Linear Regression Tutorial" data-link="https://nischal.info.np/linear-regression-tutorial"></div>
             </div>
             <br/>
 
