@@ -229,11 +229,11 @@ the client and the client will print the information in the screen.</p>
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">listenfd</span><span class="p">,</span><span class="w"> </span><span class="n">connfd</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="n">cliaddr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">,</span><span class="w"> </span><span class="n">cliaddr</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">buff</span><span class="w"> </span><span class="p">[</span><span class="n">MAXLINE</span><span class="p">];</span><span class="w"></span>
 <span class="w">    </span><span class="kt">time_t</span><span class="w"> </span><span class="n">ticks</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">;</span><span class="w"></span>
@@ -289,7 +289,7 @@ the client and the client will print the information in the screen.</p>
 </div>
 <div class="section" id="gives-type-struct-sockaddr-a-new-name-to-shorten-the-code">
 <h3>3. Gives type &quot;struct sockaddr&quot; a new name to shorten the code.</h3>
-<div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 <ol class="arabic simple" start="4">
 <li>Starts main function and it accepts command line arguments.</li>
@@ -389,12 +389,12 @@ request arrives. The call has the form:</p>
 <span class="cp">#define MAXLINE 1024</span>
 <span class="cp">#define LISTENQ 10</span>
 
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span> <span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="n">SA</span><span class="p">;</span><span class="w"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">){</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">sockfd</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">recvline</span><span class="w"> </span><span class="p">[</span><span class="n">MAXLINE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span> <span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">servaddr</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">port</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">argc</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">3</span><span class="p">){</span><span class="w"></span>
