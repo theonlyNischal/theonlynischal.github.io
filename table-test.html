@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks
+ | Nischal Lal Shrestha</title>
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='en_US'>
+      <meta property='wagtail:language' content='en'>
+      <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks, Published On:Mon, July 5 2021, keywords: rice diseases, identification of rice leaf diseases, cnn, rice disease prediction using deep learning, rice disease identification using pytorch, [<Tag 'rice'>, <Tag 'cnn'>, <Tag 'projects'>, <Tag 'nepal'>]">
+    <meta name="keywords" content="rice diseases, identification of rice leaf diseases, cnn, rice disease prediction using deep learning, rice disease identification using pytorch, [<Tag 'rice'>, <Tag 'cnn'>, <Tag 'projects'>, <Tag 'nepal'>]" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks">
+    <meta property="og:description" content="In Nepal, increased rice production is closely related not just with the national economic health but also with less hunger, better nutrition, lower levels of poverty and a better quality of life.">
+    <meta property="og:url" content="https://nischal.info.np/table-test">
+    <meta property="og:image" content="https://nischal.info.np/theme/img/OpenSource/identification-of-rice-leaf-diseases-using-cnn.png">
+    <meta property="og:site_name" content="Nischal Lal Shrestha">
+    <!-- Markup for Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dakkulanthu">
+    <meta name="twitter:title" content="Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks">
+    <meta name="twitter:description" content="In Nepal, increased rice production is closely related not just with the national economic health but also with less hunger, better nutrition, lower levels of poverty and a better quality of life.">
+    <meta name="twitter:creator" content="@dakkulanthu">
+    <meta name="twitter:image" content="https://nischal.info.np/theme/img/OpenSource/identification-of-rice-leaf-diseases-using-cnn.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <link rel="canonical" href="./table-test.html" />
+    
+      <meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
+      <meta name="ga-identifier" content="UA-87658599-6">
+      <meta name="gtm-identifier" content="GTM-MD3XGZ4">
+      
+      <script src="https://nischal.info.np/theme/js/protocol-base.js"></script>
+      <script src="https://nischal.info.np/theme/js/protocol-support.js"></script>
+      <script src="https://nischal.info.np/theme/js/protocol-utils.js"></script>
+      <link rel="stylesheet" href="https://nischal.info.np/theme/uswds-2.11.2/css/uswds.min.css" />
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/protocol.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/protocol-components.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/main.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/my-touch.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/pygments.css">
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="icon" type="image/png" sizes="196x196" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="shortcut icon" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="canonical" href="https://nischal.info.np">
+      <script src="https://nischal.info.np/theme/js/main.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+      <script src="https://nischal.info.np/theme/uswds-2.11.2/js/uswds-init.min.js"></script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZR069LM8Q"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3ZR069LM8Q');
+   </script>
+   <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2612172848875712"
+   crossorigin="anonymous"></script> -->
+      
+   </head>
+   <body class="" id="view-blog-index">
+      <div class="wrapper">
+<div class="sticky-top d-print-none">
+    <div class="primary-nav-container">
+        <div class="wrapper-burger">
+            <div class="menu-container">
+                <div class="narrow-screen-menu hidden d-lg-none">
+                <div class="narrow-screen-menu-background dark-theme">
+                    <div class="narrow-screen-menu-container">
+                        <div class="container" role="navigation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="nav-links pt-3">
+                                        <div><a class="" href="https://nischal.info.np">Home</a></div>
+                                            <div><a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/code.html">Code</a></div>
+
+                                            <div><a class="active" href="https://nischal.info.np/category/open-source.html">Open Source</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/thoughts.html">Thoughts</a></div>
+
+                                            <br>
+<div class="row">
+    <div class="col-12">
+        <hr class="intro-and-content-divider">
+    </div>
+</div>                                            <div><a  href="https://nischal.info.np/nischal.html"><i class="la-lg las la-user"></i>  About Me</a></div>
+                                            <div><a  href="https://nischal.info.np/projects.html"><i class="la-lg las la-file-code"></i>  Projects</a></div>
+                                            <div><a  href="https://nischal.info.np/contact.html"><i class="la-lg las la-phone-volume"></i> Contact</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <nav class="container wide-screen-menu-container" title="main site navigation">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div id="primary-nav-links">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+                                        <div class="burger-bar burger-bar-top"></div>
+                                        <div class="burger-bar burger-bar-middle"></div>
+                                        <div class="burger-bar burger-bar-bottom"></div>
+                                    </button>
+                                    <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
+                                    <div class="wide-screen-menu">
+                                        <div class="nav-links d-none d-lg-block">
+                                                <a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+                                                <a  href="https://nischal.info.np/category/code.html">Code</a>
+                                                <a class="active" href="https://nischal.info.np/category/open-source.html">Open Source</a>
+                                                <a  href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+ 
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/nischal.html" ><i class="la-lg las la-user"></i>  About Me</a>
+                                            
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/projects.html" ><i class="la-lg las la-file-code"></i>  Projects</a>
+                                                
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/contact.html"><i class="la-lg las la-phone-volume"></i>  Contact</a>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="d-flex align-items-center">
+
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+         <header role="banner">
+         </header>
+         
+         <main role="main" id="main-content" class="main-content">
+            <div class="container">
+              
+
+    <div class="row">
+        <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
+            <div class="blog-sticky-side d-none d-lg-flex justify-content-lg-end">
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks" data-link="https://nischal.info.np/table-test"></div>
+            </div>
+        </div>
+        <div class="py-4 py-md-5 col-lg-8">
+            <div class="cms ">
+            <h1 class="h1-heading">Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks</h1>
+            <div class="blog-authors d-flex flex-wrap flex-column mb-4">
+                <p class="body-small my-2">
+                    By
+                    <span><b><a href="https://nischal.info.np/author/nischal-lal-shrestha.html">Nischal Lal Shrestha</a></b></span>
+                    | On Mon, July 5 2021
+                    | Filed under <a class="category" href="https://nischal.info.np/category/open-source.html">Open Source</a>
+                </p>
+            </div>
+            <div class="blog-body">
+                <figure class="my-default">
+                    <img src="https://nischal.info.np/theme/img/OpenSource/identification-of-rice-leaf-diseases-using-cnn.png" alt="Image for Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks" class="w-100" />
+                    <figcaption class="body-small d-block mt-2">
+                        
+                    </figcaption>
+                </figure>
+                <div class="rich-text">
+                    <div class="section" id="introduction">
+<h2>Introduction</h2>
+<p>Rice, a staple food of more than half of the world's population, employs one billion people, and rice farms cover around 150 million hectares—more than any other crop. Rice production is arguably the most important economic activity on the planet. <a href='#TheGlobalStaple' id='ref-TheGlobalStaple-1'>Ricepedia (2020)</a></p>
+<p>In Nepal, the use of rice is indispensable in the deeds of every Nepali from the birth to death and it is predominant even in various festivals celbrated throughout the year.</p>
+<figure class="my-default">
+<img src="https://tripswithamission.org/wp-content/uploads/Tika-fest.jpg" alt="image of tika">
+
+<figcaption class="body-small d-block mt-2">
+<a href="https://tripswithamission.org/happy-dashain/" rel="nofollow">
+Tika is mixture of uncooked rice, yogurt and vermilion powder  that is put on the forehead as a sign of victory and good luck.
+</a>
+</figcaption>
+</figure><p>In Nepal, rice is cultivated, from 60m above sea level in the Terai to Chumchaur in Jumla(highes point), at an altitude of 3050m. Rice is cultivated in 47% of the total cultivable land in Nepal and provides more than 50% of the total calories requirements of Nepalese people. Not only is rice a key source of food, it is also a major employer and source of income for the people of Nepal. In Nepal, increased rice production is closely related not just with the national economic health but also with less hunger, better nutrition, lower levels of poverty and a better quality of life. <a href='#BMSBasnet1' id='ref-BMSBasnet1-1'>Basnet (2021)</a> <a href='#BMSBasnet2' id='ref-BMSBasnet2-1'>Basnet (2021)</a></p>
+<figure class="my-default">
+<img src="https://dailosewa.com/user_uploads/services/204.jpg" alt="rice feeding ceremony">
+
+<figcaption class="body-small d-block mt-2">
+<a href="https://dailosewa.com/service-detail/pasni-rice-feeding-ceremony/" rel="nofollow">
+Rice Feeding Ceremony is a celebration in Nepal in which a child is first fed rice by the GrandFather
+</a>
+</figcaption>
+</figure> <div class="col">
+ <div class="feature-quote">
+  <h3>In Nepal, increased rice production is closely related not just with the national economic health but also with less hunger, better nutrition, lower levels of poverty
+  and a better quality of life. </h3>
+ </div>
+</div><p>Various rice diseases caused by bacteria, viruses, fungi, Nematode can bring significant yield losses in the production and quality of rice grain. For example: Rice blast is responsible for approximately 30% of rice production losses globally the equivalent of feeding 60 million people <a href='#Nalley' id='ref-Nalley-1'>Nalley (2016)</a>.</p>
+<p>Leaf Blast, Brown Spot, Stem Rot, Yellow Dwarf etc are common rice diseases which damage various part of the plant and it is a big problem due to farmer’s lack of knowledge to identify different rice diseases. Early stage identification, precautions and advice in time will enable farmers to increase both quality and quantity of the production. But, the contemporary rice disease outbreak coping mechanism is slow and hectic. Whenever a rice disease outbreaks occurs, government send agriculture specialist to inspect those diseases. They use their naked eyes and experience to identify those disease, provide strategic decisions concerning the number and timing of fungicide applications.</p>
+ <div class="col">
+ <div class="feature-quote">
+  <h3>Early stage identification, precautions and advice in time will enable farmers to increase both quality and quantity of the production.</h3>
+ </div>
+</div><p>But the number of such specialist is very low and monitoring of diseases over a large cultivation area is costly, cumbersome and time-consuming. Many of the time the sample may be taken to the laboratory for chemical tests which may take an awful lot of time. This deficiency in our contemporary disease outbreak coping mechanism shows an urgent need for the development and implementation of automatic rice disease detection mechanism.</p>
+ <div class="col">
+ <div class="feature-quote">
+  <h3>This deficiency in our contemporary disease outbreak coping mechanism shows an urgent need for the development and implementation of automatic rice disease detection mechanism.</h3>
+ </div>
+</div><p>We propose an automated real-time rice disease identification and diagnosis system which performs the task of detecting rice diseases with minimal human intervention. This system based on deep learning technology  automatically detects rice diseases from still image coming from a digital camera and provides necessary advice and strategic decisions to the farmer.</p>
+<figure class="my-default">
+<img src="https://nischal.info.np/theme/img/OpenSource/methodology.png" alt="Proposed Methedology for Rice Disease Identification System">
+
+<figcaption class="body-small d-block mt-2">
+Methedology for Rice Disease Identification System
+</a>
+</figcaption>
+</figure></div>
+<div class="section" id="team-members">
+<h2>Team Members</h2>
+<ul class="simple">
+<li><a class="reference external" href="https://aashishtiwari.com.np">Ashish Tiwari</a></li>
+<li><a class="reference external" href="https://nischal.info.np/nischal.html">Nischal Lal Shrestha</a></li>
+<li><a class="reference external" href="https://poshan.com.np">Poshan Pandey</a></li>
+<li><a class="reference external" href="https://2017rezina.wordpress.com">Rejina Giri</a></li>
+</ul>
+</div>
+<hr>
+<h2>Bibliography</h2>
+<p id='BMSBasnet2'>B.&nbsp;M.&nbsp;S. Basnet.
+<span class="bibtex-protected">Hail the Humble Paddy</span>.
+url: <span class="bibtex-protected">https://kathmandupost.com/opinion/2015/06/30/hail-the-humble-paddy</span>, 2021.
+[Online; accessed 5-July-2021]. <a class="cite-backref" href="#ref-BMSBasnet2-1" title="Jump back to reference 1">↩</a></p>
+<p id='BMSBasnet1'>B.&nbsp;M.&nbsp;S. Basnet.
+<span class="bibtex-protected">Rice and food security: Serious constraints</span>.
+url: <span class="bibtex-protected">https://thehimalayantimes.com/opinion/rice-food-security-serious-constraints/</span>, 2021.
+[Online; accessed 5-July-2021]. <a class="cite-backref" href="#ref-BMSBasnet1-1" title="Jump back to reference 1">↩</a></p>
+<p id='Nalley'>Nalley.
+<em>Economic and environmental impact of rice blast pathogen alleviation in the united states</em>.
+<span class="bibtex-protected"> PLoS ONE</span>, 2016. <a class="cite-backref" href="#ref-Nalley-1" title="Jump back to reference 1">↩</a></p>
+<p id='TheGlobalStaple'>Ricepedia.
+<span class="bibtex-protected">The Global Staple</span>.
+url: <span class="bibtex-protected">https://ricepedia.org/rice-as-food/the-global-staple-rice-consumers</span>, 2020.
+[Online; accessed 5-July-2021]. <a class="cite-backref" href="#ref-TheGlobalStaple-1" title="Jump back to reference 1">↩</a></p>
+
+                </div>
+                <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks" data-link="https://nischal.info.np/table-test"></div>
+            </div>
+            <br/>
+
+
+
+            <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                    */
+                    /*
+                    var disqus_config = function () {
+                        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = table-test; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://shresthanischal.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                            
+            </div>
+        </div>
+    </div>
+
+               
+            </div>
+         </main>
+
+
+
+<footer class="mzp-c-footer">
+	<div class="mzp-l-content ">
+		<nav class="mzp-c-footer-primary">
+			<div class="mzp-c-footer-primary-logo">
+				<a href="https://nischal.info.np">Nischal Lal Shrestha</a>
+			</div>
+			<div class="mzp-c-footer-sections">
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Explore
+  </h5>
+					<ul class="mzp-c-footer-list">
+							<li><a href="https://nischal.info.np/category/algorithm.html">Algorithm</a></li>
+							<li><a href="https://nischal.info.np/category/code.html">Code</a></li>
+							<li><a href="https://nischal.info.np/category/open-source.html">Open Source</a></li>
+							<li><a href="https://nischal.info.np/category/thoughts.html">Thoughts</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    About
+  </h5>
+					<ul class="mzp-c-footer-list">
+                        <li><a href="https://nischal.info.np/nischal.html">About Me</a></li>
+                        <li><a href="https://nischal.info.np/projects.html">Projects</a></li>
+                        <li><a href="https://nischal.info.np/contact.html">Contact</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Website Credits
+  </h5>
+					<ul class="mzp-c-footer-list">
+						<li><a href="https://protocol.mozilla.org/" rel="nofollow">Mozilla Protocol</a></li>
+						<li><a href="https://designsystem.digital.gov/how-to-use-uswds/" rel="nofollow">
+							USWD </a></li>
+						<li><a href="https://docs.getpelican.com/en/stable/index.html" rel="nofollow">Pelican</a></li>
+						<li><a href="https://icons8.com/line-awesome" rel="nofollow">Line Awesome</a></li>
+						<li><a href="https://pages.github.com/" rel="nofollow">Github Pages</a></li>
+						<li><a href="https://unsplash.com/" rel="nofollow">Unsplash</a></li>
+					</ul>
+				</section>
+			</div>
+		</nav>
+		<nav class="mzp-c-footer-secondary">
+			<ul class="mzp-c-footer-links-social">
+				<li>
+					<a class="twitter" href="https://twitter.com/dakkulanthu" rel="nofollow">Twitter
+						<span> (@dakkulanthu)</span>
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="https://www.youtube.com/channel/UCQoieW45COakbskXxW_ANIw" rel="nofollow">YouTube
+						<span> (Nischal Lal Shrestha)</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="mzp-c-footer-legal">
+				<p class="mzp-c-footer-license">Hey there, I'm Nischal.
+						<br/>
+						I am a student, a developer. Currently learning ML, DL, Data Science, Python.
+				</p>
+
+				<p class="mzp-c-footer-license">I love Everything that makes me more Human.
+				<br/>
+				<br/>
+				 While not Coding, I play Football and Chess.
+				</p class="mzp-c-footer-license">
+
+				<p mzp-c-footer-license>Copyright text 2020 by Nischal!!</p>
+				
+				<ul class="mzp-c-footer-terms">
+				<li><a href="https://nischal.info.np/cookies.html">Cookies</a></li>
+				<li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+				<li><a href="https://nischal.info.np/disclaimer.html">Disclaimer</a></li>
+				<li><a href="https://nischal.info.np/code-of-conduct.html">Code of Conduct</a></li>
+				
+				</ul>
+      		</div>
+
+		</nav>
+	</div>
+</footer>      </div>
+      <script src="https://nischal.info.np/theme/uswds-2.11.2/js/uswds.min.js"></script>
+      <script src="https://nischal.info.np/theme/js/main.js"></script>
+   </body>
+</html>
