@@ -1,0 +1,49 @@
+
+/* CSS style for the custom control */
+.date-display {
+position: absolute;
+bottom: 10px;
+left: 10px;
+background-color: #fff;
+padding: 8px 16px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+line-height: 1.4;
+white-space: nowrap;
+color: #333;
+max-width: 400px; /* Limit the width of the control */
+}
+
+/* CSS style for the bank name at the top of the map */
+.bank-name {
+position: absolute;
+top: 10px;
+left: 50%;
+transform: translateX(-50%);
+background-color: rgba(255, 255, 255, 0.8);
+padding: 8px 16px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+font-family: 'Arial', sans-serif;
+font-size: 20px;
+font-weight: bold;
+color: #333;
+}
+
+    /* Style for the dropdown */
+#bankDropdown {
+float: right;
+padding: 10px;
+font-size: 16px;
+border: 2px solid #ccc;
+border-radius: 5px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for dropdown option */
+#bankDropdown option {
+    font-size: 16px;
+}

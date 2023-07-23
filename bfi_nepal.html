@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Visualize BFI of Nepal
+ | Nischal Lal Shrestha</title>
+      <meta property='og:type' content='website'>
+      <meta property='og:locale' content='en_US'>
+      <meta property='wagtail:language' content='en'>
+      <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+         <meta name="description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
+         <meta name="keywords" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
+         <!-- Markup for Twitter -->
+         <meta name="twitter:card" content="summary_large_image">
+         <meta name="twitter:site" content="@dakkulanthu">
+         <meta name="twitter:title" content="Nischal">
+         <meta name="twitter:description" content="I Love Everything That Makes Me More Human. Personal blog of Nischal.">
+         <meta name="twitter:creator" content="@dakkulanthu">
+         <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png">
+         <meta property="og:url" content="https://nischal.info.np" />
+         <meta property="og:title" content="Nischal Lal Shrestha" />
+         <meta property="og:description" content="I Love Everything That Makes Me More Human. Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal." />
+         <meta property="og:site_name" content="Nischal Lal Shrestha" />
+         <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" />
+         <meta property="og:image:width" content="1200" />
+         <meta property="og:image:height" content="1200" />
+         <meta itemprop='url' content='https://nischal.info.np' />
+         <meta itemprop="name" content="Blog">
+         <meta itemprop='description' content="Personal blog of Nischal Lal Shrestha. I talk about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
+         <meta itemprop='image' content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" />
+         <title>Nischal Lal Shrestha</title>
+         <meta name="description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
+      
+      <meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
+      <meta name="ga-identifier" content="UA-87658599-6">
+      <meta name="gtm-identifier" content="GTM-MD3XGZ4">
+      
+      <script src="https://nischal.info.np/theme/js/protocol-base.js"></script>
+      <script src="https://nischal.info.np/theme/js/protocol-support.js"></script>
+      <script src="https://nischal.info.np/theme/js/protocol-utils.js"></script>
+      <link rel="stylesheet" href="https://nischal.info.np/theme/uswds-2.11.2/css/uswds.min.css" />
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/protocol.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/protocol-components.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/main.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/my-touch.css">
+      <link rel="stylesheet" href="https://nischal.info.np/theme/css/pygments.css">
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+         <link rel="stylesheet" href="https://nischal.info.np/theme/css/bfi_main.css" />
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
+      <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="icon" type="image/png" sizes="196x196" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="shortcut icon" href="https://nischal.info.np/theme/img/favicon.png">
+      <link rel="canonical" href="https://nischal.info.np">
+      <script src="https://nischal.info.np/theme/js/main.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+      <script src="https://nischal.info.np/theme/uswds-2.11.2/js/uswds-init.min.js"></script>
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZR069LM8Q"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3ZR069LM8Q');
+   </script>
+   <!-- Google Adsense -->
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2612172848875712"
+   crossorigin="anonymous"></script>
+      
+   </head>
+   <body class="" id="view-blog-index">
+      <div class="wrapper">
+<div class="sticky-top d-print-none">
+    <div class="primary-nav-container">
+        <div class="wrapper-burger">
+            <div class="menu-container">
+                <div class="narrow-screen-menu hidden d-lg-none">
+                <div class="narrow-screen-menu-background dark-theme">
+                    <div class="narrow-screen-menu-container">
+                        <div class="container" role="navigation">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="nav-links pt-3">
+                                        <div><a class="" href="https://nischal.info.np">Home</a></div>
+                                            <div><a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/code.html">Code</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/notes.html">Notes</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/open-source.html">Open Source</a></div>
+
+                                            <div><a  href="https://nischal.info.np/category/thoughts.html">Thoughts</a></div>
+
+                                            <br>
+<div class="row">
+    <div class="col-12">
+        <hr class="intro-and-content-divider">
+    </div>
+</div>                                            <div><a  href="https://nischal.info.np/nischal.html"><i class="la-lg las la-user"></i>  About Me</a></div>
+                                            <div><a  href="https://nischal.info.np/projects.html"><i class="la-lg las la-file-code"></i>  Projects</a></div>
+                                            <div><a  href="https://nischal.info.np/contact.html"><i class="la-lg las la-phone-volume"></i> Contact</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <nav class="container wide-screen-menu-container" title="main site navigation">
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div id="primary-nav-links">
+                                <div class="d-flex align-items-center flex-wrap">
+                                    <button class="burger  d-lg-none ml-md-0 " aria-label="Open menu">
+                                        <div class="burger-bar burger-bar-top"></div>
+                                        <div class="burger-bar burger-bar-middle"></div>
+                                        <div class="burger-bar burger-bar-bottom"></div>
+                                    </button>
+                                    <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
+                                    <div class="wide-screen-menu">
+                                        <div class="nav-links d-none d-lg-block">
+                                                <a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+                                                <a  href="https://nischal.info.np/category/code.html">Code</a>
+                                                <a  href="https://nischal.info.np/category/notes.html">Notes</a>
+                                                <a  href="https://nischal.info.np/category/open-source.html">Open Source</a>
+                                                <a  href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
+ 
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/nischal.html" ><i class="la-lg las la-user"></i>  About Me</a>
+                                            
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/projects.html" ><i class="la-lg las la-file-code"></i>  Projects</a>
+                                                
+                                                <a id=""  class="primary-nav-special-link  no-underline" href="https://nischal.info.np/contact.html"><i class="la-lg las la-phone-volume"></i>  Contact</a>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Right -->
+                            <div class="d-flex align-items-center">
+
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+         <header role="banner">
+         </header>
+         
+         <main role="main" id="main-content" class="main-content">
+            <div class="container">
+              
+
+  <!-- Map container -->
+  <div id="map" style="height: 500px;" >
+      <select id="bankDropdown" style="float:right;">
+      <option value="Nepal Bank Limited">Nepal Bank Limited</option>
+      <option value="Rastriya Banijya Bank">Rastriya Banijya Bank</option>
+      <option value="Nabil Bank Limited">Nabil Bank Limited</option>
+      <option value="Nepal Investment Mega Bank Limited">Nepal Investment Mega Bank Limited</option>
+      <option value="Standard Chartered Bank Nepal Limited">Standard Chartered Bank Nepal Limited</option>
+
+      <option value="Himalayan Bank Limited">Himalayan Bank Limited</option>
+      <option value="Nepal SBI Bank Limited">Nepal SBI Bank Limited</option>
+      <option value="NIC ASIA Bank Limited">NIC ASIA Bank Limited</option>
+      <option value="Everest Bank Limited">Everest Bank Limited</option>
+      <option value="Machhapuchchhre Bank Limited">Machhapuchchhre Bank Limited</option>
+
+      </select>
+  </div>
+
+
+
+  <!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+
+<script >
+  // Initialize parsedData as an empty object to avoid ReferenceError
+  var parsedData = {};
+  var map;
+  var markers = [];
+  var dateDisplayElement; // Define date display element as a global variable
+  var bankNameElement; // Define bank name element as a global variable
+  let timeoutIds = [];
+
+
+
+  // Load the Nepal GeoJSON data
+  fetch('theme/js/district.geojson')
+      .then(response => response.json())
+      .then(nepalData => {
+
+
+          var map = L.map('map').setView([28.3949, 84.1240], 7);
+          // Add the basemap
+          L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+              maxZoom: 7,
+              minZoom: 7,
+              id: 'mapbox.light'
+          }).addTo(map);
+
+          // Get the element to display the date and additional information
+          dateDisplayElement = L.DomUtil.create('div', 'date-display');
+          dateDisplayElement.innerText = 'Date: N/A\nBranch: N/A\nLocation: N/A';
+
+          // Get the element to display the bank name
+          bankNameElement = L.DomUtil.create('div', 'bank-name');
+          bankNameElement.innerText = 'Bank Name: N/A';
+
+
+          // Create a custom control and add it to the map
+          var customControl = L.Control.extend({
+              options: {
+                  position: 'bottomleft'
+              },
+
+              onAdd: function(map) {
+                  return dateDisplayElement;
+              }
+          });
+
+          map.addControl(new customControl());
+          // Add the bank name element to the map container
+          map.getContainer().appendChild(bankNameElement);
+          // Function to update the date display element
+          function updateDateDisplay(date, branch, location, bank_name) {
+              branch = branch.toUpperCase();
+              location = location.toUpperCase()
+              dateDisplayElement.innerText = `Date: ${date}\nBranch: ${branch}\nLocation: ${location}`;
+              bankNameElement.innerText = `${bank_name}`;
+          }
+
+          // Customize the style of the GeoJSON layer
+          function style(feature) {
+              return {
+                  weight: 0.5, // Set the stroke weight of GeoJSON features to 1
+                  color: 'black', // Set the stroke color of GeoJSON features to black
+                  fillColor: 'blue', // Set the fill color of GeoJSON features to blue
+                  // fillOpacity: 0.7 // Set the fill opacity of GeoJSON features to 0.7 (70% visible)
+              };
+          }
+
+          // Add the Nepal GeoJSON data as a layer with the custom style
+          L.geoJSON(nepalData, {
+              style: style
+          }).addTo(map);
+
+          // Function to add markers on the map from the CSV data with a time delay
+          function addMarkersWithDelay(filteredData, delayMs) {
+
+              filteredData.sort((a, b) => new Date(a.date) - new Date(b.date));
+              var branch;
+              var location;
+              var bank_name;
+              // Iterate through each row of the sorted CSV data with a time delay
+              // parsedData.data.forEach((row, index) => {
+              filteredData.forEach((row, index) => {
+                  const timeoutId = setTimeout(() => {
+                      // Extract the latitude (X) and longitude (Y) from each row
+                      var latitude = parseFloat(row.X);
+                      var longitude = parseFloat(row.Y);
+
+                      branch = row.branch_name;
+                      location = row.Name_Of_Palika_English;
+                      bank_name = row.name;
+
+                      // Create a custom icon for the marker
+                      var markerIcon = L.icon({
+                          iconUrl: 'theme/img/Red_circle.gif', // Replace 'marker_icon.png' with the path to your custom icon image
+                          iconSize: [15, 15], // Set the size of the icon (smaller size)
+                          iconAnchor: [7.5, 7.5] // Set the anchor point of the icon (centered)
+                      });
+
+                      // Create a marker with the custom icon at the specified coordinates
+                      var marker = L.marker([longitude, latitude], {
+                          icon: markerIcon
+                      }).addTo(map);
+                      // Add the marker to the markers array for later removal
+                      markers.push(marker);
+
+                      // Update the date display element with the date
+                      updateDateDisplay(row.date, branch, location, bank_name);
+
+                  }, delayMs * index);
+                  timeoutIds.push(timeoutId);
+              });
+          }
+
+          // Function to remove previous markers from the map
+          function removeMarkers() {
+              for (var i = 0; i < markers.length; i++) {
+                  map.removeLayer(markers[i]);
+              }
+              markers = []; // Clear the markers array
+          }
+
+          // Function to reset the date display element
+          function resetDateDisplay() {
+              dateDisplayElement.innerText = 'Date: N/A\nBranch: N/A\nLocation: N/A';
+          }
+
+          // Function to reset the bank name element
+          function resetBankName() {
+              bankNameElement.innerText = 'Bank Name: N/A';
+          }
+
+          // Function to clear all timeouts in the array
+  function clearAllTimeouts() {
+  timeoutIds.forEach(id => clearTimeout(id));
+  timeoutIds = [];
+  }
+
+
+
+          // Function to handle dropdown selection and filter data
+          function handleDropdownSelection() {
+          clearAllTimeouts();
+          console.log(timeoutIds);
+              var selectedBank = document.getElementById('bankDropdown').value;
+
+              // Create a deep copy of the parsed data to avoid modifying the original
+              var dataCopy = JSON.parse(JSON.stringify(parsedData.data));
+
+              // Filter the CSV data based on the selected bank
+              var filteredData = dataCopy.filter(row => row.name === selectedBank);
+
+              // Remove previous markers from the map
+              removeMarkers();
+              // Reset the date display and bank name elements
+              resetDateDisplay();
+              resetBankName();
+
+              // Call the function to create markers with a time delay for the filtered data
+              var delayMs = 700; // Adjust the delay time in milliseconds
+              addMarkersWithDelay(filteredData, delayMs);
+          }
+
+
+          // Add event listener to the dropdown to trigger filtering on change
+          document.getElementById('bankDropdown').addEventListener('change', handleDropdownSelection);
+
+
+          // Fetch the CSV file and add markers on the map with a delay after loading the page
+          fetch('theme/js/location_data.csv')
+              .then(response => response.text())
+              .then(csvData => {
+                  // Parse the CSV data using PapaParse
+                  parsedData = Papa.parse(csvData, {
+                      header: true, // Treat the first row as the header row
+                      skipEmptyLines: true // Skip empty lines in the CSV file
+                  });
+                  handleDropdownSelection();
+              })
+              .catch(error => {
+                  console.error('Error loading CSV data:', error);
+              });
+
+
+
+
+      }); </script>
+
+               
+            </div>
+         </main>
+
+
+
+<footer class="mzp-c-footer">
+	<div class="mzp-l-content ">
+		<nav class="mzp-c-footer-primary">
+			<div class="mzp-c-footer-primary-logo">
+				<a href="https://nischal.info.np">Nischal Lal Shrestha</a>
+			</div>
+			<div class="mzp-c-footer-sections">
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Explore
+  </h5>
+					<ul class="mzp-c-footer-list">
+							<li><a href="https://nischal.info.np/category/algorithm.html">Algorithm</a></li>
+							<li><a href="https://nischal.info.np/category/code.html">Code</a></li>
+							<li><a href="https://nischal.info.np/category/notes.html">Notes</a></li>
+							<li><a href="https://nischal.info.np/category/open-source.html">Open Source</a></li>
+							<li><a href="https://nischal.info.np/category/thoughts.html">Thoughts</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    About
+  </h5>
+					<ul class="mzp-c-footer-list">
+                        <li><a href="https://nischal.info.np/nischal.html">About Me</a></li>
+                        <li><a href="https://nischal.info.np/projects.html">Projects</a></li>
+                        <li><a href="https://nischal.info.np/contact.html">Contact</a></li>
+					</ul>
+				</section>
+				<section class="mzp-c-footer-section">
+					<h5 class="mzp-c-footer-heading">
+    Website Credits
+  </h5>
+					<ul class="mzp-c-footer-list">
+						<li><a href="https://protocol.mozilla.org/" rel="nofollow">Mozilla Protocol</a></li>
+						<li><a href="https://designsystem.digital.gov/how-to-use-uswds/" rel="nofollow">
+							USWD </a></li>
+						<li><a href="https://docs.getpelican.com/en/stable/index.html" rel="nofollow">Pelican</a></li>
+						<li><a href="https://icons8.com/line-awesome" rel="nofollow">Line Awesome</a></li>
+						<li><a href="https://pages.github.com/" rel="nofollow">Github Pages</a></li>
+						<li><a href="https://unsplash.com/" rel="nofollow">Unsplash</a></li>
+					</ul>
+				</section>
+			</div>
+		</nav>
+		<nav class="mzp-c-footer-secondary">
+			<ul class="mzp-c-footer-links-social">
+				<li>
+					<a class="twitter" href="https://twitter.com/dakkulanthu" rel="nofollow">Twitter
+						<span> (@dakkulanthu)</span>
+					</a>
+				</li>
+				<li>
+					<a class="youtube" href="https://www.youtube.com/channel/UCQoieW45COakbskXxW_ANIw" rel="nofollow">YouTube
+						<span> (Nischal Lal Shrestha)</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="mzp-c-footer-legal">
+				<p class="mzp-c-footer-license">Hey there, I'm Nischal.
+						<br/>
+						I am a student, a developer. Currently learning ML, DL, Data Science, Python.
+				</p>
+
+				<p class="mzp-c-footer-license">I love Everything that makes me more Human.
+				<br/>
+				<br/>
+				 While not Coding, I play Football and Chess.
+				</p class="mzp-c-footer-license">
+
+				<p mzp-c-footer-license>Copyright text 2020 by Nischal!!</p>
+				
+				<ul class="mzp-c-footer-terms">
+				<li><a href="https://nischal.info.np/cookies.html">Cookies</a></li>
+				<li><a href="https://nischal.info.np/privacy.html">Privacy Policy</a></li>
+				<li><a href="https://nischal.info.np/disclaimer.html">Disclaimer</a></li>
+				<li><a href="https://nischal.info.np/code-of-conduct.html">Code of Conduct</a></li>
+				
+				</ul>
+      		</div>
+
+		</nav>
+	</div>
+</footer>      </div>
+      <script src="https://nischal.info.np/theme/uswds-2.11.2/js/uswds.min.js"></script>
+      <script src="https://nischal.info.np/theme/js/main.js"></script>
+   </body>
+</html>

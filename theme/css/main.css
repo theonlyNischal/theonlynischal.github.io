@@ -2184,8 +2184,8 @@ textarea.form-control {
 	margin-left: -1.25rem
 }
 
-.form-check-input:disabled~.form-check-label,
-.form-check-input[disabled]~.form-check-label {
+.form-check-input:disabled~~.form-check-label,
+.form-check-input[disabled]~~.form-check-label {
 	color: #6c757d
 }
 
@@ -2240,10 +2240,10 @@ textarea.form-control {
 	left: 5px
 }
 
-.is-valid~.valid-feedback,
-.is-valid~.valid-tooltip,
-.was-validated :valid~.valid-feedback,
-.was-validated :valid~.valid-tooltip {
+.is-valid~~.valid-feedback,
+.is-valid~~.valid-tooltip,
+.was-validated :valid~~.valid-feedback,
+.was-validated :valid~~.valid-tooltip {
 	display: block
 }
 
@@ -2284,49 +2284,49 @@ textarea.form-control.is-valid {
 	box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
 }
 
-.form-check-input.is-valid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
+.form-check-input.is-valid~~.form-check-label,
+.was-validated .form-check-input:valid~~.form-check-label {
 	color: #28a745
 }
 
-.form-check-input.is-valid~.valid-feedback,
-.form-check-input.is-valid~.valid-tooltip,
-.was-validated .form-check-input:valid~.valid-feedback,
-.was-validated .form-check-input:valid~.valid-tooltip {
+.form-check-input.is-valid~~.valid-feedback,
+.form-check-input.is-valid~~.valid-tooltip,
+.was-validated .form-check-input:valid~~.valid-feedback,
+.was-validated .form-check-input:valid~~.valid-tooltip {
 	display: block
 }
 
-.custom-control-input.is-valid~.custom-control-label,
-.was-validated .custom-control-input:valid~.custom-control-label {
+.custom-control-input.is-valid~~.custom-control-label,
+.was-validated .custom-control-input:valid~~.custom-control-label {
 	color: #28a745
 }
 
-.custom-control-input.is-valid~.custom-control-label:before,
-.was-validated .custom-control-input:valid~.custom-control-label:before {
+.custom-control-input.is-valid~~.custom-control-label:before,
+.was-validated .custom-control-input:valid~~.custom-control-label:before {
 	border-color: #28a745
 }
 
-.custom-control-input.is-valid:checked~.custom-control-label:before,
-.was-validated .custom-control-input:valid:checked~.custom-control-label:before {
+.custom-control-input.is-valid:checked~~.custom-control-label:before,
+.was-validated .custom-control-input:valid:checked~~.custom-control-label:before {
 	border-color: #34ce57;
 	background-color: #34ce57
 }
 
-.custom-control-input.is-valid:focus~.custom-control-label:before,
-.was-validated .custom-control-input:valid:focus~.custom-control-label:before {
+.custom-control-input.is-valid:focus~~.custom-control-label:before,
+.was-validated .custom-control-input:valid:focus~~.custom-control-label:before {
 	-webkit-box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
 }
 
-.custom-control-input.is-valid:focus:not(:checked)~.custom-control-label:before,
-.custom-file-input.is-valid~.custom-file-label,
-.was-validated .custom-control-input:valid:focus:not(:checked)~.custom-control-label:before,
-.was-validated .custom-file-input:valid~.custom-file-label {
+.custom-control-input.is-valid:focus:not(:checked)~~.custom-control-label:before,
+.custom-file-input.is-valid~~.custom-file-label,
+.was-validated .custom-control-input:valid:focus:not(:checked)~~.custom-control-label:before,
+.was-validated .custom-file-input:valid~~.custom-file-label {
 	border-color: #28a745
 }
 
-.custom-file-input.is-valid:focus~.custom-file-label,
-.was-validated .custom-file-input:valid:focus~.custom-file-label {
+.custom-file-input.is-valid:focus~~.custom-file-label,
+.was-validated .custom-file-input:valid:focus~~.custom-file-label {
 	border-color: #28a745;
 	-webkit-box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
@@ -2361,10 +2361,10 @@ textarea.form-control.is-valid {
 	left: 5px
 }
 
-.is-invalid~.invalid-feedback,
-.is-invalid~.invalid-tooltip,
-.was-validated :invalid~.invalid-feedback,
-.was-validated :invalid~.invalid-tooltip {
+.is-invalid~~.invalid-feedback,
+.is-invalid~~.invalid-tooltip,
+.was-validated :invalid~~.invalid-feedback,
+.was-validated :invalid~~.invalid-tooltip {
 	display: block
 }
 
@@ -2405,49 +2405,49 @@ textarea.form-control.is-invalid {
 	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
 }
 
-.form-check-input.is-invalid~.form-check-label,
-.was-validated .form-check-input:invalid~.form-check-label {
+.form-check-input.is-invalid~~.form-check-label,
+.was-validated .form-check-input:invalid~~.form-check-label {
 	color: #dc3545
 }
 
-.form-check-input.is-invalid~.invalid-feedback,
-.form-check-input.is-invalid~.invalid-tooltip,
-.was-validated .form-check-input:invalid~.invalid-feedback,
-.was-validated .form-check-input:invalid~.invalid-tooltip {
+.form-check-input.is-invalid~~.invalid-feedback,
+.form-check-input.is-invalid~~.invalid-tooltip,
+.was-validated .form-check-input:invalid~~.invalid-feedback,
+.was-validated .form-check-input:invalid~~.invalid-tooltip {
 	display: block
 }
 
-.custom-control-input.is-invalid~.custom-control-label,
-.was-validated .custom-control-input:invalid~.custom-control-label {
+.custom-control-input.is-invalid~~.custom-control-label,
+.was-validated .custom-control-input:invalid~~.custom-control-label {
 	color: #dc3545
 }
 
-.custom-control-input.is-invalid~.custom-control-label:before,
-.was-validated .custom-control-input:invalid~.custom-control-label:before {
+.custom-control-input.is-invalid~~.custom-control-label:before,
+.was-validated .custom-control-input:invalid~~.custom-control-label:before {
 	border-color: #dc3545
 }
 
-.custom-control-input.is-invalid:checked~.custom-control-label:before,
-.was-validated .custom-control-input:invalid:checked~.custom-control-label:before {
+.custom-control-input.is-invalid:checked~~.custom-control-label:before,
+.was-validated .custom-control-input:invalid:checked~~.custom-control-label:before {
 	border-color: #e4606d;
 	background-color: #e4606d
 }
 
-.custom-control-input.is-invalid:focus~.custom-control-label:before,
-.was-validated .custom-control-input:invalid:focus~.custom-control-label:before {
+.custom-control-input.is-invalid:focus~~.custom-control-label:before,
+.was-validated .custom-control-input:invalid:focus~~.custom-control-label:before {
 	-webkit-box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
 }
 
-.custom-control-input.is-invalid:focus:not(:checked)~.custom-control-label:before,
-.custom-file-input.is-invalid~.custom-file-label,
-.was-validated .custom-control-input:invalid:focus:not(:checked)~.custom-control-label:before,
-.was-validated .custom-file-input:invalid~.custom-file-label {
+.custom-control-input.is-invalid:focus:not(:checked)~~.custom-control-label:before,
+.custom-file-input.is-invalid~~.custom-file-label,
+.was-validated .custom-control-input:invalid:focus:not(:checked)~~.custom-control-label:before,
+.was-validated .custom-file-input:invalid~~.custom-file-label {
 	border-color: #dc3545
 }
 
-.custom-file-input.is-invalid:focus~.custom-file-label,
-.was-validated .custom-file-input:invalid:focus~.custom-file-label {
+.custom-file-input.is-invalid:focus~~.custom-file-label,
+.was-validated .custom-file-input:invalid:focus~~.custom-file-label {
 	border-color: #dc3545;
 	-webkit-box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25);
 	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
@@ -10515,15 +10515,15 @@ button:hover {
 	height: auto
 }
 
-.form-label-group input~label,
-.form-label-group textarea~label {
+.form-label-group input~~label,
+.form-label-group textarea~~label {
 	display: none
 }
 
-.form-label-group input:not(:-moz-placeholder-shown)~label,
-.form-label-group input:-moz-placeholder-shown~label,
-.form-label-group textarea:not(:-moz-placeholder-shown)~label,
-.form-label-group textarea:-moz-placeholder-shown~label {
+.form-label-group input:not(:-moz-placeholder-shown)~~label,
+.form-label-group input:-moz-placeholder-shown~~label,
+.form-label-group textarea:not(:-moz-placeholder-shown)~~label,
+.form-label-group textarea:-moz-placeholder-shown~~label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -10539,10 +10539,10 @@ button:hover {
 	align-items: center
 }
 
-.form-label-group input:not(:-ms-input-placeholder)~label,
-.form-label-group input:-ms-input-placeholder~label,
-.form-label-group textarea:not(:-ms-input-placeholder)~label,
-.form-label-group textarea:-ms-input-placeholder~label {
+.form-label-group input:not(:-ms-input-placeholder)~~label,
+.form-label-group input:-ms-input-placeholder~~label,
+.form-label-group textarea:not(:-ms-input-placeholder)~~label,
+.form-label-group textarea:-ms-input-placeholder~~label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -10560,10 +10560,10 @@ button:hover {
 	align-items: center
 }
 
-.form-label-group input:not(:placeholder-shown)~label,
-.form-label-group input:placeholder-shown~label,
-.form-label-group textarea:not(:placeholder-shown)~label,
-.form-label-group textarea:placeholder-shown~label {
+.form-label-group input:not(:placeholder-shown)~~label,
+.form-label-group input:placeholder-shown~~label,
+.form-label-group textarea:not(:placeholder-shown)~~label,
+.form-label-group textarea:placeholder-shown~~label {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -10650,22 +10650,22 @@ button:hover {
 	padding-top: 1.6rem
 }
 
-.form-label-group input:not(:-moz-placeholder-shown)~label,
-.form-label-group textarea:not(:-moz-placeholder-shown)~label {
+.form-label-group input:not(:-moz-placeholder-shown)~~label,
+.form-label-group textarea:not(:-moz-placeholder-shown)~~label {
 	font-size: .75rem;
 	padding-top: .5rem;
 	font-weight: 400
 }
 
-.form-label-group input:not(:-ms-input-placeholder)~label,
-.form-label-group textarea:not(:-ms-input-placeholder)~label {
+.form-label-group input:not(:-ms-input-placeholder)~~label,
+.form-label-group textarea:not(:-ms-input-placeholder)~~label {
 	font-size: .75rem;
 	padding-top: .5rem;
 	font-weight: 400
 }
 
-.form-label-group input:not(:placeholder-shown)~label,
-.form-label-group textarea:not(:placeholder-shown)~label {
+.form-label-group input:not(:placeholder-shown)~~label,
+.form-label-group textarea:not(:placeholder-shown)~~label {
 	font-size: .75rem;
 	padding-top: .5rem;
 	font-weight: 400
@@ -14433,7 +14433,7 @@ body.has-regrets-intro .font-changa {
 	margin-top: 47px
 }
 
-.article-blocks .rich-text hr~img.full-width {
+.article-blocks .rich-text hr~~img.full-width {
 	margin-top: 0
 }
 
@@ -14459,7 +14459,7 @@ body.has-regrets-intro .font-changa {
 }
 
 @media (min-width:576px) {
-	.article-blocks .rich-text p~.richtext-image:not(.full-width) {
+	.article-blocks .rich-text p~~.richtext-image:not(.full-width) {
 		margin-top: 0;
 		margin-bottom: 0
 	}
