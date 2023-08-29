@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2023-07-23T12:41:25-00:00</lastmod>
+<lastmod>2023-08-29T22:48:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2023-07-23T12:41:25-00:00</lastmod>
+<lastmod>2023-08-29T22:48:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2023-07-23T12:41:25-00:00</lastmod>
+<lastmod>2023-08-29T22:48:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2023-07-23T12:41:25-00:00</lastmod>
+<lastmod>2023-08-29T22:48:50-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -256,6 +256,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://nischal.info.np/caste-system-is-hurting-my-chances-of-getting-laid.html</loc>
+<lastmod>2023-08-29T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://nischal.info.np/classification-of-data-structure.html</loc>
 <lastmod>2019-09-17T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
@@ -313,7 +320,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/category/thoughts.html</loc>
-<lastmod>2023-03-13T00:00:00+05:41</lastmod>
+<lastmod>2023-08-29T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -480,6 +487,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://nischal.info.np/tag/caste-system.html</loc>
+<lastmod>2023-08-29T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://nischal.info.np/tag/holi.html</loc>
 <lastmod>2019-02-16T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
@@ -509,7 +523,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
-<lastmod>2023-03-13T00:00:00+05:41</lastmod>
+<lastmod>2023-08-29T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
