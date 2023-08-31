@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/</loc>
-<lastmod>2023-08-31T09:30:45-00:00</lastmod>
+<lastmod>2023-08-31T10:04:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/archives.html</loc>
-<lastmod>2023-08-31T09:30:45-00:00</lastmod>
+<lastmod>2023-08-31T10:04:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/tags.html</loc>
-<lastmod>2023-08-31T09:30:45-00:00</lastmod>
+<lastmod>2023-08-31T10:04:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>https://nischal.info.np/categories.html</loc>
-<lastmod>2023-08-31T09:30:45-00:00</lastmod>
+<lastmod>2023-08-31T10:04:23-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -200,6 +200,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://nischal.info.np/most-popular-names-in-nepal.html</loc>
+<lastmod>2023-09-30T00:00:00+05:45</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://nischal.info.np/time-of-day-tcp-client-server-model-example-using-sockets.html</loc>
 <lastmod>2020-10-14T00:00:00+05:45</lastmod>
 <changefreq>monthly</changefreq>
@@ -271,7 +278,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/category/open-source.html</loc>
-<lastmod>2019-07-05T00:00:00+05:41</lastmod>
+<lastmod>2023-09-30T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -403,6 +410,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://nischal.info.np/tag/open-source.html</loc>
+<lastmod>2023-09-30T00:00:00+05:41</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>https://nischal.info.np/tag/data-structure.html</loc>
 <lastmod>2019-09-17T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
@@ -446,7 +460,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://nischal.info.np/author/nischal-lal-shrestha.html</loc>
-<lastmod>2023-08-29T00:00:00+05:41</lastmod>
+<lastmod>2023-09-30T00:00:00+05:41</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
