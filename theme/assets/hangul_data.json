@@ -1,0 +1,1124 @@
+{
+    "data": [
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅏ",
+            "combined": "가",
+            "nepali_combined": "गा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_97-nvoice_kyuri_2.2.27.0.3.32_ff97d4910af5938fde96581b5cab7350-1719208303145",
+            "local": "audio/गा_가.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅑ",
+            "combined": "갸",
+            "nepali_combined": "ग्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_200-nvoice_kyuri_2.2.27.0.3.32_4439ded31f811f05c688856ada1f8c43-1719199059642",
+            "local": "audio/ग्या_갸.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅓ",
+            "combined": "거",
+            "nepali_combined": "ग",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_257-nvoice_kyuri_2.2.27.0.3.32_21b36fd03a9c2f08662fbd0f4008df1a-1719199119879",
+            "local": "audio/ग_거.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅕ",
+            "combined": "겨",
+            "nepali_combined": "ग्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_281-nvoice_kyuri_2.2.27.0.3.32_560830c8f8a0d225c795e61c28ef19d8-1719199147582",
+            "local": "audio/ग्य_겨.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅗ",
+            "combined": "고",
+            "nepali_combined": "गो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_379-nvoice_kyuri_2.2.27.0.3.32_cbd1a58d94da740a4534eae4d8eaba9e-1719199174382",
+            "local": "audio/गो_고.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅛ",
+            "combined": "교",
+            "nepali_combined": "ग्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_259-nvoice_kyuri_2.2.27.0.3.32_6bbab415da233db77611e8c0a77a5a01-1719199191072",
+            "local": "audio/ग्यो_교.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅜ",
+            "combined": "구",
+            "nepali_combined": "गु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_349-nvoice_kyuri_2.2.27.0.3.32_368b9271f669265950a9f57a05a7f0eb-1719199210231",
+            "local": "audio/गु_구.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅠ",
+            "combined": "규",
+            "nepali_combined": "ग्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_86-nvoice_kyuri_2.2.27.0.3.32_85443c2fcb5562923b5ddbb0274d5ea8-1719199230838",
+            "local": "audio/ग्यु_규.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅡ",
+            "combined": "그",
+            "nepali_combined": "गु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_99-nvoice_kyuri_2.2.27.0.3.32_5949eb39d9be76bd27aa008f5bcf10f7-1719199246409",
+            "local": "audio/गु_그.mp3"
+        },
+        {
+            "consonant": "ㄱ",
+            "vowel": "ㅣ",
+            "combined": "기",
+            "nepali_combined": "गि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_179-nvoice_kyuri_2.2.27.0.3.32_870c16b34a4fd0975bf8584218f13104-1719199265661",
+            "local": "audio/गि_기.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅏ",
+            "combined": "나",
+            "nepali_combined": "ना",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_23-nvoice_kyuri_2.2.27.0.3.32_8c203509812330dc84953248ef48b4d7-1719199327230",
+            "local": "audio/ना_나.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅑ",
+            "combined": "냐",
+            "nepali_combined": "न्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_270-nvoice_kyuri_2.2.27.0.3.32_e5a2397cc204d487fdf6a3b93be6161b-1719199353928",
+            "local": "audio/न्या_냐.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅓ",
+            "combined": "너",
+            "nepali_combined": "न",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_334-nvoice_kyuri_2.2.27.0.3.32_6bae41875714567fa3b2eb004b25ff85-1719199371359",
+            "local": "audio/न_너.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅕ",
+            "combined": "녀",
+            "nepali_combined": "न्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_67-nvoice_kyuri_2.2.27.0.3.32_fc4e1abfe5298c5a16f66650c0470c5a-1719199395224",
+            "local": "audio/न्य_녀.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅗ",
+            "combined": "노",
+            "nepali_combined": "नो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_225-nvoice_kyuri_2.2.27.0.3.32_a91c1d77fde6c91a5c2ec67527e67049-1719199420059",
+            "local": "audio/नो_노.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅛ",
+            "combined": "뇨",
+            "nepali_combined": "न्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_339-nvoice_kyuri_2.2.27.0.3.32_3475b4309d064bb4726c0b280f472aa4-1719199433226",
+            "local": "audio/न्यो_뇨.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅜ",
+            "combined": "누",
+            "nepali_combined": "नु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_264-nvoice_kyuri_2.2.27.0.3.32_984b92fc994f86351b95a48bc1ed2090-1719199451347",
+            "local": "audio/नु_누.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅠ",
+            "combined": "뉴",
+            "nepali_combined": "न्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_162-nvoice_kyuri_2.2.27.0.3.32_bf60d24e2d358f2067f830ef93e1dbe7-1719199469905",
+            "local": "audio/न्यु_뉴.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅡ",
+            "combined": "느",
+            "nepali_combined": "नु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_420-nvoice_kyuri_2.2.27.0.3.32_ce20ad3487277f456e85b2e594e87f91-1719199490535",
+            "local": "audio/नु_느.mp3"
+        },
+        {
+            "consonant": "ㄴ",
+            "vowel": "ㅣ",
+            "combined": "니",
+            "nepali_combined": "नि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_123-nvoice_kyuri_2.2.27.0.3.32_c0b33b9516a919d760f8b0533acc9649-1719199516859",
+            "local": "audio/नि_니.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅏ",
+            "combined": "다",
+            "nepali_combined": "दा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_371-nvoice_kyuri_2.2.27.0.3.32_fa9605bdad617615d7ac2efc6b87aade-1719200701383",
+            "local": "audio/दा_다.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅑ",
+            "combined": "댜",
+            "nepali_combined": "द्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_17-nvoice_kyuri_2.2.27.0.3.32_7c25ddd41d3c4d84cbc86c411d847c4b-1719200719539",
+            "local": "audio/द्या_댜.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅓ",
+            "combined": "더",
+            "nepali_combined": "द",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_161-nvoice_kyuri_2.2.27.0.3.32_21b3da407179b1c55527f8d68dee2737-1719200737342",
+            "local": "audio/द_더.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅕ",
+            "combined": "뎌",
+            "nepali_combined": "द्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_312-nvoice_kyuri_2.2.27.0.3.32_74c141d86adc8510b8c3d9edde237854-1719200773907",
+            "local": "audio/द्य_뎌.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅗ",
+            "combined": "도",
+            "nepali_combined": "दो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_241-nvoice_kyuri_2.2.27.0.3.32_455a97de6c9833a65200d0b68344b1e4-1719200786161",
+            "local": "audio/दो_도.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅛ",
+            "combined": "됴",
+            "nepali_combined": "द्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_207-nvoice_kyuri_2.2.27.0.3.32_f5315b3a0fdbeaba4d0ec661f52df9f4-1719200800401",
+            "local": "audio/द्यो_됴.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅜ",
+            "combined": "두",
+            "nepali_combined": "दु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_63-nvoice_kyuri_2.2.27.0.3.32_1763017de05edd7139cfaca51ad6cdd1-1719200814047",
+            "local": "audio/दु_두.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅠ",
+            "combined": "듀",
+            "nepali_combined": "द्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_107-nvoice_kyuri_2.2.27.0.3.32_bd04784bda8247fb378538b6d962d669-1719200825905",
+            "local": "audio/द्यु_듀.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅡ",
+            "combined": "드",
+            "nepali_combined": "दु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_230-nvoice_kyuri_2.2.27.0.3.32_141b763ec68619166a3cab0221bd61f6-1719200838470",
+            "local": "audio/दु_드.mp3"
+        },
+        {
+            "consonant": "ㄷ",
+            "vowel": "ㅣ",
+            "combined": "디",
+            "nepali_combined": "दि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_48-nvoice_kyuri_2.2.27.0.3.32_81d06f06e6408f60f08c402ec3018d57-1719200852750",
+            "local": "audio/दि_디.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅏ",
+            "combined": "라",
+            "nepali_combined": "ला",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_43-nvoice_kyuri_2.2.27.0.3.32_ffb6eacd782b1dee65d8e988bf8fefd9-1719200893658",
+            "local": "audio/ला_라.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅑ",
+            "combined": "랴",
+            "nepali_combined": "ल्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_224-nvoice_kyuri_2.2.27.0.3.32_a08c864d2d821c2f7a2091ee51e8b89c-1719200907941",
+            "local": "audio/ल्या_랴.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅓ",
+            "combined": "러",
+            "nepali_combined": "ल",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_323-nvoice_kyuri_2.2.27.0.3.32_d2c9481c3261f5c10f5fe2ee585d2942-1719200919129",
+            "local": "audio/ल_러.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅕ",
+            "combined": "려",
+            "nepali_combined": "ल्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_70-nvoice_kyuri_2.2.27.0.3.32_055da1b49b67f2234133ac4a0492fa82-1719200932305",
+            "local": "audio/ल्य_려.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅗ",
+            "combined": "로",
+            "nepali_combined": "लो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_6-nvoice_kyuri_2.2.27.0.3.32_c9d2460413163b4b1fa4846e2cb0c634-1719200944767",
+            "local": "audio/लो_로.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅛ",
+            "combined": "료",
+            "nepali_combined": "ल्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_193-nvoice_kyuri_2.2.27.0.3.32_aa86101c0e24d799ad7ec7f5b41d8ccc-1719200957216",
+            "local": "audio/ल्यो_료.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅜ",
+            "combined": "루",
+            "nepali_combined": "लु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_367-nvoice_kyuri_2.2.27.0.3.32_7c1cdacdabfa2211620477a6a22ebd3f-1719200968454",
+            "local": "audio/लु_루.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅠ",
+            "combined": "류",
+            "nepali_combined": "ल्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_377-nvoice_kyuri_2.2.27.0.3.32_33cd3ab1e59beb1a4c18a19121614b80-1719200983518",
+            "local": "audio/ल्यु_류.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅡ",
+            "combined": "르",
+            "nepali_combined": "लु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_194-nvoice_kyuri_2.2.27.0.3.32_f0e0a07b629a6bc124be8b0f00328d7a-1719200994554",
+            "local": "audio/लु_르.mp3"
+        },
+        {
+            "consonant": "ㄹ",
+            "vowel": "ㅣ",
+            "combined": "리",
+            "nepali_combined": "लि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_411-nvoice_kyuri_2.2.27.0.3.32_4325fe88d1bfa01f65337fcca5031914-1719201008239",
+            "local": "audio/लि_리.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅏ",
+            "combined": "마",
+            "nepali_combined": "मा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_322-nvoice_kyuri_2.2.27.0.3.32_625b48ab8c39a65d937b624400a49446-1719201038078",
+            "local": "audio/मा_마.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅑ",
+            "combined": "먀",
+            "nepali_combined": "म्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_72-nvoice_kyuri_2.2.27.0.3.32_c83432882c7d634fcc5cb7599221a3a1-1719201050418",
+            "local": "audio/म्या_먀.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅓ",
+            "combined": "머",
+            "nepali_combined": "म",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_88-nvoice_kyuri_2.2.27.0.3.32_63b71faf1c41ca4c0a872c2f5c2f3e2f-1719201142452",
+            "local": "audio/म_머.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅕ",
+            "combined": "며",
+            "nepali_combined": "म्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_193-nvoice_kyuri_2.2.27.0.3.32_ca317780d6958eacf7bff44fd58d1554-1719201114961",
+            "local": "audio/म्य_며.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅗ",
+            "combined": "모",
+            "nepali_combined": "मो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_225-nvoice_kyuri_2.2.27.0.3.32_06b205d35d8e52366cd62e5f3e9d6060-1719201159819",
+            "local": "audio/मो_모.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅛ",
+            "combined": "묘",
+            "nepali_combined": "म्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_126-nvoice_kyuri_2.2.27.0.3.32_c99b83f29a5a0ecf3dcf0e147c7fd1dc-1719201171292",
+            "local": "audio/म्यो_묘.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅜ",
+            "combined": "무",
+            "nepali_combined": "मु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_212-nvoice_kyuri_2.2.27.0.3.32_9304ef9b6932cbcfefff9dfc4bc831db-1719201182882",
+            "local": "audio/मु_무.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅠ",
+            "combined": "뮤",
+            "nepali_combined": "म्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_345-nvoice_kyuri_2.2.27.0.3.32_41b15be4cde3a7fd6b32fde2c43b287a-1719201193327",
+            "local": "audio/म्यु_뮤.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅡ",
+            "combined": "므",
+            "nepali_combined": "मु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_343-nvoice_kyuri_2.2.27.0.3.32_e2a776afb3f5d2fcf512bf46f454107c-1719201205254",
+            "local": "audio/मु_므.mp3"
+        },
+        {
+            "consonant": "ㅁ",
+            "vowel": "ㅣ",
+            "combined": "미",
+            "nepali_combined": "मि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_344-nvoice_kyuri_2.2.27.0.3.32_613bcc0ae27b6a0e5aa214ac74d21ef7-1719201219785",
+            "local": "audio/मि_미.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅏ",
+            "combined": "바",
+            "nepali_combined": "बा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_104-nvoice_kyuri_2.2.27.0.3.32_cd5548609f1279c016a0f272020f0ab7-1719205142539",
+            "local": "audio/बा_바.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅑ",
+            "combined": "뱌",
+            "nepali_combined": "ब्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_317-nvoice_kyuri_2.2.27.0.3.32_362f23ee1da4efdb4a0109464753035a-1719205155878",
+            "local": "audio/ब्या_뱌.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅓ",
+            "combined": "버",
+            "nepali_combined": "ब",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_389-nvoice_kyuri_2.2.27.0.3.32_d683becb182d1bcb1060c8cfaa959862-1719205168759",
+            "local": "audio/ब_버.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅕ",
+            "combined": "벼",
+            "nepali_combined": "ब्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_184-nvoice_kyuri_2.2.27.0.3.32_352851459dd2203ead9bb4e9f53c3c8e-1719205180500",
+            "local": "audio/ब्य_벼.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅗ",
+            "combined": "보",
+            "nepali_combined": "बो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_321-nvoice_kyuri_2.2.27.0.3.32_1f74fddb222132d508e5d87be63d5afb-1719205195752",
+            "local": "audio/बो_보.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅛ",
+            "combined": "뵤",
+            "nepali_combined": "ब्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_17-nvoice_kyuri_2.2.27.0.3.32_b61d36c8783c6b0bb811fe048ca3baea-1719205235294",
+            "local": "audio/ब्यो_뵤.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅜ",
+            "combined": "부",
+            "nepali_combined": "बु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_76-nvoice_kyuri_2.2.27.0.3.32_b5074cf9e453faaec6d6b59ac1036326-1719205246817",
+            "local": "audio/बु_부.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅠ",
+            "combined": "뷰",
+            "nepali_combined": "ब्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_33-nvoice_kyuri_2.2.27.0.3.32_69de4b17dcc30df096d2b7a6e9408d39-1719205258303",
+            "local": "audio/ब्यु_뷰.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅡ",
+            "combined": "브",
+            "nepali_combined": "बु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_283-nvoice_kyuri_2.2.27.0.3.32_19867f31e2ddc360608c24baaed9b831-1719205270662",
+            "local": "audio/बु_브.mp3"
+        },
+        {
+            "consonant": "ㅂ",
+            "vowel": "ㅣ",
+            "combined": "비",
+            "nepali_combined": "बि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_50-nvoice_kyuri_2.2.27.0.3.32_085bfda7d232326a6e76dc614b0bbb49-1719205283984",
+            "local": "audio/बि_비.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅏ",
+            "combined": "사",
+            "nepali_combined": "सा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_431-nvoice_kyuri_2.2.27.0.3.32_34cdcccacabcbd3b6072b5829fa53316-1719205297325",
+            "local": "audio/सा_사.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅑ",
+            "combined": "샤",
+            "nepali_combined": "स्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_127-nvoice_kyuri_2.2.27.0.3.32_59789f849631ee04c14ed3742b66a601-1719205309638",
+            "local": "audio/स्या_샤.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅓ",
+            "combined": "서",
+            "nepali_combined": "स",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_312-nvoice_kyuri_2.2.27.0.3.32_a3a1ba688c627bdab397a35956a3507b-1719205318696",
+            "local": "audio/स_서.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅕ",
+            "combined": "셔",
+            "nepali_combined": "स्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_82-nvoice_kyuri_2.2.27.0.3.32_4eaa5f3c6f4fe015fded452b02f87a9d-1719205332759",
+            "local": "audio/स्य_셔.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅗ",
+            "combined": "소",
+            "nepali_combined": "सो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_323-nvoice_kyuri_2.2.27.0.3.32_a7af0524f033b0ea4c0fe4f0d2174242-1719205347695",
+            "local": "audio/सो_소.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅛ",
+            "combined": "쇼",
+            "nepali_combined": "स्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_438-nvoice_kyuri_2.2.27.0.3.32_d46277ff3d422031effd9bf179525d32-1719205371047",
+            "local": "audio/स्यो_쇼.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅜ",
+            "combined": "수",
+            "nepali_combined": "सु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_359-nvoice_kyuri_2.2.27.0.3.32_a641e171506db25a90030a64b8e4d430-1719205384452",
+            "local": "audio/सु_수.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅠ",
+            "combined": "슈",
+            "nepali_combined": "स्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_19-nvoice_kyuri_2.2.27.0.3.32_1be2f7c7c1d5988799f9016d4f90c385-1719205396147",
+            "local": "audio/स्यु_슈.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅡ",
+            "combined": "스",
+            "nepali_combined": "सु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_217-nvoice_kyuri_2.2.27.0.3.32_872b5ed9a867a05b56d795e0852569a2-1719205409157",
+            "local": "audio/सु_스.mp3"
+        },
+        {
+            "consonant": "ㅅ",
+            "vowel": "ㅣ",
+            "combined": "시",
+            "nepali_combined": "सि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_257-nvoice_kyuri_2.2.27.0.3.32_b36390db068c8cbcc2af313e925fd6c6-1719205428166",
+            "local": "audio/सि_시.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅏ",
+            "combined": "아",
+            "nepali_combined": "आ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_418-nvoice_kyuri_2.2.27.0.3.32_0019cbcaef618cc45b352ed9d15d0939-1719205440909",
+            "local": "audio/आ_아.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅑ",
+            "combined": "야",
+            "nepali_combined": "या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_68-nvoice_kyuri_2.2.27.0.3.32_c12cdcfa58df032d75b51c5a2f2a1bca-1719205453945",
+            "local": "audio/या_야.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅓ",
+            "combined": "어",
+            "nepali_combined": "अ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_95-nvoice_kyuri_2.2.27.0.3.32_464423c7b97b95f2b1a8572d6eb0a2e6-1719205466036",
+            "local": "audio/अ_어.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅕ",
+            "combined": "여",
+            "nepali_combined": "य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_373-nvoice_kyuri_2.2.27.0.3.32_2a85cfad87a5495ff11eca690be23837-1719205478148",
+            "local": "audio/य_여.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅗ",
+            "combined": "오",
+            "nepali_combined": "ओ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_22-nvoice_kyuri_2.2.27.0.3.32_adaab3160d9720feea3f6a2e4f62e836-1719205490808",
+            "local": "audio/ओ_오.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅛ",
+            "combined": "요",
+            "nepali_combined": "यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_410-nvoice_kyuri_2.2.27.0.3.32_2a64f5b930f377fb7b915b5abce17b9a-1719205504777",
+            "local": "audio/यो_요.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅜ",
+            "combined": "우",
+            "nepali_combined": "उ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_380-nvoice_kyuri_2.2.27.0.3.32_fe79cfcbee2b0461c54e7acd5cb59ada-1719205518517",
+            "local": "audio/उ_우.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅠ",
+            "combined": "유",
+            "nepali_combined": "यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_331-nvoice_kyuri_2.2.27.0.3.32_836cbbdc49263756658356b72f0b7fb3-1719205529647",
+            "local": "audio/यु_유.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅡ",
+            "combined": "으",
+            "nepali_combined": "उ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_161-nvoice_kyuri_2.2.27.0.3.32_123369395f2025d2613181f84288c66c-1719205542113",
+            "local": "audio/उ_으.mp3"
+        },
+        {
+            "consonant": "ㅇ",
+            "vowel": "ㅣ",
+            "combined": "이",
+            "nepali_combined": "इ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_422-nvoice_kyuri_2.2.27.0.3.32_1cf132985fd42d915343df1c89e8730b-1719205553018",
+            "local": "audio/इ_이.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅏ",
+            "combined": "자",
+            "nepali_combined": "जा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_149-nvoice_kyuri_2.2.27.0.3.32_b40999fe43be8b270f2e32251aff0ff1-1719205567486",
+            "local": "audio/जा_자.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅑ",
+            "combined": "쟈",
+            "nepali_combined": "ज्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_204-nvoice_kyuri_2.2.27.0.3.32_28880c48de4ad5dca2ca9070cb4c2be3-1719205580404",
+            "local": "audio/ज्या_쟈.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅓ",
+            "combined": "저",
+            "nepali_combined": "ज",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_226-nvoice_kyuri_2.2.27.0.3.32_f430cfd48fb760dac022fb994b92f7c5-1719205591296",
+            "local": "audio/ज_저.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅕ",
+            "combined": "져",
+            "nepali_combined": "ज्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_346-nvoice_kyuri_2.2.27.0.3.32_0c18811920842a788cbd0e7d1e176892-1719205605194",
+            "local": "audio/ज्य_져.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅗ",
+            "combined": "조",
+            "nepali_combined": "जो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_389-nvoice_kyuri_2.2.27.0.3.32_fabe0825099a0de2297b8b2274668825-1719205626419",
+            "local": "audio/जो_조.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅛ",
+            "combined": "죠",
+            "nepali_combined": "ज्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_383-nvoice_kyuri_2.2.27.0.3.32_76de82a43a1ca2a251704ca45ee83f61-1719205637911",
+            "local": "audio/ज्यो_죠.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅜ",
+            "combined": "주",
+            "nepali_combined": "जु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_47-nvoice_kyuri_2.2.27.0.3.32_3b773772ae283c5ec69013545d4c142b-1719205651938",
+            "local": "audio/जु_주.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅠ",
+            "combined": "쥬",
+            "nepali_combined": "ज्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_226-nvoice_kyuri_2.2.27.0.3.32_046ceb2591cf0834b2309b26929d92c5-1719205663577",
+            "local": "audio/ज्यु_쥬.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅡ",
+            "combined": "즈",
+            "nepali_combined": "जु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_127-nvoice_kyuri_2.2.27.0.3.32_cbaf6d43557345d03f65176f86dcc613-1719205675697",
+            "local": "audio/जु_즈.mp3"
+        },
+        {
+            "consonant": "ㅈ",
+            "vowel": "ㅣ",
+            "combined": "지",
+            "nepali_combined": "जि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_145-nvoice_kyuri_2.2.27.0.3.32_d96d47ae35ff7d13a03719cae9b36af0-1719205686989",
+            "local": "audio/जि_지.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅏ",
+            "combined": "차",
+            "nepali_combined": "चा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_294-nvoice_kyuri_2.2.27.0.3.32_e18782fa7ea40eadea6cac6b943f662a-1719205703706",
+            "local": "audio/चा_차.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅑ",
+            "combined": "챠",
+            "nepali_combined": "च्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_153-nvoice_kyuri_2.2.27.0.3.32_f581ba3015af84dcf6e5a64bee85ca93-1719205713922",
+            "local": "audio/च्या_챠.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅓ",
+            "combined": "처",
+            "nepali_combined": "च",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_217-nvoice_kyuri_2.2.27.0.3.32_639eff748de6b5398524cba32496800a-1719205724847",
+            "local": "audio/च_처.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅕ",
+            "combined": "쳐",
+            "nepali_combined": "च्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_95-nvoice_kyuri_2.2.27.0.3.32_a0e6f9a22e1be48612d117b5e5ed3b67-1719205735908",
+            "local": "audio/च्य_쳐.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅗ",
+            "combined": "초",
+            "nepali_combined": "चो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_141-nvoice_kyuri_2.2.27.0.3.32_791a55ddd4d17b93610365dd5e096a34-1719205748426",
+            "local": "audio/चो_초.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅛ",
+            "combined": "쵸",
+            "nepali_combined": "च्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_291-nvoice_kyuri_2.2.27.0.3.32_67dab17957f5ec97e8e751aae1e1fb28-1719205758699",
+            "local": "audio/च्यो_쵸.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅜ",
+            "combined": "추",
+            "nepali_combined": "चु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_325-nvoice_kyuri_2.2.27.0.3.32_687dce3b56f6ab30286bc00a5362e3ad-1719205771561",
+            "local": "audio/चु_추.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅠ",
+            "combined": "츄",
+            "nepali_combined": "च्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_349-nvoice_kyuri_2.2.27.0.3.32_31aa2983582117fffc32d54251fdf820-1719205786684",
+            "local": "audio/च्यु_츄.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅡ",
+            "combined": "츠",
+            "nepali_combined": "चु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_335-nvoice_kyuri_2.2.27.0.3.32_047b86fd1d9406321fe26005de16a695-1719205804864",
+            "local": "audio/चु_츠.mp3"
+        },
+        {
+            "consonant": "ㅊ",
+            "vowel": "ㅣ",
+            "combined": "치",
+            "nepali_combined": "चि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_168-nvoice_kyuri_2.2.27.0.3.32_2112baa494d76fdac122751cadd85e93-1719205821791",
+            "local": "audio/चि_치.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅏ",
+            "combined": "카",
+            "nepali_combined": "का",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_318-nvoice_kyuri_2.2.27.0.3.32_e0f3472c31a2cbe931e96ff29b4a1c94-1719205835166",
+            "local": "audio/का_카.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅑ",
+            "combined": "캬",
+            "nepali_combined": "क्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_224-nvoice_kyuri_2.2.27.0.3.32_d22b9901b1e9bd95f0ab223f0f513d76-1719205848386",
+            "local": "audio/क्या_캬.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅓ",
+            "combined": "커",
+            "nepali_combined": "क",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_115-nvoice_kyuri_2.2.27.0.3.32_21dbb8f2344a39ccd1f5f76af4dce465-1719205868860",
+            "local": "audio/क_커.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅕ",
+            "combined": "켜",
+            "nepali_combined": "क्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_326-nvoice_kyuri_2.2.27.0.3.32_246ef104fbe38e7fa930984da86ba31a-1719205880794",
+            "local": "audio/क्य_켜.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅗ",
+            "combined": "코",
+            "nepali_combined": "को",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_191-nvoice_kyuri_2.2.27.0.3.32_9eeb31055393093dd2ff88357e9f6b8e-1719205904210",
+            "local": "audio/को_코.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅛ",
+            "combined": "쿄",
+            "nepali_combined": "क्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_115-nvoice_kyuri_2.2.27.0.3.32_e007284b2300d8cfc55efefd55c8ad7f-1719205915261",
+            "local": "audio/क्यो_쿄.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅜ",
+            "combined": "쿠",
+            "nepali_combined": "कु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_53-nvoice_kyuri_2.2.27.0.3.32_3df34efdd733bf636aa48bf03ad63c45-1719205926850",
+            "local": "audio/कु_쿠.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅠ",
+            "combined": "큐",
+            "nepali_combined": "क्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_73-nvoice_kyuri_2.2.27.0.3.32_5340ea3b559761aeb22d4f25538ae3a4-1719205937889",
+            "local": "audio/क्यु_큐.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅡ",
+            "combined": "크",
+            "nepali_combined": "कु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_98-nvoice_kyuri_2.2.27.0.3.32_dbc7f7a91025c46740107796e6ba29c3-1719205954218",
+            "local": "audio/कु_크.mp3"
+        },
+        {
+            "consonant": "ㅋ",
+            "vowel": "ㅣ",
+            "combined": "키",
+            "nepali_combined": "कि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_127-nvoice_kyuri_2.2.27.0.3.32_c272e1815efbf7e2697953cfdbff2c51-1719205965389",
+            "local": "audio/कि_키.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅏ",
+            "combined": "타",
+            "nepali_combined": "था",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_218-nvoice_kyuri_2.2.27.0.3.32_2dd4177beb43977824570c8e29494e19-1719206430634",
+            "local": "audio/था_타.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅑ",
+            "combined": "탸",
+            "nepali_combined": "थ्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_409-nvoice_kyuri_2.2.27.0.3.32_8deab2c19d147d946f6cdec85f1ff22e-1719206444338",
+            "local": "audio/थ्या_탸.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅓ",
+            "combined": "터",
+            "nepali_combined": "थ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_143-nvoice_kyuri_2.2.27.0.3.32_f35b5086b4153abd36e1062efb4bc6fd-1719206455912",
+            "local": "audio/थ_터.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅕ",
+            "combined": "텨",
+            "nepali_combined": "थ्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_131-nvoice_kyuri_2.2.27.0.3.32_90023588ccb6c33349424e846893dd00-1719206468526",
+            "local": "audio/थ्य_텨.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅗ",
+            "combined": "토",
+            "nepali_combined": "थो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_338-nvoice_kyuri_2.2.27.0.3.32_bc9a0daf0a88288875949b2f2fa297de-1719206480376",
+            "local": "audio/थो_토.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅛ",
+            "combined": "퇴",
+            "nepali_combined": "थ्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_46-nvoice_kyuri_2.2.27.0.3.32_79399fcb07b7a4b92508535c2a025646-1719206491002",
+            "local": "audio/थ्यो_퇴.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅜ",
+            "combined": "투",
+            "nepali_combined": "थु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_208-nvoice_kyuri_2.2.27.0.3.32_29c76dddb2b66a4b0428b515156c570b-1719206507949",
+            "local": "audio/थु_투.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅠ",
+            "combined": "튜",
+            "nepali_combined": "थ्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_361-nvoice_kyuri_2.2.27.0.3.32_976cb70b9a6b6e3cba8e8052baa297b5-1719206522893",
+            "local": "audio/थ्यु_튜.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅡ",
+            "combined": "트",
+            "nepali_combined": "थु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_279-nvoice_kyuri_2.2.27.0.3.32_1f3fc2562c7c628aed487d6c17d02d0c-1719206533889",
+            "local": "audio/थु_트.mp3"
+        },
+        {
+            "consonant": "ㅌ",
+            "vowel": "ㅣ",
+            "combined": "티",
+            "nepali_combined": "थि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_397-nvoice_kyuri_2.2.27.0.3.32_900b2ec32b0b3d083e7a1d9e232ce8d1-1719206543498",
+            "local": "audio/थि_티.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅏ",
+            "combined": "파",
+            "nepali_combined": "फा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_169-nvoice_kyuri_2.2.27.0.3.32_e4a97c25b7cf60d8670878d0e8fef43a-1719206597640",
+            "local": "audio/फा_파.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅑ",
+            "combined": "퍄",
+            "nepali_combined": "फ्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_313-nvoice_kyuri_2.2.27.0.3.32_dd1a6582b906207cef246dc94819f859-1719206611080",
+            "local": "audio/फ्या_퍄.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅓ",
+            "combined": "퍼",
+            "nepali_combined": "फ",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_281-nvoice_kyuri_2.2.27.0.3.32_bdee64d2d22ea8255ca998bccdab3c5d-1719206623224",
+            "local": "audio/फ_퍼.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅕ",
+            "combined": "펴",
+            "nepali_combined": "फ़्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_248-nvoice_kyuri_2.2.27.0.3.32_227db0570a1c87f2938fef21f14f525f-1719206637638",
+            "local": "audio/फ़्य_펴.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅗ",
+            "combined": "포",
+            "nepali_combined": "फो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_316-nvoice_kyuri_2.2.27.0.3.32_92a5e44c817152cf52317fefbbf8799e-1719206711639",
+            "local": "audio/फो_포.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅛ",
+            "combined": "표",
+            "nepali_combined": "फ्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_272-nvoice_kyuri_2.2.27.0.3.32_32dd7e8075d2cc493dcad0caa0772b26-1719206724537",
+            "local": "audio/फ्यो_표.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅜ",
+            "combined": "푸",
+            "nepali_combined": "फु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_168-nvoice_kyuri_2.2.27.0.3.32_0e8d23b32a5b469bace666c545d7755b-1719206734944",
+            "local": "audio/फु_푸.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅠ",
+            "combined": "퓨",
+            "nepali_combined": "फ्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_169-nvoice_kyuri_2.2.27.0.3.32_9637c3109f520f9c85e9b3da7fccdcca-1719206748708",
+            "local": "audio/फ्यु_퓨.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅡ",
+            "combined": "프",
+            "nepali_combined": "फु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_85-nvoice_kyuri_2.2.27.0.3.32_55f4f89f96620e2a8f9af0de69a9101c-1719206761009",
+            "local": "audio/फु_프.mp3"
+        },
+        {
+            "consonant": "ㅍ",
+            "vowel": "ㅣ",
+            "combined": "피",
+            "nepali_combined": "फि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_350-nvoice_kyuri_2.2.27.0.3.32_91abda1857cd23664ae02d1b8be363eb-1719206782254",
+            "local": "audio/फि_피.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅏ",
+            "combined": "하",
+            "nepali_combined": "हा",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_241-nvoice_kyuri_2.2.27.0.3.32_947c8f1c4da13fec4aee7b3524200718-1719206792654",
+            "local": "audio/हा_하.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅑ",
+            "combined": "햐",
+            "nepali_combined": "ह्या",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_79-nvoice_kyuri_2.2.27.0.3.32_43d995853efad90d9a1c9df25f20ed66-1719206805611",
+            "local": "audio/ह्या_햐.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅓ",
+            "combined": "허",
+            "nepali_combined": "ह",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_391-nvoice_kyuri_2.2.27.0.3.32_7c56c4c8a1621f600b4e943e50be9f55-1719206820653",
+            "local": "audio/ह_허.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅕ",
+            "combined": "혀",
+            "nepali_combined": "ह्य",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_422-nvoice_kyuri_2.2.27.0.3.32_dc8c5c621f033bec04181baa929bc9b5-1719206832070",
+            "local": "audio/ह्य_혀.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅗ",
+            "combined": "호",
+            "nepali_combined": "हो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_304-nvoice_kyuri_2.2.27.0.3.32_b1049d75b2146a08c9f9d3e810a1b591-1719206848570",
+            "local": "audio/हो_호.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅛ",
+            "combined": "효",
+            "nepali_combined": "ह्यो",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_68-nvoice_kyuri_2.2.27.0.3.32_a230d6a1d3e90ed3822c9b8e6a88d3ab-1719206867143",
+            "local": "audio/ह्यो_효.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅜ",
+            "combined": "후",
+            "nepali_combined": "हु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_411-nvoice_kyuri_2.2.27.0.3.32_10f82fb151b13020a79771efd8097b99-1719206877686",
+            "local": "audio/हु_후.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅠ",
+            "combined": "휴",
+            "nepali_combined": "ह्यु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_18-nvoice_kyuri_2.2.27.0.3.32_f78e029a4be6c97495ba5c96aceea352-1719206890837",
+            "local": "audio/ह्यु_휴.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅡ",
+            "combined": "흐",
+            "nepali_combined": "हु",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_19-nvoice_kyuri_2.2.27.0.3.32_f8f6b0427bdec36280480bb95d678a52-1719206902607",
+            "local": "audio/हु_흐.mp3"
+        },
+        {
+            "consonant": "ㅎ",
+            "vowel": "ㅣ",
+            "combined": "히",
+            "nepali_combined": "हि",
+            "url": "https://papago.naver.com/apis/tts/c_lt_kyuri_2.2.27.0.3.32_271-nvoice_kyuri_2.2.27.0.3.32_fc1cb8824a79b22cc6a40764dce1e84f-1719206920990",
+            "local": "audio/हि_히.mp3"
+        }
+    ]
+}

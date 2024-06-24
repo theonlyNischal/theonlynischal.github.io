@@ -1,0 +1,101 @@
+main.hangul_main #hangul-table {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+
+main.hangul_main table {
+    border-collapse: separate;
+    border-spacing: 1px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main.hangul_main th, main.hangul_main td {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+main.hangul_main th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main.hangul_main td {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+}
+
+main.hangul_main td:hover {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+main.hangul_main .highlight {
+    background-color: #ffd700 !important;
+    color: #333;
+    font-weight: bold;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+main.hangul_main .arrow-cell {
+    background-color: #2c3e50 !important;
+    color: white;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+main.hangul_main .arrow {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+main.hangul_main .text {
+    display: block;
+}
+
+main.hangul_main .consonant, main.hangul_main .vowel {
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    main.hangul_main th, main.hangul_main td {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    main.hangul_main .arrow-cell {
+        font-size: 12px;
+    }
+
+    main.hangul_main .arrow {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    main.hangul_main th, main.hangul_main td {
+        padding: 2px;
+        font-size: 12px;
+    }
+
+    main.hangul_main .arrow-cell {
+        font-size: 10px;
+    }
+
+    main.hangul_main .arrow {
+        font-size: 14px;
+    }
+}
