@@ -1,4 +1,22 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    const hangulTableContainer = document.getElementById('hangul-table');
+
+    fullscreenBtn.addEventListener('click', function() {
+        if (!document.fullscreenElement) {
+            hangulTableContainer.requestFullscreen().catch(err => {
+                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+});
+
+
+
+
 // Fetch and process data
 async function fetchData() {
     try {
