@@ -197,34 +197,37 @@
                     </figcaption>
                 </figure>
                 <div class="rich-text">
-                    <div class="section" id="why-do-we-need-an-activation-function">
-<h2>Why do we need an Activation Function?</h2>
-<p>Let's have a look at a simple neural network.</p>
+                    <p>When I first started learning about neural networks, I had a naive assumption: more layers automatically meant a smarter model. Just stack a few layers together, and the network would figure everything out on it's own.</p>
+<p>I was genuinely shocked to discover that without activation functions, even a deep network with hundreds of layers mathematically collapses into nothing more than a single linear function.</p>
+<div class="section" id="the-linear-collapse-problem">
+<h2>The Linear Collapse Problem</h2>
+<p>Let's have a look at a simple neural network without activation functions.</p>
 <img alt="Simple Neural Network" src="theme/img/code/simple-neural-network-to-show.png" style="width: 100%;" />
-<p>The output of the first layer will be</p>
+<p>Consider two-layer network:</p>
 <p>
-$$y_1 = W_1X_1 + b_1$$
-$$y_2 = W_2(y_1) + b_2$$
+<strong>Layer 1 Output: </strong>$$y_1 = W_1X_1 + b_1$$
+
+<strong>Layer 2 Output: </strong>$$y_2 = W_2(y_1) + b_2$$
+</p><p>Substituting the first equation into the second:</p>
+<p>
+$$y_2 = W_2(W_1X_1 + b_1) + b_2$$
 $$y_2 = W_2W_1X_1 + W_2b_1 + b_2$$
 $$y_2 = WX + b$$
-</p><!-- y1 = w1X + b1 -->
-<!-- y2 = W2(y1) + b2 -->
-<!-- y2 = W2W1X + W2b1 + b2 -->
-<!-- y2 = Wx b -->
-<p>which is linear output equivalent of using a single neuron.
-A single neuron is not powerful enough to do complex task.
-So, eventhough we are using a deep neural network with
-many layers it became equivalent of using a simple single
-neuron.</p>
-<p>To prevent this collapse, we need beyond multiplication and addition.
-We will use what commonly known as activation function or transfer function.
-This activation function prevents collapsing because it adds a extra bit of
-processing before transfering the output of a neuron. Let's say we have an activation
-function that allows passing of value &gt; 0. If any neuron have value &lt; 0 then their output
-are not passed to next layer. By doing these stuffs, activation function introduce non-linearlity.</p>
-<p>The result of using these functions is that we keep our network of
-many neurons, rather than having it turn into just one neuron, and
-that makes all the difference.</p>
+</p><p>where</p>
+$$W = W_2W_1$$
+$$b = W_2b_1 + b_2$$<p>This is equivalent to a single linear transformation. Even if we extend this to 100 layers</p>
+<p>
+$$y_{\text{final}} = W_{\text{final}} \times X + b_{\text{final}}$$
+</p><p>We still get just one linear function, regardless of depth. All those layers collapse into a single line, making the network no more powerful than a linear regression.</p>
+</div>
+<div class="section" id="now-let-s-introduce-activation-functions">
+<h2>Now let's introduce activation functions</h2>
+<p>Activation functions introduce non-linearlity into the network, preventing this mathematical collapse. They transform the linear output of each neuron before passing it to the next layer.</p>
+<p>With activation functions, our network becomes:</p>
+$$a_1 = f(W_1X_1 + b_1)$$
+$$a_2 = f(W_2a_1 + b_2)$$
+$$a_2 = f(W_2(f(W_1X_1 + b_1)) + b_2)$$<p><strong>There’s no algebraic trick that turns this into one linear mapping.</strong></p>
+<p>Where <strong>f()</strong> is the activation function. Now each layer's output is no longer a simple linear combination of the previous layer, breaking the chain of linear transformations.</p>
 </div>
 
                 </div>
