@@ -2,36 +2,32 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Nischal Lal Shrestha - Archives | Nischal Lal Shrestha</title>
+      <title>Why does gradient descent take the negative gradient?
+ | Nischal Lal Shrestha</title>
       <meta property='og:type' content='website'>
       <meta property='og:locale' content='en_US'>
       <meta property='wagtail:language' content='en'>
       <link rel="alternate" type="application/rss+xml" href="/en/blog/rss/" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
-         <meta name="description" content="Nischal's Blog: DL, ML, AI, Programming and Human Insights">
-         <meta name="keywords" content="ML, DL, AI, Programming, Nepal, Technology, Human insights" />
-      
-         <!-- Markup for Twitter -->
-         <meta name="twitter:card" content="summary_large_image">
-         <meta name="twitter:site" content="@dakkulanthu">
-         <meta name="twitter:title" content="Nischal">
-         <meta name="twitter:description" content="I Love Everything That Makes Me More Human. Personal blog of Nischal.">
-         <meta name="twitter:creator" content="@dakkulanthu">
-         <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png">
-         <meta property="og:url" content="https://nischal.info.np" />
-         <meta property="og:title" content="Nischal Lal Shrestha" />
-         <meta property="og:description" content="I Love Everything That Makes Me More Human. Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal." />
-         <meta property="og:site_name" content="Nischal Lal Shrestha" />
-         <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" />
-         <meta property="og:image:width" content="1200" />
-         <meta property="og:image:height" content="1200" />
-         <meta itemprop='url' content='https://nischal.info.np' />
-         <meta itemprop="name" content="Blog">
-         <meta itemprop='description' content="Personal blog of Nischal Lal Shrestha. I talk about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human" />
-         <meta itemprop='image' content="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png" />
-         <title>Nischal Lal Shrestha</title>
-         <meta name="description" content="Personal blog of Nischal Lal Shrestha. Blogs about Machine Learning, Deep Learning, Programming, Nepal. I Love Everything That Makes Me More Human">
-      
+    <meta name="description" content="Why does gradient descent take the negative gradient?, Published On:Tuesday, July 19 2025, keywords: gradient descent, backpropagation, machine learning, ">
+    <meta name="keywords" content="gradient descent, backpropagation, machine learning, " />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Why does gradient descent take the negative gradient?">
+    <meta property="og:description" content="In machine learning, gradient descent is the algorithm we use to tweat a model's parameters like weights in a neural network. Gradient descent is an optimization algorithm used to minimize a cost (or loss) function.">
+    <meta property="og:url" content="https://nischal.info.np/why-does-gradient-descent-take-the-negative-gradient">
+    <meta property="og:image" content="https://nischal.info.np/theme/img/algorithm/gradient-descent.png">
+    <meta property="og:site_name" content="Nischal Lal Shrestha">
+    <!-- Markup for Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dakkulanthu">
+    <meta name="twitter:title" content="Why does gradient descent take the negative gradient?">
+    <meta name="twitter:description" content="In machine learning, gradient descent is the algorithm we use to tweat a model's parameters like weights in a neural network. Gradient descent is an optimization algorithm used to minimize a cost (or loss) function.">
+    <meta name="twitter:creator" content="@dakkulanthu">
+    <meta name="twitter:image" content="https://nischal.info.np/theme/img/algorithm/gradient-descent.png">
+    <meta name="google-site-verification" content="iEvAoBxEoIpSiA4IZmG1FN9E_kBBkq7453c8krLFbpY" />
+    <meta name="ahrefs-site-verification" content="eb6c465128e0ba9eb3ff9730abec8b97b91f55db6ebadf734372fed79414e07c">
+    <link rel="canonical" href="./why-does-gradient-descent-take-the-negative-gradient.html" />
+    
       <meta name="google-site-verification" content="D7k-r3fHm-XfJ9E7T1uZ5aqHJG2mx-0uUZFeBUDN2lY">
       <meta name="ga-identifier" content="UA-87658599-6">
       <meta name="gtm-identifier" content="GTM-MD3XGZ4">
@@ -45,10 +41,6 @@
       <link rel="stylesheet" href="https://nischal.info.np/theme/css/main.css">
       <link rel="stylesheet" href="https://nischal.info.np/theme/css/my-touch.css">
       <link rel="stylesheet" href="https://nischal.info.np/theme/css/pygments.css">
-         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-         <link rel="stylesheet" href="https://nischal.info.np/theme/css/bfi_main.css" />
-         <link rel="stylesheet" href="https://nischal.info.np/theme/css/hangul_dashboard_style.css" />
-         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
       
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,300,700,300i,800,900">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,600,700,300i">
@@ -103,7 +95,7 @@
                                 <div class="col">
                                     <div class="nav-links pt-3">
                                         <div><a class="" href="https://nischal.info.np">Home</a></div>
-                                            <div><a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a></div>
+                                            <div><a class="active" href="https://nischal.info.np/category/algorithm.html">Algorithm</a></div>
 
                                             <div><a  href="https://nischal.info.np/category/code.html">Code</a></div>
 
@@ -140,7 +132,7 @@
                                     <a class="logo text-hide" href="/" aria-label="Nischal Lal Shrestha">Nischal Lal Shrestha</a>
                                     <div class="wide-screen-menu">
                                         <div class="nav-links d-none d-lg-block">
-                                                <a  href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
+                                                <a class="active" href="https://nischal.info.np/category/algorithm.html">Algorithm</a>
                                                 <a  href="https://nischal.info.np/category/code.html">Code</a>
                                                 <a  href="https://nischal.info.np/category/open-source.html">Open Source</a>
                                                 <a  href="https://nischal.info.np/category/thoughts.html">Thoughts</a>
@@ -177,60 +169,107 @@
             <div class="container">
               
 
-<h1>Archives for Nischal Lal Shrestha</h1>
+    <div class="row" style="justify-content: center;">
+        <aside class="usa-in-page-nav" aria-label="On this page" data-scroll-offset="-120" data-root-margin="48px 0px -90% 0px" data-threshold="1">
 
-<dl>
-    <dt>शनि 19 जुलाई 2025</dt>
-    <dd><a href="https://nischal.info.np/why-does-gradient-descent-take-the-negative-gradient.html">Why does gradient descent take the negative gradient?</a></dd>
-    <dt>शुक्र 13 दिसम्बर 2024</dt>
-    <dd><a href="https://nischal.info.np/from-kathmandu-to-gimhae-a-journey-of-discovery.html">어서 오세요! From Kathmandu to Gimhae: A Journey of Discovery</a></dd>
-    <dt>शनि 30 सितम्बर 2023</dt>
-    <dd><a href="https://nischal.info.np/most-popular-names-in-nepal.html">Most popular names in Nepal</a></dd>
-    <dt>सोम 13 मार्च 2023</dt>
-    <dd><a href="https://nischal.info.np/i-feel-nothing.html">I feel nothing.</a></dd>
-    <dt>सोम 27 दिसम्बर 2021</dt>
-    <dd><a href="https://nischal.info.np/how-to-sort-a-dictionary-in-python.html">How to sort a dictionary in python: Sort a dictionary by key, value, key and value and reverse.</a></dd>
-    <dt>शुक्र 17 दिसम्बर 2021</dt>
-    <dd><a href="https://nischal.info.np/how-to-create-a-dict-in-python.html">How to create a dict in python?</a></dd>
-    <dt>शनि 14 नवम्बर 2020</dt>
-    <dd><a href="https://nischal.info.np/most-handsome-man-of-nepal-is-nirdesh.html">Top 10 reason why Nirdesh is the most handsome man of Nepal</a></dd>
-    <dt>बुध 14 अक्टूबर 2020</dt>
-    <dd><a href="https://nischal.info.np/activation-function-in-a-deep-neural-network.html">Activation functions in a deep neural networks</a></dd>
-    <dt>बुध 14 अक्टूबर 2020</dt>
-    <dd><a href="https://nischal.info.np/time-of-day-tcp-client-server-model-example-using-sockets.html">Simple time-of-day TCP Client-Server model example using sockets in C</a></dd>
-    <dt>मंगल 17 सितम्बर 2019</dt>
-    <dd><a href="https://nischal.info.np/introduction-to-abstract-data-types.html">Introduction to Abstract Data Types</a></dd>
-    <dt>मंगल 17 सितम्बर 2019</dt>
-    <dd><a href="https://nischal.info.np/classification-of-data-structure.html">Classification of Data Structure</a></dd>
-    <dt>रवि 15 सितम्बर 2019</dt>
-    <dd><a href="https://nischal.info.np/do-not-be-religious-about-technology.html">Don't be religious about technology</a></dd>
-    <dt>रवि 15 सितम्बर 2019</dt>
-    <dd><a href="https://nischal.info.np/how-often-should-we-git-commit-nischal.html">How often should we commit? Is git commit quantification of quality?</a></dd>
-    <dt>शुक्र 05 जुलाई 2019</dt>
-    <dd><a href="https://nischal.info.np/identification-of-rice-leaf-diseases-using-cnn.html">Identification of Rice Leaf Diseases using Deep Convolutional Neural Networks</a></dd>
-    <dt>गुरु 30 मई 2019</dt>
-    <dd><a href="https://nischal.info.np/linear-regression-tutorial.html">Simple Linear Regression Tutorial</a></dd>
-    <dt>मंगल 28 मई 2019</dt>
-    <dd><a href="https://nischal.info.np/a-house-is-made-to-be-a-home.html">A House is Made To Be a Home</a></dd>
-    <dt>शनि 25 मई 2019</dt>
-    <dd><a href="https://nischal.info.np/Bayesian-Theorem-and-Naive-Bayes-Classifier.html">Bayesian Theorem and Naive Bayes Classifier</a></dd>
-    <dt>शनि 20 अप्रैल 2019</dt>
-    <dd><a href="https://nischal.info.np/k-nearest-neighbour-algorithm-for-image-classification.html">K-Nearest Neighbour Algorithm for Image Classification</a></dd>
-    <dt>सोम 01 अप्रैल 2019</dt>
-    <dd><a href="https://nischal.info.np/very-stupid-introduction-to-deep-learning.html">Mimicking Biological Neural Network | Artificial Neurons and Biological Neurons | Perceptron | Multi-Layer Perceptron | Backpropagation</a></dd>
-    <dt>गुरु 28 मार्च 2019</dt>
-    <dd><a href="https://nischal.info.np/getting-a-handle-on-vector-for-machine-learning.html">Getting a Handle on Vector for Machine Learning</a></dd>
-    <dt>मंगल 05 मार्च 2019</dt>
-    <dd><a href="https://nischal.info.np/building-a-currency-converter-using-openexchangerates-api.html">Building a Currency Converter using OpenExchangeRates API and requests</a></dd>
-    <dt>शनि 16 फरवरी 2019</dt>
-    <dd><a href="https://nischal.info.np/holi-Glorifying-romance-Playing-with-color.html">Holi - Glorifying Romance, Playing with Colors</a></dd>
-    <dt>शनि 16 फरवरी 2019</dt>
-    <dd><a href="https://nischal.info.np/nepal-love-affair-with-momo-keeps-growing.html">Nepal's Love Affair with MoMo Keeps Growing</a></dd>
-    <dt>रवि 03 फरवरी 2019</dt>
-    <dd><a href="https://nischal.info.np/i-love-everything-that-makes-me-more-human.html">I Love Everything That Makes Me More Human</a></dd>
-    <dt>रवि 27 जनवरी 2019</dt>
-    <dd><a href="https://nischal.info.np/Introduction-to-Data-Structure.html">Introduction to Data Structure</a></dd>
-</dl>
+        </aside>
+        <!-- <div class="offset-lg-1 col-lg-1 py-4 py-md-5 text-center d-print-none">
+            <div class="blog-sticky-side d-none d-lg-flex justify-content-lg-end">
+            <div class="share-button-group-wrapper" data-version="mini" data-layout="stacked" data-share-text="Why does gradient descent take the negative gradient?" data-link="https://nischal.info.np/why-does-gradient-descent-take-the-negative-gradient"></div>
+            </div>
+        </div> -->
+        <div class="py-4 py-md-5 col-lg-8">
+            <div class="cms ">
+            <h1 class="h1-heading">Why does gradient descent take the negative gradient?</h1>
+                <div class="blog-authors d-flex flex-wrap flex-column mb-4">
+                    <p class="body-small my-2">
+                        By
+                        <span><b><a href="https://nischal.info.np/author/nischal-lal-shrestha.html">Nischal Lal Shrestha</a></b></span>
+                        | On Tuesday, July 19 2025
+                        | Filed under <span class="usa-tag"><a href="https://nischal.info.np/category/algorithm.html">Algorithm</a></span>
+                    </p>
+                </div>
+            <div class="blog-body">
+                <figure class="my-default">
+                    <img src="https://nischal.info.np/theme/img/algorithm/gradient-descent.png" alt="Image for Why does gradient descent take the negative gradient?" class="w-100" />
+                    <figcaption class="body-small d-block mt-2">
+                        
+                    </figcaption>
+                </figure>
+                <div class="rich-text">
+                    <p>Imagine standing halfway up a mountain. It's cold, windy, and our only goal is simple: get to the lowest point in the valley.</p>
+<p>But here's the problem, we are blindfolded. We can't see the landscape, the valleys, or even our own feet. The only information we're given is &quot;The ground slopes this way.&quot;</p>
+<p>So what do we do?</p>
+<p><strong>We trust the slope</strong>. We step in the opposite direction of the slope. That, in essence, is the <strong>gradient descent</strong>.</p>
+<div class="section" id="the-formula-behind-the-intution">
+<h2>The Formula Behind the Intution</h2>
+<p>In machine learning, gradient descent is the algorithm we use to tweat a model's parameters like weights in a neural network. Gradient descent is an optimization algorithm used to minimize a cost (or loss) function. Its core update rule is:</p>
+<p>
+$$w_{\text{new}} = w_{\text{old}} - \eta \cdot \nabla J(w)$$
+</p><p>
+Where:
+<ul>
+    <li> \(w\) is the weight (or parameter),</li>
+    <li>\(\eta\) is the learning rate (a small positive constant),</li>
+    <li>\(\nabla J(w)\) is the gradient of the cost function with respect to \(w\).</li>
+</ul>
+
+The gradient \(\nabla J(w)\) points in the direction of the steepest incrase of the function \(\nabla J(w)\). Since we want to minimize the function, we go in the opposite direction hence the negative gradient.
+
+</p></div>
+<div class="section" id="what-if-the-gradient-is-positive">
+<h2>What If the Gradient is Positive?</h2>
+<p>
+Suppose we're at a point where the slope is +ve. \(\nabla J(w)\) is \(+0.6\), learning rate \(\eta=0.1\) . Then the update rule becomes:
+
+$$w_{\text{new}} = w_{\text{old}} - 0.1 \cdot 0.6 = w_{\text{old}} - 0.06$$
+
+Here we are decreaing the weight. Since the function is increasing here, we move in the opposite direction to go downhill(i.e decreasing the weight).
+</p></div>
+<div class="section" id="what-if-the-gradient-is-negative">
+<h2>What If the Gradient is Negative?</h2>
+<p>
+Suppose we're at a point where the slope is -ve. \(\nabla J(w)\) is \(-0.4\), learning rate \(\eta=0.1\) . Then the update rule becomes:
+
+$$w_{\text{new}} = w_{\text{old}} - 0.1 \cdot (-0.4) = w_{\text{old}} + 0.04$$
+
+Here we are increasing the weight. Since the function is decreasing (slope is -ve) here, we move in the opposite direction to go downhill (i.e increasing the weight).
+
+</p></div>
+
+                </div>
+                <!-- <div class="share-button-group-wrapper mt-5 d-print-none" data-share-text="Why does gradient descent take the negative gradient?" data-link="https://nischal.info.np/why-does-gradient-descent-take-the-negative-gradient"></div> -->
+            </div>
+            <br/>
+
+
+
+            <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                    */
+                    /*
+                    var disqus_config = function () {
+                        this.page.url = https://nischal.info.np;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = why-does-gradient-descent-take-the-negative-gradient; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function() {  // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        
+                        s.src = 'https://shresthanischal.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+                            
+            </div>
+        </div>
+    </div>
 
                
             </div>
