@@ -68,7 +68,7 @@
     .yes{background:linear-gradient(180deg,var(--accent),#ff6f84);color:#fff;margin-right:10px}
     .yes:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,77,109,0.14)}
 
-    .no{background:linear-gradient(180deg,#fff,#ffeef3);color:#7a4654;position:absolute;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,77,109,0.08)}
+    .no{background:linear-gradient(180deg,#fff,#ffeef3);color:#7a4654;position:absolute;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,77,109,0.08);max-width:120px;white-space:nowrap}
 
     .hidden{display:none}
 
@@ -287,23 +287,32 @@
     @media (max-width:520px){
       .card{padding:20px;border-radius:16px;width:95%;max-width:100%}
       .gif{width:150px}
-      .love-note{max-width:220px;font-size:13px;bottom:10px;right:10px;left:10px;max-width:calc(100% - 20px)}
+      .love-note{font-size:13px;bottom:80px;left:10px;right:10px;max-width:calc(100% - 20px);width:calc(100% - 20px);position:fixed;z-index:1000}
       h1{font-size:24px}
       h2{font-size:20px}
       button{padding:14px 18px;font-size:16px;width:100%;margin:8px 0 !important}
       .yes{margin-right:0 !important}
       .date-list button{padding:16px}
       .back{font-size:18px;padding:10px 12px}
-      .capture-card{width:95vw;max-width:400px;padding:30px}
-      .capture-header h1{font-size:28px}
-      .capture-item{flex-direction:column;gap:8px}
-      .capture-item-icon{font-size:24px}
-      .capture-item-value{font-size:16px}
+      .capture-card{width:340px;max-width:340px;padding:24px;box-sizing:border-box}
+      .capture-header{margin-bottom:24px;padding-bottom:20px}
+      .capture-header h1{font-size:24px}
+      .capture-header p{font-size:14px}
+      .capture-content{padding:24px}
+      .capture-item{margin:16px 0;gap:12px}
+      .capture-item-icon{font-size:20px;min-width:30px}
+      .capture-item-value{font-size:14px}
+      .capture-footer{margin-top:24px;padding-top:20px}
+      .capture-footer p{font-size:18px}
       .countdown-timer{font-size:24px}
       /* Stack buttons vertically on mobile */
       #screen6 button{display:block;width:100%;margin:8px 0 !important}
       #screen6 .yes{margin-top:16px !important}
       #screen6 .save-image-btn{margin-top:20px !important}
+      /* Fix screen1 button positioning */
+      #screen1 .yes{position:relative;margin-right:0 !important;max-width:200px;margin-left:auto;margin-right:auto;display:block}
+      #screen1 .no{position:static !important;margin-top:12px;display:block;width:auto;max-width:150px;margin-left:auto;margin-right:auto}
+      body{overflow:auto}
     }
   </style>
 </head>
@@ -532,8 +541,9 @@
   noBtn.style.left = '60%';
   noBtn.style.top = '65%';
 
-  // playful evasion for the No button
+  // playful evasion for the No button (desktop only)
   noBtn.addEventListener('mouseover', () => {
+    if (isMobile()) return; // Disable on mobile
     noBtn.style.left = Math.random() * 70 + '%';
     noBtn.style.top = Math.random() * 70 + '%';
     scale += 0.35;
@@ -541,6 +551,18 @@
     yesBtn.style.transform = `scale(${scale})`;
     noCount++;
     if (noCount < yesTexts.length) yesBtn.innerText = yesTexts[noCount];
+  });
+  
+  // On mobile, make No button just grow the Yes button
+  noBtn.addEventListener('click', (e) => {
+    if (isMobile()) {
+      e.preventDefault();
+      scale += 0.35;
+      if (scale > 2.6) scale = 2.6;
+      yesBtn.style.transform = `scale(${scale})`;
+      noCount++;
+      if (noCount < yesTexts.length) yesBtn.innerText = yesTexts[noCount];
+    }
   });
 
   yesBtn.onclick = () => {
@@ -1041,15 +1063,23 @@
       await document.fonts.ready;
       
       // Generate canvas with mobile-optimized settings
-      const scale = isMobile() ? 1.5 : 2;
+      const scale = isMobile() ? 1 : 2;
+      const windowWidth = window.innerWidth;
+      
+      // On mobile, adjust capture card width dynamically
+      if (isMobile()) {
+        captureCard.style.width = '340px';
+        captureCard.style.maxWidth = '340px';
+      }
+      
       const canvas = await html2canvas(captureCard, {
         backgroundColor: '#fff5f9',
         scale: scale,
         logging: false,
         useCORS: true,
         allowTaint: true,
-        width: captureCard.offsetWidth,
-        height: captureCard.offsetHeight
+        windowWidth: isMobile() ? 340 : 800,
+        windowHeight: captureCard.scrollHeight
       });
       
       // Convert to blob and download
@@ -1066,8 +1096,12 @@
       alert('Oops! Could not save image. Please try again.');
       console.error(e);
     } finally {
-      // Hide card again
+      // Hide card again and reset styles
       captureCard.style.left = '-9999px';
+      if (isMobile()) {
+        captureCard.style.width = '';
+        captureCard.style.maxWidth = '';
+      }
     }
   }
 
