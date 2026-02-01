@@ -80,12 +80,23 @@
 
     /* Excitometer */
     .meter{margin:8px 0}
-    .meter-visual{text-align:center;margin:8px 0}
-    .meter-gif{width:110px;border-radius:12px;display:inline-block;}
+    .meter-visual{text-align:center;margin:8px 0;position:relative}
+    .meter-gif{width:110px;border-radius:12px;display:inline-block;transition:all 0.3s ease}
+    .meter-visual.infinity-mode .meter-gif{transform:scale(1.2);filter:brightness(1.2) saturate(1.3)}
+    .infinity-symbol{font-size:60px;display:inline-block;background:linear-gradient(135deg,#ff2d6f,#d400ff,#ff6b98);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:infinityPulse 1.5s ease-in-out infinite;text-shadow:0 0 30px rgba(212,0,255,0.5)}
+    @keyframes infinityPulse{0%,100%{transform:scale(1) rotate(0deg)}50%{transform:scale(1.15) rotate(5deg)}}
+    .excitement-level{font-size:28px;font-weight:700;color:var(--accent);margin:12px 0;transition:all 0.3s ease}
+    .excitement-level.infinity-mode{font-size:32px;background:linear-gradient(135deg,#ff2d6f,#d400ff,#ff6b98);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:textShimmer 2s linear infinite}
+    @keyframes textShimmer{0%{filter:hue-rotate(0deg)}100%{filter:hue-rotate(360deg)}}
 
-    input[type=range]{-webkit-appearance:none;width:100%;height:14px;background:linear-gradient(90deg,#ffd6e0 0%, #ff9eb3 100%);border-radius:999px;outline:none}
-    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#fff,#ffeaf0);box-shadow:0 6px 14px rgba(255,77,109,0.16);border:3px solid #ff6b86;cursor:pointer;transform:translateY(-8px)}
-    input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;background:#fff;border:3px solid #ff6b86}
+    input[type=range]{-webkit-appearance:none;width:100%;height:14px;background:linear-gradient(90deg,#ffd6e0 0%, #ff9eb3 100%);border-radius:999px;outline:none;transition:all 0.3s ease}
+    input[type=range].infinity-mode{background:linear-gradient(90deg,#ff9eb3 0%, #ff2d6f 50%, #d400ff 100%);height:18px;box-shadow:0 0 20px rgba(212,0,255,0.4);animation:pulseGlow 1.5s ease-in-out infinite}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#fff,#ffeaf0);box-shadow:0 6px 14px rgba(255,77,109,0.16);border:3px solid #ff6b86;cursor:pointer;transform:translateY(-8px);transition:all 0.3s ease}
+    input[type=range].infinity-mode::-webkit-slider-thumb{width:40px;height:40px;background:linear-gradient(135deg,#ff2d6f,#d400ff,#ff2d6f);border:4px solid #fff;box-shadow:0 0 20px rgba(212,0,255,0.6), 0 6px 14px rgba(255,77,109,0.3);animation:thumbSpin 2s linear infinite}
+    input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;background:#fff;border:3px solid #ff6b86;transition:all 0.3s ease}
+    input[type=range].infinity-mode::-moz-range-thumb{width:40px;height:40px;background:linear-gradient(135deg,#ff2d6f,#d400ff);border:4px solid #fff;box-shadow:0 0 20px rgba(212,0,255,0.6)}
+    @keyframes pulseGlow{0%,100%{box-shadow:0 0 20px rgba(212,0,255,0.4)}50%{box-shadow:0 0 35px rgba(212,0,255,0.7)}}
+    @keyframes thumbSpin{from{transform:translateY(-10px) rotate(0deg)}to{transform:translateY(-10px) rotate(360deg)}}
 
     /* date/time fields */
     .field{display:flex;gap:10px;align-items:center}
@@ -97,22 +108,208 @@
     /* small celebration effect */
     .card.celebrate{transform:scale(1.02);box-shadow:0 18px 44px rgba(255,77,109,0.18)}
 
-    @media (max-width:520px){.card{padding:20px;border-radius:16px}.gif{width:150px}}
+    /* screen transition animations */
+    .card > div:not(.hidden){
+      animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes fadeInUp{
+      from{opacity:0;transform:translateY(20px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    .card > div.hidden{
+      opacity:0;
+      pointer-events:none;
+    }
+
+    /* progress indicator */
+    .progress-bar{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:4px;
+      background:rgba(255,45,111,0.1);
+      border-radius:22px 22px 0 0;
+      overflow:hidden;
+      z-index:5;
+    }
+    .progress-fill{
+      height:100%;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      transition:width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow:0 0 10px rgba(255,45,111,0.4);
+    }
+    .progress-dots{
+      position:absolute;
+      top:18px;
+      right:18px;
+      display:flex;
+      gap:6px;
+      z-index:5;
+    }
+    .progress-dots .dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:rgba(255,45,111,0.2);
+      transition:all 0.3s ease;
+    }
+    .progress-dots .dot.active{
+      background:var(--accent);
+      transform:scale(1.2);
+      box-shadow:0 0 8px rgba(255,45,111,0.5);
+    }
+    .progress-dots .dot.completed{
+      background:var(--accent);
+    }
+
+    /* Capture card for image generation */
+    .capture-card{
+      position:fixed;
+      left:-9999px;
+      top:0;
+      width:800px;
+      padding:60px;
+      background:linear-gradient(135deg, #fff5f9 0%, #ffe8f0 50%, #fff0f6 100%);
+      border-radius:30px;
+      box-shadow:0 20px 60px rgba(255,45,111,0.15);
+      font-family:'Segoe UI', system-ui, sans-serif;
+    }
+    .capture-card::before{
+      content:'💕';
+      position:absolute;
+      top:30px;
+      left:30px;
+      font-size:40px;
+      opacity:0.3;
+    }
+    .capture-card::after{
+      content:'💕';
+      position:absolute;
+      bottom:30px;
+      right:30px;
+      font-size:40px;
+      opacity:0.3;
+    }
+    .capture-header{
+      text-align:center;
+      margin-bottom:40px;
+      padding-bottom:30px;
+      border-bottom:3px solid rgba(255,45,111,0.15);
+    }
+    .capture-header h1{
+      font-size:42px;
+      color:var(--accent);
+      margin:0 0 10px 0;
+      text-shadow:0 2px 4px rgba(255,45,111,0.1);
+    }
+    .capture-header p{
+      font-size:18px;
+      color:var(--muted);
+      margin:0;
+      font-style:italic;
+    }
+    .capture-content{
+      background:rgba(255,255,255,0.7);
+      padding:40px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+    }
+    .capture-item{
+      margin:24px 0;
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
+    }
+    .capture-item-icon{
+      font-size:28px;
+      min-width:40px;
+      text-align:center;
+    }
+    .capture-item-content{
+      flex:1;
+    }
+    .capture-item strong{
+      display:block;
+      font-size:16px;
+      color:var(--accent);
+      margin-bottom:6px;
+      text-transform:uppercase;
+      letter-spacing:0.5px;
+      font-weight:700;
+    }
+    .capture-item-value{
+      font-size:20px;
+      color:#2b2b2b;
+      line-height:1.6;
+    }
+    .capture-footer{
+      margin-top:40px;
+      text-align:center;
+      padding-top:30px;
+      border-top:3px solid rgba(255,45,111,0.15);
+    }
+    .capture-footer p{
+      font-size:24px;
+      color:var(--accent);
+      margin:0;
+      font-weight:600;
+    }
+    .save-image-btn{
+      background:linear-gradient(180deg,#ff6b98,var(--accent));
+      color:#fff;
+      margin-top:16px;
+    }
+    .save-image-btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 30px rgba(255,77,109,0.14);
+    }
+
+    /* Confetti styles */
+    .confetti{position:fixed;width:10px;height:10px;background:#ff2d6f;position:absolute;animation:confettiFall 3s linear forwards;z-index:1}
+    @keyframes confettiFall{to{transform:translateY(100vh) rotate(360deg);opacity:0}}
+    
+    /* Love note popup */
+    .love-note{position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,#fff0f6,#ffe8f0);padding:16px 20px;border-radius:16px;box-shadow:0 8px 24px rgba(255,45,111,0.2);border:2px solid var(--pink-2);max-width:280px;opacity:0;transform:translateY(20px) scale(0.9);transition:all 0.4s cubic-bezier(0.16,1,0.3,1);z-index:100;cursor:pointer}
+    .love-note.show{opacity:1;transform:translateY(0) scale(1)}
+    .love-note:hover{transform:translateY(-2px) scale(1.02)}
+    .love-note-text{font-size:14px;color:var(--accent);line-height:1.6;margin:0}
+    .love-note-close{position:absolute;top:8px;right:10px;font-size:18px;color:var(--muted);cursor:pointer;opacity:0.5;transition:opacity 0.2s}
+    .love-note-close:hover{opacity:1}
+    
+    /* Countdown timer */
+    .countdown{text-align:center;margin:20px 0;padding:16px;background:rgba(255,182,208,0.15);border-radius:12px;border:2px dashed var(--pink-2)}
+    .countdown-timer{font-size:32px;font-weight:700;color:var(--accent);margin:8px 0}
+    .countdown-label{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+
+    @media (max-width:520px){.card{padding:20px;border-radius:16px}.gif{width:150px}.love-note{max-width:220px;font-size:13px}}
   </style>
 </head>
 <body>
 
-<audio id="bgMusic" loop>
-  <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4a465279f7.mp3" type="audio/mpeg">
-</audio>
-
 <div class="floating-hearts" aria-hidden="true"></div>
 
 <div class="card">
+  <!-- Progress Indicator -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  </div>
+  <div class="progress-dots" id="progressDots">
+    <div class="dot active" data-step="1"></div>
+    <div class="dot" data-step="2"></div>
+    <div class="dot" data-step="3"></div>
+    <div class="dot" data-step="4"></div>
+    <div class="dot" data-step="5"></div>
+    <div class="dot" data-step="6"></div>
+    <div class="dot" data-step="7"></div>
+    <div class="dot" data-step="8"></div>
+  </div>
 
   <!-- SCREEN 1 -->
   <div id="screen1">
-    <h1>Do you want to go on a date with Nischal? 💕</h1>
+    <h1>Will you let me love you? 💕</h1>
+    <h4>Let's plan a date, even from afar.</h4>
+    <p style="color:var(--muted);font-style:italic;margin-top:-8px">Say yes and change everything...</p>
     <br />
     <button id="yesBtn" class="yes">Yes 💖</button>
     <button id="noBtn" class="no">No 🙄</button>
@@ -121,15 +318,15 @@
   <!-- SCREEN 2 -->
   <div id="screen2" class="hidden">
     <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" />
-    <h2>I was really hoping for that 🥹</h2>
-    <p>You just made my whole day a little brighter.</p>
+    <h2>You said yes, and suddenly the world makes sense 🥹</h2>
+    <p id="compliment" style="font-style:italic;color:var(--accent)">You just made my whole day a little brighter.</p>
     <br />
-    <button onclick="showDates()" class="yes">Click Me 💌</button>
+    <button onclick="showDates()" class="yes">Show Me Our Possibilities 💌</button>
   </div>
 
   <!-- SCREEN 3 -->
   <div id="screen3" class="hidden">
-    <h2>Choose our date ✨</h2>
+    <h2>How do you want to be loved? ✨</h2>
     <div class="date-list">
       <button onclick="openDate('movie')">🎬 Movie / Series Night</button>
       <button onclick="openDate('dinner')">🍝 Video Call Dinner</button>
@@ -144,6 +341,7 @@
   <!-- SCREEN 4 -->
   <div id="screen4" class="hidden">
     <div class="back" onclick="backToDates()">←</div>
+    <br/>
     <div class="with-back">
       <h2 id="dateTitle"></h2>
       <p id="dateDesc"></p>
@@ -155,7 +353,7 @@
   <div id="screen4a" class="hidden">
     <div class="back" onclick="backToDateDetails()">←</div>
     <div class="with-back">
-      <h2>When should we meet? 📅</h2>
+      <h2>When can I finally have you? 📅</h2>
       <div class="date-controls">
         <div class="field">
           <label for="dateInput">Date</label>
@@ -174,25 +372,36 @@
   <div id="screen4b" class="hidden">
     <div class="back" onclick="backToDateTime()">←</div>
     <div class="with-back">
-      <h2>Our Date Plan 💕</h2>
+      <h2>Our Beautiful Conspiracy 💕</h2>
       <div class="summary">
         <p><strong>Date Type:</strong> <span id="previewDateType"></span></p>
         <p><strong>When:</strong> <span id="previewWhen"></span></p>
         <p><strong>What we'll do:</strong> <span id="previewDesc"></span></p>
       </div>
-      <button onclick="showFinalSummary()" class="yes">Lock It In 💘</button>
+      <button onclick="showMessageScreen()" class="yes">Continue 💕</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 4C - Message Input -->
+  <div id="screen4c" class="hidden">
+    <div class="back" onclick="backToDateSummary()">←</div>
+    <div class="with-back">
+      <h2>Confess Something to Me 💌</h2>
+      <p>Tell me what your heart is too afraid to say out loud...</p>
+      <textarea id="messageInput" placeholder="Write what words can barely hold..." style="width:100%;min-height:120px;padding:12px;border-radius:10px;border:2px solid var(--pink-2);font-family:inherit;font-size:15px;resize:vertical;margin:16px 0;box-sizing:border-box;"></textarea>
+      <button onclick="showFinalSummary()" class="yes">Seal This Promise 💘</button>
     </div>
   </div>
 
     <!-- SCREEN 5 -->
   <div id="screen5" class="hidden">
-    <h2>Excitometer 💓</h2>
-    <p id="meterHint">Drag slowly… excitement is shy 😌</p>
+    <h2>How desperately do you want this? 💓</h2>
+    <p id="meterHint">Show me your desire... don't hold back 😌</p>
     <div class="meter">
-        <input type="range" min="0" max="100" value="50" id="excite" />
-        <p><span id="exciteVal">50</span>% excited</p>
+        <input type="range" min="0" max="200" value="50" id="excite" />
+        <p class="excitement-level" id="exciteDisplay"><span id="exciteVal">50</span>% excited</p>
     </div>
-      <div class="meter-visual">
+      <div class="meter-visual" id="meterVisual">
         <img class="meter-gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="cute hearts" />
       </div>
     <button onclick="checkExciteAndContinue()" class="yes">Lock It In 💘</button>
@@ -200,17 +409,80 @@
 
   <!-- SCREEN 6 -->
   <div id="screen6" class="hidden">
-    <h2>Our Date Summary 💞</h2>
+    <h2>Our Promise Written in Starlight 💞</h2>
     <div class="summary">
       <p><strong>Date:</strong> <span id="sumDate"></span></p>
       <p><strong>When:</strong> <span id="sumWhen"></span></p>
       <p><strong>Description:</strong> <span id="sumDesc"></span></p>
-      <p><strong>Excitement:</strong> <span id="sumExcite"></span>%</p>
+      <p><strong>Excitement:</strong> <span id="sumExcite"></span></p>
+      <p><strong>Your Message:</strong> <span id="sumMessage"></span></p>
     </div>
+    
+    <div class="countdown" id="countdown">
+      <div class="countdown-label">Time Until Our Date</div>
+      <div class="countdown-timer" id="countdownTimer">Loading...</div>
+    </div>
+    
     <br />
-    <p>I can’t wait already 🥰</p>
+    <p style="font-style:italic;color:var(--accent);font-size:16px">Until then, I'll be counting heartbeats and dreaming of you 🥰</p>
+    <button onclick="saveAsImage()" class="yes save-image-btn">Capture This Promise 📸</button>
+    <button onclick="showLoveNote()" class="yes" style="margin-top:8px;background:linear-gradient(180deg,#ff9eb3,#ff6b98)">Whisper Something to Me 💌</button>
   </div>
 
+</div>
+
+<!-- Love note popup -->
+<div class="love-note" id="loveNote">
+  <span class="love-note-close" onclick="closeLoveNote()">×</span>
+  <p class="love-note-text" id="loveNoteText"></p>
+</div>
+
+<!-- Hidden capture card for image generation -->
+<div id="captureCard" class="capture-card">
+  <div class="capture-header">
+    <h1>Our Date Plan 💕</h1>
+    <p>A Special Moment with Nischal</p>
+  </div>
+  <div class="capture-content">
+    <div class="capture-item">
+      <div class="capture-item-icon">📅</div>
+      <div class="capture-item-content">
+        <strong>Date Type</strong>
+        <div class="capture-item-value" id="capDate"></div>
+      </div>
+    </div>
+    <div class="capture-item">
+      <div class="capture-item-icon">🕐</div>
+      <div class="capture-item-content">
+        <strong>When</strong>
+        <div class="capture-item-value" id="capWhen"></div>
+      </div>
+    </div>
+    <div class="capture-item">
+      <div class="capture-item-icon">✨</div>
+      <div class="capture-item-content">
+        <strong>What We'll Do</strong>
+        <div class="capture-item-value" id="capDesc"></div>
+      </div>
+    </div>
+    <div class="capture-item">
+      <div class="capture-item-icon">💗</div>
+      <div class="capture-item-content">
+        <strong>Excitement Level</strong>
+        <div class="capture-item-value" id="capExcite"></div>
+      </div>
+    </div>
+    <div class="capture-item">
+      <div class="capture-item-icon">💌</div>
+      <div class="capture-item-content">
+        <strong>Message</strong>
+        <div class="capture-item-value" id="capMessage"></div>
+      </div>
+    </div>
+  </div>
+  <div class="capture-footer">
+    <p>Can't wait to see you! 🥰</p>
+  </div>
 </div>
 
 <script>
@@ -223,6 +495,7 @@
   const screen4 = document.getElementById('screen4');
   const screen4a = document.getElementById('screen4a');
   const screen4b = document.getElementById('screen4b');
+  const screen4c = document.getElementById('screen4c');
   const screen5 = document.getElementById('screen5');
   const screen6 = document.getElementById('screen6');
 
@@ -249,30 +522,143 @@
   yesBtn.onclick = () => {
     screen1.classList.add('hidden');
     screen2.classList.remove('hidden');
-    // Start the music
-    const music = document.getElementById('bgMusic');
-    if (music) {
-      music.volume = 0.3;
-      music.play().catch(e => console.log('Music autoplay blocked'));
-    }
+    showRandomCompliment();
+    spawnHearts(15);
+    updateProgress(2);
   };
 
   function showDates() {
     screen2.classList.add('hidden');
     screen3.classList.remove('hidden');
+    updateProgress(3);
   }
 
   const dates = {
-    movie: { title: '🎬 Movie / Series Night', desc: 'Same movie, same time, different worlds. We press play together, chat during the boring parts, and video call after to roast the plot.' },
+    movie: { title: '🎬 Movie / Series Night', desc: 'Same movie, same heartbeat. We\'ll press play together and I\'ll pretend to watch the screen, but really I\'m just watching your reactions. Your laugh during the funny parts is my favorite scene.' },
     dinner: { title: '🍝 Video Call Dinner', desc: 'Same cuisine, same vibe. We eat together like we’re across the table, not across the planet.' },
-    coffee: { title: '☕ Late-Night Talk', desc: 'One coffee, one sleepy face. No distractions. Just us, honest talks, and terrible jokes.' },
-    game: { title: '🎮 Online Game Date', desc: 'Fun games, fake competition, real laughs. Loser owes a virtual kiss.' },
+    coffee: { title: '☕ Late-Night Talk', desc: 'When everyone else is asleep, it\'ll just be us and the quiet night. No distractions, no filters - just your sleepy voice saying things you wouldn\'t say in daylight. Those conversations are my favorite.' },
+    game: { title: '🎮 Online Game Date', desc: 'Let\'s play and be ridiculously competitive. I love hearing that fire in your voice when you\'re about to win. And when you beat me? I\'ll admit defeat - you always win anyway, especially my heart.' },
     quiz: { title: '💬 Quiz / Questions', desc: 'Deep questions, silly answers, and discovering things we didn’t know we missed.' },
     memory: { title: '🖼️ Memory Lane', desc: 'Old photos, embarrassing stories, and falling in love with each other’s past.' },
     future: { title: '✈️ Future Planning', desc: 'We plan the day distance finally loses. Where we’ll meet, what we’ll do, and how tight the hug will be.' }
   };
 
   let selectedKey = '';
+  let finalExciteValue = 50; // Store the final excitement value
+  
+  // Random compliments for screen 2 - Neruda style
+  const compliments = [
+    "You are the thirst and the water, the hunger and the feast. Every cell in my body says yes to you. 🌊",
+    "I want you like the moon wants the tide - desperately, endlessly, written in the laws of nature itself. 🌙",
+    "You've become the blood in my veins. I don't know where I end and where my need for you begins. 💫",
+    "Your voice is a fire in the winter of my loneliness. When you speak, I am warm again. 🔥",
+    "I could write a thousand poems and still not capture the way my heart stumbles when you smile. ✨",
+    "You are my vertical hour, the moment when the world stops and only we exist. ⏰",
+    "Distance is cruel, but it's taught me this: I love you in ways I didn't know love could exist. 🌹",
+    "You're not just in my thoughts - you're the architecture of my dreams, the landscape of my hope. 🏔️",
+    "I want to know you the way the rain knows the earth - completely, intimately, forever. 🌧️"
+  ];
+  
+  // Love notes for Easter eggs - Neruda inspired
+  const loveNotes = [
+    "I crave you like the desert craves the rain. Every part of me is parched for you. 🌵💧",
+    "Your absence is a physical ache. You've left fingerprints on my soul. 👐✨",
+    "I want to unbutton your laughter, undress your voice, and discover every secret you hide in silence. 🤫💕",
+    "You are the most dangerous kind of beautiful - the kind that ruins me for anyone else. 🌹🔥",
+    "I love you in ways that have no words, only pulling you closer and breathing you in. 🌬️💝",
+    "My body is a compass, and you are true north. I am always, always turning toward you. 🧭❤️",
+    "I want to trace the map of your skin until I've memorized every curve, every story, every shiver. 🗺️✨",
+    "You've colonized my thoughts. Every dream is a rebellion led by your name. 💭🌙",
+    "I'm addicted to the way you make me feel alive - dangerously, beautifully, completely alive. ⚡💓",
+    "Love me fierce or don't love me at all. But know this: I'm already yours in ways I can't take back. 🔥💕"
+  ];
+  
+  // Show random compliment
+  function showRandomCompliment() {
+    const compliment = document.getElementById('compliment');
+    if (compliment) {
+      compliment.innerText = compliments[Math.floor(Math.random() * compliments.length)];
+    }
+  }
+  
+  // Confetti explosion
+  function spawnConfetti(count = 50) {
+    const colors = ['#ff2d6f', '#ff6b98', '#ffb6d0', '#ffd6e0', '#d400ff', '#ff9eb3'];
+    for (let i = 0; i < count; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.top = '-10px';
+      confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.width = (Math.random() * 8 + 4) + 'px';
+      confetti.style.height = (Math.random() * 8 + 4) + 'px';
+      confetti.style.animationDelay = Math.random() * 0.5 + 's';
+      confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      document.body.appendChild(confetti);
+      setTimeout(() => confetti.remove(), 5000);
+    }
+  }
+  
+  // Love note popup
+  function showLoveNote() {
+    const loveNote = document.getElementById('loveNote');
+    const loveNoteText = document.getElementById('loveNoteText');
+    loveNoteText.innerText = loveNotes[Math.floor(Math.random() * loveNotes.length)];
+    loveNote.classList.add('show');
+    spawnConfetti(30);
+    setTimeout(() => {
+      if (loveNote.classList.contains('show')) {
+        loveNote.classList.remove('show');
+      }
+    }, 8000);
+  }
+  
+  function closeLoveNote() {
+    document.getElementById('loveNote').classList.remove('show');
+  }
+  
+  // Countdown timer
+  function startCountdown() {
+    const timer = document.getElementById('countdownTimer');
+    const countdownDiv = document.getElementById('countdown');
+    if (!timer || !dateInput?.value) {
+      if (countdownDiv) countdownDiv.style.display = 'none';
+      return;
+    }
+    
+    function updateCountdown() {
+      try {
+        const dateStr = dateInput.value;
+        const timeStr = timeInput?.value || '20:00';
+        const targetDate = new Date(dateStr + 'T' + timeStr);
+        const now = new Date();
+        const diff = targetDate - now;
+        
+        if (diff <= 0) {
+          timer.innerText = "It's Date Time! 🎉";
+          return;
+        }
+        
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+        
+        if (days > 0) {
+          timer.innerText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        } else if (hours > 0) {
+          timer.innerText = `${hours}h ${minutes}m ${seconds}s`;
+        } else {
+          timer.innerText = `${minutes}m ${seconds}s`;
+        }
+      } catch(e) {
+        timer.innerText = 'Soon! 💕';
+      }
+    }
+    
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
 
   function openDate(key) {
     selectedKey = key;
@@ -280,6 +666,7 @@
     screen4.classList.remove('hidden');
     dateTitle.innerText = dates[key].title;
     dateDesc.innerText = dates[key].desc;
+    updateProgress(4);
   }
 
   function backToDates() {
@@ -295,6 +682,7 @@
   function showDateSummary() {
     screen4a.classList.add('hidden');
     screen4b.classList.remove('hidden');
+    updateProgress(6);
     // populate summary preview
     const previewDateType = document.getElementById('previewDateType');
     const previewWhen = document.getElementById('previewWhen');
@@ -321,14 +709,30 @@
     screen4a.classList.remove('hidden');
   }
 
-  function showFinalSummary() {
+  function showMessageScreen() {
     screen4b.classList.add('hidden');
+    screen4c.classList.remove('hidden');
+    updateProgress(7);
+  }
+
+  function backToDateSummary() {
+    screen4c.classList.add('hidden');
+    screen4b.classList.remove('hidden');
+  }
+
+  function showFinalSummary() {
+    screen4c.classList.add('hidden');
     screen6.classList.remove('hidden');
+    spawnConfetti(60);
+    updateProgress(8);
     
     // populate final summary
+    const messageInput = document.getElementById('messageInput');
+    const sumMessage = document.getElementById('sumMessage');
     sumDate.innerText = dates[selectedKey].title;
     sumDesc.innerText = dates[selectedKey].desc;
-    sumExcite.innerText = excite.value;
+    sumExcite.innerText = finalExciteValue === '∞' ? '∞ (Infinite!)' : finalExciteValue + '%';
+    if (sumMessage) sumMessage.innerText = messageInput?.value || 'No message';
     
     // format chosen date/time
     function formatWhen(d,t){
@@ -341,6 +745,9 @@
       }catch(e){return (d + ' ' + (t||'')).trim();}
     }
     if (sumWhen) sumWhen.innerText = formatWhen(dateInput?.value, timeInput?.value);
+    
+    // Start countdown timer
+    startCountdown();
     
     // Submit to Google Form
     submitToGoogleForm();
@@ -361,11 +768,13 @@
       form.target = 'hidden_iframe';
       
       // Add form fields (entry IDs from the Google Form)
+      const messageInput = document.getElementById('messageInput');
       const fields = {
         'entry.579016455': dates[selectedKey].title, // Date Type (question ID 704946352)
-        'entry.1588982249': excite.value + '%', // Excitometer (question ID 558239009)
+        'entry.1588982249': finalExciteValue === '∞' ? 'Infinite Excitement! ∞' : finalExciteValue + '%', // Excitometer (question ID 558239009)
         'entry.4385258': dateInput?.value || '', // Date (question ID 1309384822)
-        'entry.918362407': timeInput?.value || '' // Time (question ID 804182938)
+        'entry.918362407': timeInput?.value || '', // Time (question ID 804182938)
+        'entry.1395018043': messageInput?.value || '' // Message (question ID 39679934)
       };
       
       for (const [name, value] of Object.entries(fields)) {
@@ -392,28 +801,70 @@
   function showMeter() {
     screen4.classList.add('hidden');
     screen5.classList.remove('hidden');
+    updateProgress(5);
   }
 
   /* Excitometer elements */
   const excite = document.getElementById('excite');
   const exciteVal = document.getElementById('exciteVal');
+  const exciteDisplay = document.getElementById('exciteDisplay');
   const meterHint = document.getElementById('meterHint');
+  const meterVisual = document.getElementById('meterVisual');
   const dateInput = document.getElementById('dateInput');
   const timeInput = document.getElementById('timeInput');
   const sumWhen = document.getElementById('sumWhen');
 
-  // nicer resistance and hints
+  const infinityMessages = [
+    'Your desire is intoxicating... 🚀',
+    'This intensity... I feel it too 🔥',
+    'You want this as badly as I do... 😳',
+    'This hunger between us is dangerous 💫',
+    'Our longing knows no limits ⚡',
+    'This passion could set the world on fire 🌌',
+    'The distance doesn\'t stand a chance 😱',
+    'This is the kind of wanting that changes everything 📈',
+    'We\'ve moved beyond ordinary desire 🏆',
+    'This isn\'t just excitement - it\'s destiny ✨'
+  ];
+
+  // nicer resistance and hints with infinity mode
   excite.addEventListener('input', () => {
     let val = +excite.value;
-    if (val > 85 && Math.random() < 0.45) {
-      excite.value = Math.max(80, val - Math.floor(Math.random() * 10));
-      meterHint.innerText = 'Oh stop, that tickles… try again 😳';
-    } else if (val > 95) {
-      meterHint.innerText = 'So close… breathe, gently 💗';
+    
+    // Infinity mode (over 100)
+    if (val > 100) {
+      excite.classList.add('infinity-mode');
+      exciteDisplay.classList.add('infinity-mode');
+      meterVisual.classList.add('infinity-mode');
+      
+      const msgIndex = Math.min(Math.floor((val - 100) / 10), infinityMessages.length - 1);
+      meterHint.innerText = infinityMessages[msgIndex];
+      
+      // Show infinity symbol and creative display
+      if (val >= 150) {
+        exciteDisplay.innerHTML = '<span class="infinity-symbol">∞</span> INFINITE EXCITEMENT!';
+      } else {
+        exciteDisplay.innerHTML = `<span id="exciteVal">${val}</span>% excited (OVER 9000!!! 💥)`;
+      }
+      
+      // Spawn extra hearts at high levels
+      if (Math.random() < 0.3) spawnHearts(1);
     } else {
-      meterHint.innerText = 'Drag slowly… excitement is shy 😌';
+      excite.classList.remove('infinity-mode');
+      exciteDisplay.classList.remove('infinity-mode');
+      meterVisual.classList.remove('infinity-mode');
+      
+      if (val > 85 && Math.random() < 0.45) {
+        excite.value = Math.max(80, val - Math.floor(Math.random() * 10));
+        meterHint.innerText = 'Easy... savor this moment with me 😳';
+      } else if (val > 95) {
+        meterHint.innerText = 'Almost there... let the anticipation build 💗';
+      } else {
+        meterHint.innerText = 'Show me your desire... don\'t hold back 😌';
+      }
+      
+      exciteDisplay.innerHTML = `<span id="exciteVal">${excite.value}</span>% excited`;
     }
-    exciteVal.innerText = excite.value;
   });
 
   function spawnHearts(count = 18) {
@@ -433,20 +884,17 @@
     // quick pulse on card
     document.querySelector('.card').classList.add('celebrate');
     spawnHearts(26);
-    // Boost music volume briefly
-    const music = document.getElementById('bgMusic');
-    if (music) {
-      music.volume = 0.5;
-      setTimeout(() => music.volume = 0.3, 2000);
-    }
     setTimeout(()=> document.querySelector('.card').classList.remove('celebrate'), 2000);
   }
 
   function checkExciteAndContinue() {
-    if (+excite.value < 100) {
-      alert('I know you\'re hiding some excitement 😏');
+    const val = +excite.value;
+    if (val < 100) {
+      alert('Don\'t hide your desire from me... I want all of it 😏');
       return;
     }
+    // Store the excitement value before resetting
+    finalExciteValue = val >= 150 ? '∞' : val;
     // celebration
     celebrate();
     screen5.classList.add('hidden');
@@ -462,9 +910,139 @@
     exciteVal.innerText = '50';
   }
 
+  // Progress tracking
+  function updateProgress(step) {
+    const progressFill = document.getElementById('progressFill');
+    const progressDots = document.querySelectorAll('.progress-dots .dot');
+    const percentage = (step / 8) * 100;
+    
+    progressFill.style.width = percentage + '%';
+    
+    progressDots.forEach((dot, index) => {
+      const dotStep = index + 1;
+      if (dotStep < step) {
+        dot.classList.add('completed');
+        dot.classList.remove('active');
+      } else if (dotStep === step) {
+        dot.classList.add('active');
+        dot.classList.remove('completed');
+      } else {
+        dot.classList.remove('active', 'completed');
+      }
+    });
+    
+    // Save progress to localStorage
+    saveProgress();
+  }
+
+  // Save form data to localStorage
+  function saveProgress() {
+    try {
+      const formData = {
+        selectedKey,
+        dateValue: dateInput?.value || '',
+        timeValue: timeInput?.value || '',
+        exciteValue: finalExciteValue,
+        messageValue: document.getElementById('messageInput')?.value || ''
+      };
+      localStorage.setItem('valentineFormData', JSON.stringify(formData));
+    } catch(e) {}
+  }
+
+  // Load saved data on page load
+  function loadProgress() {
+    try {
+      const saved = localStorage.getItem('valentineFormData');
+      if (saved) {
+        const data = JSON.parse(saved);
+        if (data.selectedKey) selectedKey = data.selectedKey;
+        if (data.dateValue && dateInput) dateInput.value = data.dateValue;
+        if (data.timeValue && timeInput) timeInput.value = data.timeValue;
+        if (data.exciteValue) {
+          finalExciteValue = data.exciteValue;
+          if (excite) {
+            excite.value = data.exciteValue;
+            exciteVal.innerText = data.exciteValue;
+          }
+        }
+        if (data.messageValue) {
+          const msgInput = document.getElementById('messageInput');
+          if (msgInput) msgInput.value = data.messageValue;
+        }
+      }
+    } catch(e) {}
+  }
+
+  // Load saved data
+  loadProgress();
+
+  // Save as Image function
+  async function saveAsImage() {
+    const captureCard = document.getElementById('captureCard');
+    const capDate = document.getElementById('capDate');
+    const capWhen = document.getElementById('capWhen');
+    const capDesc = document.getElementById('capDesc');
+    const capExcite = document.getElementById('capExcite');
+    const capMessage = document.getElementById('capMessage');
+    
+    // Populate capture card with current data
+    capDate.innerText = dates[selectedKey]?.title || 'Date Type';
+    capDesc.innerText = dates[selectedKey]?.desc || 'Description';
+    capExcite.innerText = finalExciteValue === '∞' ? '∞ Infinitely Excited!' : finalExciteValue + '% Excited!';
+    capMessage.innerText = document.getElementById('messageInput')?.value || 'No message';
+    
+    // Format date/time
+    function formatWhen(d,t){
+      if (!d && !t) return 'Not set';
+      if (!d) return t || 'Not set';
+      try{
+        if (!t) return new Date(d).toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'});
+        const dt = new Date(d + 'T' + t);
+        return dt.toLocaleString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric', hour:'numeric', minute:'2-digit'});
+      }catch(e){return (d + ' ' + (t||'')).trim();}
+    }
+    capWhen.innerText = formatWhen(dateInput?.value, timeInput?.value);
+    
+    // Temporarily position card for capture
+    captureCard.style.left = '0';
+    captureCard.style.top = '0';
+    
+    try {
+      // Wait for fonts and styles to load
+      await document.fonts.ready;
+      
+      // Generate canvas
+      const canvas = await html2canvas(captureCard, {
+        backgroundColor: null,
+        scale: 2,
+        logging: false,
+        useCORS: true,
+        allowTaint: true
+      });
+      
+      // Convert to blob and download
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.download = 'our-date-plan.png';
+        link.href = url;
+        link.click();
+        URL.revokeObjectURL(url);
+      });
+      
+    } catch(e) {
+      alert('Oops! Could not save image. Please try again.');
+      console.error(e);
+    } finally {
+      // Hide card again
+      captureCard.style.left = '-9999px';
+    }
+  }
+
   // spawn a few gentle hearts in the background
   setInterval(()=> spawnHearts(2), 1200);
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </body>
 </html>
