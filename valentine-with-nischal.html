@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <title>Date with Nischal 💖</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <style>
     :root{
       --pink-1:#ffdff0;
@@ -61,7 +63,7 @@
     .card > div:not(.hidden) {margin-bottom:20px}
     .card > div:not(.hidden) > *:not(:last-child) {margin-bottom:16px}
 
-    button{border:none;padding:12px 22px;border-radius:999px;font-size:15px;cursor:pointer;transition:all .22s cubic-bezier(.2,.9,.2,1);box-shadow:0 8px 18px rgba(255,77,109,0.08);}
+    button{border:none;padding:12px 22px;border-radius:999px;font-size:15px;cursor:pointer;transition:all .22s cubic-bezier(.2,.9,.2,1);box-shadow:0 8px 18px rgba(255,77,109,0.08);-webkit-tap-highlight-color:rgba(255,45,111,0.2);touch-action:manipulation;}
 
     .yes{background:linear-gradient(180deg,var(--accent),#ff6f84);color:#fff;margin-right:10px}
     .yes:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,77,109,0.14)}
@@ -282,7 +284,27 @@
     .countdown-timer{font-size:32px;font-weight:700;color:var(--accent);margin:8px 0}
     .countdown-label{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
 
-    @media (max-width:520px){.card{padding:20px;border-radius:16px}.gif{width:150px}.love-note{max-width:220px;font-size:13px}}
+    @media (max-width:520px){
+      .card{padding:20px;border-radius:16px;width:95%;max-width:100%}
+      .gif{width:150px}
+      .love-note{max-width:220px;font-size:13px;bottom:10px;right:10px;left:10px;max-width:calc(100% - 20px)}
+      h1{font-size:24px}
+      h2{font-size:20px}
+      button{padding:14px 18px;font-size:16px;width:100%;margin:8px 0 !important}
+      .yes{margin-right:0 !important}
+      .date-list button{padding:16px}
+      .back{font-size:18px;padding:10px 12px}
+      .capture-card{width:95vw;max-width:400px;padding:30px}
+      .capture-header h1{font-size:28px}
+      .capture-item{flex-direction:column;gap:8px}
+      .capture-item-icon{font-size:24px}
+      .capture-item-value{font-size:16px}
+      .countdown-timer{font-size:24px}
+      /* Stack buttons vertically on mobile */
+      #screen6 button{display:block;width:100%;margin:8px 0 !important}
+      #screen6 .yes{margin-top:16px !important}
+      #screen6 .save-image-btn{margin-top:20px !important}
+    }
   </style>
 </head>
 <body>
@@ -425,8 +447,10 @@
     
     <br />
     <p style="font-style:italic;color:var(--accent);font-size:16px">Until then, I'll be counting heartbeats and dreaming of you 🥰</p>
-    <button onclick="saveAsImage()" class="yes save-image-btn">Capture This Promise 📸</button>
-    <button onclick="showLoveNote()" class="yes" style="margin-top:8px;background:linear-gradient(180deg,#ff9eb3,#ff6b98)">Whisper Something to Me 💌</button>
+    <div style="margin-top:20px">
+      <button onclick="saveAsImage()" class="yes save-image-btn">Capture This Promise 📸</button>
+      <button onclick="showLoveNote()" class="yes" style="margin-top:8px;background:linear-gradient(180deg,#ff9eb3,#ff6b98)">Whisper Something to Me 💌</button>
+    </div>
   </div>
 
 </div>
@@ -976,6 +1000,11 @@
   // Load saved data
   loadProgress();
 
+  // Detect mobile device
+  function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+  }
+
   // Save as Image function
   async function saveAsImage() {
     const captureCard = document.getElementById('captureCard');
@@ -1011,13 +1040,16 @@
       // Wait for fonts and styles to load
       await document.fonts.ready;
       
-      // Generate canvas
+      // Generate canvas with mobile-optimized settings
+      const scale = isMobile() ? 1.5 : 2;
       const canvas = await html2canvas(captureCard, {
-        backgroundColor: null,
-        scale: 2,
+        backgroundColor: '#fff5f9',
+        scale: scale,
         logging: false,
         useCORS: true,
-        allowTaint: true
+        allowTaint: true,
+        width: captureCard.offsetWidth,
+        height: captureCard.offsetHeight
       });
       
       // Convert to blob and download
