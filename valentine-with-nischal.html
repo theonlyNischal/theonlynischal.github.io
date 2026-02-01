@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Date with Nischal 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{
+      --pink-1:#ffdff0;
+      --pink-2:#ffb6d0;
+      --accent:#ff2d6f;
+      --accent-2:#ff6b98;
+      --glass: rgba(255,255,255,0.6);
+      --muted:#6b6b6b;
+      --card-width:600px;
+    }
+
+    html,body{height:100%;}
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, #fff6f9 0%, transparent 20%),
+                  radial-gradient(1000px 500px at 90% 90%, #fff0f6 0%, transparent 18%),
+                  linear-gradient(135deg, #fffafb 0%, #fff0f6 50%, #fffaf6 100%);
+      color: #2b2b2b;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow:hidden;
+    }
+
+    /* floating heart container */
+    .floating-hearts{
+      position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;
+    }
+    .floating-hearts .heart{position:absolute;display:block;opacity:0;transform:translateY(40px) scale(0.9);animation:floatUp 3.6s linear forwards;filter:drop-shadow(0 6px 12px rgba(255,77,109,0.18));}
+    .floating-hearts .heart::before{content:'❤';display:block;color:var(--accent);text-shadow:0 1px 0 rgba(255,255,255,0.4);}
+    @keyframes floatUp{0%{opacity:0;transform:translateY(30px) scale(0.8);}15%{opacity:1;}100%{opacity:0;transform:translateY(-340px) scale(1.05);}}
+
+    .card {
+      width:90%;max-width:var(--card-width);
+      padding:34px 36px;
+      border-radius:22px;
+      position:relative;
+      z-index:2;
+      overflow:visible;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,244,249,0.98) 100%);
+      box-shadow: 0 14px 40px rgba(255,45,111,0.08), 0 8px 20px rgba(19,19,19,0.06);
+      border: 1px solid rgba(255,255,255,0.8);
+      backdrop-filter: blur(6px) saturate(1.02);
+    }
+
+    .card::before{content:'';position:absolute;inset:-2px;border-radius:22px;padding:2px;background:linear-gradient(90deg, rgba(255,77,109,0.12), rgba(255,200,220,0.12));-webkit-mask:linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);mask:linear-gradient(#000,#000) content-box, linear-gradient(#000,#000);pointer-events:none;}
+    .card::after{content:'';position:absolute;left:-60%;top:-40%;width:220%;height:140%;background:linear-gradient(120deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.14) 100%);transform:rotate(20deg);opacity:0.72;animation:sheen 5s linear infinite;pointer-events:none}
+    @keyframes sheen{0%{transform:translateX(-20%) rotate(20deg)}100%{transform:translateX(20%) rotate(20deg)}}
+    h1,h2{margin:0 0 16px 0;font-weight:700;color:var(--accent)}
+    p{line-height:1.8;margin:14px 0;color:var(--muted);font-size:15px}
+
+    /* increase spacing inside card */
+    .card > div:not(.hidden) {margin-bottom:20px}
+    .card > div:not(.hidden) > *:not(:last-child) {margin-bottom:16px}
+
+    button{border:none;padding:12px 22px;border-radius:999px;font-size:15px;cursor:pointer;transition:all .22s cubic-bezier(.2,.9,.2,1);box-shadow:0 8px 18px rgba(255,77,109,0.08);}
+
+    .yes{background:linear-gradient(180deg,var(--accent),#ff6f84);color:#fff;margin-right:10px}
+    .yes:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(255,77,109,0.14)}
+
+    .no{background:linear-gradient(180deg,#fff,#ffeef3);color:#7a4654;position:absolute;padding:10px 14px;border-radius:14px;border:1px solid rgba(255,77,109,0.08)}
+
+    .hidden{display:none}
+
+    .gif{width:200px;margin:18px auto;border-radius:12px;display:block}
+
+    .date-list{display:flex;flex-direction:column;gap:12px}
+    .date-list button{display:block;width:100%;margin:0;padding:14px 16px;background:linear-gradient(180deg,#ffe6f0,#ffdced);border-radius:12px;border:1px solid rgba(255,45,111,0.12);text-align:left;font-weight:600}
+
+    .back{position:absolute;left:14px;top:14px;font-size:20px;cursor:pointer;color:#ffffff;background:linear-gradient(180deg,var(--accent),var(--accent-2));padding:8px 10px;border-radius:12px;box-shadow:0 6px 14px rgba(255,45,111,0.14);border:1px solid rgba(255,255,255,0.35);z-index:10}
+    .with-back{padding-top:50px}
+
+    /* Excitometer */
+    .meter{margin:8px 0}
+    .meter-visual{text-align:center;margin:8px 0}
+    .meter-gif{width:110px;border-radius:12px;display:inline-block;}
+
+    input[type=range]{-webkit-appearance:none;width:100%;height:14px;background:linear-gradient(90deg,#ffd6e0 0%, #ff9eb3 100%);border-radius:999px;outline:none}
+    input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;border-radius:50%;background:linear-gradient(180deg,#fff,#ffeaf0);box-shadow:0 6px 14px rgba(255,77,109,0.16);border:3px solid #ff6b86;cursor:pointer;transform:translateY(-8px)}
+    input[type=range]::-moz-range-thumb{width:34px;height:34px;border-radius:50%;background:#fff;border:3px solid #ff6b86}
+
+    /* date/time fields */
+    .field{display:flex;gap:10px;align-items:center}
+    .field label{min-width:72px;font-weight:700;color:var(--accent)}
+    .field input[type=date], .field input[type=time]{padding:8px 10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#fff;box-shadow:inset 0 2px 6px rgba(0,0,0,0.03)}
+
+    .summary{text-align:left}
+
+    /* small celebration effect */
+    .card.celebrate{transform:scale(1.02);box-shadow:0 18px 44px rgba(255,77,109,0.18)}
+
+    @media (max-width:520px){.card{padding:20px;border-radius:16px}.gif{width:150px}}
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_4a465279f7.mp3" type="audio/mpeg">
+</audio>
+
+<div class="floating-hearts" aria-hidden="true"></div>
+
+<div class="card">
+
+  <!-- SCREEN 1 -->
+  <div id="screen1">
+    <h1>Do you want to go on a date with Nischal? 💕</h1>
+    <br />
+    <button id="yesBtn" class="yes">Yes 💖</button>
+    <button id="noBtn" class="no">No 🙄</button>
+  </div>
+
+  <!-- SCREEN 2 -->
+  <div id="screen2" class="hidden">
+    <img class="gif" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" />
+    <h2>I was really hoping for that 🥹</h2>
+    <p>You just made my whole day a little brighter.</p>
+    <br />
+    <button onclick="showDates()" class="yes">Click Me 💌</button>
+  </div>
+
+  <!-- SCREEN 3 -->
+  <div id="screen3" class="hidden">
+    <h2>Choose our date ✨</h2>
+    <div class="date-list">
+      <button onclick="openDate('movie')">🎬 Movie / Series Night</button>
+      <button onclick="openDate('dinner')">🍝 Video Call Dinner</button>
+      <button onclick="openDate('coffee')">☕ Late-Night Talk</button>
+      <button onclick="openDate('game')">🎮 Online Game Date</button>
+      <button onclick="openDate('quiz')">💬 Quiz / Questions</button>
+      <button onclick="openDate('memory')">🖼️ Memory Lane</button>
+      <button onclick="openDate('future')">✈️ Future Planning</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 4 -->
+  <div id="screen4" class="hidden">
+    <div class="back" onclick="backToDates()">←</div>
+    <div class="with-back">
+      <h2 id="dateTitle"></h2>
+      <p id="dateDesc"></p>
+      <button onclick="showMeter()" class="yes">Sounds Cute 💖</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 4A - Date/Time Selection -->
+  <div id="screen4a" class="hidden">
+    <div class="back" onclick="backToDateDetails()">←</div>
+    <div class="with-back">
+      <h2>When should we meet? 📅</h2>
+      <div class="date-controls">
+        <div class="field">
+          <label for="dateInput">Date</label>
+          <input id="dateInput" type="date" />
+        </div>
+        <div class="field">
+          <label for="timeInput">Time</label>
+          <input id="timeInput" type="time" />
+        </div>
+      </div>
+      <button onclick="showDateSummary()" class="yes">Perfect Time 💖</button>
+    </div>
+  </div>
+
+  <!-- SCREEN 4B - Date Summary -->
+  <div id="screen4b" class="hidden">
+    <div class="back" onclick="backToDateTime()">←</div>
+    <div class="with-back">
+      <h2>Our Date Plan 💕</h2>
+      <div class="summary">
+        <p><strong>Date Type:</strong> <span id="previewDateType"></span></p>
+        <p><strong>When:</strong> <span id="previewWhen"></span></p>
+        <p><strong>What we'll do:</strong> <span id="previewDesc"></span></p>
+      </div>
+      <button onclick="showFinalSummary()" class="yes">Lock It In 💘</button>
+    </div>
+  </div>
+
+    <!-- SCREEN 5 -->
+  <div id="screen5" class="hidden">
+    <h2>Excitometer 💓</h2>
+    <p id="meterHint">Drag slowly… excitement is shy 😌</p>
+    <div class="meter">
+        <input type="range" min="0" max="100" value="50" id="excite" />
+        <p><span id="exciteVal">50</span>% excited</p>
+    </div>
+      <div class="meter-visual">
+        <img class="meter-gif" src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="cute hearts" />
+      </div>
+    <button onclick="checkExciteAndContinue()" class="yes">Lock It In 💘</button>
+  </div>
+
+  <!-- SCREEN 6 -->
+  <div id="screen6" class="hidden">
+    <h2>Our Date Summary 💞</h2>
+    <div class="summary">
+      <p><strong>Date:</strong> <span id="sumDate"></span></p>
+      <p><strong>When:</strong> <span id="sumWhen"></span></p>
+      <p><strong>Description:</strong> <span id="sumDesc"></span></p>
+      <p><strong>Excitement:</strong> <span id="sumExcite"></span>%</p>
+    </div>
+    <br />
+    <p>I can’t wait already 🥰</p>
+  </div>
+
+</div>
+
+<script>
+  /* DOM references */
+  const noBtn = document.getElementById('noBtn');
+  const yesBtn = document.getElementById('yesBtn');
+  const screen1 = document.getElementById('screen1');
+  const screen2 = document.getElementById('screen2');
+  const screen3 = document.getElementById('screen3');
+  const screen4 = document.getElementById('screen4');
+  const screen4a = document.getElementById('screen4a');
+  const screen4b = document.getElementById('screen4b');
+  const screen5 = document.getElementById('screen5');
+  const screen6 = document.getElementById('screen6');
+
+  let scale = 1;
+  let noCount = 0;
+
+  const yesTexts = ['Yes 💖','YES 😳','Okay yes 😭','Fine. YES. 💕'];
+
+  // position the naughty "no" button initially
+  noBtn.style.left = '60%';
+  noBtn.style.top = '65%';
+
+  // playful evasion for the No button
+  noBtn.addEventListener('mouseover', () => {
+    noBtn.style.left = Math.random() * 70 + '%';
+    noBtn.style.top = Math.random() * 70 + '%';
+    scale += 0.35;
+    if (scale > 2.6) scale = 2.6;
+    yesBtn.style.transform = `scale(${scale})`;
+    noCount++;
+    if (noCount < yesTexts.length) yesBtn.innerText = yesTexts[noCount];
+  });
+
+  yesBtn.onclick = () => {
+    screen1.classList.add('hidden');
+    screen2.classList.remove('hidden');
+    // Start the music
+    const music = document.getElementById('bgMusic');
+    if (music) {
+      music.volume = 0.3;
+      music.play().catch(e => console.log('Music autoplay blocked'));
+    }
+  };
+
+  function showDates() {
+    screen2.classList.add('hidden');
+    screen3.classList.remove('hidden');
+  }
+
+  const dates = {
+    movie: { title: '🎬 Movie / Series Night', desc: 'Same movie, same time, different worlds. We press play together, chat during the boring parts, and video call after to roast the plot.' },
+    dinner: { title: '🍝 Video Call Dinner', desc: 'Same cuisine, same vibe. We eat together like we’re across the table, not across the planet.' },
+    coffee: { title: '☕ Late-Night Talk', desc: 'One coffee, one sleepy face. No distractions. Just us, honest talks, and terrible jokes.' },
+    game: { title: '🎮 Online Game Date', desc: 'Fun games, fake competition, real laughs. Loser owes a virtual kiss.' },
+    quiz: { title: '💬 Quiz / Questions', desc: 'Deep questions, silly answers, and discovering things we didn’t know we missed.' },
+    memory: { title: '🖼️ Memory Lane', desc: 'Old photos, embarrassing stories, and falling in love with each other’s past.' },
+    future: { title: '✈️ Future Planning', desc: 'We plan the day distance finally loses. Where we’ll meet, what we’ll do, and how tight the hug will be.' }
+  };
+
+  let selectedKey = '';
+
+  function openDate(key) {
+    selectedKey = key;
+    screen3.classList.add('hidden');
+    screen4.classList.remove('hidden');
+    dateTitle.innerText = dates[key].title;
+    dateDesc.innerText = dates[key].desc;
+  }
+
+  function backToDates() {
+    screen4.classList.add('hidden');
+    screen3.classList.remove('hidden');
+  }
+
+  function backToDateDetails() {
+    screen4a.classList.add('hidden');
+    screen4.classList.remove('hidden');
+  }
+
+  function showDateSummary() {
+    screen4a.classList.add('hidden');
+    screen4b.classList.remove('hidden');
+    // populate summary preview
+    const previewDateType = document.getElementById('previewDateType');
+    const previewWhen = document.getElementById('previewWhen');
+    const previewDesc = document.getElementById('previewDesc');
+    
+    if (previewDateType) previewDateType.innerText = dates[selectedKey].title;
+    if (previewDesc) previewDesc.innerText = dates[selectedKey].desc;
+    
+    // format date/time
+    function formatWhen(d,t){
+      if (!d && !t) return 'Not set';
+      if (!d) return t || 'Not set';
+      try{
+        if (!t) return new Date(d).toLocaleDateString();
+        const dt = new Date(d + 'T' + t);
+        return dt.toLocaleString([], {dateStyle:'medium', timeStyle:'short'});
+      }catch(e){return (d + ' ' + (t||'')).trim();}
+    }
+    if (previewWhen) previewWhen.innerText = formatWhen(dateInput?.value, timeInput?.value);
+  }
+
+  function backToDateTime() {
+    screen4b.classList.add('hidden');
+    screen4a.classList.remove('hidden');
+  }
+
+  function showFinalSummary() {
+    screen4b.classList.add('hidden');
+    screen6.classList.remove('hidden');
+    
+    // populate final summary
+    sumDate.innerText = dates[selectedKey].title;
+    sumDesc.innerText = dates[selectedKey].desc;
+    sumExcite.innerText = excite.value;
+    
+    // format chosen date/time
+    function formatWhen(d,t){
+      if (!d && !t) return 'Not set';
+      if (!d) return t || 'Not set';
+      try{
+        if (!t) return new Date(d).toLocaleDateString();
+        const dt = new Date(d + 'T' + t);
+        return dt.toLocaleString([], {dateStyle:'medium', timeStyle:'short'});
+      }catch(e){return (d + ' ' + (t||'')).trim();}
+    }
+    if (sumWhen) sumWhen.innerText = formatWhen(dateInput?.value, timeInput?.value);
+    
+    // Submit to Google Form
+    submitToGoogleForm();
+  }
+  
+  function submitToGoogleForm() {
+    try {
+      // Create hidden iframe for form submission
+      const iframe = document.createElement('iframe');
+      iframe.name = 'hidden_iframe';
+      iframe.style.display = 'none';
+      document.body.appendChild(iframe);
+      
+      // Create form
+      const form = document.createElement('form');
+      form.action = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSfJwoqOA6S-09nOHh0Naaa8-T_gQ4U4EBvJAjGXn8zwYoGpgw/formResponse';
+      form.method = 'POST';
+      form.target = 'hidden_iframe';
+      
+      // Add form fields (entry IDs from the Google Form)
+      const fields = {
+        'entry.579016455': dates[selectedKey].title, // Date Type (question ID 704946352)
+        'entry.1588982249': excite.value + '%', // Excitometer (question ID 558239009)
+        'entry.4385258': dateInput?.value || '', // Date (question ID 1309384822)
+        'entry.918362407': timeInput?.value || '' // Time (question ID 804182938)
+      };
+      
+      for (const [name, value] of Object.entries(fields)) {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+      }
+      
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Clean up after 2 seconds
+      setTimeout(() => {
+        document.body.removeChild(form);
+        document.body.removeChild(iframe);
+      }, 2000);
+    } catch (e) {
+      console.error('Form submission error:', e);
+    }
+  }
+
+  function showMeter() {
+    screen4.classList.add('hidden');
+    screen5.classList.remove('hidden');
+  }
+
+  /* Excitometer elements */
+  const excite = document.getElementById('excite');
+  const exciteVal = document.getElementById('exciteVal');
+  const meterHint = document.getElementById('meterHint');
+  const dateInput = document.getElementById('dateInput');
+  const timeInput = document.getElementById('timeInput');
+  const sumWhen = document.getElementById('sumWhen');
+
+  // nicer resistance and hints
+  excite.addEventListener('input', () => {
+    let val = +excite.value;
+    if (val > 85 && Math.random() < 0.45) {
+      excite.value = Math.max(80, val - Math.floor(Math.random() * 10));
+      meterHint.innerText = 'Oh stop, that tickles… try again 😳';
+    } else if (val > 95) {
+      meterHint.innerText = 'So close… breathe, gently 💗';
+    } else {
+      meterHint.innerText = 'Drag slowly… excitement is shy 😌';
+    }
+    exciteVal.innerText = excite.value;
+  });
+
+  function spawnHearts(count = 18) {
+    const container = document.querySelector('.floating-hearts');
+    for (let i = 0; i < count; i++) {
+      const el = document.createElement('i');
+      el.className = 'heart burst';
+      el.style.left = (Math.random()*100) + '%';
+      el.style.animationDelay = (Math.random()*0.6) + 's';
+      el.style.fontSize = (12 + Math.random()*28) + 'px';
+      container.appendChild(el);
+      setTimeout(()=> el.remove(), 4500 + Math.random()*1200);
+    }
+  }
+
+  function celebrate() {
+    // quick pulse on card
+    document.querySelector('.card').classList.add('celebrate');
+    spawnHearts(26);
+    // Boost music volume briefly
+    const music = document.getElementById('bgMusic');
+    if (music) {
+      music.volume = 0.5;
+      setTimeout(() => music.volume = 0.3, 2000);
+    }
+    setTimeout(()=> document.querySelector('.card').classList.remove('celebrate'), 2000);
+  }
+
+  function checkExciteAndContinue() {
+    if (+excite.value < 100) {
+      alert('I know you\'re hiding some excitement 😏');
+      return;
+    }
+    // celebration
+    celebrate();
+    screen5.classList.add('hidden');
+    screen4a.classList.remove('hidden');
+    // set defaults for date/time
+    try{
+      const now = new Date();
+      if (dateInput) dateInput.value = now.toISOString().slice(0,10);
+      if (timeInput && !timeInput.value) timeInput.value = '20:00';
+    }catch(e){}
+    // Reset excitometer for next time
+    excite.value = 50;
+    exciteVal.innerText = '50';
+  }
+
+  // spawn a few gentle hearts in the background
+  setInterval(()=> spawnHearts(2), 1200);
+</script>
+
+</body>
+</html>
